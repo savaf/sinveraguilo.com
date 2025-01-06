@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "start": "NODE_ENV=production node .output/server/index.mjs",
-    "build": "nuxt build --prerender",
+    "build": "nuxt build",
     "clean": "rimraf .nuxt dist .cache .output node_modules .lighthouseci .vercel .unlighthouse",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
