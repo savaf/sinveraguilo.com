@@ -6,7 +6,7 @@
     <div class="font-general-regular container mx-auto py-20 block sm:flex sm:justify-between sm:items-center text-center">
       <!-- Years of experience counter -->
       <div class="mb-20 sm:mb-0">
-        <span class="font-general-medium text-4xl font-bold text-secondary-light mb-2">7+</span>
+        <span class="font-general-medium text-4xl font-bold text-secondary-light mb-2">9+</span>
         <span class="block text-md text-ternary-light">Years of experience</span>
       </div>
 

@@ -3,8 +3,8 @@ title: "BIOGRAPHY"
 description: ""
 ---
 
-Hi, I'm **Sinver Aguiló** , a web developer with a passion for creating beautiful, functional, and user-centered digital experiences. With 7+ years of experience in the field. I am always looking for new and innovative ways to bring my clients' visions to life.
+Hi, I'm **Sinver Aguiló**, a Software Engineer with 9+ years of experience building enterprise-class web applications that scale to meet the demands of their users.
 
-I believe that design is about more than just making things look pretty – it's about solving problems and creating intuitive, enjoyable experiences for users.
+My expertise lies in creating robust, scalable front-end applications with Vue.js, React.js, and Angular, and I'm also well-versed in building microservices with Node.js and PHP. I've led architecture design for large migration projects — from legacy monoliths to modern client-server and microservices structures — for products like Corotos, NZXT, and Crunchyroll.
 
-Whether I'm working on a website, mobile app, or other digital product, I bring my commitment to design excellence and user-centered thinking to every project I work on. I look forward to the opportunity to bring my skills and passion to your next project.
+Throughout my career I've been committed to doing things the right way and getting things done. I thrive in collaborative environments that value innovation and experimentation, and I bring a results-driven approach to every team I join. I look forward to the opportunity to bring my skills and experience to your next project.

@@ -1,0 +1,11 @@
+{
+  "company": "BairesDev · Contractor",
+  "position": "Frontend Web Developer",
+  "date": "Mar 2025 - Present · 1 yr 5 mos",
+  "location": "United States · Remote",
+  "skills": ["Vue.js", "JavaScript", "Vuex", "Pinia", "SASS", "CSS", "Vite", "Agile Methodologies"],
+  "description": [
+    "As a contractor for one of BairesDev's US-based clients, I build and maintain front-end features for a production Vue.js application. My work covers state management with Vuex and Pinia, styling with SASS, and a Vite-based build setup, delivering iteratively as part of an Agile team."
+  ],
+  "images": []
+}

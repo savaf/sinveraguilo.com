@@ -1,0 +1,11 @@
+{
+  "company": "Consejo Nacional de Competitividad · Employee",
+  "position": "Full Stack Engineer",
+  "date": "Nov 2025 - Present · 9 mos",
+  "location": "Santo Domingo, Dominican Republic",
+  "skills": ["Vue.js", "Node.js", "FastAPI", "TypeScript"],
+  "description": [
+    "As a Full Stack Engineer at the National Competitiveness Council, I develop and maintain web platforms that support the institution's public-sector initiatives. I build front-end applications with Vue.js and TypeScript and back-end services with Node.js and FastAPI, covering the full development cycle from design to deployment."
+  ],
+  "images": []
+}

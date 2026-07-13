@@ -1,9 +1,0 @@
-{
-  "company": "MCTEKK · Employee",
-  "position": "Mid Web Developer · Full-time",
-  "date": "Aug 2019 - Sep 2020 · 1 yr 2 mos",
-  "location": "Santo Domingo, Dominican Republic",
-  "skills": ["JavaScript", "Vue.js", "Vuex", "CSS", "SASS", "TFS", "Zoho", "SCRUM"],
-  "description": ["n my work on the Crunchyroll project, I was involved in the development of two static sites using Gatsby. I participated in the selection of the best technologies and ensured the reliability and scalability of both applications. Additionally, I supervised and reviewed all pull requests from team members and assisted colleagues in keeping them updated with all technologies and React best practices. Since the project required 24/7 activity with an uptime of 99%, I ensured that all sites were fastened and resilient with network, data access, and intercommunication with services from another environment. I worked under the Scrum methodology for this project.", "On the NZXT project, I participated in a large migration project to transfer an e-commerce Ruby on Rails application and another with PHP Cake to a PHP Phalcon-based structure with microservices architecture. In this legacy service, I worked with three databases on SQL Server, MySQL, and Postgres that we migrated for a MySQL and Redis for the cache. In the new solution, I was responsible for designing the architecture for the whole solution, ensuring the reliability and scalability of the applications. I also helped make all the UI screens for some modules. We used AWS infrastructure with EC2 and S3 storage for this project. I also worked on the maintenance of an e-commerce made with Ruby on Rails in this legacy service."],
-  "images": []
-}
