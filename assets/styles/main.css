@@ -1,0 +1,41 @@
+html {
+  background-color: #0d2438;
+}
+
+body {
+  overflow: hidden;
+  display: contents;
+}
+
+::selection {
+  background: #facc15;
+  color: #0b1622;
+}
+
+a {
+  text-decoration: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #5c7386;
+}
+
+/* Reusable neo-brutalist grid overlay */
+.grid-overlay {
+  background-image:
+    linear-gradient(#123049 1px, transparent 1px),
+    linear-gradient(90deg, #123049 1px, transparent 1px);
+  background-size: 44px 44px;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.grid-overlay--light {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 44px 44px;
+  opacity: 1;
+  pointer-events: none;
+}

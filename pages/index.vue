@@ -1,6 +1,9 @@
 <template>
-  <main class="isolate">
+  <div>
     <SectionHero />
-    <SectionProjects />
-  </main>
+    <SectionMarquee />
+    <SharedStatsBar />
+    <SectionFeatured />
+    <SharedCtaBand />
+  </div>
 </template>

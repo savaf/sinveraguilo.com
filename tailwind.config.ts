@@ -1,13 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 import type { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
-// import colors from "tailwindcss/colors";
 import tailwindTypography from "@tailwindcss/typography";
-import tailwindForms from "@tailwindcss/forms";
-import tailwindAspectRatio from "@tailwindcss/aspect-ratio";
-// import daisyUI from "daisyui";
-// import daisyTheme from "daisyui/src/theming/themes";
-import flowbitePlugin from "flowbite/plugin";
 
 const srcDir = "./";
 export default <Partial<Config>>{
@@ -26,6 +20,19 @@ export default <Partial<Config>>{
 
         primary: "#51ECF3",
         "primary-content": "#175255",
+
+        // Neo-brutalist redesign palette
+        ink: "#0a1420",
+        grid: "#123049",
+        surface: "#0a1c2e",
+        "footer-dark": "#0a1626",
+        cyan: "#22d3ee",
+        yellow: "#facc15",
+        indigo: "#6366f1",
+        mint: "#34d399",
+        muted: "#9fb3c4",
+        dim: "#5c7386",
+        "ink-text": "#0b1622",
       },
       container: {
         padding: {
@@ -38,8 +45,19 @@ export default <Partial<Config>>{
       },
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
-        display: ["Montserrat", ...defaultTheme.fontFamily.sans],
+        display: ["Archivo", ...defaultTheme.fontFamily.sans],
+        grotesk: ["Space Grotesk", ...defaultTheme.fontFamily.sans],
+        mono: ["JetBrains Mono", ...defaultTheme.fontFamily.mono],
         loading: ["Flow Circular", "cursive"],
+      },
+      keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        marquee: "marquee 20s linear infinite",
       },
       // fontSize: {
       //   base: [
@@ -101,27 +119,5 @@ export default <Partial<Config>>{
       },
     },
   },
-  plugins: [tailwindForms, tailwindTypography, tailwindAspectRatio, flowbitePlugin],
-
-  // daisyUI config (optional - here are the default values)
-  daisyui: {
-    // themes: true, // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]
-    themes: ["aqua"],
-    // themes: [
-    //   {
-    //     light: {
-    //       ...daisyTheme["[data-theme=aqua]"],
-    //       "secondary-content": "#fff",
-    //       "accent-content": "#fff",
-    //     },
-    //   },
-    // ],
-    darkTheme: "aqua", // name of one of the included themes for dark mode
-    base: true, // applies background color and foreground color for root element by default
-    styled: true, // include daisyUI colors and design decisions for all components
-    utils: true, // adds responsive and modifier utility classes
-    rtl: false, // rotate style direction from left-to-right to right-to-left. You also need to add dir="rtl" to your html tag and install `tailwindcss-flip` plugin for Tailwind CSS.
-    prefix: "", // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
-    logs: false, // Shows info about daisyUI version and used config in the console when building your CSS
-  },
+  plugins: [tailwindTypography],
 };

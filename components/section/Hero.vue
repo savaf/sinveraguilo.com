@@ -1,61 +1,53 @@
 <script setup lang="ts">
-// const colorMode = useColorMode();
-
-// const backgroundUrl = computed(() => {
-//   return colorMode.value === "dark" ? "/images/background_dark.jpg" : "/images/background.jpg";
-// });
-
-const { data } = await useAsyncData("social_links", () => {
-  return queryContent("social_links").findOne();
-});
+const techs = ["Vue", "React", "Node", "TypeScript", "Angular"];
 </script>
 
 <template>
-  <div class="relative isolate overflow-hidden pb-16 pt-14 sm:pb-20 w-full">
-    <NuxtPicture
-      src="/images/background_dark.jpg"
-      format="webp"
-      legacy-format="jpg"
-      width="1097"
-      height="845"
-      sizes="sm:100vw"
-      alt=""
-      preload
-      :placeholder="[50, 50, 10, 15]"
-      class="absolute inset-0 -z-10 h-full w-full"
-      :img-attrs="{
-        class: 'absolute h-full w-full object-cover object-right md:object-center saturate-50',
-      }"
-    />
+  <section class="relative border-b-2 border-ink overflow-hidden">
+    <div class="absolute inset-0 grid-overlay" />
+    <div class="relative mx-auto max-w-[1180px] grid grid-cols-1 md:grid-cols-[1.15fr_0.85fr]">
+      <!-- Left -->
+      <div class="px-6 py-14 sm:px-10 sm:py-16 md:border-r-2 border-ink">
+        <div class="inline-flex items-center gap-2 font-mono text-xs font-medium text-ink-text bg-mint border-2 border-ink px-3 py-1.5 mb-6">
+          <span class="w-2 h-2 rounded-full bg-ink-text" />
+          {{ $t("hero.available") }}
+        </div>
 
-    <section class="container mx-auto flex flex-col items-center sm:flex-row sm:justify-center mt-12 sm:mt-10">
-      <!-- Banner left contents -->
-      <div class="w-full md:w-1/3 text-left">
-        <h1 class="font-bold text-3xl md:text-3xl xl:text-4xl text-center sm:text-left text-ternary-light uppercase">Hi, I'm Sinver Aguiló</h1>
-        <p class="mt-2 text-lg sm:text-xl xl:text-2xl text-center sm:text-left leading-none text-white drop-shadow-lg">Turning Your Vision Into Reality With Code And Design.</p>
+        <h1 class="m-0 font-display font-black uppercase text-slate-50 leading-[0.9] tracking-[-0.02em] text-[clamp(3.25rem,7vw,5.25rem)]">Sinver<br /><span class="text-cyan">Aguiló</span></h1>
 
-        <nav class="flex gap-4 mt-8 flex-wrap">
-          <NuxtLink v-for="social in data.links" :key="social.id" :href="social.url" target="__blank" :class="['bg-white/5', 'border', 'border-white/10', 'rounded-full', 'flex', 'justify-center', 'items-center', 'gap-x-2', 'py-1', 'px-2', 'md:py-2', 'md:px-4', 'text-xs', 'md:text-base', 'text-white', 'transition', 'hover:scale-110', 'hover:bg-white/10']">
-            {{ social.name }}
-            <Icon :name="social.icon" class="w-6 h-6" aria-hidden="true" />
-          </NuxtLink>
-        </nav>
+        <p class="mt-5 font-mono text-[15px] leading-relaxed text-yellow max-w-[40ch]"><span class="text-dim">const role = </span>"{{ $t("hero.eyebrow") }}"</p>
 
-        <div class="flex justify-center sm:block">
-          <a href="/Sinver-Aguilo-CV.pdf" download="" class="flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-500 hover:text-white duration-500" aria-label="Download Resume">
-            <Icon name="i-heroicons-arrow-down-circle" class="ml-0 sm:ml-1 mr-2 sm:mr-3 w-5 sm:w-6 duration-100" aria-hidden="true" />
-            <span class="text-sm sm:text-lg font-general-medium duration-100">Download CV</span>
-          </a>
+        <p class="mt-4 font-grotesk text-[22px] font-medium leading-snug text-slate-200 max-w-[28ch]">
+          {{ $t("hero.tagline") }}
+        </p>
+
+        <!-- Split CTA -->
+        <div class="mt-9">
+          <div class="group inline-flex w-max border-2 border-ink shadow-[6px_6px_0_#22d3ee] transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[9px_9px_0_#22d3ee]">
+            <NuxtLink to="/projects" class="font-display font-extrabold uppercase text-[15px] bg-indigo text-white px-[26px] py-[15px] border-r-2 border-ink">
+              {{ $t("hero.ctaWork") }}
+            </NuxtLink>
+            <a href="/Sinver-Aguilo-CV.pdf" download class="font-display font-extrabold uppercase text-[15px] bg-primary-dark text-primary-light px-[26px] py-[15px]">
+              {{ $t("hero.ctaCV") }}
+            </a>
+          </div>
+        </div>
+
+        <!-- Tech tags -->
+        <div class="flex flex-wrap gap-2 mt-8 font-mono text-xs font-medium">
+          <span v-for="(tech, i) in techs" :key="tech" class="border-2 border-ink px-3 py-[5px]" :class="i === 0 ? 'text-ink-text bg-yellow' : 'text-slate-200 bg-surface'">
+            {{ tech }}
+          </span>
         </div>
       </div>
 
-      <!-- Banner right illustration -->
-      <div class="w-full md:w-auto text-right float-right">
-        <NuxtImg width="575" height="522" sizes="sm:575px" src="/images/developer-dark.svg" alt="Developer Dark" />
-
-        <!-- <img v-if="colorMode.value == 'dark'" src="/images/developer-dark.svg" alt="Developer Dark" />
-        <img v-else src="/images/developer.svg" alt="Developer Light" /> -->
+      <!-- Right -->
+      <div class="relative flex items-stretch bg-surface min-h-[420px]">
+        <NuxtImg src="/images/portrait.jpg" alt="Sinver Aguiló" width="575" height="522" class="w-full object-cover grayscale contrast-[1.05]" />
+        <div class="absolute left-0 bottom-0 font-mono font-bold text-xs text-ink-text bg-cyan px-3.5 py-2 border-t-2 border-r-2 border-ink">
+          {{ $t("hero.label") }}
+        </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </template>
