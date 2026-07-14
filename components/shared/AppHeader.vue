@@ -28,7 +28,7 @@ watch(
       <!-- Logo -->
       <NuxtLink to="/" class="flex items-center gap-3" aria-label="Home">
         <img src="/images/logo.png" alt="Sinver Aguiló" class="h-10 block" width="40" height="40" />
-        <span class="font-mono text-cyan text-[13px] hidden sm:inline">~/sinver</span>
+        <span class="font-mono text-cyan text-[13px] hidden sm:inline">~/savaf</span>
       </NuxtLink>
 
       <!-- Desktop nav -->
