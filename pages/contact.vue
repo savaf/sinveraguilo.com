@@ -1,32 +1,15 @@
-<script>
-export default {
-  scrollToTop: true,
-  data: () => {
-    return {
-      contacts: [
-        {
-          id: 1,
-          name: "Santo Domingo, Dominican Republic",
-          icon: "i-heroicons-map-pin",
-        },
-        {
-          id: 2,
-          name: "email@domain.com",
-          icon: "i-heroicons-envelope",
-        },
-        // {
-        //   id: 3,
-        //   name: "555 8888 888",
-        //   icon: "i-heroicons-phone",
-        // },
-      ],
-    };
-  },
-};
+<script setup lang="ts">
+definePageMeta({
+  title: "Contact",
+});
 </script>
 
 <template>
-  <div class="container mx-auto flex justify-center">
-    <ContactForm />
-  </div>
+  <section class="relative overflow-hidden border-b-2 border-ink">
+    <div class="absolute inset-0 grid-overlay" />
+    <div class="relative mx-auto max-w-[1180px] px-6 py-16 sm:px-10 sm:py-20 grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-12 lg:gap-14 items-start">
+      <ContactDetails />
+      <ContactForm />
+    </div>
+  </section>
 </template>

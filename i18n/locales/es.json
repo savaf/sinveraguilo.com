@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "available": "Disponible para proyectos",
+    "eyebrow": "Ingeniero de Software",
+    "tagline": "Convierto tu visión en realidad con código y diseño.",
+    "ctaWork": "Ver proyectos",
+    "ctaCV": "Descargar CV",
+    "label": "// ingeniería + diseño"
+  },
+  "stats": {
+    "experience": "Años de experiencia",
+    "clients": "Clientes satisfechos",
+    "projects": "Proyectos entregados"
+  },
+  "featured": {
+    "label": "Trabajo seleccionado",
+    "title": "Proyectos destacados",
+    "more": "Todos los proyectos"
+  },
+  "about": {
+    "label": "// biografía",
+    "title": "Sobre mí",
+    "bio1": "Hola, soy Sinver Aguiló, Ingeniero de Software con más de 9 años de experiencia construyendo aplicaciones web de nivel empresarial que escalan para responder a las demandas de sus usuarios.",
+    "bio2": "Mi especialidad es crear aplicaciones front-end robustas y escalables con Vue.js, React.js y Angular, y también domino la construcción de microservicios con Node.js y PHP. He liderado el diseño de arquitectura de grandes proyectos de migración — de monolitos legados a estructuras cliente-servidor y microservicios modernos — para productos como Corotos, NZXT y Crunchyroll.",
+    "bio3": "A lo largo de mi carrera me he comprometido a hacer las cosas bien y a sacarlas adelante. Me desenvuelvo mejor en entornos colaborativos que valoran la innovación y la experimentación, y aporto un enfoque orientado a resultados a cada equipo del que formo parte.",
+    "location": "Santo Domingo, DO",
+    "experienceTitle": "Experiencia",
+    "educationTitle": "Educación",
+    "roles": "roles"
+  },
+  "projects": {
+    "label": "// trabajo seleccionado",
+    "title": "Proyectos",
+    "subtitle": "Una selección de cosas que he diseñado y construido — desde landing pages hasta retos de front-end.",
+    "filterAll": "Todos",
+    "search": "Buscar proyectos",
+    "noResults": "Ningún proyecto coincide con tu búsqueda."
+  },
+  "detail": {
+    "back": "Volver a proyectos",
+    "published": "Publicado",
+    "live": "Ver en vivo",
+    "code": "Ver código",
+    "overview": "Resumen",
+    "tech": "Herramientas y tecnologías",
+    "more": "Más proyectos"
+  },
+  "contact": {
+    "label": "// contáctame",
+    "title": "Contacto",
+    "intro": "¿Tienes un proyecto, una vacante o solo quieres saludar? Envíame un mensaje y te responderé pronto.",
+    "email": "Correo",
+    "location": "Ubicación",
+    "formLabel": "// envía un mensaje",
+    "name": "Nombre completo",
+    "namePh": "Tu nombre",
+    "emailField": "Correo",
+    "emailPh": "tu{'@'}correo.com",
+    "subject": "Asunto",
+    "subjectPh": "¿De qué se trata?",
+    "message": "Mensaje",
+    "messagePh": "Cuéntame sobre tu proyecto...",
+    "send": "Enviar mensaje"
+  },
+  "cta": {
+    "title": "Construyamos algo",
+    "subtitle": "¿Tienes un proyecto en mente? Estoy abierto a trabajo freelance y roles full-time.",
+    "button": "Contáctame"
+  },
+  "footer": {
+    "follow": "Sígueme"
+  }
+}

@@ -1,149 +1,99 @@
 <script setup lang="ts">
-// definePageMeta({
-//   image: "/images/logo.png",
-// })
+const { data: allProjects } = await useAsyncData("detail_more_projects", () => {
+  return queryContent("projects").find();
+});
+
+const tagAccent = ["bg-yellow", "bg-cyan", "bg-indigo text-white"];
+const galleryShadow = ["#22d3ee", "#facc15", "#6366f1"];
+
+function moreProjects(slug: string) {
+  return (allProjects.value || []).filter((p: any) => p.slug !== slug).slice(0, 2);
+}
 </script>
 
 <template>
-  <main class="isolate w-full pb-16 sm:pb-32 bg-secondary-dark">
-    <div class="container mx-auto max-w-7xl">
-      <!-- Check if there are projects and then load -->
-      <!-- <div v-if="pending" class="font-general-medium container mx-auto text-center text-ternary-light">
-        <h1>Loading...</h1>
-      </div> -->
-      <ContentDoc v-slot="{ doc }">
-        <Head>
-          <Title>{{ doc.title }}</Title>
-          <Meta name="og:image" :content="doc.image" />
-        </Head>
-        <div>
-          <!-- Project heading and meta info -->
-          <div>
-            <p class="font-general-medium text-left text-3xl sm:text-4xl font-bold text-primary-light mt-14 sm:mt-20 mb-7">
-              {{ doc.title }}
-            </p>
-            <div class="flex">
-              <div class="flex items-center mr-10">
-                <Icon name="i-heroicons-clock-solid" class="w-4 h-4 text-ternary-light" aria-hidden="true" />
-                <span class="font-general-medium ml-2 leading-none text-primary-light">{{ doc.publishDate }}</span>
+  <ContentDoc v-slot="{ doc }">
+    <div>
+      <Head>
+        <Title>{{ doc.title }}</Title>
+        <Meta name="og:image" :content="doc.image" />
+      </Head>
+
+      <!-- Hero -->
+      <section class="relative border-b-2 border-ink overflow-hidden">
+        <div class="absolute inset-0 grid-overlay" />
+        <div class="relative mx-auto max-w-[1180px] px-6 pt-10 pb-14 sm:px-10">
+          <NuxtLink to="/projects" class="inline-flex items-center gap-2 font-mono text-[13px] text-muted mb-8 hover:text-cyan">
+            <Icon name="i-heroicons-chevron-left" class="w-4 h-4" aria-hidden="true" />
+            {{ $t("detail.back") }}
+          </NuxtLink>
+
+          <div class="flex flex-wrap justify-between items-end gap-6">
+            <div>
+              <div class="flex gap-2 mb-4 flex-wrap">
+                <span v-for="(tag, i) in doc.tags" :key="tag" class="font-mono text-[11px] text-ink-text px-2.5 py-1" :class="tagAccent[i % tagAccent.length]">
+                  {{ tag }}
+                </span>
               </div>
-              <div class="flex items-center">
-                <Icon name="i-heroicons-tag-solid" class="w-4 h-4 text-ternary-light" aria-hidden="true" />
-                <span class="font-general-medium ml-2 leading-none text-primary-light">{{ doc.tags }}</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project gallery -->
-          <div class="mt-12 grid grid-cols-1 gap-y-4 lg:grid-cols-3 lg:gap-x-4">
-            <div
-              v-for="projectImage in doc.projectImages"
-              :key="projectImage.id"
-              class="mb-10 sm:mb-0 w-full lg:max-w-[350px] lg:max-h-[310px]"
-            >
-              <NuxtImg
-                :src="projectImage.img"
-                class="rounded-xl cursor-pointer shadow-lg sm:shadow-none object-cover w-full h-full"
-              />
-            </div>
-          </div>
-
-          <!-- Project info -->
-          <div class="block sm:flex gap-0 sm:gap-10 mt-14">
-            <!-- Single project left section details -->
-            <div class="w-full sm:w-1/3 text-left">
-              <!-- Single project client details -->
-              <!-- <div v-if="project.companyInfos?.length" class="mb-7">
-                <p class="font-general-medium text-2xl text-secondary-light mb-2">
-                  {{ project.clientTitle }}
-                </p>
-                <ul class="leading-loose">
-                  <li v-for="info in project.companyInfos" :key="info.id" class="font-general-regular text-ternary-light">
-                    <span>{{ info.title }}: </span>
-                    <a href="#" :class="info.title == 'Website' || info.title == 'Phone' ? 'hover:underline cursor-pointer' : ''" aria-label="Project website and phone">{{ info.details }}</a>
-                  </li>
-                </ul>
-              </div> -->
-              <!-- Single project objectives -->
-              <!-- <div class="mb-7">
-                <p class="font-general-medium text-2xl text-ternary-light mb-2">
-                  {{ project.objectivesTitle }}
-                </p>
-                <p class="font-general-regular text-ternary-light">
-                  {{ project.objectivesDetails }}
-                </p>
-              </div> -->
-
-              <!-- Single project technologies -->
-              <div class="mb-7">
-                <p class="font-general-medium text-2xl text-ternary-light mb-2">
-                  {{ doc.techTitle }}
-                </p>
-                <p class="font-general-regular text-ternary-light">
-                  {{ doc.technologies.join(", ") }}
-                </p>
-              </div>
-
-              <!-- Links -->
-              <div class="mb-7 space-y-3">
-                <a v-if="doc.previewLink"  :href="doc.previewLink" target="_blank" class="flex justify-center items-center w-36 sm:w-48 text-lg border border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-500 hover:text-white duration-500">
-                  <span class="text-sm sm:text-lg font-general-medium duration-100">
-                    Go Site
-                  </span>
-                  <Icon name="tabler:world-www" class="ml-0 sm:ml-1 mr-2 sm:mr-3 w-5 sm:w-6 duration-100" aria-hidden="true" />
-                </a>
-                <a v-if="doc.codeLink" :href="doc.codeLink" target="_blank" class="flex justify-center items-center w-36 sm:w-48 text-lg border border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-500 hover:text-white duration-500">
-                  <span class="text-sm sm:text-lg font-general-medium duration-100">
-                    View Code
-                  </span>
-                  <Icon name="mdi:code-braces" class="ml-0 sm:ml-1 mr-2 sm:mr-3 w-5 sm:w-6 duration-100" aria-hidden="true" />
-                </a>
-              </div>
-
-              <!-- Single project social sharing -->
-              <!-- <div v-if="project.socialLinks?.length">
-                <p class="font-general-medium text-2xl text-ternary-light mb-2">
-                  {{ project.socialTitle }}
-                </p>
-                <div class="flex items-center gap-3 mt-5">
-                  <a v-for="social in project.socialLinks" :key="social.id" :href="social.url" target="__blank" aria-label="Share Project" class="bg-ternary-dark text-gray-400 hover:text-primary-light p-2 rounded-lg shadow-sm duration-500">
-                    <Icon :name="social.icon" class="w-4 lg:w-5 h-4 lg:h-5" />
-                  </a>
-                </div>
-              </div> -->
+              <h1 class="m-0 font-display font-black uppercase text-slate-50 leading-[0.9] tracking-[-0.02em] text-[clamp(2.75rem,6vw,4.5rem)]">
+                {{ doc.title }}
+              </h1>
+              <p class="mt-4 font-mono text-[13px] text-dim">{{ $t("detail.published") }} {{ doc.publishDate }}</p>
             </div>
 
-            <!-- Single project right section details -->
-            <article class="w-full sm:w-2/3 text-left mt-10 sm:mt-0">
-              <ContentRenderer
-                class="mb-5 prose prose-slate prose-invert md:prose-lg lg:prose-xl"
-                :value="doc"
-              />
-            </article>
+            <div class="flex flex-wrap gap-3.5">
+              <a v-if="doc.previewLink" :href="doc.previewLink" target="_blank" rel="noopener" class="inline-flex items-center gap-2 font-display font-extrabold uppercase text-sm text-white bg-indigo border-2 border-ink px-[22px] py-3.5 shadow-[5px_5px_0_#22d3ee] transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[7px_7px_0_#22d3ee]">
+                <Icon name="i-heroicons-arrow-top-right-on-square" class="w-[18px] h-[18px]" aria-hidden="true" />
+                {{ $t("detail.live") }}
+              </a>
+              <a v-if="doc.codeLink" :href="doc.codeLink" target="_blank" rel="noopener" class="inline-flex items-center gap-2 font-display font-extrabold uppercase text-sm text-primary-light bg-surface border-2 border-ink px-[22px] py-3.5 transition-all hover:bg-yellow hover:text-ink-text">
+                {{ $t("detail.code") }}
+              </a>
+            </div>
           </div>
-
-          <!-- Project related projects -->
-          <!-- <ProjectsRelatedProjects /> -->
         </div>
-      </ContentDoc>
+      </section>
 
-      <!-- Load not found components if no project found -->
-      <!-- <div v-else class="font-general-medium container mx-auto text-center text-ternary-light">
-        <h1>No projects yet</h1>
-      </div> -->
+      <!-- Gallery -->
+      <section v-if="doc.projectImages?.length" class="mx-auto max-w-[1180px] px-6 pt-14 sm:px-10">
+        <div class="border-2 border-ink" :style="{ boxShadow: `10px 10px 0 ${galleryShadow[2]}` }">
+          <NuxtImg :src="doc.projectImages[0].img" :alt="doc.projectImages[0].title" width="1120" height="600" class="w-full block" />
+        </div>
+        <div v-if="doc.projectImages.length > 1" class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+          <div v-for="(img, i) in doc.projectImages.slice(1)" :key="img.id" class="border-2 border-ink" :style="{ boxShadow: `8px 8px 0 ${galleryShadow[i % galleryShadow.length]}` }">
+            <NuxtImg :src="img.img" :alt="img.title" width="550" height="360" class="w-full h-full object-cover block" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Overview + tech -->
+      <section class="mx-auto max-w-[1180px] px-6 pt-16 pb-8 sm:px-10 grid grid-cols-1 lg:grid-cols-[1.6fr_1fr] gap-10 lg:gap-14">
+        <div>
+          <h2 class="m-0 mb-4 font-display font-black text-[32px] uppercase text-slate-50">{{ $t("detail.overview") }}</h2>
+          <ContentRenderer :value="doc" class="prose prose-invert prose-slate max-w-none prose-headings:font-display prose-headings:uppercase prose-a:text-cyan" />
+        </div>
+        <div>
+          <h3 class="m-0 mb-4 font-mono text-[13px] text-cyan uppercase tracking-[0.06em]">{{ $t("detail.tech") }}</h3>
+          <div class="flex flex-wrap gap-2.5">
+            <span v-for="tech in doc.technologies" :key="tech" class="font-mono text-[13px] text-slate-200 border-2 border-ink bg-surface px-3.5 py-[7px]">
+              {{ tech }}
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- More projects -->
+      <section class="mx-auto max-w-[1180px] px-6 pt-10 pb-18 sm:px-10">
+        <div class="flex items-center gap-4 mb-8">
+          <h2 class="m-0 font-display font-black text-[32px] uppercase text-slate-50">{{ $t("detail.more") }}</h2>
+          <div class="flex-1 h-0.5 bg-ink" />
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <ProjectsCard v-for="(project, i) in moreProjects(doc.slug)" :key="project._path" :project="project" :accent="projectAccent(i + 1)" :subtitle="`${projectCategory(project).toLowerCase()}/ · ${projectStack(project)}`" subtitle-class="text-yellow" img-class="h-[170px]" />
+        </div>
+      </section>
+
+      <SharedCtaBand />
     </div>
-  </main>
+  </ContentDoc>
 </template>
-
-<style lang="scss">
-/* .gallery {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: 2rem;
-
-  @screen sm {
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  }
-} */
-</style>

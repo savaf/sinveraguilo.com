@@ -1,21 +1,21 @@
 <script setup lang="ts">
-const appConfig = useAppConfig()
-const route = useRoute()
+const appConfig = useAppConfig();
+const route = useRoute();
 
 function titleTemplate(title) {
-  return title !== (appConfig.title as string) ? `${appConfig.title} · ${title}` : title
+  return title !== (appConfig.title as string) ? `${appConfig.title} · ${title}` : title;
 }
 
 let seoMetaOptions: Record<string, string> = {
   title: titleTemplate(route.meta.title || appConfig.title),
   url: appConfig.url + route.path,
-  description: route.meta.description as string || appConfig.description,
-  icon: '/images/og-logo.png',
-}
+  description: (route.meta.description as string) || appConfig.description,
+  icon: "/images/og-logo.png",
+};
 
-const ogImage =  route.meta.image ?  route.meta.image : '/images/og-image.png'
-seoMetaOptions.ogImage = ogImage
-seoMetaOptions.twitterImage = ogImage
+const ogImage = route.meta.image ? route.meta.image : "/images/og-image.png";
+seoMetaOptions.ogImage = ogImage;
+seoMetaOptions.twitterImage = ogImage;
 
 useSeoMeta({
   ...seoMetaOptions,
@@ -25,14 +25,16 @@ useSeoMeta({
 
   twitterTitle: seoMetaOptions.title,
   twitterDescription: seoMetaOptions.description,
-  twitterCard: 'summary'
-})
+  twitterCard: "summary",
+});
 </script>
 
 <template>
-  <div class="bg-primary-dark min-h-screen flex flex-col backdrop-blur-md">
+  <div class="bg-primary-dark min-h-screen flex flex-col text-primary-light">
     <SharedAppHeader />
-    <slot />
+    <main class="flex-1">
+      <slot />
+    </main>
 
     <LazySharedAppFooter />
 

@@ -1,8 +1,9 @@
+import tailwindcss from "@tailwindcss/vite";
+
 const isDev = process.env.NODE_ENV === "development";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-
   devtools: { enabled: true },
 
   experimental: {
@@ -11,15 +12,35 @@ export default defineNuxtConfig({
 
   modules: [
     "@nuxt/image",
-    "@nuxtjs/tailwindcss",
     // "@nuxtjs/color-mode",
     "@nuxtjs/google-fonts",
     "nuxt-icon",
     "@nuxt/content",
+    "@nuxtjs/i18n",
     // "@nuxtjs/partytown",
     // "nuxt-gtag",
     // '@nuxtjs/seo',
   ],
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
+
+  i18n: {
+    strategy: "no_prefix",
+    defaultLocale: "en",
+    locales: [
+      { code: "en", language: "en-US", name: "English", file: "en.json" },
+      { code: "es", language: "es-DO", name: "Español", file: "es.json" },
+    ],
+    langDir: "i18n/locales",
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "sinver_lang",
+      redirectOn: "root",
+      alwaysRedirect: true,
+    },
+  },
 
   routeRules: {
     "/**": isDev
@@ -47,7 +68,7 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      autoSubfolderIndex: false
+      autoSubfolderIndex: false,
     },
     // prerender: {
     //   crawlLinks: true,
@@ -112,22 +133,15 @@ export default defineNuxtConfig({
     // domains: isDev ? ["localhost"] : ["sinveraguilo.com"],
   },
 
-  css: ["~/assets/styles/main.scss"],
-
+  css: ["~/assets/styles/tailwind.css", "~/assets/styles/main.css"],
   components: true,
-
-  tailwindcss: {
-    cssPath: "~/assets/styles/tailwind.scss",
-    configPath: "tailwind.config.ts",
-    exposeConfig: false,
-    exposeLevel: 2,
-    injectPosition: "first",
-    viewer: true,
-  },
 
   googleFonts: {
     families: {
       Inter: [400, 500, 600, 700],
+      Archivo: [600, 700, 800, 900],
+      "Space+Grotesk": [400, 500, 600, 700],
+      "JetBrains+Mono": [400, 500, 700],
       "Flow+Circular": [400],
     },
     display: "swap",
@@ -175,4 +189,6 @@ export default defineNuxtConfig({
   gtag: {
     // initialConsent: true,
   },
+
+  compatibilityDate: "2026-07-14",
 });

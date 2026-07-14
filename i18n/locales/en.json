@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "available": "Available for work",
+    "eyebrow": "Software Engineer",
+    "tagline": "Turning your vision into reality with code and design.",
+    "ctaWork": "View work",
+    "ctaCV": "Download CV",
+    "label": "// engineering + design"
+  },
+  "stats": {
+    "experience": "Years experience",
+    "clients": "Satisfied clients",
+    "projects": "Projects shipped"
+  },
+  "featured": {
+    "label": "Selected work",
+    "title": "Featured projects",
+    "more": "All projects"
+  },
+  "about": {
+    "label": "// biography",
+    "title": "About me",
+    "bio1": "Hi, I'm Sinver Aguiló, a Software Engineer with 9+ years of experience building enterprise-class web applications that scale to meet the demands of their users.",
+    "bio2": "My expertise lies in creating robust, scalable front-end applications with Vue.js, React.js and Angular, and I'm also well-versed in building microservices with Node.js and PHP. I've led architecture design for large migration projects — from legacy monoliths to modern client-server and microservices structures — for products like Corotos, NZXT and Crunchyroll.",
+    "bio3": "Throughout my career I've been committed to doing things the right way and getting things done. I thrive in collaborative environments that value innovation and experimentation, and I bring a results-driven approach to every team I join.",
+    "location": "Santo Domingo, DO",
+    "experienceTitle": "Experience",
+    "educationTitle": "Education",
+    "roles": "roles"
+  },
+  "projects": {
+    "label": "// selected work",
+    "title": "Projects",
+    "subtitle": "A selection of things I have designed and built — from landing pages to front-end challenges.",
+    "filterAll": "All",
+    "search": "Search projects",
+    "noResults": "No projects match your search."
+  },
+  "detail": {
+    "back": "Back to projects",
+    "published": "Published",
+    "live": "Live preview",
+    "code": "View code",
+    "overview": "Overview",
+    "tech": "Tools & technologies",
+    "more": "More projects"
+  },
+  "contact": {
+    "label": "// get in touch",
+    "title": "Contact",
+    "intro": "Have a project, a role or just want to say hi? Send a message and I'll get back to you soon.",
+    "email": "Email",
+    "location": "Location",
+    "formLabel": "// send a message",
+    "name": "Full name",
+    "namePh": "Your name",
+    "emailField": "Email",
+    "emailPh": "you{'@'}email.com",
+    "subject": "Subject",
+    "subjectPh": "What is this about?",
+    "message": "Message",
+    "messagePh": "Tell me about your project...",
+    "send": "Send message"
+  },
+  "cta": {
+    "title": "Let's build something",
+    "subtitle": "Have a project in mind? I'm open to freelance work and full-time roles.",
+    "button": "Get in touch"
+  },
+  "footer": {
+    "follow": "Follow me"
+  }
+}

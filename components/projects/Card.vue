@@ -1,39 +1,46 @@
 <script setup lang="ts">
-const { project, as = "div" } = defineProps<{
-  project: {
-    title: string;
-    category: string;
-    image: string;
-    slug: string;
-  };
-  as?: string;
-}>();
+withDefaults(
+  defineProps<{
+    project: {
+      title: string;
+      slug: string;
+      image: string;
+    };
+    subtitle: string;
+    accent?: string;
+    categoryChip?: string;
+    subtitleClass?: string;
+    imgClass?: string;
+  }>(),
+  {
+    accent: "#22d3ee",
+    categoryChip: "",
+    subtitleClass: "text-muted",
+    imgClass: "h-[180px]",
+  },
+);
 </script>
 
 <template>
-  <component :is="as" class="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-ternary-dark" aria-label="Single Project">
-    <NuxtLink :to="`/projects/${project.slug}`">
-      <div>
-        <NuxtPicture
-          :src="project.image"
-          :alt="project.title"
-          format="webp"
-          legacy-format="jpg"
-          width="336"
-          height="224"
-          sizes="sm:336px md:393px"
-          loading="lazy"
-          :img-attrs="{
-            class: 'w-full h-48 sm:h-56 object-cover object-center rounded-t-xl',
-          }"
-        />
-      </div>
-      <div class="text-center px-4 py-6">
-        <p class="font-general-semibold text-xl text-ternary-light font-semibold mb-2">
-          {{ project.title }}
-        </p>
-        <span class="font-general-medium text-lg text-ternary-light">{{ project.category }}</span>
-      </div>
-    </NuxtLink>
-  </component>
+  <NuxtLink :to="`/projects/${project.slug}`" class="card block border-2 border-ink bg-surface" :style="{ '--accent': accent }" :aria-label="project.title">
+    <NuxtImg :src="project.image" :alt="project.title" width="380" height="190" format="webp" loading="lazy" class="w-full object-cover block border-b-2 border-ink" :class="imgClass" />
+    <div class="p-5">
+      <span v-if="categoryChip" class="inline-block font-mono text-[11px] text-ink-text bg-yellow px-2 py-[3px] mb-2.5">{{ categoryChip }}</span>
+      <div class="font-display font-extrabold text-primary-light text-[18px] uppercase leading-tight">{{ project.title }}</div>
+      <div class="font-mono text-xs mt-1.5" :class="subtitleClass">{{ subtitle }}</div>
+    </div>
+  </NuxtLink>
 </template>
+
+<style scoped>
+.card {
+  box-shadow: 6px 6px 0 var(--accent);
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+.card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 10px 10px 0 var(--accent);
+}
+</style>
