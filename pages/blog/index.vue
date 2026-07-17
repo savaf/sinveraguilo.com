@@ -22,7 +22,7 @@ const ordered = computed(() => (posts.value || []).slice().reverse());
 
     <section class="mx-auto max-w-[1180px] px-6 py-12 sm:px-10">
       <div v-if="ordered.length" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <ProjectsCard v-for="(post, i) in ordered" :key="post._path" :project="post" :to="`/blog/${post.slug}`" :accent="projectAccent(i)" :subtitle="post.publishDate" subtitle-class="text-yellow" />
+        <ProjectsCard v-for="(post, i) in ordered" :key="post._path" :project="post" :to="`/blog/${post.slug}`" :fallback="null" :accent="projectAccent(i)" :subtitle="post.publishDate" subtitle-class="text-yellow" />
       </div>
       <div v-else class="text-center py-16 font-mono text-dim">{{ $t("blog.empty") }}</div>
     </section>
