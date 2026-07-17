@@ -3,6 +3,7 @@
     "home": "Inicio",
     "about": "Sobre mí",
     "projects": "Proyectos",
+    "blog": "Blog",
     "contact": "Contacto"
   },
   "hero": {
@@ -41,6 +42,14 @@
     "filterAll": "Todos",
     "search": "Buscar proyectos",
     "noResults": "Ningún proyecto coincide con tu búsqueda."
+  },
+  "blog": {
+    "label": "// escritos",
+    "title": "Blog",
+    "subtitle": "Notas sobre ingeniería, diseño y cosas que estoy construyendo.",
+    "back": "Volver al blog",
+    "published": "Publicado",
+    "empty": "Aún no hay posts — vuelve pronto."
   },
   "detail": {
     "back": "Volver a proyectos",

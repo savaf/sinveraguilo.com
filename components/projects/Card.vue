@@ -4,15 +4,17 @@ const props = withDefaults(
     project: {
       title: string;
       slug: string;
-      image: string;
+      image?: string;
     };
     subtitle: string;
+    to?: string;
     accent?: string;
     categoryChip?: string;
     subtitleClass?: string;
     imgClass?: string;
   }>(),
   {
+    to: undefined,
     accent: "#22d3ee",
     categoryChip: "",
     subtitleClass: "text-muted",
@@ -20,13 +22,15 @@ const props = withDefaults(
   },
 );
 
+const href = computed(() => props.to ?? `/projects/${props.project.slug}`);
+
 // @nuxt/image can't rasterize SVGs to webp — serve those as-is.
-const isSvg = computed(() => props.project.image.endsWith(".svg"));
+const isSvg = computed(() => props.project.image?.endsWith(".svg") ?? false);
 </script>
 
 <template>
-  <NuxtLink :to="`/projects/${project.slug}`" class="card block border-2 border-ink bg-surface" :style="{ '--accent': accent }" :aria-label="project.title">
-    <NuxtImg :src="project.image" :alt="project.title" width="380" height="190" :format="isSvg ? undefined : 'webp'" loading="lazy" class="w-full object-cover block border-b-2 border-ink" :class="imgClass" />
+  <NuxtLink :to="href" class="card block border-2 border-ink bg-surface" :style="{ '--accent': accent }" :aria-label="project.title">
+    <NuxtImg v-if="project.image" :src="project.image" :alt="project.title" width="380" height="190" :format="isSvg ? undefined : 'webp'" loading="lazy" class="w-full object-cover block border-b-2 border-ink" :class="imgClass" />
     <div class="p-5">
       <span v-if="categoryChip" class="inline-block font-mono text-[11px] text-ink-text bg-yellow px-2 py-[3px] mb-2.5">{{ categoryChip }}</span>
       <div class="font-display font-extrabold text-primary-light text-[18px] uppercase leading-tight">{{ project.title }}</div>

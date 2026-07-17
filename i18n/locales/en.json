@@ -3,6 +3,7 @@
     "home": "Home",
     "about": "About",
     "projects": "Projects",
+    "blog": "Blog",
     "contact": "Contact"
   },
   "hero": {
@@ -41,6 +42,14 @@
     "filterAll": "All",
     "search": "Search projects",
     "noResults": "No projects match your search."
+  },
+  "blog": {
+    "label": "// writing",
+    "title": "Blog",
+    "subtitle": "Notes on engineering, design and things I'm building.",
+    "back": "Back to blog",
+    "published": "Published",
+    "empty": "No posts yet — check back soon."
   },
   "detail": {
     "back": "Back to projects",
