@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 630" width="1120" height="630" font-family="Archivo, Arial, sans-serif">
+  <rect width="1120" height="630" fill="#0d2438"/>
+  <g stroke="#123049" stroke-width="1">
+    <path d="M44 0V630M88 0V630M132 0V630M176 0V630M220 0V630M264 0V630M308 0V630M352 0V630M396 0V630M440 0V630M484 0V630M528 0V630M572 0V630M616 0V630M660 0V630M704 0V630M748 0V630M792 0V630M836 0V630M880 0V630M924 0V630M968 0V630M1012 0V630M1056 0V630M1100 0V630"/>
+    <path d="M0 44H1120M0 88H1120M0 132H1120M0 176H1120M0 220H1120M0 264H1120M0 308H1120M0 352H1120M0 396H1120M0 440H1120M0 484H1120M0 528H1120M0 572H1120M0 616H1120"/>
+  </g>
+  <!-- framed image placeholder -->
+  <rect x="360" y="150" width="400" height="280" fill="#0a1c2e" stroke="#0a1420" stroke-width="4"/>
+  <!-- sun -->
+  <circle cx="470" cy="230" r="26" fill="#facc15"/>
+  <!-- mountains -->
+  <path d="M360 430 L500 300 L590 380 L680 290 L760 430 Z" fill="#22d3ee"/>
+  <path d="M360 430 L620 340 L760 430 Z" fill="#6366f1"/>
+  <!-- label -->
+  <rect x="360" y="454" width="234" height="54" fill="#22d3ee" stroke="#0a1420" stroke-width="4"/>
+  <text x="380" y="488" fill="#0b1622" font-size="18" font-weight="800" font-family="JetBrains Mono, monospace">No preview</text>
+</svg>
