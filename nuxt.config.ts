@@ -10,17 +10,10 @@ export default defineNuxtConfig({
     viewTransition: true,
   },
 
-  modules: [
-    "@nuxt/image",
-    // "@nuxtjs/color-mode",
-    "@nuxtjs/google-fonts",
-    "nuxt-icon",
-    "@nuxt/content",
-    "@nuxtjs/i18n",
-    // "@nuxtjs/partytown",
-    // "nuxt-gtag",
-    // '@nuxtjs/seo',
-  ],
+  modules: ["@nuxt/image", "@nuxtjs/google-fonts", "nuxt-icon", "@nuxt/content", "@nuxtjs/i18n"],
+
+  // No sourcemaps in production: speeds up the Nitro/Vite bundle and shrinks output.
+  sourcemap: { server: false, client: false },
 
   vite: {
     plugins: [tailwindcss()],
@@ -83,7 +76,6 @@ export default defineNuxtConfig({
     // Keys within public are also exposed client-side
     public: {
       apiBase: "/api",
-      gtagId: "G-1ZQZQZQZQZ",
     },
   },
 
@@ -164,30 +156,6 @@ export default defineNuxtConfig({
 
   content: {
     // ... options
-  },
-
-  colorMode: {
-    preference: "system", // default value of $colorMode.preference
-    fallback: "light", // fallback value if not system preference found
-    dataValue: "theme",
-    hid: "nuxt-color-mode-script",
-    globalName: "__NUXT_COLOR_MODE__",
-    componentName: "ColorScheme",
-    classPrefix: "",
-    classSuffix: "",
-    storageKey: "sinveraguilo-nuxt-color-mode",
-  },
-
-  eslint: {
-    /* module options */
-  },
-
-  partytown: {
-    forward: ["$plausible", "$plausible.push"],
-  },
-
-  gtag: {
-    // initialConsent: true,
   },
 
   compatibilityDate: "2026-07-14",
