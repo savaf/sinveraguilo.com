@@ -1,11 +1,19 @@
 {
-  "company": "Ensitech · Contractor",
-  "position": "Frontend Engineer",
-  "date": "Mar 2025 - Jul 2025 · 5 mos",
-  "location": "Remote",
+  "company": "Ensitech",
+  "position": { "en": "Frontend Engineer", "es": "Ingeniero Frontend" },
+  "location": { "en": "Remote", "es": "Remoto" },
+  "startDate": "2025-03",
+  "endDate": "2025-07",
   "skills": ["Vue.js", "TypeScript", "CSS"],
-  "description": [
-    "I joined Ensitech on a short-term contract as a Frontend Engineer, building user-facing features with Vue.js and TypeScript. I worked closely with the team to deliver responsive, maintainable UI components within tight timelines."
-  ],
+  "description": {
+    "en": [
+      "Built and refactored UI components across six modules of an internal management platform, including reporting, permissions, and Excel-like spreadsheet grids.",
+      "Worked closely with the team to deliver responsive, maintainable Vue.js/TypeScript components within tight timelines."
+    ],
+    "es": [
+      "Construí y refactoricé componentes de UI en seis módulos de una plataforma interna de gestión, incluyendo reportería, permisos y grillas tipo Excel.",
+      "Trabajé de cerca con el equipo para entregar componentes Vue.js/TypeScript responsivos y mantenibles dentro de plazos ajustados."
+    ]
+  },
   "images": []
 }

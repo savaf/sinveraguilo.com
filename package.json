@@ -22,6 +22,7 @@
     "@nuxtjs/eslint-module": "^4.1.0",
     "@nuxtjs/google-fonts": "^3.1.0",
     "@nuxtjs/i18n": "^8",
+    "@nuxtjs/sitemap": "^8.5.0",
     "@rushstack/eslint-patch": "^1.6.0",
     "@tailwindcss/typography": "^0.5.15",
     "@tailwindcss/vite": "^4.0.0",

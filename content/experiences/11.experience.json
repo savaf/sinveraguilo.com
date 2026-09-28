@@ -1,9 +1,23 @@
 {
-  "company": "TwoCare · Employee",
-  "position": "Junior Web Developer · Full-time",
-  "date": "Aug 2017 - Dec 2017 · 5 mos",
-  "location": "Santo Domingo, Dominican Republic",
+  "company": "TwoCare",
+  "position": { "en": "Junior Web Developer", "es": "Desarrollador Web Junior" },
+  "location": { "en": "Santo Domingo, Dominican Republic", "es": "Santo Domingo, República Dominicana" },
+  "startDate": "2017-08",
+  "endDate": "2017-12",
   "skills": ["JavaScript", "Vue.js", "Vuex", "CSS", "SASS", "TFS", "Zoho", "SCRUM"],
-  "description": ["During my time as a junior web developer at TwoCare, I participated in the maintenance of three applications. One of the applications was a desktop application built using Electron that retrieved information such as specs, IP, domain, and DNS from the computer where the application was installed, to facilitate help desk support.", "Another application I worked on was an Angular-based dashboard used to display real-time information from an electric power production plant. I contributed to the development of this application's features and functionality.", "The third application was a Vue-based web application designed for call centers to manage call flows. I participated in the development of the application's user interface and utilized Vue, Sass, and WebSockets for the front-end implementation.", "Throughout my time at TwoCare, I utilized various technologies to ensure optimal application performance, including MySQL and Redis for caching, and CircleCI and Jenkins for continuous integration and delivery."],
+  "description": {
+    "en": [
+      "Maintained a desktop Electron app that retrieved machine specs, IP, domain, and DNS info to support the help desk.",
+      "Contributed to an Angular dashboard showing real-time data from an electric power production plant.",
+      "Built parts of a Vue.js web app for call centers to manage call flows, using Vue, Sass, and WebSockets.",
+      "Used MySQL and Redis for caching, and CircleCI/Jenkins for continuous integration and delivery."
+    ],
+    "es": [
+      "Mantuve una aplicación de escritorio en Electron que obtenía specs, IP, dominio y DNS del equipo para dar soporte al help desk.",
+      "Contribuí a un dashboard en Angular que mostraba datos en tiempo real de una planta de producción eléctrica.",
+      "Construí partes de una app web en Vue.js para que call centers gestionaran flujos de llamadas, usando Vue, Sass y WebSockets.",
+      "Usé MySQL y Redis para caché, y CircleCI/Jenkins para integración y entrega continua."
+    ]
+  },
   "images": []
 }

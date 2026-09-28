@@ -25,7 +25,8 @@ const props = withDefaults(
   },
 );
 
-const href = computed(() => props.to ?? `/projects/${props.project.slug}`);
+const localePath = useLocalePath();
+const href = computed(() => localePath(props.to ?? `/projects/${props.project.slug}`));
 const displayImage = computed(() => props.project.image ?? props.fallback ?? undefined);
 
 // @nuxt/image can't rasterize SVGs to webp — serve those as-is.

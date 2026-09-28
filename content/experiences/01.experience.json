@@ -1,11 +1,27 @@
 {
-  "company": "Consejo Nacional de Competitividad · Employee",
-  "position": "Full Stack Engineer",
-  "date": "Nov 2025 - Present · 9 mos",
-  "location": "Santo Domingo, Dominican Republic",
-  "skills": ["Vue.js", "Node.js", "FastAPI", "TypeScript"],
-  "description": [
-    "As a Full Stack Engineer at the National Competitiveness Council, I develop and maintain web platforms that support the institution's public-sector initiatives. I build front-end applications with Vue.js and TypeScript and back-end services with Node.js and FastAPI, covering the full development cycle from design to deployment."
-  ],
+  "company": "Consejo Nacional de Competitividad",
+  "position": { "en": "Full Stack Engineer · Frontend Tech Lead", "es": "Ingeniero Full Stack · Tech Lead de Frontend" },
+  "location": { "en": "Santo Domingo, Dominican Republic", "es": "Santo Domingo, República Dominicana" },
+  "startDate": "2025-11",
+  "endDate": null,
+  "skills": ["React", "Next.js", "TypeScript", "TanStack Query", "Zustand", "Tailwind CSS", "OAuth 2.0", "Docker", "GitHub Actions", "Web Accessibility"],
+  "description": {
+    "en": [
+      "Acting as the de-facto frontend tech lead for PSM (Permiso de Salida de Menor), a national government platform built for Burocracia Cero / CNC — owning the frontend architecture end-to-end and guiding the frontend team.",
+      "Defined the frontend foundation on React 19 and TanStack Start: root layout, global providers, routing, and the state strategy (server state via TanStack Query, form/UI state via Zustand).",
+      "Implemented the Cuenta Única (OAuth 2.0) authentication flow against the Dominican government's identity provider, including secure httpOnly cookie sessions.",
+      "Set up server-side rendering, Docker multi-stage builds, and GitHub Actions CI/CD pipelines for building and shipping the app.",
+      "Built accessible, WCAG 2.1 AA-compliant UI with Tailwind CSS and Radix UI, and a bilingual (ES/EN) experience.",
+      "Helped drive a roughly 4x improvement in PSM's request-processing throughput."
+    ],
+    "es": [
+      "Actúo como tech lead de facto del frontend de PSM (Permiso de Salida de Menor), una plataforma de gobierno nacional para Burocracia Cero / CNC — liderando la arquitectura de frontend de punta a punta y guiando al equipo.",
+      "Definí la base del frontend sobre React 19 y TanStack Start: layout raíz, providers globales, enrutamiento y la estrategia de estado (estado de servidor con TanStack Query, estado de formularios/UI con Zustand).",
+      "Implementé el flujo de autenticación de Cuenta Única (OAuth 2.0) contra el proveedor de identidad del gobierno dominicano, incluyendo sesiones seguras con cookies httpOnly.",
+      "Configuré el server-side rendering, builds multi-stage con Docker y pipelines de CI/CD en GitHub Actions para construir y publicar la app.",
+      "Construí una UI accesible conforme a WCAG 2.1 AA con Tailwind CSS y Radix UI, y una experiencia bilingüe (ES/EN).",
+      "Contribuí a una mejora de aproximadamente 4x en el throughput de procesamiento de solicitudes de PSM."
+    ]
+  },
   "images": []
 }

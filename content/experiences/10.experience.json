@@ -1,9 +1,21 @@
 {
-  "company": "MCTEKK · Employee",
-  "position": "Junior Web Developer · Full-time",
-  "date": "Jan 2018 - Aug 2019 · 1yr 8 mos",
-  "location": "Santo Domingo, Dominican Republic",
+  "company": "MCTEKK",
+  "position": { "en": "Junior Web Developer", "es": "Desarrollador Web Junior" },
+  "location": { "en": "Santo Domingo, Dominican Republic", "es": "Santo Domingo, República Dominicana" },
+  "startDate": "2018-01",
+  "endDate": "2019-08",
   "skills": ["JavaScript", "Vue.js", "Vuex", "CSS", "SASS", "TFS", "Zoho", "SCRUM"],
-  "description": ["At Intras, I was involved in a large migration project to transfer monolithic JSP applications to a client-server structure using PHP Phalcon and Vue.js. In the legacy service, I worked with SQL Server, which we migrated to MySQL, and Redis for caching. I also assisted my colleagues in keeping up-to-date with all the latest technologies and best practices in JavaScript and PHP.", "In the new solution, I was responsible for designing the architecture, ensuring the reliability and scalability of the applications. I worked under the Scrum methodology throughout the project and later switched to Kanban for maintenance of the application. For development and deployment, we used VMware virtual machines, and later, we created some docker images for Centos PHP Phalcon to upgrade our infrastructure and optimize our CI/CD.", "In this new solution, I designed the backend architecture for the entire solution and utilized ElasticSearch for more complex searches. We used AWS infrastructure with EC2 and S3 storage. Additionally, I contributed to developing all UI screens for some modules."],
+  "description": {
+    "en": [
+      "Migrated monolithic JSP applications to a client-server structure using PHP Phalcon and Vue.js, consolidating SQL Server into MySQL with Redis for caching.",
+      "Designed the new architecture, worked under Scrum and later Kanban, and containerized the CentOS/PHP Phalcon stack with Docker to improve CI/CD.",
+      "Built the backend architecture with Elasticsearch for complex search on AWS (EC2 + S3), and contributed UI screens for several modules."
+    ],
+    "es": [
+      "Migré aplicaciones JSP monolíticas a una estructura cliente-servidor con PHP Phalcon y Vue.js, consolidando SQL Server en MySQL con Redis para caché.",
+      "Diseñé la nueva arquitectura, trabajé bajo Scrum y luego Kanban, y contenericé el stack CentOS/PHP Phalcon con Docker para mejorar el CI/CD.",
+      "Construí la arquitectura de backend con Elasticsearch para búsquedas complejas sobre AWS (EC2 + S3), y contribuí pantallas de UI para varios módulos."
+    ]
+  },
   "images": []
 }

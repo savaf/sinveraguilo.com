@@ -1,15 +1,19 @@
 <script setup lang="ts">
 const appConfig = useAppConfig();
 const route = useRoute();
+const { t } = useI18n();
 
-function titleTemplate(title) {
+function titleTemplate(title: string) {
   return title !== (appConfig.title as string) ? `${appConfig.title} · ${title}` : title;
 }
 
+const pageTitle = route.meta.title ? t(route.meta.title as string) : (appConfig.title as string);
+const pageDescription = route.meta.description ? t(route.meta.description as string) : t("seo.description");
+
 let seoMetaOptions: Record<string, string> = {
-  title: titleTemplate(route.meta.title || appConfig.title),
+  title: titleTemplate(pageTitle),
   url: appConfig.url + route.path,
-  description: (route.meta.description as string) || appConfig.description,
+  description: pageDescription,
   icon: "/images/og-logo.png",
 };
 
@@ -27,6 +31,14 @@ useSeoMeta({
   twitterDescription: seoMetaOptions.description,
   twitterCard: "summary",
 });
+
+// hreflang alternates + locale-aware <html lang>, canonical, og:locale
+const i18nHead = useLocaleHead({ addSeoAttributes: true });
+useHead(() => ({
+  htmlAttrs: i18nHead.value.htmlAttrs,
+  link: i18nHead.value.link,
+  meta: i18nHead.value.meta,
+}));
 </script>
 
 <template>

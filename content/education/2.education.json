@@ -1,8 +1,8 @@
 {
-  "id": 1,
   "company": "ITLA",
-  "title": "Associate of Science, Computer Software Engineering",
+  "title": { "en": "Associate of Science, Computer Software Engineering", "es": "Técnico Superior en Desarrollo de Software" },
   "date": "2015 - 2018",
-  "location": "Santo Domingo, Dominican Republic",
-  "description": []
+  "location": { "en": "Santo Domingo, Dominican Republic", "es": "Santo Domingo, República Dominicana" },
+  "description": { "en": [], "es": [] },
+  "kind": "degree"
 }

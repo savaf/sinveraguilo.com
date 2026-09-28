@@ -1,11 +1,19 @@
 {
-  "company": "BairesDev · Contractor",
-  "position": "Frontend Web Developer",
-  "date": "Mar 2025 - Present · 1 yr 5 mos",
-  "location": "United States · Remote",
+  "company": "BairesDev",
+  "position": { "en": "Frontend Web Developer", "es": "Desarrollador Frontend" },
+  "location": { "en": "United States · Remote", "es": "Estados Unidos · Remoto" },
+  "startDate": "2025-03",
+  "endDate": null,
   "skills": ["Vue.js", "JavaScript", "Vuex", "Pinia", "SASS", "CSS", "Vite", "Agile Methodologies"],
-  "description": [
-    "As a contractor for one of BairesDev's US-based clients, I build and maintain front-end features for a production Vue.js application. My work covers state management with Vuex and Pinia, styling with SASS, and a Vite-based build setup, delivering iteratively as part of an Agile team."
-  ],
+  "description": {
+    "en": [
+      "Building and maintaining front-end features for a production Vue.js e-commerce platform as a contractor for a NASDAQ-listed BairesDev client operating four retail brands.",
+      "Working across state management with Vuex and Pinia, styling with SASS, and a Vite-based build setup, delivering iteratively as part of an Agile team."
+    ],
+    "es": [
+      "Construyo y mantengo funcionalidades de frontend para una plataforma Vue.js de e-commerce en producción, como contratista de un cliente de BairesDev que cotiza en NASDAQ y opera cuatro marcas retail.",
+      "Trabajo en gestión de estado con Vuex y Pinia, estilos con SASS, y un setup de build basado en Vite, entregando de forma iterativa como parte de un equipo Agile."
+    ]
+  },
   "images": []
 }

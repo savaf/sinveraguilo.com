@@ -1,9 +1,21 @@
 {
-  "company": "Corotos · Employee",
-  "position": "Senior Web Engineer · Full-time",
-  "date": "May 2021 - Apr 2022 · 1 yr",
-  "location": "Santo Domingo, Dominican Republic · Remote",
+  "company": "Corotos",
+  "position": { "en": "Senior Web Engineer", "es": "Ingeniero Web Senior" },
+  "location": { "en": "Santo Domingo, Dominican Republic · Remote", "es": "Santo Domingo, República Dominicana · Remoto" },
+  "startDate": "2021-05",
+  "endDate": "2022-04",
   "skills": ["Vue.js", "JavaScript", "Ruby", "Ruby on Rails", "Vuex", "SASS", "PostgreSQL", "jQuery", "Tailwind CSS", "Redis", "Agile Methodologies", "Kanban", "Nuxt.js"],
-  "description": ["Corotos is the largest second-hand e-commerce platform in the Dominican Republic, I was responsible for designing the architecture for the migration of an e-commerce Ruby on Rails application. I helped create all the UI screens for some modules and supervised and reviewed all pull requests from team members. Additionally, I assisted colleagues to keep them updated with all technologies and Vue best practices. This project required 24/7 activity with an uptime of 99%, so all sites had to be fastened and resilient with network, data access, and intercommunication with services from another environment."],
+  "description": {
+    "en": [
+      "Corotos is the largest second-hand e-commerce platform in the Dominican Republic. I designed the architecture for migrating its Ruby on Rails e-commerce application.",
+      "Built UI screens for several modules, and reviewed and supervised the team's pull requests, keeping colleagues current on Vue.js best practices.",
+      "Kept the platform resilient under 24/7 traffic with 99% uptime across networking, data access, and inter-service communication."
+    ],
+    "es": [
+      "Corotos es la plataforma de e-commerce de segunda mano más grande de República Dominicana. Diseñé la arquitectura para migrar su aplicación de e-commerce en Ruby on Rails.",
+      "Construí pantallas de UI para varios módulos, y revisé y supervisé los pull requests del equipo, manteniendo a mis colegas al día con las mejores prácticas de Vue.js.",
+      "Mantuve la plataforma resiliente bajo tráfico 24/7 con 99% de uptime, cubriendo red, acceso a datos y comunicación entre servicios."
+    ]
+  },
   "images": ["/images/experiences/corotos-desktop.jpeg", "/images/experiences/corotos-mobile.jpeg"]
 }

@@ -10,7 +10,15 @@ export default defineNuxtConfig({
     viewTransition: true,
   },
 
-  modules: ["@nuxt/image", "@nuxtjs/google-fonts", "nuxt-icon", "@nuxt/content", "@nuxtjs/i18n"],
+  modules: ["@nuxt/image", "@nuxtjs/google-fonts", "nuxt-icon", "@nuxt/content", "@nuxtjs/i18n", "@nuxtjs/sitemap"],
+
+  site: {
+    url: "https://www.sinveraguilo.com",
+  },
+
+  sitemap: {
+    sources: ["/api/__sitemap__/urls"],
+  },
 
   // No sourcemaps in production: speeds up the Nitro/Vite bundle and shrinks output.
   sourcemap: { server: false, client: false },
@@ -20,8 +28,9 @@ export default defineNuxtConfig({
   },
 
   i18n: {
-    strategy: "no_prefix",
+    strategy: "prefix_except_default",
     defaultLocale: "en",
+    baseUrl: "https://www.sinveraguilo.com",
     locales: [
       { code: "en", language: "en-US", name: "English", file: "en.json" },
       { code: "es", language: "es-DO", name: "Español", file: "es.json" },
@@ -31,7 +40,7 @@ export default defineNuxtConfig({
       useCookie: true,
       cookieKey: "sinver_lang",
       redirectOn: "root",
-      alwaysRedirect: true,
+      alwaysRedirect: false,
     },
   },
 
@@ -62,16 +71,15 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       autoSubfolderIndex: false,
+      crawlLinks: true,
+      routes: ["/sitemap.xml"],
     },
-    // prerender: {
-    //   crawlLinks: true,
-    //   routes: ["/sitemap.xml", "/robots.txt"],
-    // },
   },
 
   runtimeConfig: {
     // The private keys which are only available server-side
     apiSecret: "123",
+    resendApiKey: process.env.RESEND_API_KEY || "",
     isProd: import.meta.env.NODE_ENV === "production",
     // Keys within public are also exposed client-side
     public: {
@@ -84,7 +92,6 @@ export default defineNuxtConfig({
     layoutTransition: { name: "layout", mode: "out-in" },
     head: {
       title: "Sinver Aguiló",
-      htmlAttrs: { lang: "en" },
       bodyAttrs: { class: "antialiased" },
       meta: [
         // SEO meta tags

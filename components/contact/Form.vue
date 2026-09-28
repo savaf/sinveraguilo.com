@@ -6,10 +6,17 @@ const form = ref({
   message: "",
 });
 
-function sendEmail() {
-  const { name, email, subject, message } = form.value;
-  const body = `${message}\n\n${name}\n${email}`;
-  window.location.href = `mailto:hello@sinveraguilo.com?subject=${encodeURIComponent(`${subject} - ${name}`)}&body=${encodeURIComponent(body)}`;
+const status = ref<"idle" | "sending" | "sent" | "error">("idle");
+
+async function sendEmail() {
+  status.value = "sending";
+  try {
+    await $fetch("/api/contact", { method: "POST", body: form.value });
+    status.value = "sent";
+    form.value = { name: "", email: "", subject: "", message: "" };
+  } catch {
+    status.value = "error";
+  }
 }
 
 const inputClass = "w-full box-border border-2 border-ink bg-primary-dark text-primary-light font-sans text-[15px] px-3.5 py-3 outline-hidden focus:border-cyan";
@@ -38,7 +45,11 @@ const labelClass = "block font-display font-bold text-xs uppercase tracking-[0.0
         <label :class="labelClass" for="message">{{ $t("contact.message") }}</label>
         <textarea id="message" v-model="form.message" :class="[inputClass, 'resize-y']" name="message" rows="6" required :placeholder="$t('contact.messagePh')" />
       </div>
-      <button type="submit" aria-label="Send message" class="self-start font-display font-extrabold uppercase text-[15px] text-ink-text bg-yellow border-2 border-ink px-[30px] py-4 shadow-[5px_5px_0_#22d3ee] cursor-pointer transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[7px_7px_0_#22d3ee] active:translate-x-0 active:translate-y-0 active:shadow-[3px_3px_0_#22d3ee]">{{ $t("contact.send") }} →</button>
+      <button type="submit" aria-label="Send message" :disabled="status === 'sending'" class="self-start font-display font-extrabold uppercase text-[15px] text-ink-text bg-yellow border-2 border-ink px-[30px] py-4 shadow-[5px_5px_0_#22d3ee] cursor-pointer transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[7px_7px_0_#22d3ee] active:translate-x-0 active:translate-y-0 active:shadow-[3px_3px_0_#22d3ee] disabled:opacity-60 disabled:cursor-wait">
+        {{ status === "sending" ? $t("contact.sending") : $t("contact.send") }} →
+      </button>
+      <p v-if="status === 'sent'" class="m-0 font-mono text-[13px] text-cyan">{{ $t("contact.sentOk") }}</p>
+      <p v-if="status === 'error'" class="m-0 font-mono text-[13px] text-yellow">{{ $t("contact.sentError") }}</p>
     </form>
   </div>
 </template>

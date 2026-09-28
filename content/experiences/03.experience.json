@@ -1,11 +1,21 @@
 {
-  "company": "BairesDev · Contractor",
-  "position": "Salesforce Email Developer",
-  "date": "Feb 2022 - Nov 2025 · 3 yrs 10 mos",
-  "location": "United States · Remote",
+  "company": "BairesDev",
+  "position": { "en": "Salesforce Email Developer", "es": "Desarrollador de Email Salesforce" },
+  "location": { "en": "United States · Remote", "es": "Estados Unidos · Remoto" },
+  "startDate": "2022-02",
+  "endDate": "2025-11",
   "skills": ["HTML", "SASS", "jQuery", "AMPscript", "Salesforce Marketing Cloud", "Agile Methodologies"],
-  "description": [
-    "As a contractor for one of BairesDev's clients, I was responsible for creating and maintaining operational emails for multiple commercial brands. My duties included implementing HTML and CSS styles using SASS, writing AMPscript for dynamic content, and ensuring compliance with email marketing best practices. I worked closely with the client's marketing team to ensure that all email copy was translated accurately and that the emails were visually appealing and effective. This role required me to be highly organized, detail-oriented, and responsive to tight deadlines."
-  ],
+  "description": {
+    "en": [
+      "Created and maintained operational emails for six commercial brands, shipping 20+ campaigns a month as a contractor for a BairesDev client.",
+      "Implemented HTML/CSS styling with SASS and wrote AMPscript for dynamic content in Salesforce Marketing Cloud.",
+      "Worked closely with the client's marketing team to ensure accurate copy and visually effective, deadline-driven delivery."
+    ],
+    "es": [
+      "Creé y mantuve correos operacionales para seis marcas comerciales, entregando más de 20 campañas al mes como contratista de un cliente de BairesDev.",
+      "Implementé estilos HTML/CSS con SASS y escribí AMPscript para contenido dinámico en Salesforce Marketing Cloud.",
+      "Trabajé de cerca con el equipo de marketing del cliente para asegurar copy preciso y una entrega visualmente efectiva bajo plazos ajustados."
+    ]
+  },
   "images": []
 }

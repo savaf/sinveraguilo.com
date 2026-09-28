@@ -1,11 +1,19 @@
 {
-  "company": "Customily (YC S21) · Contractor",
-  "position": "Frontend Developer",
-  "date": "Jun 2023 - Aug 2023 · 3 mos",
-  "location": "Remote",
+  "company": "Customily (YC S21)",
+  "position": { "en": "Frontend Developer", "es": "Desarrollador Frontend" },
+  "location": { "en": "Remote", "es": "Remoto" },
+  "startDate": "2023-06",
+  "endDate": "2023-08",
   "skills": ["JavaScript", "TypeScript", "CSS", "E-commerce"],
-  "description": [
-    "Customily is a Y Combinator-backed startup (S21) that provides a product personalization platform for e-commerce. As a Frontend Developer, I worked on the customer-facing tools that let shoppers preview and customize products in real time, delivering UI improvements during a short-term engagement."
-  ],
+  "description": {
+    "en": [
+      "Customily is a Y Combinator-backed startup (S21) building a product-personalization platform for e-commerce.",
+      "Worked on the customer-facing tools that let shoppers preview and customize products in real time, delivering UI improvements during a short-term engagement."
+    ],
+    "es": [
+      "Customily es una startup respaldada por Y Combinator (S21) que construye una plataforma de personalización de productos para e-commerce.",
+      "Trabajé en las herramientas de cara al cliente que permiten a los compradores previsualizar y personalizar productos en tiempo real, entregando mejoras de UI durante un contrato de corto plazo."
+    ]
+  },
   "images": []
 }

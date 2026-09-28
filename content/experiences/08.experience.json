@@ -1,9 +1,19 @@
 {
-  "company": "Khensys Corporation S.R.L · Contractor",
-  "position": "Vue Frontend Developer · Full-time",
-  "date": "Oct 2020 - Jan 2021 · 4 mos",
-  "location": "Santo Domingo, Dominican Republic · Remote",
+  "company": "Khensys Corporation S.R.L",
+  "position": { "en": "Vue Frontend Developer", "es": "Desarrollador Frontend Vue" },
+  "location": { "en": "Santo Domingo, Dominican Republic · Remote", "es": "Santo Domingo, República Dominicana · Remoto" },
+  "startDate": "2020-10",
+  "endDate": "2021-01",
   "skills": ["JavaScript", "Vue.js", "Vuex", "CSS", "SASS", "TFS", "Zoho", "SCRUM"],
-  "description": ["In this position, I participated in a large migration project to transfer a monolithic Web Form .NET application to a client-server web app made with .Net core + Vue.js. As the frontend developer, I was responsible for designing the architecture for the whole solution, ensuring the reliability and scalability of the applications. Additionally, I assisted my colleagues in staying updated with all technologies and Vue and SCSS best practices. The role required working under the Scrum methodology throughout the project."],
+  "description": {
+    "en": [
+      "Participated in a large migration from a monolithic Web Forms .NET application to a client-server app built with .NET Core and Vue.js.",
+      "Designed the frontend architecture for the whole solution, ensuring reliability and scalability, and mentored colleagues on Vue.js and SCSS best practices under Scrum."
+    ],
+    "es": [
+      "Participé en un proyecto de migración a gran escala de una aplicación monolítica Web Forms .NET a una app cliente-servidor construida con .NET Core y Vue.js.",
+      "Diseñé la arquitectura de frontend de toda la solución, garantizando confiabilidad y escalabilidad, y guié a mis colegas en las mejores prácticas de Vue.js y SCSS bajo Scrum."
+    ]
+  },
   "images": []
 }

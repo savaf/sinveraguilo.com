@@ -1,8 +1,10 @@
 <script setup lang="ts">
 const route = useRoute();
+const { locale } = useI18n();
+const localePath = useLocalePath();
 
-const { data: doc } = await useAsyncData(`project:${route.path}`, () => {
-  return queryContent(route.path).findOne();
+const { data: doc } = await useAsyncData(`project:${route.params.slug}`, () => {
+  return queryContent("projects").where({ slug: route.params.slug }).findOne();
 });
 
 if (!doc.value) {
@@ -32,7 +34,7 @@ useHead({
     <section class="relative border-b-2 border-ink overflow-hidden">
       <div class="absolute inset-0 grid-overlay" />
       <div class="relative mx-auto max-w-[1180px] px-6 pt-10 pb-14 sm:px-10">
-        <NuxtLink to="/projects" class="inline-flex items-center gap-2 font-mono text-[13px] text-muted mb-8 hover:text-cyan">
+        <NuxtLink :to="localePath('/projects')" class="inline-flex items-center gap-2 font-mono text-[13px] text-muted mb-8 hover:text-cyan">
           <Icon name="i-heroicons-chevron-left" class="w-4 h-4" aria-hidden="true" />
           {{ $t("detail.back") }}
         </NuxtLink>
@@ -79,6 +81,7 @@ useHead({
     <section class="mx-auto max-w-[1180px] px-6 pt-16 pb-8 sm:px-10 grid grid-cols-1 lg:grid-cols-[1.6fr_1fr] gap-10 lg:gap-14">
       <div v-reveal>
         <h2 class="m-0 mb-4 font-display font-black text-[32px] uppercase text-slate-50">{{ $t("detail.overview") }}</h2>
+        <p v-if="locale !== 'en'" class="font-mono text-xs text-dim mb-4">{{ $t("detail.englishOnly") }}</p>
         <ContentRenderer :value="doc" class="prose prose-invert prose-slate max-w-none prose-headings:font-display prose-headings:uppercase prose-a:text-cyan" />
       </div>
       <div v-reveal="120">

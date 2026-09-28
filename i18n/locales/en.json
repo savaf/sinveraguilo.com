@@ -1,4 +1,7 @@
 {
+  "seo": {
+    "description": "Hi, I'm Sinver Aguiló, Software Engineer in Santo Domingo, Dominican Republic."
+  },
   "nav": {
     "home": "Home",
     "about": "About",
@@ -16,20 +19,25 @@
   },
   "stats": {
     "experience": "Years experience",
-    "clients": "Satisfied clients",
-    "projects": "Projects shipped"
+    "migrations": "Migrations led",
+    "roles": "Professional roles"
   },
   "featured": {
     "label": "Selected work",
     "title": "Featured projects",
     "more": "All projects"
   },
+  "experience": {
+    "present": "Present",
+    "years": "{n} yr | {n} yrs",
+    "months": "{n} mo | {n} mos"
+  },
   "about": {
     "label": "// biography",
     "title": "About me",
-    "bio1": "Hi, I'm Sinver Aguiló, a Software Engineer with 9+ years of experience building enterprise-class web applications that scale to meet the demands of their users.",
-    "bio2": "My expertise lies in creating robust, scalable front-end applications with Vue.js, React.js and Angular, and I'm also well-versed in building microservices with Node.js and PHP. I've led architecture design for large migration projects — from legacy monoliths to modern client-server and microservices structures — for products like Corotos, NZXT and Crunchyroll.",
-    "bio3": "Throughout my career I've been committed to doing things the right way and getting things done. I thrive in collaborative environments that value innovation and experimentation, and I bring a results-driven approach to every team I join.",
+    "bio1": "Hi, I'm Sinver Aguiló, a Software Engineer with 9+ years of experience building web platforms that scale to meet the demands of their users. I currently lead the frontend of PSM, a national government platform for Burocracia Cero / CNC in the Dominican Republic, where our work has driven a roughly 4x improvement in request-processing throughput.",
+    "bio2": "My expertise spans React, Next.js and Vue.js on the frontend, and full-stack work with Node.js and PHP on the backend. I've led architecture for large legacy migrations — from monolithic .NET, Rails and JSP applications to modern client-server and microservices structures, for products like Corotos, NZXT and Crunchyroll — and I care deeply about accessibility (WCAG 2.1 AA), internationalization, and CI/CD with Docker and GitHub Actions.",
+    "bio3": "Throughout my career I've been committed to doing things the right way and getting things done. I bring architecture ownership, mentorship and a results-driven approach to every team I join. I'm based in Santo Domingo, Dominican Republic, open to remote work, and fluent in English (C1).",
     "location": "Santo Domingo, DO",
     "experienceTitle": "Experience",
     "educationTitle": "Education",
@@ -58,7 +66,8 @@
     "code": "View code",
     "overview": "Overview",
     "tech": "Tools & technologies",
-    "more": "More projects"
+    "more": "More projects",
+    "englishOnly": "This case study is only available in English."
   },
   "contact": {
     "label": "// get in touch",
@@ -75,7 +84,10 @@
     "subjectPh": "What is this about?",
     "message": "Message",
     "messagePh": "Tell me about your project...",
-    "send": "Send message"
+    "send": "Send message",
+    "sending": "Sending",
+    "sentOk": "Message sent — I'll get back to you soon.",
+    "sentError": "Something went wrong. Please email me directly instead."
   },
   "cta": {
     "title": "Let's build something",

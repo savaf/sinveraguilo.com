@@ -1,9 +1,28 @@
 <script setup lang="ts">
-const stats = [
-  { value: "9+", color: "text-yellow", label: "stats.experience" },
-  { value: "10+", color: "text-cyan", label: "stats.clients" },
-  { value: "20+", color: "text-indigo", label: "stats.projects" },
-];
+const { data: jobExperiences } = await useAsyncData("stats_bar_experiences", () => queryContent("experiences").find());
+
+const experiences = computed(() => jobExperiences.value || []);
+
+const yearsExperience = computed(() => {
+  const starts = experiences.value.map((exp: any) => exp.startDate).filter(Boolean);
+  if (!starts.length) return "9+";
+  const earliest = starts.sort()[0];
+  const years = Math.floor(monthsBetween(earliest) / 12);
+  return `${years}+`;
+});
+
+const migrationsLed = computed(() => {
+  const count = experiences.value.filter((exp: any) => JSON.stringify(exp.description).toLowerCase().includes("migrat")).length;
+  return `${count}+`;
+});
+
+const rolesCount = computed(() => `${experiences.value.length}+`);
+
+const stats = computed(() => [
+  { value: yearsExperience.value, color: "text-yellow", label: "stats.experience" },
+  { value: migrationsLed.value, color: "text-cyan", label: "stats.migrations" },
+  { value: rolesCount.value, color: "text-indigo", label: "stats.roles" },
+]);
 </script>
 
 <template>

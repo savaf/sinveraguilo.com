@@ -1,8 +1,8 @@
 {
-  "id": 1,
   "company": "Universidad APEC",
-  "title": "Engineer's Degree, Computer Software Engineering",
+  "title": { "en": "Engineer's Degree, Computer Software Engineering", "es": "Ingeniería en Desarrollo de Software" },
   "date": "Jan 2018 - Dec 2023",
-  "location": "Santo Domingo, Dominican Republic",
-  "description": ["Bachelor's degree in Software Engineering."]
+  "location": { "en": "Santo Domingo, Dominican Republic", "es": "Santo Domingo, República Dominicana" },
+  "description": { "en": ["Bachelor's degree in Software Engineering."], "es": ["Grado en Ingeniería de Software."] },
+  "kind": "degree"
 }

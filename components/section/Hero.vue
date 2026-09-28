@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const techs = ["Vue", "React", "Node", "TypeScript", "Angular"];
+const localePath = useLocalePath();
 </script>
 
 <template>
@@ -24,7 +25,7 @@ const techs = ["Vue", "React", "Node", "TypeScript", "Angular"];
         <!-- Split CTA -->
         <div class="hero-enter mt-9" style="--i: 4">
           <div class="group inline-flex w-max border-2 border-ink shadow-[6px_6px_0_#22d3ee] transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[9px_9px_0_#22d3ee] active:translate-x-0 active:translate-y-0 active:shadow-[4px_4px_0_#22d3ee]">
-            <NuxtLink to="/projects" class="font-display font-extrabold uppercase text-[15px] bg-indigo text-white px-[26px] py-[15px] border-r-2 border-ink">
+            <NuxtLink :to="localePath('/projects')" class="font-display font-extrabold uppercase text-[15px] bg-indigo text-white px-[26px] py-[15px] border-r-2 border-ink">
               {{ $t("hero.ctaWork") }}
             </NuxtLink>
             <a href="/Sinver-Aguilo-CV.pdf" download class="font-display font-extrabold uppercase text-[15px] bg-primary-dark text-primary-light px-[26px] py-[15px]">

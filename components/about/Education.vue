@@ -1,12 +1,19 @@
 <script setup lang="ts">
+import type { Localized } from "~/utils/i18n";
+
 const { educations } = defineProps<{
   educations: {
-    title: string;
+    _path?: string;
+    title: Localized<string>;
     date: string;
     company: string;
-    description: string[];
+    location?: Localized<string>;
+    description: Localized<string[]>;
+    kind?: "degree" | "certification";
   }[];
 }>();
+
+const { tr } = useLocalized();
 </script>
 
 <template>
@@ -17,11 +24,11 @@ const { educations } = defineProps<{
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-      <article v-for="(edu, i) in educations" :key="edu.title" v-reveal="i * 90" class="edu-card border-2 border-ink bg-surface px-7 py-6">
-        <span class="inline-block font-mono text-[11px] text-ink-text bg-cyan px-2 py-[3px] mb-3">{{ edu.date }}</span>
-        <h3 class="m-0 mb-1 font-grotesk font-semibold text-[19px] text-primary-light">{{ edu.title }}</h3>
+      <article v-for="(edu, i) in educations" :key="edu._path" v-reveal="i * 90" class="edu-card border-2 border-ink bg-surface px-7 py-6">
+        <span class="inline-block font-mono text-[11px] px-2 py-[3px] mb-3" :class="edu.kind === 'certification' ? 'text-white bg-indigo' : 'text-ink-text bg-cyan'">{{ edu.date }}</span>
+        <h3 class="m-0 mb-1 font-grotesk font-semibold text-[19px] text-primary-light">{{ tr(edu.title) }}</h3>
         <div class="font-mono text-xs text-yellow mb-3">{{ edu.company }}</div>
-        <p v-for="line in edu.description" :key="line" class="m-0 mb-1.5 text-[15px] leading-relaxed text-slate-300">{{ line }}</p>
+        <p v-for="line in tr(edu.description)" :key="line" class="m-0 mb-1.5 text-[15px] leading-relaxed text-slate-300">{{ line }}</p>
       </article>
     </div>
   </section>

@@ -1,9 +1,21 @@
 {
-  "company": "DA Sistemas Integrados · Internship",
-  "position": "Web Developer · Full-time",
-  "date": "Apr 2017 - Aug 2017 · 5 mos",
-  "location": "Santo Domingo, Dominican Republic",
+  "company": "DA Sistemas Integrados",
+  "position": { "en": "Web Developer", "es": "Desarrollador Web" },
+  "location": { "en": "Santo Domingo, Dominican Republic", "es": "Santo Domingo, República Dominicana" },
+  "startDate": "2017-04",
+  "endDate": "2017-08",
   "skills": ["JavaScript", "Vue.js", "Vuex", "CSS", "SASS", "TFS", "Zoho", "SCRUM"],
-  "description": ["During my internship at DA Sistemas Integrados, I had the opportunity to work on accounting and fuel management applications. In addition, I participated in a migration project aimed at transferring a monolithic Visual PRO/5 application to a Nodejs-based structure with microservices architecture.", "In this project, I contributed to developing all user interface screens for some modules. I leveraged technologies such as AngularJS, NodeJS, and Microsoft SQL Server. Moreover, I deployed the application with IIS on a dedicated server with Windows Server.", "Furthermore, during my time at the company, I provided support for the maintenance of the Visual PRO/5 application for in-house users."],
+  "description": {
+    "en": [
+      "Worked on accounting and fuel-management applications, and on migrating a monolithic Visual PRO/5 application to a Node.js microservices structure.",
+      "Built UI screens for several modules using AngularJS, Node.js, and Microsoft SQL Server, deploying with IIS on Windows Server.",
+      "Provided ongoing support for the legacy Visual PRO/5 application for in-house users."
+    ],
+    "es": [
+      "Trabajé en aplicaciones de contabilidad y gestión de combustible, y en la migración de una aplicación monolítica Visual PRO/5 a una estructura de microservicios en Node.js.",
+      "Construí pantallas de UI para varios módulos usando AngularJS, Node.js y Microsoft SQL Server, desplegando con IIS sobre Windows Server.",
+      "Brindé soporte continuo a la aplicación legada Visual PRO/5 para usuarios internos."
+    ]
+  },
   "images": []
 }
