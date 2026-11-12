@@ -31,7 +31,7 @@ export default <Partial<Config>>{
         indigo: "#6366f1",
         mint: "#34d399",
         muted: "#9fb3c4",
-        dim: "#5c7386",
+        dim: "#8197aa",
         "ink-text": "#0b1622",
       },
       container: {

@@ -14,7 +14,6 @@ const hoverColor: Record<string, string> = {
     <div class="absolute inset-0 grid-overlay" />
     <div class="relative mx-auto max-w-[1180px] grid grid-cols-1 md:grid-cols-[1.25fr_0.75fr]">
       <div class="px-6 py-14 sm:px-10 sm:py-16 md:border-r-2 border-ink">
-        <div class="font-mono text-xs text-cyan mb-4">{{ $t("about.label") }}</div>
         <h1 class="m-0 mb-7 font-display font-black uppercase text-slate-50 leading-[0.92] tracking-[-0.02em] text-[clamp(2.75rem,6vw,4.5rem)]">
           {{ $t("about.title") }}
         </h1>
