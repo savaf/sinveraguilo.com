@@ -35,7 +35,7 @@ export default defineNuxtConfig({
       { code: "en", language: "en-US", name: "English", file: "en.json" },
       { code: "es", language: "es-DO", name: "Español", file: "es.json" },
     ],
-    langDir: "i18n/locales",
+    langDir: "locales",
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: "sinver_lang",

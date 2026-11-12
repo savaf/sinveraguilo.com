@@ -11,7 +11,7 @@ if (!doc.value) {
   throw createError({ statusCode: 404, statusMessage: "Post not found" });
 }
 
-const tagAccent = ["bg-yellow", "bg-cyan", "bg-indigo text-white"];
+const tagAccent = ["bg-yellow", "bg-cyan", "bg-indigo-600 text-white"];
 
 useHead({
   title: doc.value?.title,

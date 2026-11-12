@@ -1,5 +1,24 @@
 html {
   background-color: #0d2438;
+  color-scheme: dark;
+  scrollbar-color: #2b4a66 #0a1626;
+  scrollbar-width: thin;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Figures in stats and dates line up instead of jittering */
+.font-mono,
+.font-display {
+  font-variant-numeric: tabular-nums;
 }
 
 body {
@@ -18,7 +37,7 @@ a {
 
 input::placeholder,
 textarea::placeholder {
-  color: #5c7386;
+  color: #8197aa;
 }
 
 /* Reusable neo-brutalist grid overlay */

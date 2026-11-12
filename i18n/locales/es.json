@@ -23,7 +23,6 @@
     "roles": "Roles profesionales"
   },
   "featured": {
-    "label": "Trabajo seleccionado",
     "title": "Proyectos destacados",
     "more": "Todos los proyectos"
   },
@@ -33,7 +32,6 @@
     "months": "{n} mes | {n} meses"
   },
   "about": {
-    "label": "// biografía",
     "title": "Sobre mí",
     "bio1": "Hola, soy Sinver Aguiló, Ingeniero de Software con más de 9 años de experiencia construyendo plataformas web que escalan para responder a las demandas de sus usuarios. Actualmente lidero el frontend de PSM, una plataforma de gobierno nacional para Burocracia Cero / CNC en República Dominicana, donde nuestro trabajo ha impulsado una mejora de aproximadamente 4x en el throughput de procesamiento de solicitudes.",
     "bio2": "Mi experiencia abarca React, Next.js y Vue.js en el frontend, y trabajo full-stack con Node.js y PHP en el backend. He liderado la arquitectura de grandes migraciones legadas — de aplicaciones monolíticas en .NET, Rails y JSP a estructuras modernas cliente-servidor y de microservicios, para productos como Corotos, NZXT y Crunchyroll — y me importa profundamente la accesibilidad (WCAG 2.1 AA), la internacionalización, y el CI/CD con Docker y GitHub Actions.",
@@ -44,7 +42,6 @@
     "roles": "roles"
   },
   "projects": {
-    "label": "// trabajo seleccionado",
     "title": "Proyectos",
     "subtitle": "Una selección de cosas que he diseñado y construido — desde landing pages hasta retos de front-end.",
     "filterAll": "Todos",
@@ -52,7 +49,6 @@
     "noResults": "Ningún proyecto coincide con tu búsqueda."
   },
   "blog": {
-    "label": "// escritos",
     "title": "Blog",
     "subtitle": "Notas sobre ingeniería, diseño y cosas que estoy construyendo.",
     "back": "Volver al blog",
@@ -70,12 +66,10 @@
     "englishOnly": "Este case study solo está disponible en inglés."
   },
   "contact": {
-    "label": "// contáctame",
     "title": "Contacto",
     "intro": "¿Tienes un proyecto, una vacante o solo quieres saludar? Envíame un mensaje y te responderé pronto.",
     "email": "Correo",
     "location": "Ubicación",
-    "formLabel": "// envía un mensaje",
     "name": "Nombre completo",
     "namePh": "Tu nombre",
     "emailField": "Correo",

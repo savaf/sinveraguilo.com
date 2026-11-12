@@ -23,7 +23,6 @@
     "roles": "Professional roles"
   },
   "featured": {
-    "label": "Selected work",
     "title": "Featured projects",
     "more": "All projects"
   },
@@ -33,7 +32,6 @@
     "months": "{n} mo | {n} mos"
   },
   "about": {
-    "label": "// biography",
     "title": "About me",
     "bio1": "Hi, I'm Sinver Aguiló, a Software Engineer with 9+ years of experience building web platforms that scale to meet the demands of their users. I currently lead the frontend of PSM, a national government platform for Burocracia Cero / CNC in the Dominican Republic, where our work has driven a roughly 4x improvement in request-processing throughput.",
     "bio2": "My expertise spans React, Next.js and Vue.js on the frontend, and full-stack work with Node.js and PHP on the backend. I've led architecture for large legacy migrations — from monolithic .NET, Rails and JSP applications to modern client-server and microservices structures, for products like Corotos, NZXT and Crunchyroll — and I care deeply about accessibility (WCAG 2.1 AA), internationalization, and CI/CD with Docker and GitHub Actions.",
@@ -44,7 +42,6 @@
     "roles": "roles"
   },
   "projects": {
-    "label": "// selected work",
     "title": "Projects",
     "subtitle": "A selection of things I have designed and built — from landing pages to front-end challenges.",
     "filterAll": "All",
@@ -52,7 +49,6 @@
     "noResults": "No projects match your search."
   },
   "blog": {
-    "label": "// writing",
     "title": "Blog",
     "subtitle": "Notes on engineering, design and things I'm building.",
     "back": "Back to blog",
@@ -70,12 +66,10 @@
     "englishOnly": "This case study is only available in English."
   },
   "contact": {
-    "label": "// get in touch",
     "title": "Contact",
     "intro": "Have a project, a role or just want to say hi? Send a message and I'll get back to you soon.",
     "email": "Email",
     "location": "Location",
-    "formLabel": "// send a message",
     "name": "Full name",
     "namePh": "Your name",
     "emailField": "Email",

@@ -11,7 +11,6 @@ const hoverColor: Record<string, string> = {
 
 <template>
   <div>
-    <div class="font-mono text-xs text-cyan mb-3.5">{{ $t("contact.label") }}</div>
     <h1 class="m-0 font-display font-black uppercase text-slate-50 leading-[0.9] tracking-[-0.02em] text-[clamp(2.75rem,6vw,4.5rem)]">
       {{ $t("contact.title") }}
     </h1>
