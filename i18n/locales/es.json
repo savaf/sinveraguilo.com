@@ -145,7 +145,7 @@
     "title": "Terminal",
     "subtitle": "¿Prefieres una shell? Escribe un comando o toca uno. Todo lo que imprime viene de mis proyectos y roles reales.",
     "welcome": "Escribe 'help' para ver qué puedes ejecutar.",
-    "openHint": "Ejecuta 'open <n>' para leer uno.",
+    "openHint": "Ejecuta 'open N' para leer uno.",
     "badIndex": "No hay un proyecto con ese número.",
     "notFound": "comando no encontrado, prueba 'help'",
     "cvStart": "Descargando CV…",
