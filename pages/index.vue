@@ -8,6 +8,7 @@
     <SectionCareerLog />
     <SectionStackExplorer />
     <SectionTerminal />
+    <SectionTimeOverlap />
     <SectionBriefBuilder />
     <SharedCtaBand />
   </div>

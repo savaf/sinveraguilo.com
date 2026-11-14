@@ -165,5 +165,21 @@
     "stack": "Stack",
     "terminal": "Terminal",
     "brief": "Brief"
+  },
+  "overlap": {
+    "kicker": "timezone check",
+    "title": "We share {n} working hours a day",
+    "titleNone": "Our days barely overlap, so I work async",
+    "note": "Based on a standard {start}:00-{end}:00 workday on both sides. Santo Domingo is UTC-4 year-round.",
+    "me": "Santo Domingo",
+    "you": "You",
+    "aria": "Working-hours overlap: {n} hours per day",
+    "legendBoth": "both online",
+    "legendOne": "one of us",
+    "legendNow": "now (my time)",
+    "same": "same timezone as me",
+    "ahead": "{n}h ahead of me",
+    "behind": "{n}h behind me",
+    "cta": "Book a call in our overlap"
   }
 }
