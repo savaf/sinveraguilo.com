@@ -193,5 +193,17 @@
     "title": "Résumé",
     "print": "Print / Save as PDF",
     "skills": "Core skills"
+  },
+  "error": {
+    "label": "Error",
+    "notFoundTitle": "Lost in the stack",
+    "notFoundText": "This route doesn't exist. It may have moved, or the link is wrong. Here are the places that do.",
+    "errorTitle": "Something broke",
+    "errorText": "An unexpected error happened on my side. Try again or head somewhere safe.",
+    "path": "Requested path",
+    "home": "Back home",
+    "goto": "Go to",
+    "report": "Report a broken link",
+    "hint": "Press Ctrl/Cmd+K to search the site"
   }
 }
