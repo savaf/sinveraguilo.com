@@ -7,7 +7,8 @@
     "about": "About",
     "projects": "Projects",
     "blog": "Blog",
-    "contact": "Contact"
+    "contact": "Contact",
+    "colophon": "Colophon"
   },
   "hero": {
     "available": "Available for work",
@@ -120,7 +121,8 @@
     "copied": "Email copied",
     "close": "Close",
     "hintKeys": "↑↓ navigate · ↵ run · esc close",
-    "resume": "View résumé"
+    "resume": "View résumé",
+    "colophon": "View colophon (how this site is made)"
   },
   "sticky": {
     "text": "Available — let's talk",
@@ -357,6 +359,70 @@
       "mint": "Mint",
       "pink": "Pink",
       "orange": "Orange"
+    }
+  },
+  "colophon": {
+    "label": "// how this site is made",
+    "title": "Colophon",
+    "intro": "No template, no page builder. This site is a hand-built Nuxt app, and this page lists what it is made of and the details I sweated over.",
+    "specsTitle": "Stack",
+    "featuresTitle": "Details worth a look",
+    "hint": "Tip: press Ctrl/⌘ K anywhere on the site.",
+    "specs": {
+      "framework": {
+        "k": "framework",
+        "v": "Nuxt 3 · Vue 3"
+      },
+      "style": {
+        "k": "styling",
+        "v": "Tailwind CSS 4"
+      },
+      "content": {
+        "k": "content",
+        "v": "@nuxt/content (Markdown + JSON)"
+      },
+      "i18n": {
+        "k": "languages",
+        "v": "English / Español via @nuxtjs/i18n"
+      },
+      "type": {
+        "k": "type",
+        "v": "Archivo, Inter, Space Grotesk, JetBrains Mono"
+      },
+      "icons": {
+        "k": "seo",
+        "v": "Sitemap, hreflang alternates, OG tags"
+      },
+      "host": {
+        "k": "package mgr",
+        "v": "pnpm"
+      }
+    },
+    "features": {
+      "palette": {
+        "k": "Command palette",
+        "v": "Ctrl/⌘ K opens a quick menu to jump pages, switch language, or copy my email."
+      },
+      "accent": {
+        "k": "Accent picker",
+        "v": "The header colour picker re-themes every cyan highlight, live."
+      },
+      "a11y": {
+        "k": "Accessibility switches",
+        "v": "Text size, contrast, motion and spacing adjustable on the home page."
+      },
+      "curtain": {
+        "k": "Page curtain",
+        "v": "Route changes wipe through a curtain that names the destination."
+      },
+      "share": {
+        "k": "Quote sharing",
+        "v": "Select text in a blog post to copy it or share it on X and LinkedIn."
+      },
+      "resume": {
+        "k": "Printable résumé",
+        "v": "A résumé page built from the same content as the site, ready for Save as PDF."
+      }
     }
   }
 }

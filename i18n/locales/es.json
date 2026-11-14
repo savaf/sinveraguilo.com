@@ -7,7 +7,8 @@
     "about": "Sobre mí",
     "projects": "Proyectos",
     "blog": "Blog",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "colophon": "Colofón"
   },
   "hero": {
     "available": "Disponible para proyectos",
@@ -120,7 +121,8 @@
     "copied": "Correo copiado",
     "close": "Cerrar",
     "hintKeys": "↑↓ navegar · ↵ ejecutar · esc cerrar",
-    "resume": "Ver currículum"
+    "resume": "Ver currículum",
+    "colophon": "Ver colofón (cómo está hecho)"
   },
   "sticky": {
     "text": "Disponible — hablemos",
@@ -357,6 +359,70 @@
       "mint": "Menta",
       "pink": "Rosa",
       "orange": "Naranja"
+    }
+  },
+  "colophon": {
+    "label": "// cómo está hecho este sitio",
+    "title": "Colofón",
+    "intro": "Sin plantilla ni constructor de páginas. Este sitio es una app Nuxt hecha a mano, y esta página lista de qué está hecho y los detalles que cuidé.",
+    "specsTitle": "Stack",
+    "featuresTitle": "Detalles que vale la pena ver",
+    "hint": "Tip: pulsa Ctrl/⌘ K en cualquier parte del sitio.",
+    "specs": {
+      "framework": {
+        "k": "framework",
+        "v": "Nuxt 3 · Vue 3"
+      },
+      "style": {
+        "k": "estilos",
+        "v": "Tailwind CSS 4"
+      },
+      "content": {
+        "k": "contenido",
+        "v": "@nuxt/content (Markdown + JSON)"
+      },
+      "i18n": {
+        "k": "idiomas",
+        "v": "English / Español con @nuxtjs/i18n"
+      },
+      "type": {
+        "k": "tipografía",
+        "v": "Archivo, Inter, Space Grotesk, JetBrains Mono"
+      },
+      "icons": {
+        "k": "seo",
+        "v": "Sitemap, alternates hreflang, etiquetas OG"
+      },
+      "host": {
+        "k": "paquetes",
+        "v": "pnpm"
+      }
+    },
+    "features": {
+      "palette": {
+        "k": "Paleta de comandos",
+        "v": "Ctrl/⌘ K abre un menú rápido para saltar de página, cambiar de idioma o copiar mi correo."
+      },
+      "accent": {
+        "k": "Selector de acento",
+        "v": "El selector de color del encabezado recolorea en vivo todos los resaltes cian."
+      },
+      "a11y": {
+        "k": "Ajustes de accesibilidad",
+        "v": "Tamaño de texto, contraste, movimiento y espaciado ajustables en el inicio."
+      },
+      "curtain": {
+        "k": "Cortina de página",
+        "v": "Los cambios de ruta pasan por una cortina que nombra el destino."
+      },
+      "share": {
+        "k": "Compartir citas",
+        "v": "Selecciona texto en un artículo para copiarlo o compartirlo en X y LinkedIn."
+      },
+      "resume": {
+        "k": "Currículum imprimible",
+        "v": "Una página de currículum hecha con el mismo contenido del sitio, lista para Guardar como PDF."
+      }
     }
   }
 }
