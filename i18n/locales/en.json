@@ -83,6 +83,10 @@
     "sentOk": "Message sent — I'll get back to you soon.",
     "sentError": "Something went wrong. Please email me directly instead."
   },
+  "sticky": {
+    "text": "Available — let's talk",
+    "dismiss": "Dismiss"
+  },
   "cta": {
     "title": "Let's build something",
     "subtitle": "Have a project in mind? I'm open to freelance work and full-time roles.",
