@@ -193,5 +193,17 @@
     "title": "Currículum",
     "print": "Imprimir / Guardar PDF",
     "skills": "Habilidades clave"
+  },
+  "error": {
+    "label": "Error",
+    "notFoundTitle": "Perdido en el stack",
+    "notFoundText": "Esta ruta no existe. Puede que se haya movido o que el enlace esté mal. Estos son los lugares que sí existen.",
+    "errorTitle": "Algo se rompió",
+    "errorText": "Ocurrió un error inesperado de mi lado. Intenta de nuevo o ve a un lugar seguro.",
+    "path": "Ruta solicitada",
+    "home": "Volver al inicio",
+    "goto": "Ir a",
+    "report": "Reportar un enlace roto",
+    "hint": "Presiona Ctrl/Cmd+K para buscar en el sitio"
   }
 }

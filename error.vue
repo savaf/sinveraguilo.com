@@ -1,55 +1,66 @@
 <script setup lang="ts">
-import { useHead, ref, clearError } from "#imports";
-
 const props = defineProps<{
   error: Error & { statusCode?: number; statusMessage?: string };
 }>();
 
-const statusCode = ref(props.error.statusCode || 404);
-const statusMessage = ref(props.error.statusMessage || "Unknown error");
-const message = ref(props.error.message || "Sorry, there was an error. Please try again later.");
-// const stack = ref(props.error.stack || "");
+const { t, locale } = useI18n();
+const localePath = useLocalePath();
+const route = useRoute();
 
-// Head
+const statusCode = computed(() => props.error.statusCode || 404);
+const isNotFound = computed(() => statusCode.value === 404);
+
 useHead({
-  title: `${statusCode.value}: ${statusMessage.value}`,
-  htmlAttrs: {
-    lang: "en",
-    class: "h-full",
-  },
+  title: `${statusCode.value} · ${isNotFound.value ? t("error.notFoundTitle") : t("error.errorTitle")}`,
+  htmlAttrs: { lang: locale.value },
+  meta: [{ name: "robots", content: "noindex" }],
 });
 
-const handleError = () => clearError({ redirect: "/" });
+const links = computed(() => [
+  { to: "/", label: t("nav.home") },
+  { to: "/projects", label: t("nav.projects") },
+  { to: "/about", label: t("nav.about") },
+  { to: "/blog", label: t("nav.blog") },
+  { to: "/resume", label: t("resume.title") },
+  { to: "/contact", label: t("nav.contact") },
+]);
+
+const goHome = () => clearError({ redirect: localePath("/") });
+const goTo = (to: string) => clearError({ redirect: localePath(to) });
 </script>
 
 <template>
-  <div class="flex flex-col items-center justify-center w-screen h-screen bg-gradient-to-r from-primary-dark to-ternary-dark">
-    <div class="px-40 py-20 bg-secondary-dark rounded-md shadow-xl max-w-screen-lg">
-      <div class="flex flex-col items-center">
-        <h1 class="font-bold text-ternary-light text-9xl">{{ statusCode }}</h1>
+  <div class="relative min-h-screen overflow-hidden bg-indigo-600 text-white flex items-center">
+    <div class="absolute inset-0 grid-overlay--light" />
+    <div class="relative mx-auto w-full max-w-[1180px] px-6 py-16 sm:px-10">
+      <p class="m-0 inline-block border-2 border-ink bg-yellow px-3 py-1 font-display font-extrabold uppercase text-sm text-ink-text shadow-[4px_4px_0_#0a1420]">{{ $t("error.label") }} {{ statusCode }}</p>
 
-        <template v-if="statusCode === 404">
-          <h2 class="mb-2 text-2xl font-bold text-center text-ternary-light md:text-3xl"><span class="text-accent">Oops!</span> Page not found</h2>
+      <h1 class="m-0 mt-6 font-display font-black uppercase leading-[0.85] tracking-[-0.03em] text-[clamp(7rem,28vw,20rem)] [text-shadow:8px_8px_0_#0a1420]">
+        {{ statusCode }}
+      </h1>
 
-          <p class="mb-8 text-center text-ternary-light md:text-lg">The page you’re looking for doesn’t exist.</p>
-        </template>
-        <template v-else>
-          <h2 class="mb-2 text-2xl font-bold text-center text-ternary-light md:text-3xl"><span class="text-accent">Oops!</span> {{ statusMessage }}</h2>
+      <h2 class="m-0 mt-4 font-display font-black uppercase tracking-[-0.01em] text-[clamp(1.75rem,4vw,3rem)]">
+        {{ isNotFound ? $t("error.notFoundTitle") : $t("error.errorTitle") }}
+      </h2>
+      <p class="mt-3 max-w-[52ch] text-base text-indigo-50">
+        {{ isNotFound ? $t("error.notFoundText") : $t("error.errorText") }}
+      </p>
 
-          <p class="mb-8 text-center text-ternary-light md:text-lg">
-            {{ message }}
-          </p>
-        </template>
+      <p v-if="isNotFound" class="mt-5 max-w-full overflow-x-auto border-2 border-ink bg-ink-text/90 px-4 py-3 font-mono text-sm text-yellow shadow-[6px_6px_0_#0a1420]">
+        <span class="text-indigo-200">{{ $t("error.path") }}:</span> {{ route.fullPath }}
+      </p>
 
-        <SharedButton as="a" href="/" label="Go home" @click="handleError" />
-        <!-- <NuxtLink to="/" class="btn btn-primary" @click="handleError"> Go home </NuxtLink> -->
+      <nav class="mt-10 flex flex-wrap gap-4" :aria-label="$t('error.goto')">
+        <button type="button" class="font-display font-extrabold uppercase text-base text-ink-text bg-yellow border-2 border-ink px-[30px] py-[18px] shadow-[6px_6px_0_#0a1420] transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[9px_9px_0_#0a1420] active:translate-x-0 active:translate-y-0 active:shadow-[4px_4px_0_#0a1420]" @click="goHome">← {{ $t("error.home") }}</button>
+        <button v-for="l in links.slice(1)" :key="l.to" type="button" class="font-display font-extrabold uppercase text-base text-ink-text bg-white border-2 border-ink px-5 py-[18px] shadow-[4px_4px_0_#0a1420] transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[7px_7px_0_#0a1420] active:translate-x-0 active:translate-y-0" @click="goTo(l.to)">
+          {{ l.label }}
+        </button>
+      </nav>
 
-        <!-- <DevOnly>
-          <div v-if="stack" class="mockup-code mt-8 w-full">
-            <pre><code v-html="stack"></code></pre>
-          </div>
-        </DevOnly> -->
-      </div>
+      <p class="mt-8 text-sm text-indigo-100">
+        {{ $t("error.hint") }} ·
+        <a href="#" class="underline underline-offset-4 hover:text-yellow" @click.prevent="goTo('/contact')">{{ $t("error.report") }}</a>
+      </p>
     </div>
   </div>
 </template>
