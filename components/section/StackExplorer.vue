@@ -31,7 +31,7 @@ const yearsLabel = (months: number) => (months >= 12 ? `${(months / 12).toFixed(
 </script>
 
 <template>
-  <section class="mx-auto max-w-[1180px] px-6 pt-16 sm:px-10 sm:pt-[72px]">
+  <section id="stack" class="mx-auto max-w-[1180px] px-6 pt-16 sm:px-10 sm:pt-[72px]">
     <div v-reveal class="flex items-center gap-4 mb-3">
       <h2 class="m-0 font-display font-black text-[clamp(2rem,6vw,2.75rem)] uppercase text-slate-50 tracking-[-0.01em]">{{ $t("stack.title") }}</h2>
       <div class="flex-1 h-0.5 bg-ink" />

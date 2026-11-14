@@ -1,6 +1,7 @@
 <template>
   <div>
     <SectionHero />
+    <ClientOnly><SharedSectionRail /></ClientOnly>
     <SectionMarquee />
     <SharedStatsBar />
     <SectionFeatured />

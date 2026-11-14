@@ -6,7 +6,7 @@ const { data: projects } = await useAsyncData("featured_projects", () => {
 </script>
 
 <template>
-  <section class="mx-auto max-w-[1180px] px-6 py-16 sm:px-10 sm:py-[72px]">
+  <section id="work" class="mx-auto max-w-[1180px] px-6 py-16 sm:px-10 sm:py-[72px]">
     <div v-reveal class="flex items-baseline justify-between flex-wrap gap-4 mb-8">
       <div>
         <h2 class="m-0 font-display font-black text-[clamp(2rem,6vw,2.75rem)] uppercase text-slate-50 tracking-[-0.01em]">{{ $t("featured.title") }}</h2>

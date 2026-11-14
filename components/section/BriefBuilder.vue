@@ -19,7 +19,7 @@ const chip = (active: boolean) => ["cursor-pointer font-display font-bold upperc
 </script>
 
 <template>
-  <section class="border-t-2 border-ink bg-primary-dark">
+  <section id="brief" class="border-t-2 border-ink bg-primary-dark">
     <div v-reveal class="mx-auto max-w-[1180px] px-6 py-16 sm:px-10">
       <h2 class="m-0 font-display font-black uppercase text-primary-light tracking-[-0.01em] text-[clamp(2rem,4.5vw,3rem)]">{{ $t("brief.title") }}</h2>
       <p class="mt-3 mb-8 text-base text-muted max-w-[52ch]">{{ $t("brief.subtitle") }}</p>
