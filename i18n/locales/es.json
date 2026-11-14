@@ -437,5 +437,9 @@
     "cta": "Enviarme este stack",
     "subj": "Compatibilidad de stack",
     "msg": "Mi stack: {stack}\nCubierto por tus roles: {have} ({pct}%)\n\nSobre el proyecto: "
+  },
+  "tldr": {
+    "label": "// lectura de 30 segundos",
+    "aria": "Abrir el resumen de 30 segundos"
   }
 }

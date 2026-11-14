@@ -43,6 +43,7 @@ watch(
 
       <div class="flex items-center gap-3">
         <ClientOnly><SharedCommandPalette /></ClientOnly>
+        <SharedTldr />
         <SharedAccentPicker />
         <SharedLangSwitcher />
         <!-- Mobile toggle -->

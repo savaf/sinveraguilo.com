@@ -437,5 +437,9 @@
     "cta": "Send this stack to me",
     "subj": "Stack fit check",
     "msg": "My stack: {stack}\nCovered by your roles: {have} ({pct}%)\n\nAbout the project: "
+  },
+  "tldr": {
+    "label": "// 30-second read",
+    "aria": "Open the 30-second summary"
   }
 }
