@@ -5,6 +5,7 @@
     <SectionMarquee />
     <SharedStatsBar />
     <SectionImpact />
+    <SectionManifesto />
     <SectionFeatured />
     <SectionCareerLog />
     <SectionStackExplorer />
