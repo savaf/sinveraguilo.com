@@ -162,3 +162,34 @@ html.a11y-motion *::after {
   --accent: #fb923c;
   --accent-rgb: 251 146 60;
 }
+
+/* Blueprint mode: outlines every layout box and labels it with its tag (toggle with "B") */
+:root[data-blueprint] main * {
+  outline: 1px dashed rgb(var(--accent-rgb) / 0.55);
+  outline-offset: -1px;
+}
+:root[data-blueprint] main :is(section, article, form, h1, h2, h3) {
+  position: relative;
+}
+:root[data-blueprint] :root[data-blueprint] main section::before { content: "<section>"; }
+:root[data-blueprint] main article::before { content: "<article>"; }
+:root[data-blueprint] main form::before { content: "<form>"; }
+:root[data-blueprint] main h1::before { content: "<h1>"; }
+:root[data-blueprint] main h2::before { content: "<h2>"; }
+:root[data-blueprint] main h3::before { content: "<h3>"; }
+:root[data-blueprint] main :is(section, article, form, h1, h2, h3)::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  padding: 0 4px;
+  font: 700 10px/1.5 ui-monospace, monospace;
+  color: #0b0b12;
+  background: rgb(var(--accent-rgb));
+  pointer-events: none;
+  text-transform: none;
+}
+:root[data-blueprint] main {
+  background-image: linear-gradient(rgb(var(--accent-rgb) / 0.07) 1px, transparent 1px), linear-gradient(90deg, rgb(var(--accent-rgb) / 0.07) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
