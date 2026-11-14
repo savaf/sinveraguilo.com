@@ -26,7 +26,7 @@ export default <Partial<Config>>{
         grid: "#123049",
         surface: "#0a1c2e",
         "footer-dark": "#0a1626",
-        cyan: "#22d3ee",
+        cyan: "rgb(var(--accent-rgb) / <alpha-value>)",
         yellow: "#facc15",
         indigo: "#6366f1",
         mint: "#34d399",

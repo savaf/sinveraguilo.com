@@ -41,7 +41,7 @@ onBeforeUnmount(() => clearTimeout(timer));
       <div class="flex flex-wrap items-end justify-between gap-8">
         <div>
           <p class="m-0 font-mono text-[13px] text-cyan">{{ $t("footer.emailLabel") }}</p>
-          <div class="mt-3 flex flex-wrap items-stretch border-2 border-ink shadow-[6px_6px_0_#22d3ee]">
+          <div class="mt-3 flex flex-wrap items-stretch border-2 border-ink shadow-[6px_6px_0_var(--accent)]">
             <a :href="`mailto:${EMAIL}`" class="bg-surface px-5 py-3.5 font-mono text-sm text-slate-50 hover:text-yellow break-all">{{ EMAIL }}</a>
             <button type="button" class="border-l-2 border-ink bg-yellow px-5 py-3.5 font-display text-sm font-extrabold uppercase text-ink-text transition-colors hover:bg-cyan" aria-live="polite" @click="copyEmail">
               {{ copied ? $t("footer.copied") : $t("footer.copy") }}
@@ -78,7 +78,7 @@ onBeforeUnmount(() => clearTimeout(timer));
 <style scoped>
 .wordmark {
   color: transparent;
-  -webkit-text-stroke: 2px #22d3ee;
+  -webkit-text-stroke: 2px var(--accent);
   transition: color 0.3s ease;
 }
 .wordmark:hover {

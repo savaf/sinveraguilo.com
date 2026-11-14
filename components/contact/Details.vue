@@ -17,7 +17,7 @@ const hoverColor: Record<string, string> = {
     <p class="mt-5 mb-9 text-[17px] leading-relaxed text-slate-300 max-w-[42ch]">{{ $t("contact.intro") }}</p>
 
     <div class="flex flex-col gap-4">
-      <a href="mailto:hello@sinveraguilo.com" class="flex items-center gap-3.5 border-2 border-ink bg-surface p-4 shadow-[5px_5px_0_#22d3ee] transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[7px_7px_0_#22d3ee]">
+      <a href="mailto:hello@sinveraguilo.com" class="flex items-center gap-3.5 border-2 border-ink bg-surface p-4 shadow-[5px_5px_0_var(--accent)] transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[7px_7px_0_var(--accent)]">
         <span class="flex p-2 bg-cyan text-ink-text border-2 border-ink">
           <Icon name="i-heroicons-envelope" class="w-[18px] h-[18px]" aria-hidden="true" />
         </span>

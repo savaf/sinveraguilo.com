@@ -49,7 +49,7 @@ async function copy() {
   <div ref="root">
     <slot />
     <Teleport to="body">
-      <div v-if="text" role="toolbar" :aria-label="t('quote.label')" class="fixed z-[60] flex -translate-x-1/2 -translate-y-full items-stretch border-2 border-ink bg-yellow font-mono text-[12px] font-bold uppercase text-ink-text shadow-[4px_4px_0_#22d3ee]" :style="{ left: `${pos.x}px`, top: `${pos.y}px` }" @mousedown.prevent>
+      <div v-if="text" role="toolbar" :aria-label="t('quote.label')" class="fixed z-[60] flex -translate-x-1/2 -translate-y-full items-stretch border-2 border-ink bg-yellow font-mono text-[12px] font-bold uppercase text-ink-text shadow-[4px_4px_0_var(--accent)]" :style="{ left: `${pos.x}px`, top: `${pos.y}px` }" @mousedown.prevent>
         <button type="button" class="px-3 py-2 hover:bg-cyan" @click="copy">{{ copied ? t("quote.copied") : t("quote.copy") }}</button>
         <a :href="xUrl" target="_blank" rel="noopener noreferrer" class="border-l-2 border-ink px-3 py-2 hover:bg-cyan">X</a>
         <a :href="liUrl" target="_blank" rel="noopener noreferrer" class="border-l-2 border-ink px-3 py-2 hover:bg-cyan">LinkedIn</a>

@@ -43,6 +43,7 @@ watch(
 
       <div class="flex items-center gap-3">
         <ClientOnly><SharedCommandPalette /></ClientOnly>
+        <SharedAccentPicker />
         <SharedLangSwitcher />
         <!-- Mobile toggle -->
         <button type="button" class="md:hidden inline-flex items-center justify-center border-2 border-ink text-primary-light h-11 w-11" aria-label="Toggle menu" @click="mobileMenuOpen = !mobileMenuOpen">

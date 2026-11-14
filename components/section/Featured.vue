@@ -23,7 +23,7 @@ const preview = (p: any) => p.image ?? "/images/projects/placeholder.svg";
   <section id="work" class="mx-auto max-w-[1180px] px-6 py-16 sm:px-10 sm:py-[72px]">
     <div v-reveal class="flex items-baseline justify-between flex-wrap gap-4 mb-8">
       <h2 class="m-0 font-display font-black text-[clamp(2rem,6vw,2.75rem)] uppercase text-slate-50 tracking-[-0.01em]">{{ $t("featured.title") }}</h2>
-      <NuxtLink :to="localePath('/projects')" class="font-display font-extrabold uppercase text-sm text-ink-text bg-yellow border-2 border-ink px-5 py-3 shadow-[4px_4px_0_#22d3ee] transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0_#22d3ee] active:translate-x-0 active:translate-y-0 active:shadow-[2px_2px_0_#22d3ee]"> {{ $t("featured.more") }} → </NuxtLink>
+      <NuxtLink :to="localePath('/projects')" class="font-display font-extrabold uppercase text-sm text-ink-text bg-yellow border-2 border-ink px-5 py-3 shadow-[4px_4px_0_var(--accent)] transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0_var(--accent)] active:translate-x-0 active:translate-y-0 active:shadow-[2px_2px_0_var(--accent)]"> {{ $t("featured.more") }} → </NuxtLink>
     </div>
 
     <ol class="m-0 p-0 list-none border-t-2 border-ink" @pointerleave="active = null">

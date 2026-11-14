@@ -1,7 +1,7 @@
 <script setup lang="ts">
 type Img = { id: number; title: string; img: string };
 const props = defineProps<{ images: Img[] }>();
-const shadows = ["#6366f1", "#22d3ee", "#facc15"];
+const shadows = ["#6366f1", "var(--accent)", "#facc15"];
 const dialog = ref<HTMLDialogElement | null>(null);
 const current = ref(0);
 const total = computed(() => props.images.length);

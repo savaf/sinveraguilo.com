@@ -144,3 +144,21 @@ html.a11y-motion *::after {
   transition: none !important;
   scroll-behavior: auto !important;
 }
+
+/* Accent palette (switched from SharedAccentPicker). Default is the original cyan. */
+:root {
+  --accent: #22d3ee;
+  --accent-rgb: 34 211 238;
+}
+:root[data-accent="mint"] {
+  --accent: #34d399;
+  --accent-rgb: 52 211 153;
+}
+:root[data-accent="pink"] {
+  --accent: #f472b6;
+  --accent-rgb: 244 114 182;
+}
+:root[data-accent="orange"] {
+  --accent: #fb923c;
+  --accent-rgb: 251 146 60;
+}

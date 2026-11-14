@@ -349,5 +349,14 @@
     "note": "Carga el sitio publicado al hacer clic",
     "open": "Abrir en pestaña nueva",
     "case": "Leer el caso"
+  },
+  "accent": {
+    "label": "Color de acento",
+    "names": {
+      "cyan": "Cian",
+      "mint": "Menta",
+      "pink": "Rosa",
+      "orange": "Naranja"
+    }
   }
 }

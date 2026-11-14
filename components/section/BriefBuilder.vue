@@ -15,7 +15,7 @@ const target = computed(() => {
   };
 });
 
-const chip = (active: boolean) => ["cursor-pointer font-display font-bold uppercase text-sm border-2 border-ink px-4 py-3 transition-all", active ? "bg-yellow text-ink-text shadow-[4px_4px_0_#22d3ee] -translate-x-0.5 -translate-y-0.5" : "bg-surface text-primary-light hover:border-cyan"];
+const chip = (active: boolean) => ["cursor-pointer font-display font-bold uppercase text-sm border-2 border-ink px-4 py-3 transition-all", active ? "bg-yellow text-ink-text shadow-[4px_4px_0_var(--accent)] -translate-x-0.5 -translate-y-0.5" : "bg-surface text-primary-light hover:border-cyan"];
 </script>
 
 <template>

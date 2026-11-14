@@ -349,5 +349,14 @@
     "note": "Loads the hosted site on click",
     "open": "Open in new tab",
     "case": "Read the case"
+  },
+  "accent": {
+    "label": "Accent color",
+    "names": {
+      "cyan": "Cyan",
+      "mint": "Mint",
+      "pink": "Pink",
+      "orange": "Orange"
+    }
   }
 }

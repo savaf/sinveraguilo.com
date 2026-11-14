@@ -40,7 +40,7 @@ const yearsLabel = (months: number) => (months >= 12 ? `${(months / 12).toFixed(
 
     <div class="border-2 border-ink bg-surface">
       <div class="flex flex-wrap gap-3 p-6 sm:p-8">
-        <button v-for="s in skills" :key="s.name" type="button" :aria-pressed="selected === s.name" class="font-display font-extrabold uppercase border-2 border-ink px-3 py-1.5 transition-all hover:-translate-y-0.5" :class="selected === s.name ? 'bg-yellow text-ink-text shadow-[4px_4px_0_#22d3ee]' : 'text-slate-100 hover:border-yellow'" :style="{ fontSize: `${size(s.months)}rem` }" @click="toggle(s.name)">
+        <button v-for="s in skills" :key="s.name" type="button" :aria-pressed="selected === s.name" class="font-display font-extrabold uppercase border-2 border-ink px-3 py-1.5 transition-all hover:-translate-y-0.5" :class="selected === s.name ? 'bg-yellow text-ink-text shadow-[4px_4px_0_var(--accent)]' : 'text-slate-100 hover:border-yellow'" :style="{ fontSize: `${size(s.months)}rem` }" @click="toggle(s.name)">
           {{ s.name }}
         </button>
       </div>
