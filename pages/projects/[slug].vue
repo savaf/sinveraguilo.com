@@ -16,7 +16,6 @@ const { data: allProjects } = await useAsyncData("detail_more_projects", () => {
 });
 
 const tagAccent = ["bg-yellow", "bg-cyan", "bg-indigo-600 text-white"];
-const galleryShadow = ["#22d3ee", "#facc15", "#6366f1"];
 
 function moreProjects(slug: string) {
   return (allProjects.value || []).filter((p: any) => p.slug !== slug).slice(0, 2);
@@ -67,14 +66,7 @@ useHead({
 
     <!-- Gallery -->
     <section v-if="doc.projectImages?.length" class="mx-auto max-w-[1180px] px-6 pt-14 sm:px-10">
-      <div class="border-2 border-ink" :style="{ boxShadow: `10px 10px 0 ${galleryShadow[2]}` }">
-        <NuxtImg :src="doc.projectImages[0].img" :alt="doc.projectImages[0].title" width="1120" height="600" class="w-full block" />
-      </div>
-      <div v-if="doc.projectImages.length > 1" class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
-        <div v-for="(img, i) in doc.projectImages.slice(1)" :key="img.id" v-reveal="(i % 2) * 90" class="border-2 border-ink" :style="{ boxShadow: `8px 8px 0 ${galleryShadow[i % galleryShadow.length]}` }">
-          <NuxtImg :src="img.img" :alt="img.title" width="550" height="360" class="w-full h-full object-cover block" />
-        </div>
-      </div>
+      <ProjectsGallery :images="doc.projectImages" />
     </section>
 
     <!-- Overview + tech -->

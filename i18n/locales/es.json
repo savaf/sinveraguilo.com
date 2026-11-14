@@ -67,6 +67,10 @@
     "empty": "Aún no hay posts — vuelve pronto."
   },
   "detail": {
+    "zoom": "Ampliar",
+    "prev": "Imagen anterior",
+    "next": "Imagen siguiente",
+    "close": "Cerrar",
     "toc": "En esta página",
     "back": "Volver a proyectos",
     "published": "Publicado",
