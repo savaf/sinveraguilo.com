@@ -13,7 +13,7 @@ const localePath = useLocalePath();
       <h2 class="m-0 mt-2 font-display font-black uppercase text-slate-50 tracking-[-0.01em] text-[clamp(2rem,4.5vw,3rem)] max-w-[22ch]">{{ $t("demos.title") }}</h2>
       <p class="m-0 mt-3 max-w-[60ch] text-slate-300">{{ $t("demos.lead") }}</p>
       <div class="mt-10 grid gap-8 md:grid-cols-2">
-        <article v-for="p in demos" :key="p._path" v-reveal class="border-2 border-ink bg-primary-dark shadow-[6px_6px_0_#22d3ee]">
+        <article v-for="p in demos" :key="p._path" v-reveal class="border-2 border-ink bg-primary-dark shadow-[6px_6px_0_var(--accent)]">
           <header class="flex items-center justify-between gap-3 border-b-2 border-ink px-4 py-3">
             <h3 class="m-0 font-display text-lg font-extrabold uppercase text-slate-50">{{ p.title }}</h3>
             <a :href="p.previewLink" target="_blank" rel="noopener noreferrer" class="font-mono text-xs font-bold uppercase text-yellow underline underline-offset-4 hover:text-cyan">{{ $t("demos.open") }} ↗</a>
@@ -22,7 +22,7 @@ const localePath = useLocalePath();
             <iframe v-if="loaded[p._path]" :src="p.previewLink" :title="p.title" loading="lazy" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin" class="h-full w-full border-0 bg-white" />
             <button v-else type="button" class="group absolute inset-0 flex h-full w-full flex-col items-center justify-center gap-3 text-slate-50" @click="loaded[p._path] = true">
               <NuxtImg :src="p.image" alt="" width="560" height="460" loading="lazy" format="webp" class="absolute inset-0 h-full w-full object-cover opacity-40 transition-opacity group-hover:opacity-60" />
-              <span class="relative border-2 border-ink bg-yellow px-5 py-3 font-display text-sm font-extrabold uppercase text-ink-text shadow-[4px_4px_0_#22d3ee] transition-transform group-hover:-translate-y-0.5">▶ {{ $t("demos.run") }}</span>
+              <span class="relative border-2 border-ink bg-yellow px-5 py-3 font-display text-sm font-extrabold uppercase text-ink-text shadow-[4px_4px_0_var(--accent)] transition-transform group-hover:-translate-y-0.5">▶ {{ $t("demos.run") }}</span>
               <span class="relative font-mono text-xs">{{ $t("demos.note") }}</span>
             </button>
           </div>

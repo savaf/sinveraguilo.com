@@ -61,7 +61,7 @@ function leaveGrid() {
   mask-image: radial-gradient(circle 130px at var(--x) var(--y), #000 55%, transparent 100%);
 }
 .grid-glow {
-  background-image: linear-gradient(#22d3ee 1px, transparent 1px), linear-gradient(90deg, #22d3ee 1px, transparent 1px);
+  background-image: linear-gradient(var(--accent) 1px, transparent 1px), linear-gradient(90deg, var(--accent) 1px, transparent 1px);
   background-size: 44px 44px;
   pointer-events: none;
   -webkit-mask-image: radial-gradient(circle 220px at var(--gx) var(--gy), #000 0%, transparent 100%);
@@ -101,7 +101,7 @@ function leaveGrid() {
 
         <!-- Split CTA -->
         <div class="hero-enter mt-9" style="--i: 4">
-          <div class="group inline-flex w-max border-2 border-ink shadow-[6px_6px_0_#22d3ee] transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[9px_9px_0_#22d3ee] active:translate-x-0 active:translate-y-0 active:shadow-[4px_4px_0_#22d3ee]">
+          <div class="group inline-flex w-max border-2 border-ink shadow-[6px_6px_0_var(--accent)] transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[9px_9px_0_var(--accent)] active:translate-x-0 active:translate-y-0 active:shadow-[4px_4px_0_var(--accent)]">
             <NuxtLink :to="localePath('/projects')" class="font-display font-extrabold uppercase text-[15px] bg-indigo-600 text-white px-[26px] py-[15px] border-r-2 border-ink">
               {{ $t("hero.ctaWork") }}
             </NuxtLink>

@@ -94,7 +94,7 @@ onBeforeUnmount(() => window.removeEventListener("keydown", onKey));
   <Teleport to="body">
     <transition name="fade">
       <div v-if="open" class="fixed inset-0 z-[100] flex items-start justify-center bg-ink/80 px-4 pt-[15vh]" role="dialog" aria-modal="true" :aria-label="$t('palette.hint')" @mousedown.self="close">
-        <div class="w-full max-w-xl border-2 border-ink bg-surface shadow-[8px_8px_0_#22d3ee]">
+        <div class="w-full max-w-xl border-2 border-ink bg-surface shadow-[8px_8px_0_var(--accent)]">
           <div class="flex items-center border-b-2 border-ink">
             <span class="pl-4 font-mono text-cyan" aria-hidden="true">&gt;</span>
             <input ref="input" v-model="query" type="text" role="combobox" aria-expanded="true" aria-controls="palette-list" :placeholder="$t('palette.placeholder')" class="flex-1 bg-transparent px-3 py-4 font-mono text-sm text-white outline-none placeholder:text-dim" @keydown="onInputKey" />

@@ -86,7 +86,7 @@ const offsetLabel = computed(() => {
           </div>
         </div>
 
-        <NuxtLink :to="localePath('/contact')" class="mt-8 inline-block font-display font-extrabold uppercase text-sm text-ink-text bg-yellow border-2 border-ink px-5 py-3 shadow-[4px_4px_0_#22d3ee] transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0_#22d3ee]"> {{ $t("overlap.cta") }} → </NuxtLink>
+        <NuxtLink :to="localePath('/contact')" class="mt-8 inline-block font-display font-extrabold uppercase text-sm text-ink-text bg-yellow border-2 border-ink px-5 py-3 shadow-[4px_4px_0_var(--accent)] transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0_var(--accent)]"> {{ $t("overlap.cta") }} → </NuxtLink>
       </ClientOnly>
     </div>
   </section>

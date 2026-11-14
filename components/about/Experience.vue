@@ -65,10 +65,10 @@ function dateLabel(exp: (typeof jobExperiences)[number]) {
 }
 .exp-card:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 8px 8px 0 #22d3ee;
+  box-shadow: 8px 8px 0 var(--accent);
 }
 .exp-card:active {
   transform: translate(0, 0);
-  box-shadow: 5px 5px 0 #22d3ee;
+  box-shadow: 5px 5px 0 var(--accent);
 }
 </style>

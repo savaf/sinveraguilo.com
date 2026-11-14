@@ -104,7 +104,7 @@ watch(locale, () => {
     </div>
     <p class="m-0 mb-6 text-[15px] text-slate-300 max-w-[60ch]">{{ $t("terminal.subtitle") }}</p>
 
-    <div class="border-2 border-ink bg-footer-dark shadow-[6px_6px_0_#22d3ee]" @click="field?.focus()">
+    <div class="border-2 border-ink bg-footer-dark shadow-[6px_6px_0_var(--accent)]" @click="field?.focus()">
       <div class="flex items-center gap-2 border-b-2 border-ink px-4 py-2 font-mono text-xs text-dim">
         <span class="w-2.5 h-2.5 rounded-full bg-yellow" /><span class="w-2.5 h-2.5 rounded-full bg-cyan" /><span class="w-2.5 h-2.5 rounded-full bg-mint" />
         <span class="ml-2">~/savaf — zsh</span>

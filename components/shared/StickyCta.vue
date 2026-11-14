@@ -31,7 +31,7 @@ onBeforeUnmount(() => window.removeEventListener("scroll", onScroll));
 
 <template>
   <transition name="fade">
-    <div v-if="visible" class="fixed bottom-6 left-4 right-20 sm:right-auto sm:left-8 z-40 flex items-stretch border-2 border-ink bg-yellow text-ink-text shadow-[6px_6px_0_#22d3ee]">
+    <div v-if="visible" class="fixed bottom-6 left-4 right-20 sm:right-auto sm:left-8 z-40 flex items-stretch border-2 border-ink bg-yellow text-ink-text shadow-[6px_6px_0_var(--accent)]">
       <NuxtLink :to="localePath('/contact')" class="flex items-center gap-3 px-4 py-3 font-display font-extrabold uppercase text-sm transition-colors hover:bg-cyan">
         <span class="relative flex h-2.5 w-2.5">
           <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-ink-text opacity-60" />
