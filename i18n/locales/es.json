@@ -306,5 +306,24 @@
         "d": "Más espacio entre líneas, letras y palabras."
       }
     }
+  },
+  "intent": {
+    "kicker": "// empieza aquí",
+    "title": "¿Qué te trae por aquí?",
+    "hire": {
+      "tab": "Estoy contratando",
+      "pitch": "Echa un vistazo al currículum y luego al registro de carrera para ver cómo se conectan los roles. Si encaja, el contacto está a un clic.",
+      "links": ["Leer el currículum", "Ver el registro de carrera"]
+    },
+    "project": {
+      "tab": "Tengo un proyecto",
+      "pitch": "Sin llamada de introducción. Describe el problema, la restricción y la fecha en el constructor de briefs y recibirás un alcance en lenguaje claro.",
+      "links": ["Abrir el constructor de briefs", "Ver trabajos anteriores"]
+    },
+    "look": {
+      "tab": "Solo miro",
+      "pitch": "Empieza por el trabajo destacado, o juega con la terminal más abajo. Responde preguntas reales sobre el sitio.",
+      "links": ["Ver trabajo destacado", "Probar la terminal"]
+    }
   }
 }
