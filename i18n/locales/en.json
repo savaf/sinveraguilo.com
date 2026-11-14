@@ -352,6 +352,7 @@
     "open": "Open in new tab",
     "case": "Read the case"
   },
+  "blueprint": {"label": "Blueprint", "hint": "Toggle blueprint mode (B): outline every section and heading"},
   "accent": {
     "label": "Accent color",
     "names": {

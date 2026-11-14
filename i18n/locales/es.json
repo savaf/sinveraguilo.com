@@ -352,6 +352,7 @@
     "open": "Abrir en pestaña nueva",
     "case": "Leer el caso"
   },
+  "blueprint": {"label": "Plano", "hint": "Alternar modo plano (B): delinea cada sección y encabezado"},
   "accent": {
     "label": "Color de acento",
     "names": {
