@@ -83,6 +83,18 @@
     "sentOk": "Message sent — I'll get back to you soon.",
     "sentError": "Something went wrong. Please email me directly instead."
   },
+  "palette": {
+    "hint": "Quick menu",
+    "placeholder": "Type a command or search…",
+    "empty": "No matches",
+    "go": "Go to {page}",
+    "lang": "Switch language to {lang}",
+    "cv": "Download CV",
+    "copyEmail": "Copy email address",
+    "copied": "Email copied",
+    "close": "Close",
+    "hintKeys": "↑↓ navigate · ↵ run · esc close"
+  },
   "sticky": {
     "text": "Available — let's talk",
     "dismiss": "Dismiss"

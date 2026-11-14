@@ -83,6 +83,18 @@
     "sentOk": "Mensaje enviado — te responderé pronto.",
     "sentError": "Algo salió mal. Por favor escríbeme directamente por correo."
   },
+  "palette": {
+    "hint": "Menú rápido",
+    "placeholder": "Escribe un comando o busca…",
+    "empty": "Sin resultados",
+    "go": "Ir a {page}",
+    "lang": "Cambiar idioma a {lang}",
+    "cv": "Descargar CV",
+    "copyEmail": "Copiar correo",
+    "copied": "Correo copiado",
+    "close": "Cerrar",
+    "hintKeys": "↑↓ navegar · ↵ ejecutar · esc cerrar"
+  },
   "sticky": {
     "text": "Disponible — hablemos",
     "dismiss": "Cerrar"
