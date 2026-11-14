@@ -55,6 +55,7 @@ function move(e: PointerEvent) {
               {{ $t("hero.ctaCV") }}
             </a>
           </div>
+          <NuxtLink :to="localePath('/resume')" class="mt-4 block font-mono text-xs text-cyan underline underline-offset-4 hover:text-yellow">{{ $t("palette.resume") }} →</NuxtLink>
         </div>
 
         <!-- Tech tags -->
