@@ -110,5 +110,25 @@
   "careerLog": {
     "title": "Career log",
     "all": "Full experience"
+  },
+  "brief": {
+    "title": "Start your brief",
+    "subtitle": "Pick what you need. I'll prefill the message so you only add the details.",
+    "needLabel": "I need",
+    "timeLabel": "Timing",
+    "needs": {
+      "web": "A website or web app",
+      "migration": "A migration",
+      "role": "A full-time hire",
+      "freelance": "Freelance help"
+    },
+    "times": {
+      "asap": "As soon as possible",
+      "month": "Within a month",
+      "explore": "Just exploring"
+    },
+    "send": "Draft my message",
+    "subj": "{need}",
+    "msg": "Hi Sinver,\n\nI'm looking for: {need}.\nTiming: {time}.\n\nSome context:\n"
   }
 }
