@@ -130,5 +130,12 @@
     "send": "Draft my message",
     "subj": "{need}",
     "msg": "Hi Sinver,\n\nI'm looking for: {need}.\nTiming: {time}.\n\nSome context:\n"
+  },
+  "stack": {
+    "title": "Stack explorer",
+    "subtitle": "Every skill from my roles, sized by months of real use. Click one to see where I used it.",
+    "hint": "Select a skill to see the roles behind it.",
+    "years": "yrs",
+    "months": "mo"
   }
 }

@@ -130,5 +130,12 @@
     "send": "Redactar mi mensaje",
     "subj": "{need}",
     "msg": "Hola Sinver,\n\nBusco: {need}.\nPlazo: {time}.\n\nContexto:\n"
+  },
+  "stack": {
+    "title": "Explorador de stack",
+    "subtitle": "Cada habilidad de mis roles, dimensionada por meses de uso real. Haz clic en una para ver dónde la usé.",
+    "hint": "Selecciona una habilidad para ver los roles detrás.",
+    "years": "años",
+    "months": "meses"
   }
 }

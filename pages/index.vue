@@ -5,6 +5,7 @@
     <SharedStatsBar />
     <SectionFeatured />
     <SectionCareerLog />
+    <SectionStackExplorer />
     <SectionBriefBuilder />
     <SharedCtaBand />
   </div>
