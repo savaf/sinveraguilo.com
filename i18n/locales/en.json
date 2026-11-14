@@ -94,5 +94,9 @@
   },
   "footer": {
     "follow": "Follow me"
+  },
+  "careerLog": {
+    "title": "Career log",
+    "all": "Full experience"
   }
 }
