@@ -165,5 +165,21 @@
     "stack": "Stack",
     "terminal": "Terminal",
     "brief": "Brief"
+  },
+  "overlap": {
+    "kicker": "chequeo de zona horaria",
+    "title": "Compartimos {n} horas laborales al día",
+    "titleNone": "Nuestros días casi no coinciden, así que trabajo asíncrono",
+    "note": "Basado en una jornada estándar de {start}:00 a {end}:00 en ambos lados. Santo Domingo es UTC-4 todo el año.",
+    "me": "Santo Domingo",
+    "you": "Tú",
+    "aria": "Solape de horario laboral: {n} horas al día",
+    "legendBoth": "ambos en línea",
+    "legendOne": "uno de los dos",
+    "legendNow": "ahora (mi hora)",
+    "same": "misma zona horaria que yo",
+    "ahead": "{n}h por delante de mí",
+    "behind": "{n}h por detrás de mí",
+    "cta": "Agenda una llamada en nuestro solape"
   }
 }
