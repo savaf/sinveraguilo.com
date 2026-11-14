@@ -84,7 +84,11 @@
     "send": "Enviar mensaje",
     "sending": "Enviando",
     "sentOk": "Mensaje enviado — te responderé pronto.",
-    "sentError": "Algo salió mal. Por favor escríbeme directamente por correo."
+    "sentError": "Algo salió mal. Por favor escríbeme directamente por correo.",
+    "preview": "Vista previa de tu correo",
+    "mailApp": "Abrir en mi app de correo",
+    "pvFrom": "De",
+    "pvTo": "Para"
   },
   "palette": {
     "hint": "Menú rápido",

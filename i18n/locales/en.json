@@ -84,7 +84,11 @@
     "send": "Send message",
     "sending": "Sending",
     "sentOk": "Message sent — I'll get back to you soon.",
-    "sentError": "Something went wrong. Please email me directly instead."
+    "sentError": "Something went wrong. Please email me directly instead.",
+    "preview": "Live preview of your email",
+    "mailApp": "Open in my mail app",
+    "pvFrom": "From",
+    "pvTo": "To"
   },
   "palette": {
     "hint": "Quick menu",
