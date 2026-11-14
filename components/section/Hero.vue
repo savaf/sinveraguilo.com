@@ -1,7 +1,30 @@
 <script setup lang="ts">
 const techs = ["Vue", "React", "Node", "TypeScript", "Angular"];
 const localePath = useLocalePath();
+
+// Colour "flashlight" over the grayscale portrait, following the pointer.
+const lit = ref(false);
+const x = ref(0);
+const y = ref(0);
+function move(e: PointerEvent) {
+  const r = (e.currentTarget as HTMLElement).getBoundingClientRect();
+  x.value = e.clientX - r.left;
+  y.value = e.clientY - r.top;
+  lit.value = true;
+}
 </script>
+
+<style scoped>
+.portrait-color {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  -webkit-mask-image: radial-gradient(circle 130px at var(--x) var(--y), #000 55%, transparent 100%);
+  mask-image: radial-gradient(circle 130px at var(--x) var(--y), #000 55%, transparent 100%);
+}
+.is-lit .portrait-color {
+  opacity: 1;
+}
+</style>
 
 <template>
   <section class="relative border-b-2 border-ink overflow-hidden">
@@ -43,8 +66,9 @@ const localePath = useLocalePath();
       </div>
 
       <!-- Right -->
-      <div class="hero-enter relative flex items-stretch bg-surface min-h-[420px]" style="--i: 2">
+      <div class="hero-enter portrait relative flex items-stretch bg-surface min-h-[420px] overflow-hidden touch-pan-y" :class="{ 'is-lit': lit }" style="--i: 2" @pointermove="move" @pointerleave="lit = false">
         <NuxtImg src="/images/portrait.jpg" alt="Sinver Aguiló" width="575" height="522" class="w-full object-cover grayscale contrast-[1.05]" />
+        <NuxtImg src="/images/portrait.jpg" alt="" aria-hidden="true" width="575" height="522" class="portrait-color absolute inset-0 w-full h-full object-cover pointer-events-none" :style="{ '--x': x + 'px', '--y': y + 'px' }" />
         <div class="absolute left-0 bottom-0 font-mono font-bold text-xs text-ink-text bg-cyan px-3.5 py-2 border-t-2 border-r-2 border-ink">
           {{ $t("hero.label") }}
         </div>
