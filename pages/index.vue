@@ -10,6 +10,7 @@
     <SectionStackExplorer />
     <SectionTerminal />
     <SectionTimeOverlap />
+    <SectionProcess />
     <SectionBriefBuilder />
     <SharedCtaBand />
   </div>

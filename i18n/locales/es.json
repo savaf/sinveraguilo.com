@@ -226,5 +226,28 @@
     "before": "Antes",
     "after": "Después",
     "migrated": "Migraciones de sistemas legados (.NET, Rails, JSP → cliente-servidor y microservicios) para"
+  },
+  "process": {
+    "kicker": "// cómo trabajaríamos",
+    "title": "Del brief a producción en cuatro pasos",
+    "cta": "Empezar con el paso 01",
+    "steps": [
+      {
+        "t": "Brief",
+        "d": "Me cuentas el problema, la restricción y la fecha. No hace falta una presentación."
+      },
+      {
+        "t": "Alcance",
+        "d": "Te respondo con un plan en lenguaje claro: qué sale primero, qué espera y qué omitiría."
+      },
+      {
+        "t": "Construcción",
+        "d": "Incrementos pequeños en un repo compartido, con CI desde el primer día."
+      },
+      {
+        "t": "Entrega",
+        "d": "Desplegado, documentado y entregado para que tu equipo lo mantenga."
+      }
+    ]
   }
 }
