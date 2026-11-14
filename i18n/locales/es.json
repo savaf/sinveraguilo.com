@@ -51,6 +51,8 @@
   "blog": {
     "title": "Blog",
     "subtitle": "Notas sobre ingeniería, diseño y cosas que estoy construyendo.",
+    "readTime": "{n} min de lectura",
+    "next": "Sigue leyendo",
     "back": "Volver al blog",
     "published": "Publicado",
     "empty": "Aún no hay posts — vuelve pronto."
