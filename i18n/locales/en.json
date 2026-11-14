@@ -137,5 +137,24 @@
     "hint": "Select a skill to see the roles behind it.",
     "years": "yrs",
     "months": "mo"
+  },
+  "terminal": {
+    "title": "Terminal",
+    "subtitle": "Prefer a shell? Type a command or tap one. Everything it prints comes from my real projects and roles.",
+    "welcome": "Type 'help' to see what you can run.",
+    "openHint": "Run 'open <n>' to read one.",
+    "badIndex": "No project with that number.",
+    "notFound": "command not found, try 'help'",
+    "cvStart": "Downloading CV…",
+    "cmd": {
+      "help": "list commands",
+      "whoami": "who I am",
+      "projects": "list my projects",
+      "experience": "latest roles",
+      "cv": "download my CV",
+      "contact": "go to the contact page",
+      "clear": "clear the screen",
+      "open": "open a project by number"
+    }
   }
 }
