@@ -38,6 +38,19 @@ function move(e: PointerEvent) {
   y.value = e.clientY - r.top;
   lit.value = true;
 }
+
+// Cyan grid that lights up under the pointer across the whole hero (fine pointers only).
+const gx = ref(-999);
+const gy = ref(-999);
+function moveGrid(e: PointerEvent) {
+  if (e.pointerType === "touch") return;
+  const r = (e.currentTarget as HTMLElement).getBoundingClientRect();
+  gx.value = e.clientX - r.left;
+  gy.value = e.clientY - r.top;
+}
+function leaveGrid() {
+  gx.value = gy.value = -999;
+}
 </script>
 
 <style scoped>
@@ -47,14 +60,27 @@ function move(e: PointerEvent) {
   -webkit-mask-image: radial-gradient(circle 130px at var(--x) var(--y), #000 55%, transparent 100%);
   mask-image: radial-gradient(circle 130px at var(--x) var(--y), #000 55%, transparent 100%);
 }
+.grid-glow {
+  background-image: linear-gradient(#22d3ee 1px, transparent 1px), linear-gradient(90deg, #22d3ee 1px, transparent 1px);
+  background-size: 44px 44px;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(circle 220px at var(--gx) var(--gy), #000 0%, transparent 100%);
+  mask-image: radial-gradient(circle 220px at var(--gx) var(--gy), #000 0%, transparent 100%);
+}
+@media (prefers-reduced-motion: reduce) {
+  .grid-glow {
+    display: none;
+  }
+}
 .is-lit .portrait-color {
   opacity: 1;
 }
 </style>
 
 <template>
-  <section class="relative border-b-2 border-ink overflow-hidden">
+  <section class="relative border-b-2 border-ink overflow-hidden" @pointermove="moveGrid" @pointerleave="leaveGrid">
     <div class="absolute inset-0 grid-overlay" />
+    <div class="absolute inset-0 grid-glow" aria-hidden="true" :style="{ '--gx': gx + 'px', '--gy': gy + 'px' }" />
     <div class="relative mx-auto max-w-[1180px] grid grid-cols-1 md:grid-cols-[1.15fr_0.85fr]">
       <!-- Left -->
       <div class="px-6 py-14 sm:px-10 sm:py-16 md:border-r-2 border-ink">
