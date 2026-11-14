@@ -84,14 +84,17 @@ useHead({
         <p v-if="locale !== 'en'" class="font-mono text-xs text-dim mb-4">{{ $t("detail.englishOnly") }}</p>
         <ContentRenderer :value="doc" class="prose prose-invert prose-slate max-w-none prose-headings:font-display prose-headings:uppercase prose-a:text-cyan" />
       </div>
-      <div v-reveal="120">
-        <h3 class="m-0 mb-4 font-mono text-[13px] text-cyan uppercase tracking-[0.06em]">{{ $t("detail.tech") }}</h3>
-        <div class="flex flex-wrap gap-2.5">
-          <span v-for="tech in doc.technologies" :key="tech" class="font-mono text-[13px] text-slate-200 border-2 border-ink bg-surface px-3.5 py-[7px]">
-            {{ tech }}
-          </span>
+      <aside class="lg:sticky lg:top-24 lg:self-start">
+        <ProjectsCaseToc :links="doc.body?.toc?.links || []" />
+        <div v-reveal="120">
+          <h3 class="m-0 mb-4 font-mono text-[13px] text-cyan uppercase tracking-[0.06em]">{{ $t("detail.tech") }}</h3>
+          <div class="flex flex-wrap gap-2.5">
+            <span v-for="tech in doc.technologies" :key="tech" class="font-mono text-[13px] text-slate-200 border-2 border-ink bg-surface px-3.5 py-[7px]">
+              {{ tech }}
+            </span>
+          </div>
         </div>
-      </div>
+      </aside>
     </section>
 
     <!-- More projects -->
