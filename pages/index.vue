@@ -12,6 +12,7 @@
     <SectionLiveDemos />
     <SectionCareerLog />
     <SectionStackExplorer />
+    <SectionFitCheck />
     <SectionTerminal />
     <SectionTimeOverlap />
     <SectionProcess />
