@@ -6,6 +6,7 @@
     <SectionFeatured />
     <SectionCareerLog />
     <SectionStackExplorer />
+    <SectionTerminal />
     <SectionBriefBuilder />
     <SharedCtaBand />
   </div>

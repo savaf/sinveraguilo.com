@@ -137,5 +137,24 @@
     "hint": "Selecciona una habilidad para ver los roles detrás.",
     "years": "años",
     "months": "meses"
+  },
+  "terminal": {
+    "title": "Terminal",
+    "subtitle": "¿Prefieres una shell? Escribe un comando o toca uno. Todo lo que imprime viene de mis proyectos y roles reales.",
+    "welcome": "Escribe 'help' para ver qué puedes ejecutar.",
+    "openHint": "Ejecuta 'open <n>' para leer uno.",
+    "badIndex": "No hay un proyecto con ese número.",
+    "notFound": "comando no encontrado, prueba 'help'",
+    "cvStart": "Descargando CV…",
+    "cmd": {
+      "help": "lista los comandos",
+      "whoami": "quién soy",
+      "projects": "lista mis proyectos",
+      "experience": "últimos roles",
+      "cv": "descarga mi CV",
+      "contact": "ir a la página de contacto",
+      "clear": "limpia la pantalla",
+      "open": "abre un proyecto por número"
+    }
   }
 }
