@@ -83,6 +83,10 @@
     "sentOk": "Mensaje enviado — te responderé pronto.",
     "sentError": "Algo salió mal. Por favor escríbeme directamente por correo."
   },
+  "sticky": {
+    "text": "Disponible — hablemos",
+    "dismiss": "Cerrar"
+  },
   "cta": {
     "title": "Construyamos algo",
     "subtitle": "¿Tienes un proyecto en mente? Estoy abierto a trabajo freelance y roles full-time.",
