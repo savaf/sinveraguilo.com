@@ -159,7 +159,7 @@
     "title": "Terminal",
     "subtitle": "Prefer a shell? Type a command or tap one. Everything it prints comes from my real projects and roles.",
     "welcome": "Type 'help' to see what you can run.",
-    "openHint": "Run 'open <n>' to read one.",
+    "openHint": "Run 'open N' to read one.",
     "badIndex": "No project with that number.",
     "notFound": "command not found, try 'help'",
     "cvStart": "Downloading CV…",
