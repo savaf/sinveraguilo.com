@@ -280,5 +280,31 @@
   "manifesto": {
     "kicker": "// cómo trabajo",
     "text": "Hago las cosas bien y hago que las cosas pasen. Accesible según WCAG 2.1 AA, bilingüe por defecto, entregado con CI/CD."
+  },
+  "a11y": {
+    "kicker": "// accesibilidad, en vivo",
+    "title": "No me creas. Pruébalo.",
+    "lead": "Construyo según WCAG 2.1 AA. Estos interruptores cambian esta misma página, para que veas cómo se adapta el sitio a distintas necesidades. Tu elección se guarda en este navegador.",
+    "on": "Activo",
+    "off": "Inactivo",
+    "reset": "Restablecer todo",
+    "modes": {
+      "text": {
+        "t": "Texto más grande",
+        "d": "Aumenta la tipografía un 25%."
+      },
+      "contrast": {
+        "t": "Alto contraste",
+        "d": "Mayor separación entre texto y fondo."
+      },
+      "motion": {
+        "t": "Sin movimiento",
+        "d": "Detiene animaciones y transiciones."
+      },
+      "spacing": {
+        "t": "Lectura fácil",
+        "d": "Más espacio entre líneas, letras y palabras."
+      }
+    }
   }
 }

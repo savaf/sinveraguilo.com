@@ -124,3 +124,23 @@ textarea::placeholder {
     transition: none !important;
   }
 }
+
+/* Live accessibility modes (toggled from SectionA11yLive) */
+html.a11y-text {
+  font-size: 125%;
+}
+html.a11y-contrast body {
+  filter: contrast(1.3);
+}
+html.a11y-spacing body {
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+  word-spacing: 0.12em;
+}
+html.a11y-motion *,
+html.a11y-motion *::before,
+html.a11y-motion *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}

@@ -280,5 +280,31 @@
   "manifesto": {
     "kicker": "// how I work",
     "text": "I do things the right way and I get things done. Accessible to WCAG 2.1 AA, bilingual by default, shipped through CI/CD."
+  },
+  "a11y": {
+    "kicker": "// accessibility, live",
+    "title": "Don't take my word for it. Try it.",
+    "lead": "I build to WCAG 2.1 AA. These switches change this very page, so you can see how the site adapts to different needs. Your choice is saved in this browser.",
+    "on": "On",
+    "off": "Off",
+    "reset": "Reset all",
+    "modes": {
+      "text": {
+        "t": "Larger text",
+        "d": "Scales type up 25%."
+      },
+      "contrast": {
+        "t": "High contrast",
+        "d": "Sharper separation between text and background."
+      },
+      "motion": {
+        "t": "No motion",
+        "d": "Stops animations and transitions."
+      },
+      "spacing": {
+        "t": "Easy reading",
+        "d": "More line, letter and word spacing."
+      }
+    }
   }
 }

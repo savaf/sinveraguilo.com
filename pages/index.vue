@@ -6,6 +6,7 @@
     <SharedStatsBar />
     <SectionImpact />
     <SectionManifesto />
+    <SectionA11yLive />
     <SectionFeatured />
     <SectionCareerLog />
     <SectionStackExplorer />
