@@ -424,5 +424,18 @@
         "v": "Una página de currículum hecha con el mismo contenido del sitio, lista para Guardar como PDF."
       }
     }
+  },
+  "fit": {
+    "title": "Compatibilidad de stack",
+    "subtitle": "Escribe las tecnologías que necesita tu proyecto. Las comparo con las habilidades de mis roles reales y marco lo que conviene preguntarme.",
+    "label": "Tu stack",
+    "placeholder": "ej. Vue, Node, PostgreSQL",
+    "try": "Prueba:",
+    "empty": "Agrega algunas tecnologías, separadas por comas.",
+    "summary": "{m} de {n} aparecen en mis roles",
+    "ask": "pregúntame",
+    "cta": "Enviarme este stack",
+    "subj": "Compatibilidad de stack",
+    "msg": "Mi stack: {stack}\nCubierto por tus roles: {have} ({pct}%)\n\nSobre el proyecto: "
   }
 }

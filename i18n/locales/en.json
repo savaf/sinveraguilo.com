@@ -424,5 +424,18 @@
         "v": "A résumé page built from the same content as the site, ready for Save as PDF."
       }
     }
+  },
+  "fit": {
+    "title": "Stack fit check",
+    "subtitle": "Type the technologies your project needs. I'll check them against the skills from my real roles, and flag what to ask me about.",
+    "label": "Your stack",
+    "placeholder": "e.g. Vue, Node, PostgreSQL",
+    "try": "Try:",
+    "empty": "Add a few technologies, separated by commas.",
+    "summary": "{m} of {n} found in my roles",
+    "ask": "ask me",
+    "cta": "Send this stack to me",
+    "subj": "Stack fit check",
+    "msg": "My stack: {stack}\nCovered by your roles: {have} ({pct}%)\n\nAbout the project: "
   }
 }
