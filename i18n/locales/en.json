@@ -249,5 +249,32 @@
         "d": "Deployed, documented and handed over so your team can own it."
       }
     ]
+  },
+  "faq": {
+    "kicker": "// before you write",
+    "title": "Questions you may have",
+    "cta": "Skip to the brief",
+    "items": [
+      {
+        "q": "Do I need a spec first?",
+        "a": "No. Tell me the problem, the constraint and the deadline. I reply with a plain-language plan."
+      },
+      {
+        "q": "What can I hire you for?",
+        "a": "A website or web app, a migration, a full-time role or freelance help. The brief builder below covers all four."
+      },
+      {
+        "q": "What if we are in different timezones?",
+        "a": "The timezone check above shows our shared hours. When they are few, I work async and write things down."
+      },
+      {
+        "q": "Which languages do you work in?",
+        "a": "Spanish and English, the same as this site."
+      },
+      {
+        "q": "Who owns the result?",
+        "a": "Your team. Work ships deployed and documented, then gets handed over so you can own it."
+      }
+    ]
   }
 }

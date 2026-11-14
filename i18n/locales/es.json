@@ -249,5 +249,32 @@
         "d": "Desplegado, documentado y entregado para que tu equipo lo mantenga."
       }
     ]
+  },
+  "faq": {
+    "kicker": "// antes de escribir",
+    "title": "Preguntas que quizá tengas",
+    "cta": "Ir al brief",
+    "items": [
+      {
+        "q": "¿Necesito una especificación primero?",
+        "a": "No. Cuéntame el problema, la restricción y la fecha límite. Te respondo con un plan en lenguaje claro."
+      },
+      {
+        "q": "¿Para qué puedo contratarte?",
+        "a": "Un sitio o app web, una migración, un puesto a tiempo completo o ayuda freelance. El constructor de brief de abajo cubre los cuatro."
+      },
+      {
+        "q": "¿Y si estamos en zonas horarias distintas?",
+        "a": "El chequeo de zona horaria de arriba muestra nuestras horas compartidas. Si son pocas, trabajo en asíncrono y dejo todo por escrito."
+      },
+      {
+        "q": "¿En qué idiomas trabajas?",
+        "a": "Español e inglés, igual que este sitio."
+      },
+      {
+        "q": "¿De quién es el resultado?",
+        "a": "De tu equipo. El trabajo se entrega desplegado y documentado, y se traspasa para que lo hagas tuyo."
+      }
+    ]
   }
 }
