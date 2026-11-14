@@ -15,6 +15,7 @@
     <SectionTimeOverlap />
     <SectionProcess />
     <SectionFaq />
+    <SectionWriting />
     <SectionBriefBuilder />
     <SharedCtaBand />
   </div>

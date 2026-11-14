@@ -277,6 +277,11 @@
       }
     ]
   },
+  "writing": {
+    "kicker": "// notas de campo",
+    "title": "Lo último que escribí",
+    "all": "Todos los artículos"
+  },
   "manifesto": {
     "kicker": "// cómo trabajo",
     "text": "Hago las cosas bien y hago que las cosas pasen. Accesible según WCAG 2.1 AA, bilingüe por defecto, entregado con CI/CD."
