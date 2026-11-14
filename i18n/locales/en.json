@@ -51,6 +51,12 @@
     "search": "Search projects",
     "noResults": "No projects match your search."
   },
+  "quote": {
+    "label": "Share selection",
+    "copy": "Copy quote",
+    "copied": "Copied ✓",
+    "hint": "// Tip: select any passage to copy or share it with a link back."
+  },
   "blog": {
     "all": "All",
     "search": "Search posts",

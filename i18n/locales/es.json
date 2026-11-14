@@ -51,6 +51,12 @@
     "search": "Buscar proyectos",
     "noResults": "Ningún proyecto coincide con tu búsqueda."
   },
+  "quote": {
+    "label": "Compartir selección",
+    "copy": "Copiar cita",
+    "copied": "Copiado ✓",
+    "hint": "// Tip: selecciona cualquier pasaje para copiarlo o compartirlo con un enlace."
+  },
   "blog": {
     "all": "Todos",
     "search": "Buscar posts",
