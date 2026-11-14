@@ -352,7 +352,8 @@
     "open": "Abrir en pestaña nueva",
     "case": "Leer el caso"
   },
-  "blueprint": {"label": "Plano", "hint": "Alternar modo plano (B): delinea cada sección y encabezado"},
+  "shortcuts": { "title": "Atajos de teclado", "goto": "Ir a (pulsa g y luego…)", "more": "En cualquier lugar", "palette": "Abrir la paleta de comandos", "blueprint": "Alternar modo plano", "help": "Mostrar u ocultar esta hoja", "close": "Cerrar" },
+  "blueprint": { "label": "Plano", "hint": "Alternar modo plano (B): delinea cada sección y encabezado" },
   "accent": {
     "label": "Color de acento",
     "names": {
