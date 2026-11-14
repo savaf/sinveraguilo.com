@@ -94,5 +94,9 @@
   },
   "footer": {
     "follow": "Sígueme"
+  },
+  "careerLog": {
+    "title": "Bitácora de carrera",
+    "all": "Experiencia completa"
   }
 }
