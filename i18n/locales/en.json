@@ -122,7 +122,12 @@
     "button": "Get in touch"
   },
   "footer": {
-    "follow": "Follow me"
+    "follow": "Follow me",
+    "emailLabel": "Prefer email?",
+    "copy": "Copy email",
+    "copied": "Copied ✓",
+    "pages": "Pages",
+    "top": "Back to top ↑"
   },
   "careerLog": {
     "title": "Career log",

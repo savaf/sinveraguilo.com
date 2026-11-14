@@ -122,7 +122,12 @@
     "button": "Contáctame"
   },
   "footer": {
-    "follow": "Sígueme"
+    "follow": "Sígueme",
+    "emailLabel": "¿Prefieres correo?",
+    "copy": "Copiar correo",
+    "copied": "Copiado ✓",
+    "pages": "Páginas",
+    "top": "Volver arriba ↑"
   },
   "careerLog": {
     "title": "Bitácora de carrera",
