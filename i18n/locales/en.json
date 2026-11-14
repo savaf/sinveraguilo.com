@@ -226,5 +226,28 @@
     "before": "Before",
     "after": "After",
     "migrated": "Legacy migrations (.NET, Rails, JSP → client-server & microservices) for"
+  },
+  "process": {
+    "kicker": "// how we'd work",
+    "title": "From brief to shipped, in four moves",
+    "cta": "Start with step 01",
+    "steps": [
+      {
+        "t": "Brief",
+        "d": "You tell me the problem, the constraint and the deadline. No deck needed."
+      },
+      {
+        "t": "Scope",
+        "d": "I reply with a plain-language plan: what ships first, what waits, what I'd skip."
+      },
+      {
+        "t": "Build",
+        "d": "Small increments in a shared repo, with CI running from day one."
+      },
+      {
+        "t": "Ship",
+        "d": "Deployed, documented and handed over so your team can own it."
+      }
+    ]
   }
 }
