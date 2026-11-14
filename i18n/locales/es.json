@@ -330,5 +330,14 @@
       "pitch": "Empieza por el trabajo destacado, o juega con la terminal más abajo. Responde preguntas reales sobre el sitio.",
       "links": ["Ver trabajo destacado", "Probar la terminal"]
     }
+  },
+  "demos": {
+    "kicker": "// pruébalo en vivo",
+    "title": "Ejecuta las demos aquí mismo",
+    "lead": "Dos de mis proyectos pequeños están publicados en línea. Cárgalos dentro de la página y pruébalos, sin cambiar de pestaña.",
+    "run": "Ejecutar demo en vivo",
+    "note": "Carga el sitio publicado al hacer clic",
+    "open": "Abrir en pestaña nueva",
+    "case": "Leer el caso"
   }
 }
