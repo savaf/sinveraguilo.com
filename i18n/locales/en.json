@@ -277,6 +277,11 @@
       }
     ]
   },
+  "writing": {
+    "kicker": "// field notes",
+    "title": "Latest writing",
+    "all": "All posts"
+  },
   "manifesto": {
     "kicker": "// how I work",
     "text": "I do things the right way and I get things done. Accessible to WCAG 2.1 AA, bilingual by default, shipped through CI/CD."
