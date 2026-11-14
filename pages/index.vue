@@ -4,6 +4,7 @@
     <ClientOnly><SharedSectionRail /></ClientOnly>
     <SectionMarquee />
     <SharedStatsBar />
+    <SectionImpact />
     <SectionFeatured />
     <SectionCareerLog />
     <SectionStackExplorer />
