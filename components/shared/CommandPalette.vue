@@ -21,6 +21,7 @@ const commands = computed(() => {
   return [
     ...pages.map((p) => ({ label: t("palette.go", { page: t(p.key) }), tag: "goto", run: () => navigateTo(localePath(p.to)) })),
     { label: t("palette.lang", { lang: other === "es" ? "Español" : "English" }), tag: "lang", run: () => setLocale(other) },
+    { label: t("palette.colophon"), tag: "goto", run: () => navigateTo(localePath("/colophon")) },
     { label: t("palette.resume"), tag: "goto", run: () => navigateTo(localePath("/resume")) },
     {
       label: t("palette.cv"),
