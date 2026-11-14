@@ -156,5 +156,13 @@
       "clear": "clear the screen",
       "open": "open a project by number"
     }
+  },
+  "rail": {
+    "label": "Page sections",
+    "work": "Work",
+    "career": "Career",
+    "stack": "Stack",
+    "terminal": "Terminal",
+    "brief": "Brief"
   }
 }
