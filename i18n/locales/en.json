@@ -52,6 +52,12 @@
     "noResults": "No projects match your search."
   },
   "blog": {
+    "all": "All",
+    "search": "Search posts",
+    "noResults": "No posts match.",
+    "latest": "Latest",
+    "count": "{n} posts",
+    "open": "Read post",
     "title": "Blog",
     "subtitle": "Notes on engineering, design and things I'm building.",
     "readTime": "{n} min read",

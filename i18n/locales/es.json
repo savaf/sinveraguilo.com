@@ -52,6 +52,12 @@
     "noResults": "Ningún proyecto coincide con tu búsqueda."
   },
   "blog": {
+    "all": "Todos",
+    "search": "Buscar posts",
+    "noResults": "Ningún post coincide.",
+    "latest": "Más reciente",
+    "count": "{n} posts",
+    "open": "Leer post",
     "title": "Blog",
     "subtitle": "Notas sobre ingeniería, diseño y cosas que estoy construyendo.",
     "readTime": "{n} min de lectura",
