@@ -2,6 +2,32 @@
 const techs = ["Vue", "React", "Node", "TypeScript", "Angular"];
 const localePath = useLocalePath();
 
+// Name "decode" on load: glyphs resolve left to right. SSR and reduced-motion
+// users get the final text straight away.
+const FIRST = "Sinver";
+const LAST = "Aguiló";
+const first = ref(FIRST);
+const last = ref(LAST);
+onMounted(() => {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const pool = "ABCDEFGHJKLMNPQRSTUVWXYZ0123456789#%&";
+  const full = FIRST + LAST;
+  const start = performance.now();
+  const step = 70; // ms between each letter locking in
+  const tick = (now: number) => {
+    const locked = Math.floor((now - start - 150) / step);
+    const out = [...full].map((c, i) => (i < locked ? c : pool[Math.floor(Math.random() * pool.length)]!)).join("");
+    first.value = out.slice(0, FIRST.length);
+    last.value = out.slice(FIRST.length);
+    if (locked < full.length) requestAnimationFrame(tick);
+    else {
+      first.value = FIRST;
+      last.value = LAST;
+    }
+  };
+  requestAnimationFrame(tick);
+});
+
 // Colour "flashlight" over the grayscale portrait, following the pointer.
 const lit = ref(false);
 const x = ref(0);
@@ -37,7 +63,9 @@ function move(e: PointerEvent) {
           {{ $t("hero.available") }}
         </div>
 
-        <h1 class="hero-enter m-0 font-display font-black uppercase text-slate-50 leading-[0.9] tracking-[-0.02em] text-[clamp(3.25rem,7vw,5.25rem)]" style="--i: 1">Sinver<br /><span class="text-cyan">Aguiló</span></h1>
+        <h1 class="hero-enter m-0 font-display font-black uppercase text-slate-50 leading-[0.9] tracking-[-0.02em] text-[clamp(3.25rem,7vw,5.25rem)]" style="--i: 1" aria-label="Sinver Aguiló">
+          <span aria-hidden="true" class="whitespace-nowrap">{{ first }}</span><br aria-hidden="true" /><span aria-hidden="true" class="text-cyan whitespace-nowrap">{{ last }}</span>
+        </h1>
 
         <p class="hero-enter mt-5 font-mono text-[15px] leading-relaxed text-yellow max-w-[40ch]" style="--i: 2"><span class="text-dim">const role = </span>"{{ $t("hero.eyebrow") }}"</p>
 
