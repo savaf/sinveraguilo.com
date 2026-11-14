@@ -9,6 +9,7 @@
     <SectionManifesto />
     <SectionA11yLive />
     <SectionFeatured />
+    <SectionLiveDemos />
     <SectionCareerLog />
     <SectionStackExplorer />
     <SectionTerminal />

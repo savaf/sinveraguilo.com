@@ -330,5 +330,14 @@
       "pitch": "Start with the featured work, or poke around the terminal further down. It answers real questions about the site.",
       "links": ["Browse featured work", "Try the terminal"]
     }
+  },
+  "demos": {
+    "kicker": "// try it live",
+    "title": "Run the demos right here",
+    "lead": "Two of my small projects are hosted online. Load them inside the page and click around, no tab switching.",
+    "run": "Run live demo",
+    "note": "Loads the hosted site on click",
+    "open": "Open in new tab",
+    "case": "Read the case"
   }
 }
