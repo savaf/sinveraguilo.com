@@ -276,5 +276,9 @@
         "a": "De tu equipo. El trabajo se entrega desplegado y documentado, y se traspasa para que lo hagas tuyo."
       }
     ]
+  },
+  "manifesto": {
+    "kicker": "// cómo trabajo",
+    "text": "Hago las cosas bien y hago que las cosas pasen. Accesible según WCAG 2.1 AA, bilingüe por defecto, entregado con CI/CD."
   }
 }

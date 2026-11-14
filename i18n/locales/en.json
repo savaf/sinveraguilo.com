@@ -276,5 +276,9 @@
         "a": "Your team. Work ships deployed and documented, then gets handed over so you can own it."
       }
     ]
+  },
+  "manifesto": {
+    "kicker": "// how I work",
+    "text": "I do things the right way and I get things done. Accessible to WCAG 2.1 AA, bilingual by default, shipped through CI/CD."
   }
 }
