@@ -110,5 +110,25 @@
   "careerLog": {
     "title": "Bitácora de carrera",
     "all": "Experiencia completa"
+  },
+  "brief": {
+    "title": "Empieza tu brief",
+    "subtitle": "Elige lo que necesitas. Yo relleno el mensaje y tú solo añades los detalles.",
+    "needLabel": "Necesito",
+    "timeLabel": "Plazo",
+    "needs": {
+      "web": "Un sitio o app web",
+      "migration": "Una migración",
+      "role": "Una contratación full-time",
+      "freelance": "Ayuda freelance"
+    },
+    "times": {
+      "asap": "Lo antes posible",
+      "month": "En el próximo mes",
+      "explore": "Solo explorando"
+    },
+    "send": "Redactar mi mensaje",
+    "subj": "{need}",
+    "msg": "Hola Sinver,\n\nBusco: {need}.\nPlazo: {time}.\n\nContexto:\n"
   }
 }

@@ -1,9 +1,11 @@
 <script setup lang="ts">
+const route = useRoute();
+const pick = (v: unknown) => (typeof v === "string" ? v.slice(0, 1000) : "");
 const form = ref({
   name: "",
   email: "",
-  subject: "",
-  message: "",
+  subject: pick(route.query.subject).slice(0, 120),
+  message: pick(route.query.message),
 });
 
 const status = ref<"idle" | "sending" | "sent" | "error">("idle");
