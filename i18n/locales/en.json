@@ -96,7 +96,8 @@
     "copyEmail": "Copy email address",
     "copied": "Email copied",
     "close": "Close",
-    "hintKeys": "↑↓ navigate · ↵ run · esc close"
+    "hintKeys": "↑↓ navigate · ↵ run · esc close",
+    "resume": "View résumé"
   },
   "sticky": {
     "text": "Available — let's talk",
@@ -183,5 +184,10 @@
     "ahead": "{n}h ahead of me",
     "behind": "{n}h behind me",
     "cta": "Book a call in our overlap"
+  },
+  "resume": {
+    "title": "Résumé",
+    "print": "Print / Save as PDF",
+    "skills": "Core skills"
   }
 }

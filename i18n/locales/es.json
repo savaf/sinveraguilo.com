@@ -96,7 +96,8 @@
     "copyEmail": "Copiar correo",
     "copied": "Correo copiado",
     "close": "Cerrar",
-    "hintKeys": "↑↓ navegar · ↵ ejecutar · esc cerrar"
+    "hintKeys": "↑↓ navegar · ↵ ejecutar · esc cerrar",
+    "resume": "Ver currículum"
   },
   "sticky": {
     "text": "Disponible — hablemos",
@@ -183,5 +184,10 @@
     "ahead": "{n}h por delante de mí",
     "behind": "{n}h por detrás de mí",
     "cta": "Agenda una llamada en nuestro solape"
+  },
+  "resume": {
+    "title": "Currículum",
+    "print": "Imprimir / Guardar PDF",
+    "skills": "Habilidades clave"
   }
 }
