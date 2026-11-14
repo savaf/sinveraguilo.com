@@ -219,5 +219,12 @@
     "goto": "Go to",
     "report": "Report a broken link",
     "hint": "Press Ctrl/Cmd+K to search the site"
+  },
+  "impact": {
+    "kicker": "// measured result",
+    "claim": "Roughly 4x faster request processing on PSM, a national government platform in the Dominican Republic.",
+    "before": "Before",
+    "after": "After",
+    "migrated": "Legacy migrations (.NET, Rails, JSP → client-server & microservices) for"
   }
 }

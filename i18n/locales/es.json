@@ -219,5 +219,12 @@
     "goto": "Ir a",
     "report": "Reportar un enlace roto",
     "hint": "Presiona Ctrl/Cmd+K para buscar en el sitio"
+  },
+  "impact": {
+    "kicker": "// resultado medido",
+    "claim": "Procesamiento de solicitudes aproximadamente 4x más rápido en PSM, una plataforma de gobierno nacional en República Dominicana.",
+    "before": "Antes",
+    "after": "Después",
+    "migrated": "Migraciones de sistemas legados (.NET, Rails, JSP → cliente-servidor y microservicios) para"
   }
 }
