@@ -5,7 +5,8 @@ const scrolled = ref(false);
 const dismissed = ref(false);
 
 const onContact = computed(() => route.path.replace(/\/$/, "").endsWith("/contact"));
-const visible = computed(() => scrolled.value && !dismissed.value && !onContact.value);
+const hasOwnCta = computed(() => /\/(projects|blog)\/[^/]+\/?$/.test(route.path));
+const visible = computed(() => scrolled.value && !dismissed.value && !onContact.value && !hasOwnCta.value);
 
 function onScroll() {
   scrolled.value = window.scrollY > 600;

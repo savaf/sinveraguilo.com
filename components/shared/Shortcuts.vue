@@ -44,6 +44,7 @@ function onKey(e: KeyboardEvent) {
     clearTimeout(timer);
     if (routes[k]) {
       e.preventDefault();
+      e.stopImmediatePropagation();
       close();
       router.push(localePath(routes[k]));
     }
@@ -53,9 +54,9 @@ function onKey(e: KeyboardEvent) {
   }
 }
 watch(() => route.path, close);
-onMounted(() => window.addEventListener("keydown", onKey));
+onMounted(() => window.addEventListener("keydown", onKey, true));
 onBeforeUnmount(() => {
-  window.removeEventListener("keydown", onKey);
+  window.removeEventListener("keydown", onKey, true);
   clearTimeout(timer);
 });
 </script>

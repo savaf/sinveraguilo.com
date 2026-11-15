@@ -12,6 +12,7 @@ const pair = computed(() => {
 
 function onKey(e: KeyboardEvent) {
   if (!pair.value || e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return;
+  if (document.querySelector("dialog[open]")) return;
   const el = e.target as HTMLElement | null;
   if (el && (el.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(el.tagName))) return;
   if (e.key === "ArrowLeft") navigateTo(localePath(`/projects/${pair.value.prev.slug}`));
