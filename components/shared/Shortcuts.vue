@@ -14,6 +14,7 @@ const other = [
   { keys: ["B"], k: "shortcuts.blueprint" },
   { keys: ["P"], k: "shortcuts.paper" },
   { keys: ["L"], k: "shortcuts.spotlight" },
+  { keys: ["M"], k: "shortcuts.rain" },
   { keys: ["?"], k: "shortcuts.help" },
   { keys: ["Esc"], k: "shortcuts.close" },
 ];

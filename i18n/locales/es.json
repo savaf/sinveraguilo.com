@@ -354,7 +354,8 @@
   },
   "paper": { "label": "Papel", "hint": "Alternar modo papel, claro (P)" },
   "spotlight": { "label": "Foco", "hint": "Alternar modo foco (L): atenúa la página y ilumina solo junto al cursor" },
-  "shortcuts": { "title": "Atajos de teclado", "goto": "Ir a (pulsa g y luego…)", "more": "En cualquier lugar", "palette": "Abrir la paleta de comandos", "blueprint": "Alternar modo plano", "paper": "Alternar modo papel (claro)", "spotlight": "Alternar modo foco", "help": "Mostrar u ocultar esta hoja", "close": "Cerrar" },
+  "rain": { "label": "Lluvia", "hint": "Alternar lluvia de código (M): glifos de código cayendo con tu color de acento" },
+  "shortcuts": { "title": "Atajos de teclado", "goto": "Ir a (pulsa g y luego…)", "more": "En cualquier lugar", "palette": "Abrir la paleta de comandos", "blueprint": "Alternar modo plano", "paper": "Alternar modo papel (claro)", "spotlight": "Alternar modo foco", "rain": "Alternar lluvia de código", "help": "Mostrar u ocultar esta hoja", "close": "Cerrar" },
   "blueprint": { "label": "Plano", "hint": "Alternar modo plano (B): delinea cada sección y encabezado" },
   "accent": {
     "label": "Color de acento",
