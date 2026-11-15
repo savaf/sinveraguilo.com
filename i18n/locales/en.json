@@ -282,6 +282,7 @@
     "print": "Print / Save as PDF",
     "skills": "Core skills"
   },
+  "squash": { "title": "Squash the bugs", "intro": "While you're here: click the bugs before they hit the bottom.", "play": "Play", "again": "Play again", "over": "Deployed with {n} bugs squashed. Want someone who ships fewer?", "score": "Score {n}", "best": "Best {n}", "bug": "Bug" },
   "error": {
     "label": "Error",
     "notFoundTitle": "Lost in the stack",
