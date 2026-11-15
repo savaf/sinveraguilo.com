@@ -81,7 +81,7 @@
   },
   "code": { "copy": "Copiar", "copied": "Copiado ✓", "failed": "Usa Ctrl+C" },
   "listen": { "label": "Escuchar este artículo", "play": "Escuchar", "pause": "Pausar", "resume": "Continuar", "stop": "Detener" },
-  "resume": { "label": "Retomar lectura", "title": "Te quedaste en {n}%", "go": "Continuar", "reset": "Empezar de nuevo" },
+  "readingResume": { "label": "Retomar lectura", "title": "Te quedaste en {n}%", "go": "Continuar", "reset": "Empezar de nuevo" },
   "postReply": { "title": "¿Te sirvió este artículo?", "body": "Cuéntame qué funcionó, qué no o qué añadirías. Leo cada respuesta.", "btn": "Responder a este artículo", "subject": "Sobre tu artículo: {title}", "msg": "Hola Sinver,\n\nAcabo de leer \"{title}\" y quería decirte:\n\n" },
   "postMap": { "label": "Mapa del artículo", "hint": "ancho del bloque = largo de la sección", "min": "{n} min" },
   "timeLeft": { "left": "~{n} min restantes", "done": "Lectura terminada" },
@@ -128,6 +128,9 @@
     "englishOnly": "Este case study solo está disponible en inglés."
   },
   "contact": {
+    "copyEmail": "Copiar correo",
+    "copied": "Copiado",
+    "localTime": "Mi hora local (Santo Domingo)",
     "title": "Contacto",
     "intro": "¿Tienes un proyecto, una vacante o solo quieres saludar? Envíame un mensaje y te responderé pronto.",
     "email": "Correo",

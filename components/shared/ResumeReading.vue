@@ -55,11 +55,11 @@ onBeforeUnmount(() => {
 
 <template>
   <transition name="fade">
-    <div v-if="show" role="region" :aria-label="t('resume.label')" class="fixed bottom-4 left-4 z-40 max-w-[calc(100vw-2rem)] border-2 border-ink bg-surface p-4 shadow-[6px_6px_0_var(--accent)]">
-      <p class="m-0 font-mono text-[12px] uppercase text-cyan">{{ t("resume.title", { n: Math.round(saved * 100) }) }}</p>
+    <div v-if="show" role="region" :aria-label="t('readingResume.label')" class="fixed bottom-4 left-4 z-40 max-w-[calc(100vw-2rem)] border-2 border-ink bg-surface p-4 shadow-[6px_6px_0_var(--accent)]">
+      <p class="m-0 font-mono text-[12px] uppercase text-cyan">{{ t("readingResume.title", { n: Math.round(saved * 100) }) }}</p>
       <div class="mt-3 flex gap-2">
-        <button type="button" class="border-2 border-ink bg-yellow px-3 py-1.5 font-mono text-[12px] font-bold uppercase text-ink-text hover:bg-cyan" @click="resume">{{ t("resume.go") }} →</button>
-        <button type="button" class="border-2 border-ink px-3 py-1.5 font-mono text-[12px] uppercase text-slate-50 hover:text-yellow" @click="restart">{{ t("resume.reset") }}</button>
+        <button type="button" class="border-2 border-ink bg-yellow px-3 py-1.5 font-mono text-[12px] font-bold uppercase text-ink-text hover:bg-cyan" @click="resume">{{ t("readingResume.go") }} →</button>
+        <button type="button" class="border-2 border-ink px-3 py-1.5 font-mono text-[12px] uppercase text-slate-50 hover:text-yellow" @click="restart">{{ t("readingResume.reset") }}</button>
       </div>
     </div>
   </transition>
