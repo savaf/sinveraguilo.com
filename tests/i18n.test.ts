@@ -57,3 +57,16 @@ describe("i18n keys used in code", () => {
     expect(orphan).toEqual([]);
   });
 });
+
+describe("i18n orphan keys", () => {
+  const src = [...walk("components", [".vue", ".ts"]), ...walk("pages", [".vue"]), ...walk("layouts", [".vue"]), ...walk("utils", [".ts"]), ...walk("plugins", [".ts"]), "app.vue", "error.vue"].map((f) => read(f)).join("\n");
+  // A key counts as used if it, or any parent path (t("a.b") for a.b.c, a dynamic `a.${x}`), appears in code.
+  const used = (k: string) => {
+    const parts = k.split(".");
+    return parts.some((_, i) => i > 0 && src.includes(parts.slice(0, i + 1).join("."))) || src.includes(parts.slice(0, -1).join(".") + ".${") || (parts.length === 1 && src.includes(`"${k}"`));
+  };
+  it("every key is referenced from code", () => {
+    const keys = Object.keys(flat.en).filter((k) => !k.includes("["));
+    expect(keys.filter((k) => !used(k))).toEqual([]);
+  });
+});
