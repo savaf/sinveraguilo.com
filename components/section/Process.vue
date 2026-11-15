@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const steps = [0, 1, 2, 3];
+const faq = [0, 1, 2];
 </script>
 
 <template>
@@ -14,6 +15,16 @@ const steps = [0, 1, 2, 3];
           <p class="m-0 mt-2 text-sm leading-relaxed text-muted group-hover:text-indigo-50">{{ $t(`process.steps[${i}].d`) }}</p>
         </li>
       </ol>
+      <h3 class="m-0 mt-12 font-display font-black uppercase text-primary-light tracking-[-0.01em] text-2xl">{{ $t("faq.title") }}</h3>
+      <div class="mt-6 border-2 border-ink">
+        <details v-for="i in faq" :key="i" class="group border-ink bg-surface not-last:border-b-2 open:bg-indigo-600">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5 font-display text-lg font-extrabold uppercase text-primary-light marker:hidden [&::-webkit-details-marker]:hidden">
+            {{ $t(`faq.items[${i}].q`) }}
+            <span class="font-mono text-2xl text-yellow transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+          </summary>
+          <p class="m-0 px-5 pb-5 text-sm leading-relaxed text-indigo-50">{{ $t(`faq.items[${i}].a`) }}</p>
+        </details>
+      </div>
       <a href="#brief" class="mt-8 inline-block font-mono text-sm font-bold uppercase text-yellow underline underline-offset-4 hover:text-cyan">{{ $t("process.cta") }} ↓</a>
     </div>
   </section>

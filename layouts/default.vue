@@ -46,7 +46,6 @@ useHead(() => ({
 
     <LazySharedAppFooter />
 
-    <ClientOnly><SharedStickyCta /></ClientOnly>
     <ClientOnly><SharedPageCurtain /></ClientOnly>
     <ClientOnly><SharedShortcuts /></ClientOnly>
 
