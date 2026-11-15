@@ -462,11 +462,11 @@
       },
       "content": {
         "k": "contenido",
-        "v": "@nuxt/content (Markdown + JSON)"
+        "v": "{'@'}nuxt/content (Markdown + JSON)"
       },
       "i18n": {
         "k": "idiomas",
-        "v": "English / Español con @nuxtjs/i18n"
+        "v": "English / Español con {'@'}nuxtjs/i18n"
       },
       "type": {
         "k": "tipografía",
