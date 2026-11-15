@@ -85,6 +85,9 @@
     "failed": "No se pudo copiar"
   },
   "blog": {
+    "budget": "Tiempo disponible",
+    "any": "Cualquier duración",
+    "fit": "{n} de {total} caben en tu tiempo",
     "all": "Todos",
     "search": "Buscar posts",
     "noResults": "Ningún post coincide.",

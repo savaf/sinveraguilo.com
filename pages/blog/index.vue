@@ -18,6 +18,13 @@ const filtered = computed(() => {
     return !q || `${p.title} ${p.description} ${(p.tags || []).join(" ")}`.toLowerCase().includes(q);
   });
 });
+// Reading budget: real word counts (same 220 wpm as the post page) vs. the minutes the visitor has.
+const countWords = (n: any): number => (n?.type === "text" ? (n.value || "").trim().split(/\s+/).filter(Boolean).length : (n?.children || []).reduce((a: number, c: any) => a + countWords(c), 0));
+const minutesOf = (p: any) => Math.max(1, Math.round(countWords(p.body) / 220));
+const budgets = [5, 10, 20];
+const budget = ref(0);
+const fits = (p: any) => !budget.value || minutesOf(p) <= budget.value;
+const fitCount = computed(() => filtered.value.filter(fits).length);
 const featured = computed(() => filtered.value[0]);
 const rest = computed(() => filtered.value.slice(1));
 const pad = (i: number) => String(i).padStart(2, "0");
@@ -46,11 +53,20 @@ const pad = (i: number) => String(i).padStart(2, "0");
           </div>
         </div>
 
+        <div class="flex flex-wrap items-center gap-3 mb-8 font-mono text-xs uppercase tracking-wider text-dim">
+          <span>{{ $t("blog.budget") }}</span>
+          <button v-for="b in [0, ...budgets]" :key="b" type="button" :aria-pressed="budget === b" class="border-2 px-3 py-1.5 transition-colors" :class="budget === b ? 'border-cyan bg-cyan text-black' : 'border-ink text-slate-300 hover:border-cyan'" @click="budget = b">
+            {{ b ? `≤ ${b} min` : $t("blog.any") }}
+          </button>
+          <span v-if="budget" role="status" class="text-cyan">{{ $t("blog.fit", { n: fitCount, total: filtered.length }) }}</span>
+        </div>
+
         <template v-if="featured">
-          <NuxtLink :to="`/blog/${featured.slug}`" class="group block border-2 border-ink p-6 sm:p-10 hover:border-yellow transition-colors">
+          <NuxtLink :to="`/blog/${featured.slug}`" class="group block border-2 border-ink p-6 sm:p-10 hover:border-yellow transition-all" :class="{ 'opacity-35': !fits(featured) }">
             <div class="flex flex-wrap items-center gap-3 font-mono text-xs uppercase tracking-wider text-dim">
               <span class="bg-yellow px-2 py-0.5 text-black font-bold">{{ $t("blog.latest") }}</span>
               <span>{{ featured.publishDate }}</span>
+              <span class="text-cyan">{{ $t("blog.readTime", { n: minutesOf(featured) }) }}</span>
               <span>{{ featured.lang === "en" ? "EN" : "ES" }}</span>
             </div>
             <h2 class="mt-5 mb-0 font-display font-black uppercase leading-[0.95] tracking-[-0.02em] text-slate-50 text-[clamp(1.75rem,4vw,3rem)] group-hover:text-yellow transition-colors">
@@ -65,10 +81,10 @@ const pad = (i: number) => String(i).padStart(2, "0");
 
           <ul v-if="rest.length" class="m-0 mt-8 list-none p-0 border-t-2 border-ink">
             <li v-for="(post, i) in rest" :key="post._path" class="border-b-2 border-ink">
-              <NuxtLink :to="`/blog/${post.slug}`" class="group grid grid-cols-[auto_1fr] sm:grid-cols-[auto_1fr_auto] items-baseline gap-x-6 gap-y-1 py-5 hover:bg-white/5 transition-colors">
+              <NuxtLink :to="`/blog/${post.slug}`" class="group grid grid-cols-[auto_1fr] sm:grid-cols-[auto_1fr_auto] items-baseline gap-x-6 gap-y-1 py-5 hover:bg-white/5 transition-all" :class="{ 'opacity-35': !fits(post) }">
                 <span class="font-mono text-sm text-yellow">{{ pad(rest.length - i) }}</span>
                 <span class="font-display font-bold text-xl text-slate-50 group-hover:text-yellow transition-colors">{{ post.title }}</span>
-                <span class="col-start-2 sm:col-start-3 font-mono text-xs uppercase text-dim">{{ post.publishDate }} · {{ post.lang === "en" ? "EN" : "ES" }}</span>
+                <span class="col-start-2 sm:col-start-3 font-mono text-xs uppercase text-dim">{{ post.publishDate }} · {{ $t("blog.readTime", { n: minutesOf(post) }) }} · {{ post.lang === "en" ? "EN" : "ES" }}</span>
               </NuxtLink>
             </li>
           </ul>
