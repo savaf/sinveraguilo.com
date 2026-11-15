@@ -193,3 +193,12 @@ html.a11y-motion *::after {
   background-image: linear-gradient(rgb(var(--accent-rgb) / 0.07) 1px, transparent 1px), linear-gradient(90deg, rgb(var(--accent-rgb) / 0.07) 1px, transparent 1px);
   background-size: 24px 24px;
 }
+
+/* ---- Paper (light) mode: invert the dark palette, keep media true ------- */
+:root[data-paper] {
+  color-scheme: light;
+  filter: invert(1) hue-rotate(180deg);
+}
+:root[data-paper] :is(img, video, picture, canvas, iframe) {
+  filter: invert(1) hue-rotate(180deg);
+}

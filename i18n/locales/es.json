@@ -352,7 +352,8 @@
     "open": "Abrir en pestaña nueva",
     "case": "Leer el caso"
   },
-  "shortcuts": { "title": "Atajos de teclado", "goto": "Ir a (pulsa g y luego…)", "more": "En cualquier lugar", "palette": "Abrir la paleta de comandos", "blueprint": "Alternar modo plano", "help": "Mostrar u ocultar esta hoja", "close": "Cerrar" },
+  "paper": { "label": "Papel", "hint": "Alternar modo papel, claro (P)" },
+  "shortcuts": { "title": "Atajos de teclado", "goto": "Ir a (pulsa g y luego…)", "more": "En cualquier lugar", "palette": "Abrir la paleta de comandos", "blueprint": "Alternar modo plano", "paper": "Alternar modo papel (claro)", "help": "Mostrar u ocultar esta hoja", "close": "Cerrar" },
   "blueprint": { "label": "Plano", "hint": "Alternar modo plano (B): delinea cada sección y encabezado" },
   "accent": {
     "label": "Color de acento",

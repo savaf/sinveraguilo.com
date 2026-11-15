@@ -352,7 +352,8 @@
     "open": "Open in new tab",
     "case": "Read the case"
   },
-  "shortcuts": { "title": "Keyboard shortcuts", "goto": "Go to (press g, then…)", "more": "Anywhere", "palette": "Open the command palette", "blueprint": "Toggle blueprint mode", "help": "Show or hide this sheet", "close": "Close" },
+  "paper": { "label": "Paper", "hint": "Toggle paper (light) mode (P)" },
+  "shortcuts": { "title": "Keyboard shortcuts", "goto": "Go to (press g, then…)", "more": "Anywhere", "palette": "Open the command palette", "blueprint": "Toggle blueprint mode", "paper": "Toggle paper (light) mode", "help": "Show or hide this sheet", "close": "Close" },
   "blueprint": { "label": "Blueprint", "hint": "Toggle blueprint mode (B): outline every section and heading" },
   "accent": {
     "label": "Accent color",

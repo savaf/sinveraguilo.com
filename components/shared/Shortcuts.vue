@@ -12,6 +12,7 @@ const labels: Record<string, string> = { h: "nav.home", a: "nav.about", p: "nav.
 const other = [
   { keys: ["⌘/Ctrl", "K"], k: "shortcuts.palette" },
   { keys: ["B"], k: "shortcuts.blueprint" },
+  { keys: ["P"], k: "shortcuts.paper" },
   { keys: ["?"], k: "shortcuts.help" },
   { keys: ["Esc"], k: "shortcuts.close" },
 ];
