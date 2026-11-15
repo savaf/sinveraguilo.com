@@ -24,20 +24,6 @@ const topSkills = computed(() => {
   return [...count.entries()].sort((a, b) => b[1] - a[1]).slice(0, 14);
 });
 
-// Tailor lens: picked skills float matching roles to the top; the rest dim on screen and drop out of print.
-const picked = ref<string[]>([]);
-const toggle = (s: string) => (picked.value = picked.value.includes(s) ? picked.value.filter((x) => x !== s) : [...picked.value, s]);
-const matches = (j: any) => (j.skills ?? []).filter((s: string) => picked.value.includes(s)).length;
-const shownJobs = computed(() =>
-  picked.value.length
-    ? jobs
-        .map((j, i) => ({ j, i, m: matches(j) }))
-        .sort((a, b) => b.m - a.m || a.i - b.i)
-        .map((x) => x.j)
-    : jobs,
-);
-const matched = computed(() => jobs.filter((j) => matches(j) > 0).length);
-
 function print() {
   window.print();
 }
@@ -65,25 +51,11 @@ function print() {
         <div class="flex flex-wrap gap-2 font-mono text-xs">
           <span v-for="[s] in topSkills" :key="s" class="border-2 border-ink bg-surface text-slate-200 px-2.5 py-1">{{ s }}</span>
         </div>
-        <div class="no-print mt-5 border-2 border-ink bg-surface p-4">
-          <p class="m-0 font-mono text-xs font-bold uppercase tracking-[0.06em] text-cyan">{{ $t("lens.title") }}</p>
-          <p class="m-0 mt-1 text-[13px] text-muted">{{ $t("lens.hint") }}</p>
-          <div class="mt-3 flex flex-wrap gap-2">
-            <button v-for="[s] in topSkills" :key="s" type="button" :aria-pressed="picked.includes(s)" class="cursor-pointer border-2 px-2.5 py-1 font-mono text-xs transition-colors" :class="picked.includes(s) ? 'border-yellow bg-yellow text-ink-text font-bold' : 'border-ink text-slate-200 hover:border-yellow'" @click="toggle(s)">{{ s }}</button>
-          </div>
-          <p class="m-0 mt-3 font-mono text-xs text-yellow" aria-live="polite">
-            <template v-if="picked.length">
-              {{ $t("lens.result", { m: matched, n: jobs.length }) }}
-              <button type="button" class="ml-2 cursor-pointer underline text-slate-200 hover:text-cyan" @click="picked = []">{{ $t("lens.clear") }}</button>
-            </template>
-          </p>
-        </div>
-        <p v-if="picked.length" class="print-only mt-3 font-mono text-xs">{{ $t("lens.printNote", { skills: picked.join(", ") }) }}</p>
       </section>
 
       <section class="mb-6">
         <h2 class="r-h font-display">{{ $t("about.experienceTitle") }}</h2>
-        <article v-for="j in shownJobs" :key="j._path" class="job mb-5 transition-opacity" :class="picked.length && !matches(j) ? 'opacity-40 job-off' : ''">
+        <article v-for="j in jobs" :key="j._path" class="job mb-5">
           <div class="flex flex-wrap items-baseline justify-between gap-x-3">
             <h3 class="m-0 font-grotesk font-semibold text-[17px] text-primary-light">
               {{ tr(j.position) }} <span class="text-cyan">@ {{ j.company }}</span>
@@ -119,9 +91,6 @@ function print() {
 </style>
 
 <style>
-.print-only {
-  display: none;
-}
 @media print {
   header,
   footer,
@@ -140,12 +109,6 @@ function print() {
   }
   .resume .job {
     break-inside: avoid;
-  }
-  .resume .job-off {
-    display: none !important;
-  }
-  .resume .print-only {
-    display: block !important;
   }
   @page {
     margin: 14mm;

@@ -46,10 +46,6 @@ useHead(() => ({
 
     <LazySharedAppFooter />
 
-    <ClientOnly><SharedStickyCta /></ClientOnly>
-    <ClientOnly><SharedPageCurtain /></ClientOnly>
-    <ClientOnly><SharedShortcuts /></ClientOnly>
-
     <!-- Go back to top when scrolled down -->
     <div class="flex space-x-2 mr-8 mb-6 right-0 bottom-0 z-50 fixed items-center sm:space-x-4">
       <LazyBackToTop />

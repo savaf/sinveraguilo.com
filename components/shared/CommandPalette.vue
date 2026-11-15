@@ -9,20 +9,25 @@ const input = ref<HTMLInputElement | null>(null);
 const EMAIL = "hello@sinveraguilo.com";
 
 const pages = [
-  { key: "nav.home", to: "/" },
-  { key: "nav.about", to: "/about" },
-  { key: "nav.projects", to: "/projects" },
-  { key: "nav.blog", to: "/blog" },
-  { key: "nav.contact", to: "/contact" },
+  { key: "nav.home", to: "/", gKey: "h" },
+  { key: "nav.about", to: "/about", gKey: "a" },
+  { key: "nav.projects", to: "/projects", gKey: "p" },
+  { key: "nav.blog", to: "/blog", gKey: "b" },
+  { key: "nav.contact", to: "/contact", gKey: "c" },
+  { key: "palette.resume", to: "/resume", gKey: "r", plain: true },
 ];
+// "g" then a letter jumps to a page; never toggles a mode.
+const gRoutes: Record<string, string> = { ...Object.fromEntries(pages.map((p) => [p.gKey, p.to])) };
+const pending = ref(false);
+let timer: ReturnType<typeof setTimeout> | undefined;
 
 const commands = computed(() => {
   const other = locale.value === "en" ? "es" : "en";
   return [
-    ...pages.map((p) => ({ label: t("palette.go", { page: t(p.key) }), tag: "goto", run: () => navigateTo(localePath(p.to)) })),
+    ...pages.map((p) => ({ label: p.plain ? t(p.key) : t("palette.go", { page: t(p.key) }), tag: "goto", keys: `g ${p.gKey}`, run: () => navigateTo(localePath(p.to)) })),
     { label: t("palette.lang", { lang: other === "es" ? "Español" : "English" }), tag: "lang", run: () => setLocale(other) },
+    { label: t("palette.blueprint"), tag: "mode", keys: "B", keep: true, run: () => window.dispatchEvent(new Event("blueprint:toggle")) },
     { label: t("palette.colophon"), tag: "goto", run: () => navigateTo(localePath("/colophon")) },
-    { label: t("palette.resume"), tag: "goto", run: () => navigateTo(localePath("/resume")) },
     {
       label: t("palette.cv"),
       tag: "pdf",
@@ -75,15 +80,41 @@ function onInputKey(e: KeyboardEvent) {
   else if (e.key === "ArrowUp" && n) (e.preventDefault(), (active.value = (active.value - 1 + n) % n));
   else if (e.key === "Enter") (e.preventDefault(), exec(active.value));
 }
+function typing(e: KeyboardEvent) {
+  const el = e.target as HTMLElement | null;
+  return !!el && (el.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(el.tagName));
+}
 function onKey(e: KeyboardEvent) {
   if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
     e.preventDefault();
-    open.value ? close() : show();
-  } else if (e.key === "Escape" && open.value) close();
+    return open.value ? close() : show();
+  }
+  if (e.key === "Escape" && open.value) return close();
+  if (e.metaKey || e.ctrlKey || e.altKey || open.value || typing(e)) return;
+  if (e.key === "?") {
+    e.preventDefault();
+    return show();
+  }
+  const k = e.key.toLowerCase();
+  if (pending.value) {
+    pending.value = false;
+    clearTimeout(timer);
+    if (gRoutes[k]) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      navigateTo(localePath(gRoutes[k]));
+    }
+  } else if (k === "g") {
+    pending.value = true;
+    timer = setTimeout(() => (pending.value = false), 1500);
+  }
 }
 
-onMounted(() => window.addEventListener("keydown", onKey));
-onBeforeUnmount(() => window.removeEventListener("keydown", onKey));
+onMounted(() => window.addEventListener("keydown", onKey, true));
+onBeforeUnmount(() => {
+  window.removeEventListener("keydown", onKey, true);
+  clearTimeout(timer);
+});
 </script>
 
 <template>
@@ -93,6 +124,7 @@ onBeforeUnmount(() => window.removeEventListener("keydown", onKey));
   </button>
 
   <Teleport to="body">
+    <div v-if="pending" class="fixed bottom-6 left-6 z-[90] border-2 border-ink bg-yellow px-3 py-2 font-mono text-xs font-bold uppercase text-ink-text shadow-[4px_4px_0_var(--accent)]" role="status">g → {{ Object.keys(gRoutes).join(" · ") }}</div>
     <transition name="fade">
       <div v-if="open" class="fixed inset-0 z-[100] flex items-start justify-center bg-ink/80 px-4 pt-[15vh]" role="dialog" aria-modal="true" :aria-label="$t('palette.hint')" @mousedown.self="close">
         <div class="w-full max-w-xl border-2 border-ink bg-surface shadow-[8px_8px_0_var(--accent)]">
@@ -104,7 +136,10 @@ onBeforeUnmount(() => window.removeEventListener("keydown", onKey));
           <ul id="palette-list" role="listbox" class="m-0 max-h-[50vh] list-none overflow-y-auto p-0">
             <li v-for="(c, i) in results" :key="c.tag + c.label" role="option" :aria-selected="i === active" class="flex cursor-pointer items-center justify-between px-4 py-3 font-display text-sm font-bold uppercase" :class="i === active ? 'bg-yellow text-ink-text' : 'text-primary-light'" @mousemove="active = i" @click="exec(i)">
               <span>{{ c.tag === "copy" && copied ? $t("palette.copied") : c.label }}</span>
-              <span class="font-mono text-[11px] font-medium normal-case opacity-70">{{ c.tag }}</span>
+              <span class="flex items-center gap-2 font-mono text-[11px] font-medium normal-case opacity-70">
+                <kbd v-if="c.keys" class="border border-current px-1.5">{{ c.keys }}</kbd>
+                {{ c.tag }}
+              </span>
             </li>
             <li v-if="!results.length" class="px-4 py-6 text-center font-mono text-sm text-dim">{{ $t("palette.empty") }}</li>
           </ul>

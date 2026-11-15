@@ -57,8 +57,6 @@ const goTo = (to: string) => clearError({ redirect: localePath(to) });
         </button>
       </nav>
 
-      <SharedBugSquash v-if="isNotFound" />
-
       <p class="mt-8 text-sm text-indigo-100">
         {{ $t("error.hint") }} ·
         <a href="#" class="underline underline-offset-4 hover:text-yellow" @click.prevent="goTo('/contact')">{{ $t("error.report") }}</a>

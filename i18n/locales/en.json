@@ -14,6 +14,7 @@
     "available": "Available for work",
     "eyebrow": "Software Engineer",
     "tagline": "Turning your vision into reality with code and design.",
+    "ctaContact": "Contact me",
     "ctaWork": "View work",
     "ctaCV": "Download CV",
     "label": "// engineering + design"
@@ -37,9 +38,6 @@
     "bio1": "Hi, I'm Sinver Aguiló, a Software Engineer with 9+ years of experience building web platforms that scale to meet the demands of their users. I currently lead the frontend of PSM, a national government platform for Burocracia Cero / CNC in the Dominican Republic, where our work has driven a roughly 4x improvement in request-processing throughput.",
     "bio2": "My expertise spans React, Next.js and Vue.js on the frontend, and full-stack work with Node.js and PHP on the backend. I've led architecture for large legacy migrations — from monolithic .NET, Rails and JSP applications to modern client-server and microservices structures, for products like Corotos, NZXT and Crunchyroll — and I care deeply about accessibility (WCAG 2.1 AA), internationalization, and CI/CD with Docker and GitHub Actions.",
     "bio3": "Throughout my career I've been committed to doing things the right way and getting things done. I bring architecture ownership, mentorship and a results-driven approach to every team I join. I'm based in Santo Domingo, Dominican Republic, open to remote work, and fluent in English (C1).",
-    "localTime": "Local time",
-    "copyEmail": "Copy email address",
-    "copied": "Copied!",
     "location": "Santo Domingo, DO",
     "experienceTitle": "Experience",
     "educationTitle": "Education",
@@ -50,42 +48,11 @@
     "subtitle": "A selection of things I have designed and built — from landing pages to front-end challenges.",
     "surprise": "Surprise me",
     "filterAll": "All",
-    "view": "View",
-    "viewCards": "Cards",
-    "viewIndex": "Index",
-    "tech": "Technology",
-    "techClear": "Clear",
-    "showing": "Showing {n} of {total}",
     "search": "Search projects",
-    "noResults": "No projects match your search.",
-    "compare": "Compare",
-    "compareHint": "Tip: use + to compare up to {n} projects side by side.",
-    "compareClear": "Clear selection",
-    "comparePickMore": "Pick at least one more project to compare.",
-    "compareCategory": "Category",
-    "compareDate": "Published",
-    "compareShared": "Shared technologies (highlighted): {list}",
-    "compareNone": "No technology is shared by all selected projects.",
-    "constellation": "Technology constellation",
-    "constellationKicker": "// how the work connects",
-    "constellationHint": "Each dot is a technology, sized by how many projects use it. Lines join technologies used together. Hover to see neighbours, click to filter the projects below.",
-    "constellationAlone": "not paired with anything else",
-    "constellationNodes": "technologies",
-    "constellationLinks": "links"
-  },
-  "quote": {
-    "label": "Share selection",
-    "copy": "Copy quote",
-    "copied": "Copied ✓",
-    "hint": "// Tip: select any passage to copy or share it with a link back."
+    "noResults": "No projects match your search."
   },
   "code": { "copy": "Copy", "copied": "Copied ✓", "failed": "Press Ctrl+C" },
-  "listen": { "label": "Listen to this post", "play": "Listen", "pause": "Pause", "resume": "Resume", "stop": "Stop" },
-  "readingResume": { "label": "Resume reading", "title": "You stopped at {n}%", "go": "Continue", "reset": "Start over" },
   "postReply": { "title": "Did this post help?", "body": "Tell me what worked, what didn't, or what you'd add. I read every reply.", "btn": "Reply to this post", "subject": "About your post: {title}", "msg": "Hi Sinver,\n\nI just read \"{title}\" and wanted to say:\n\n" },
-  "postMap": { "label": "Post map", "hint": "block width = section length", "min": "{n} min" },
-  "timeLeft": { "left": "~{n} min left", "done": "Finished reading" },
-  "focus": { "on": "Focus reading", "off": "Exit focus", "hint": "Dim everything but the paragraph you are reading (F)" },
   "headingLink": {
     "copy": "Copy link to this section",
     "copied": "Link copied",
@@ -99,7 +66,6 @@
     "search": "Search posts",
     "noResults": "No posts match.",
     "latest": "Latest",
-    "count": "{n} posts",
     "open": "Read post",
     "title": "Blog",
     "subtitle": "Notes on engineering, design and things I'm building.",
@@ -112,7 +78,6 @@
   "detail": {
     "prevProject": "Previous project",
     "nextProject": "Next project",
-    "pagerHint": "Tip: use ← and → to move between projects",
     "zoom": "Zoom",
     "prev": "Previous image",
     "next": "Next image",
@@ -147,17 +112,12 @@
     "sending": "Sending",
     "sentOk": "Message sent — I'll get back to you soon.",
     "sentError": "Something went wrong. Please email me directly instead.",
-    "preview": "Live preview of your email",
-    "mailApp": "Open in my mail app",
-    "pvFrom": "From",
-    "pvTo": "To",
     "stampSent": "SENT",
     "meanwhile": "Meanwhile, browse",
     "meanwhileProjects": "projects",
     "meanwhileBlog": "writing",
     "draftRestored": "Draft restored — picking up where you left off.",
     "draftDiscard": "Discard draft",
-    "draftNote": "Draft saved on this device only.",
     "startWith": "Start with a template",
     "starters": {
       "project": {
@@ -193,12 +153,9 @@
     "copied": "Email copied",
     "close": "Close",
     "hintKeys": "↑↓ navigate · ↵ run · esc close",
+    "blueprint": "Toggle blueprint mode",
     "resume": "View résumé",
     "colophon": "View colophon (how this site is made)"
-  },
-  "sticky": {
-    "text": "Available — let's talk",
-    "dismiss": "Dismiss"
   },
   "cta": {
     "title": "Let's build something",
@@ -206,12 +163,10 @@
     "button": "Get in touch"
   },
   "footer": {
-    "follow": "Follow me",
     "emailLabel": "Prefer email?",
     "copy": "Copy email",
     "copied": "Copied ✓",
-    "pages": "Pages",
-    "top": "Back to top ↑"
+    "pages": "Pages"
   },
   "careerLog": {
     "title": "Career log",
@@ -236,12 +191,6 @@
     "send": "Draft my message",
     "subj": "{need}",
     "msg": "Hi Sinver,\n\nI'm looking for: {need}.\nTiming: {time}.\n\nSome context:\n"
-  },
-  "heatmap": {
-    "title": "Skills by year",
-    "subtitle": "When each skill was in daily use, built from the date ranges of my real roles. Brighter means more months in that year.",
-    "skill": "Skill",
-    "legend": "Columns are years. Brightness = months of use that year (max 12)."
   },
   "stack": {
     "title": "Stack explorer",
@@ -269,14 +218,6 @@
       "open": "open a project by number"
     }
   },
-  "rail": {
-    "label": "Page sections",
-    "work": "Work",
-    "career": "Career",
-    "stack": "Stack",
-    "terminal": "Terminal",
-    "brief": "Brief"
-  },
   "overlap": {
     "kicker": "timezone check",
     "title": "We share {n} working hours a day",
@@ -293,13 +234,11 @@
     "behind": "{n}h behind me",
     "cta": "Book a call in our overlap"
   },
-  "lens": { "title": "Tailor this résumé", "hint": "Pick the skills you care about. Roles that used them move to the top, and Print / Save as PDF keeps only those roles.", "result": "{m} of {n} roles match", "clear": "Clear", "printNote": "Tailored to: {skills}" },
   "resume": {
     "title": "Résumé",
     "print": "Print / Save as PDF",
     "skills": "Core skills"
   },
-  "squash": { "title": "Squash the bugs", "intro": "While you're here: click the bugs before they hit the bottom.", "play": "Play", "again": "Play again", "over": "Deployed with {n} bugs squashed. Want someone who ships fewer?", "score": "Score {n}", "best": "Best {n}", "bug": "Bug" },
   "error": {
     "label": "Error",
     "notFoundTitle": "Lost in the stack",
@@ -343,9 +282,7 @@
     ]
   },
   "faq": {
-    "kicker": "// before you write",
     "title": "Questions you may have",
-    "cta": "Skip to the brief",
     "items": [
       {
         "q": "Do I need a spec first?",
@@ -356,29 +293,12 @@
         "a": "A website or web app, a migration, a full-time role or freelance help. The brief builder below covers all four."
       },
       {
-        "q": "What if we are in different timezones?",
-        "a": "The timezone check above shows our shared hours. When they are few, I work async and write things down."
-      },
-      {
-        "q": "Which languages do you work in?",
-        "a": "Spanish and English, the same as this site."
-      },
-      {
         "q": "Who owns the result?",
         "a": "Your team. Work ships deployed and documented, then gets handed over so you can own it."
       }
     ]
   },
-  "writing": {
-    "kicker": "// field notes",
-    "title": "Latest writing",
-    "all": "All posts"
-  },
   "perf": { "kicker": "// performance, live", "title": "The receipt for this page, measured on your device", "lead": "No lab numbers, no screenshots. These are the real timings your browser recorded while loading this page, read through the Performance API.", "measuring": "Measuring…", "good": "within the recommended threshold", "slow": "above the recommended threshold", "note": "Values vary with your network, device and cache. Thresholds are Google's \"good\" Core Web Vitals limits (LCP 2.5 s, CLS 0.1) plus 1.8 s for FCP and 800 ms for TTFB.", "rows": { "ttfb": { "t": "Server response (TTFB)", "d": "Time to first byte" }, "fcp": { "t": "First paint with content (FCP)", "d": "First Contentful Paint" }, "lcp": { "t": "Largest element (LCP)", "d": "Largest Contentful Paint" }, "cls": { "t": "Layout shift (CLS)", "d": "Cumulative Layout Shift" }, "bytes": { "t": "Transferred so far", "d": "Bytes over the network, 0 if cached" }, "dom": { "t": "DOM elements", "d": "Elements in the page right now" } } },
-  "manifesto": {
-    "kicker": "// how I work",
-    "text": "I do things the right way and I get things done. Accessible to WCAG 2.1 AA, bilingual by default, shipped through CI/CD."
-  },
   "a11y": {
     "kicker": "// accessibility, live",
     "title": "Don't take my word for it. Try it.",
@@ -405,25 +325,6 @@
       }
     }
   },
-  "intent": {
-    "kicker": "// start here",
-    "title": "What brings you here?",
-    "hire": {
-      "tab": "I'm hiring",
-      "pitch": "Skim the résumé first, then the career log to see how the roles connect. If it fits, the contact page is one click away.",
-      "links": ["Read the résumé", "See the career log"]
-    },
-    "project": {
-      "tab": "I have a project",
-      "pitch": "Skip the intro call. Describe the problem, constraint and deadline in the brief builder and you'll get a plain-language scope back.",
-      "links": ["Open the brief builder", "See past work"]
-    },
-    "look": {
-      "tab": "Just looking",
-      "pitch": "Start with the featured work, or poke around the terminal further down. It answers real questions about the site.",
-      "links": ["Browse featured work", "Try the terminal"]
-    }
-  },
   "demos": {
     "kicker": "// try it live",
     "title": "Run the demos right here",
@@ -433,21 +334,7 @@
     "open": "Open in new tab",
     "case": "Read the case"
   },
-  "paper": { "label": "Paper", "hint": "Toggle paper (light) mode (P)" },
   "similar": { "title": "Need something like this?", "cta": "Start a similar project", "subject": "A project like {title}", "message": "Hi Sinver, I saw {title} ({stack}) and I would like to build something similar. Here is what I have in mind:\n\n" },
-  "spotlight": { "label": "Spotlight", "hint": "Toggle spotlight mode (L): dim the page, light only around the cursor" },
-  "rain": { "label": "Rain", "hint": "Toggle code rain (M): falling code glyphs in your accent color" },
-  "shortcuts": { "title": "Keyboard shortcuts", "goto": "Go to (press g, then…)", "more": "Anywhere", "palette": "Open the command palette", "blueprint": "Toggle blueprint mode", "paper": "Toggle paper (light) mode", "spotlight": "Toggle spotlight mode", "rain": "Toggle code rain", "help": "Show or hide this sheet", "close": "Close" },
-  "blueprint": { "label": "Blueprint", "hint": "Toggle blueprint mode (B): outline every section and heading" },
-  "accent": {
-    "label": "Accent color",
-    "names": {
-      "cyan": "Cyan",
-      "mint": "Mint",
-      "pink": "Pink",
-      "orange": "Orange"
-    }
-  },
   "colophon": {
     "label": "// how this site is made",
     "title": "Colophon",
@@ -490,21 +377,9 @@
         "k": "Command palette",
         "v": "Ctrl/⌘ K opens a quick menu to jump pages, switch language, or copy my email."
       },
-      "accent": {
-        "k": "Accent picker",
-        "v": "The header colour picker re-themes every cyan highlight, live."
-      },
       "a11y": {
         "k": "Accessibility switches",
         "v": "Text size, contrast, motion and spacing adjustable on the home page."
-      },
-      "curtain": {
-        "k": "Page curtain",
-        "v": "Route changes wipe through a curtain that names the destination."
-      },
-      "share": {
-        "k": "Quote sharing",
-        "v": "Select text in a blog post to copy it or share it on X and LinkedIn."
       },
       "resume": {
         "k": "Printable résumé",
@@ -524,10 +399,6 @@
     "cta": "Send this stack to me",
     "subj": "Stack fit check",
     "msg": "My stack: {stack}\nCovered by your roles: {have} ({pct}%)\n\nAbout the project: "
-  },
-  "tldr": {
-    "label": "// 30-second read",
-    "aria": "Open the 30-second summary"
   },
   "timeline": { "kicker": "// career at a glance", "title": "Timeline", "hint": "Select a bar to see the role. Bars are drawn from real start and end dates.", "jump": "Jump to details", "overlap": "Overlapping bars are roles held in parallel." }
 }

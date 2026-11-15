@@ -14,6 +14,7 @@
     "available": "Disponible para proyectos",
     "eyebrow": "Ingeniero de Software",
     "tagline": "Convierto tu visión en realidad con código y diseño.",
+    "ctaContact": "Contáctame",
     "ctaWork": "Ver proyectos",
     "ctaCV": "Descargar CV",
     "label": "// ingeniería + diseño"
@@ -37,9 +38,6 @@
     "bio1": "Hola, soy Sinver Aguiló, Ingeniero de Software con más de 9 años de experiencia construyendo plataformas web que escalan para responder a las demandas de sus usuarios. Actualmente lidero el frontend de PSM, una plataforma de gobierno nacional para Burocracia Cero / CNC en República Dominicana, donde nuestro trabajo ha impulsado una mejora de aproximadamente 4x en el throughput de procesamiento de solicitudes.",
     "bio2": "Mi experiencia abarca React, Next.js y Vue.js en el frontend, y trabajo full-stack con Node.js y PHP en el backend. He liderado la arquitectura de grandes migraciones legadas — de aplicaciones monolíticas en .NET, Rails y JSP a estructuras modernas cliente-servidor y de microservicios, para productos como Corotos, NZXT y Crunchyroll — y me importa profundamente la accesibilidad (WCAG 2.1 AA), la internacionalización, y el CI/CD con Docker y GitHub Actions.",
     "bio3": "A lo largo de mi carrera me he comprometido a hacer las cosas bien y a sacarlas adelante. Aporto propiedad sobre la arquitectura, mentoría, y un enfoque orientado a resultados a cada equipo del que formo parte. Vivo en Santo Domingo, República Dominicana, estoy abierto a trabajo remoto, y tengo dominio del inglés (nivel C1).",
-    "localTime": "Hora local",
-    "copyEmail": "Copiar correo",
-    "copied": "¡Copiado!",
     "location": "Santo Domingo, DO",
     "experienceTitle": "Experiencia",
     "educationTitle": "Educación",
@@ -50,42 +48,11 @@
     "subtitle": "Una selección de cosas que he diseñado y construido — desde landing pages hasta retos de front-end.",
     "surprise": "Sorpréndeme",
     "filterAll": "Todos",
-    "view": "Vista",
-    "viewCards": "Tarjetas",
-    "viewIndex": "Índice",
-    "tech": "Tecnología",
-    "techClear": "Limpiar",
-    "showing": "Mostrando {n} de {total}",
     "search": "Buscar proyectos",
-    "noResults": "Ningún proyecto coincide con tu búsqueda.",
-    "compare": "Comparar",
-    "compareHint": "Tip: usa + para comparar hasta {n} proyectos lado a lado.",
-    "compareClear": "Limpiar selección",
-    "comparePickMore": "Elige al menos un proyecto más para comparar.",
-    "compareCategory": "Categoría",
-    "compareDate": "Publicado",
-    "compareShared": "Tecnologías compartidas (resaltadas): {list}",
-    "compareNone": "Ninguna tecnología es común a todos los proyectos seleccionados.",
-    "constellation": "Constelación de tecnologías",
-    "constellationKicker": "// cómo se conecta el trabajo",
-    "constellationHint": "Cada punto es una tecnología, con tamaño según cuántos proyectos la usan. Las líneas unen tecnologías usadas juntas. Pasa el cursor para ver vecinas, haz clic para filtrar los proyectos de abajo.",
-    "constellationAlone": "sin pareja en otros proyectos",
-    "constellationNodes": "tecnologías",
-    "constellationLinks": "vínculos"
-  },
-  "quote": {
-    "label": "Compartir selección",
-    "copy": "Copiar cita",
-    "copied": "Copiado ✓",
-    "hint": "// Tip: selecciona cualquier pasaje para copiarlo o compartirlo con un enlace."
+    "noResults": "Ningún proyecto coincide con tu búsqueda."
   },
   "code": { "copy": "Copiar", "copied": "Copiado ✓", "failed": "Usa Ctrl+C" },
-  "listen": { "label": "Escuchar este artículo", "play": "Escuchar", "pause": "Pausar", "resume": "Continuar", "stop": "Detener" },
-  "readingResume": { "label": "Retomar lectura", "title": "Te quedaste en {n}%", "go": "Continuar", "reset": "Empezar de nuevo" },
   "postReply": { "title": "¿Te sirvió este artículo?", "body": "Cuéntame qué funcionó, qué no o qué añadirías. Leo cada respuesta.", "btn": "Responder a este artículo", "subject": "Sobre tu artículo: {title}", "msg": "Hola Sinver,\n\nAcabo de leer \"{title}\" y quería decirte:\n\n" },
-  "postMap": { "label": "Mapa del artículo", "hint": "ancho del bloque = largo de la sección", "min": "{n} min" },
-  "timeLeft": { "left": "~{n} min restantes", "done": "Lectura terminada" },
-  "focus": { "on": "Lectura enfocada", "off": "Salir del enfoque", "hint": "Atenúa todo menos el párrafo que lees (F)" },
   "headingLink": {
     "copy": "Copiar enlace a esta sección",
     "copied": "Enlace copiado",
@@ -99,7 +66,6 @@
     "search": "Buscar posts",
     "noResults": "Ningún post coincide.",
     "latest": "Más reciente",
-    "count": "{n} posts",
     "open": "Leer post",
     "title": "Blog",
     "subtitle": "Notas sobre ingeniería, diseño y cosas que estoy construyendo.",
@@ -112,7 +78,6 @@
   "detail": {
     "prevProject": "Proyecto anterior",
     "nextProject": "Proyecto siguiente",
-    "pagerHint": "Tip: usa ← y → para moverte entre proyectos",
     "zoom": "Ampliar",
     "prev": "Imagen anterior",
     "next": "Imagen siguiente",
@@ -147,17 +112,12 @@
     "sending": "Enviando",
     "sentOk": "Mensaje enviado — te responderé pronto.",
     "sentError": "Algo salió mal. Por favor escríbeme directamente por correo.",
-    "preview": "Vista previa de tu correo",
-    "mailApp": "Abrir en mi app de correo",
-    "pvFrom": "De",
-    "pvTo": "Para",
     "stampSent": "ENVIADO",
     "meanwhile": "Mientras tanto, mira los",
     "meanwhileProjects": "proyectos",
     "meanwhileBlog": "artículos",
     "draftRestored": "Borrador restaurado: seguimos donde lo dejaste.",
     "draftDiscard": "Descartar borrador",
-    "draftNote": "Borrador guardado solo en este dispositivo.",
     "startWith": "Empieza con una plantilla",
     "starters": {
       "project": {
@@ -193,12 +153,9 @@
     "copied": "Correo copiado",
     "close": "Cerrar",
     "hintKeys": "↑↓ navegar · ↵ ejecutar · esc cerrar",
+    "blueprint": "Alternar modo plano",
     "resume": "Ver currículum",
     "colophon": "Ver colofón (cómo está hecho)"
-  },
-  "sticky": {
-    "text": "Disponible — hablemos",
-    "dismiss": "Cerrar"
   },
   "cta": {
     "title": "Construyamos algo",
@@ -206,12 +163,10 @@
     "button": "Contáctame"
   },
   "footer": {
-    "follow": "Sígueme",
     "emailLabel": "¿Prefieres correo?",
     "copy": "Copiar correo",
     "copied": "Copiado ✓",
-    "pages": "Páginas",
-    "top": "Volver arriba ↑"
+    "pages": "Páginas"
   },
   "careerLog": {
     "title": "Bitácora de carrera",
@@ -236,12 +191,6 @@
     "send": "Redactar mi mensaje",
     "subj": "{need}",
     "msg": "Hola Sinver,\n\nBusco: {need}.\nPlazo: {time}.\n\nContexto:\n"
-  },
-  "heatmap": {
-    "title": "Habilidades por año",
-    "subtitle": "Cuándo usé cada habilidad a diario, construido con las fechas de mis roles reales. Más brillante significa más meses ese año.",
-    "skill": "Habilidad",
-    "legend": "Las columnas son años. Brillo = meses de uso ese año (máx. 12)."
   },
   "stack": {
     "title": "Explorador de stack",
@@ -269,14 +218,6 @@
       "open": "abre un proyecto por número"
     }
   },
-  "rail": {
-    "label": "Secciones de la página",
-    "work": "Trabajo",
-    "career": "Carrera",
-    "stack": "Stack",
-    "terminal": "Terminal",
-    "brief": "Brief"
-  },
   "overlap": {
     "kicker": "chequeo de zona horaria",
     "title": "Compartimos {n} horas laborales al día",
@@ -293,13 +234,11 @@
     "behind": "{n}h por detrás de mí",
     "cta": "Agenda una llamada en nuestro solape"
   },
-  "lens": { "title": "Adapta este currículum", "hint": "Elige las habilidades que te interesan. Los roles que las usaron suben al inicio e Imprimir / Guardar PDF conserva solo esos roles.", "result": "{m} de {n} roles coinciden", "clear": "Limpiar", "printNote": "Adaptado a: {skills}" },
   "resume": {
     "title": "Currículum",
     "print": "Imprimir / Guardar PDF",
     "skills": "Habilidades clave"
   },
-  "squash": { "title": "Aplasta los bugs", "intro": "Ya que estás aquí: haz clic en los bugs antes de que lleguen al fondo.", "play": "Jugar", "again": "Jugar de nuevo", "over": "Desplegado con {n} bugs aplastados. ¿Quieres a alguien que envíe menos?", "score": "Puntos {n}", "best": "Récord {n}", "bug": "Bug" },
   "error": {
     "label": "Error",
     "notFoundTitle": "Perdido en el stack",
@@ -343,9 +282,7 @@
     ]
   },
   "faq": {
-    "kicker": "// antes de escribir",
     "title": "Preguntas que quizá tengas",
-    "cta": "Ir al brief",
     "items": [
       {
         "q": "¿Necesito una especificación primero?",
@@ -356,29 +293,12 @@
         "a": "Un sitio o app web, una migración, un puesto a tiempo completo o ayuda freelance. El constructor de brief de abajo cubre los cuatro."
       },
       {
-        "q": "¿Y si estamos en zonas horarias distintas?",
-        "a": "El chequeo de zona horaria de arriba muestra nuestras horas compartidas. Si son pocas, trabajo en asíncrono y dejo todo por escrito."
-      },
-      {
-        "q": "¿En qué idiomas trabajas?",
-        "a": "Español e inglés, igual que este sitio."
-      },
-      {
         "q": "¿De quién es el resultado?",
         "a": "De tu equipo. El trabajo se entrega desplegado y documentado, y se traspasa para que lo hagas tuyo."
       }
     ]
   },
-  "writing": {
-    "kicker": "// notas de campo",
-    "title": "Lo último que escribí",
-    "all": "Todos los artículos"
-  },
   "perf": { "kicker": "// rendimiento, en vivo", "title": "El recibo de esta página, medido en tu dispositivo", "lead": "Sin números de laboratorio ni capturas. Son los tiempos reales que tu navegador registró al cargar esta página, leídos con la Performance API.", "measuring": "Midiendo…", "good": "dentro del umbral recomendado", "slow": "por encima del umbral recomendado", "note": "Los valores varían según tu red, dispositivo y caché. Los umbrales son los límites \"buenos\" de Core Web Vitals de Google (LCP 2,5 s, CLS 0,1) más 1,8 s para FCP y 800 ms para TTFB.", "rows": { "ttfb": { "t": "Respuesta del servidor (TTFB)", "d": "Tiempo hasta el primer byte" }, "fcp": { "t": "Primer pintado con contenido (FCP)", "d": "First Contentful Paint" }, "lcp": { "t": "Elemento más grande (LCP)", "d": "Largest Contentful Paint" }, "cls": { "t": "Salto de diseño (CLS)", "d": "Cumulative Layout Shift" }, "bytes": { "t": "Transferido hasta ahora", "d": "Bytes por la red, 0 si está en caché" }, "dom": { "t": "Elementos DOM", "d": "Elementos en la página ahora mismo" } } },
-  "manifesto": {
-    "kicker": "// cómo trabajo",
-    "text": "Hago las cosas bien y hago que las cosas pasen. Accesible según WCAG 2.1 AA, bilingüe por defecto, entregado con CI/CD."
-  },
   "a11y": {
     "kicker": "// accesibilidad, en vivo",
     "title": "No me creas. Pruébalo.",
@@ -405,25 +325,6 @@
       }
     }
   },
-  "intent": {
-    "kicker": "// empieza aquí",
-    "title": "¿Qué te trae por aquí?",
-    "hire": {
-      "tab": "Estoy contratando",
-      "pitch": "Echa un vistazo al currículum y luego al registro de carrera para ver cómo se conectan los roles. Si encaja, el contacto está a un clic.",
-      "links": ["Leer el currículum", "Ver el registro de carrera"]
-    },
-    "project": {
-      "tab": "Tengo un proyecto",
-      "pitch": "Sin llamada de introducción. Describe el problema, la restricción y la fecha en el constructor de briefs y recibirás un alcance en lenguaje claro.",
-      "links": ["Abrir el constructor de briefs", "Ver trabajos anteriores"]
-    },
-    "look": {
-      "tab": "Solo miro",
-      "pitch": "Empieza por el trabajo destacado, o juega con la terminal más abajo. Responde preguntas reales sobre el sitio.",
-      "links": ["Ver trabajo destacado", "Probar la terminal"]
-    }
-  },
   "demos": {
     "kicker": "// pruébalo en vivo",
     "title": "Ejecuta las demos aquí mismo",
@@ -433,21 +334,7 @@
     "open": "Abrir en pestaña nueva",
     "case": "Leer el caso"
   },
-  "paper": { "label": "Papel", "hint": "Alternar modo papel, claro (P)" },
   "similar": { "title": "¿Necesitas algo así?", "cta": "Empezar un proyecto similar", "subject": "Un proyecto como {title}", "message": "Hola Sinver, vi {title} ({stack}) y me gustaría construir algo parecido. Esto es lo que tengo en mente:\n\n" },
-  "spotlight": { "label": "Foco", "hint": "Alternar modo foco (L): atenúa la página y ilumina solo junto al cursor" },
-  "rain": { "label": "Lluvia", "hint": "Alternar lluvia de código (M): glifos de código cayendo con tu color de acento" },
-  "shortcuts": { "title": "Atajos de teclado", "goto": "Ir a (pulsa g y luego…)", "more": "En cualquier lugar", "palette": "Abrir la paleta de comandos", "blueprint": "Alternar modo plano", "paper": "Alternar modo papel (claro)", "spotlight": "Alternar modo foco", "rain": "Alternar lluvia de código", "help": "Mostrar u ocultar esta hoja", "close": "Cerrar" },
-  "blueprint": { "label": "Plano", "hint": "Alternar modo plano (B): delinea cada sección y encabezado" },
-  "accent": {
-    "label": "Color de acento",
-    "names": {
-      "cyan": "Cian",
-      "mint": "Menta",
-      "pink": "Rosa",
-      "orange": "Naranja"
-    }
-  },
   "colophon": {
     "label": "// cómo está hecho este sitio",
     "title": "Colofón",
@@ -490,21 +377,9 @@
         "k": "Paleta de comandos",
         "v": "Ctrl/⌘ K abre un menú rápido para saltar de página, cambiar de idioma o copiar mi correo."
       },
-      "accent": {
-        "k": "Selector de acento",
-        "v": "El selector de color del encabezado recolorea en vivo todos los resaltes cian."
-      },
       "a11y": {
         "k": "Ajustes de accesibilidad",
         "v": "Tamaño de texto, contraste, movimiento y espaciado ajustables en el inicio."
-      },
-      "curtain": {
-        "k": "Cortina de página",
-        "v": "Los cambios de ruta pasan por una cortina que nombra el destino."
-      },
-      "share": {
-        "k": "Compartir citas",
-        "v": "Selecciona texto en un artículo para copiarlo o compartirlo en X y LinkedIn."
       },
       "resume": {
         "k": "Currículum imprimible",
@@ -524,10 +399,6 @@
     "cta": "Enviarme este stack",
     "subj": "Compatibilidad de stack",
     "msg": "Mi stack: {stack}\nCubierto por tus roles: {have} ({pct}%)\n\nSobre el proyecto: "
-  },
-  "tldr": {
-    "label": "// lectura de 30 segundos",
-    "aria": "Abrir el resumen de 30 segundos"
   },
   "timeline": { "kicker": "// carrera de un vistazo", "title": "Línea de tiempo", "hint": "Selecciona una barra para ver el rol. Las barras salen de fechas reales de inicio y fin.", "jump": "Ir al detalle", "overlap": "Las barras superpuestas son roles en paralelo." }
 }
