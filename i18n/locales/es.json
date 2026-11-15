@@ -64,7 +64,13 @@
     "compareCategory": "Categoría",
     "compareDate": "Publicado",
     "compareShared": "Tecnologías compartidas (resaltadas): {list}",
-    "compareNone": "Ninguna tecnología es común a todos los proyectos seleccionados."
+    "compareNone": "Ninguna tecnología es común a todos los proyectos seleccionados.",
+    "constellation": "Constelación de tecnologías",
+    "constellationKicker": "// cómo se conecta el trabajo",
+    "constellationHint": "Cada punto es una tecnología, con tamaño según cuántos proyectos la usan. Las líneas unen tecnologías usadas juntas. Pasa el cursor para ver vecinas, haz clic para filtrar los proyectos de abajo.",
+    "constellationAlone": "sin pareja en otros proyectos",
+    "constellationNodes": "tecnologías",
+    "constellationLinks": "vínculos"
   },
   "quote": {
     "label": "Compartir selección",
