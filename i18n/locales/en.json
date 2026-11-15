@@ -75,6 +75,9 @@
     "empty": "No posts yet — check back soon."
   },
   "detail": {
+    "prevProject": "Previous project",
+    "nextProject": "Next project",
+    "pagerHint": "Tip: use ← and → to move between projects",
     "zoom": "Zoom",
     "prev": "Previous image",
     "next": "Next image",

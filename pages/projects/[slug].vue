@@ -100,6 +100,8 @@ useHead({
       </div>
     </section>
 
+    <ProjectsPager :slug="doc.slug" :projects="allProjects || []" />
+
     <ProjectsSimilarCta :title="doc.title" :technologies="doc.technologies" />
     <SharedCtaBand />
   </div>
