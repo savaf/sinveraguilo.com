@@ -7,6 +7,27 @@ const activeFilter = ref("All");
 const query = ref("");
 const view = ref<"cards" | "index">("cards");
 const localePath = useLocalePath();
+const route = useRoute();
+const router = useRouter();
+
+// Technologies are multi-select (AND) and mirrored in ?tech= so a filtered view can be shared
+const activeTech = ref<string[]>(
+  String(route.query.tech || "")
+    .split(",")
+    .filter(Boolean),
+);
+const techCounts = computed(() => {
+  const counts = new Map<string, number>();
+  (projects.value || []).forEach((p) => {
+    new Set((p as unknown as ProjectLike).technologies || []).forEach((t) => counts.set(t, (counts.get(t) || 0) + 1));
+  });
+  return Array.from(counts.entries()).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+});
+function toggleTech(t: string) {
+  activeTech.value = activeTech.value.includes(t) ? activeTech.value.filter((x) => x !== t) : [...activeTech.value, t];
+  const { tech: _omit, ...rest } = route.query;
+  router.replace({ query: activeTech.value.length ? { ...rest, tech: activeTech.value.join(",") } : rest });
+}
 
 // Distinct categories present in the content, in a stable order
 const categories = computed(() => {
@@ -23,7 +44,8 @@ const filtered = computed(() => {
     const matchesFilter = activeFilter.value === "All" || cat === activeFilter.value;
     const haystack = [project.title, cat, projectStack(project), ...(project.technologies || [])].join(" ").toLowerCase();
     const matchesQuery = !q || haystack.includes(q);
-    return matchesFilter && matchesQuery;
+    const matchesTech = activeTech.value.every((t) => (project.technologies || []).includes(t));
+    return matchesFilter && matchesQuery && matchesTech;
   });
 });
 
@@ -57,6 +79,18 @@ function chipClass(active: boolean) {
           </span>
           <input v-model="query" type="search" :placeholder="$t('projects.search')" class="border-none bg-transparent text-primary-light font-mono text-[13px] px-3.5 py-2.5 outline-hidden w-[200px]" aria-label="Search projects" />
         </div>
+      </div>
+    </div>
+
+    <!-- Technology filter -->
+    <div v-if="techCounts.length" class="border-b-2 border-ink bg-primary-dark">
+      <div class="mx-auto max-w-[1180px] px-6 py-4 sm:px-10 flex flex-wrap items-center gap-2">
+        <span class="font-mono text-[11px] uppercase text-dim mr-2">{{ $t("projects.tech") }}</span>
+        <button v-for="[t, n] in techCounts" :key="t" type="button" :aria-pressed="activeTech.includes(t)" class="border-2 border-ink px-3 py-1.5 font-mono text-xs cursor-pointer transition-colors" :class="chipClass(activeTech.includes(t))" @click="toggleTech(t)">
+          {{ t }} <span class="opacity-60">{{ n }}</span>
+        </button>
+        <button v-if="activeTech.length" type="button" class="font-mono text-xs text-dim underline cursor-pointer ml-2" @click="activeTech.slice().forEach(toggleTech)">{{ $t("projects.techClear") }}</button>
+        <span class="ml-auto font-mono text-xs text-muted" aria-live="polite">{{ $t("projects.showing", { n: filtered.length, total: projects?.length || 0 }) }}</span>
       </div>
     </div>
 
