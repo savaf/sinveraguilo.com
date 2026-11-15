@@ -26,3 +26,5 @@ logs
 .lighthouseci
 .wrangler
 .unlighthouse
+test-results
+playwright-report

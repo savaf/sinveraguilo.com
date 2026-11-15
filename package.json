@@ -14,7 +14,8 @@
     "lint:prettier": "prettier --check .",
     "lint": "yarn lint:js && yarn lint:prettier",
     "test": "vitest run",
-    "lintfix": "prettier --write --list-different . && pnpm lint:js --fix"
+    "lintfix": "prettier --write --list-different . && pnpm lint:js --fix",
+    "test:e2e": "playwright test"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
@@ -24,6 +25,7 @@
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/i18n": "^10.6.0",
     "@nuxtjs/sitemap": "^8.6.2",
+    "@playwright/test": "1.53.2",
     "@rushstack/eslint-patch": "^1.16.1",
     "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.3.5",

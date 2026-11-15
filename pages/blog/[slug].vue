@@ -70,8 +70,6 @@ useSeoMeta({
     <div class="fixed top-0 inset-x-0 z-50 h-1 pointer-events-none" aria-hidden="true">
       <div class="h-full bg-yellow origin-left" :style="{ width: `${readProgress * 100}%` }" />
     </div>
-    <ClientOnly><SharedTimeLeft :minutes="readMinutes" target="#post-body" /></ClientOnly>
-    <ClientOnly><SharedResumeReading :id="String(route.params.slug)" /></ClientOnly>
     <!-- Hero -->
     <section class="relative border-b-2 border-ink overflow-hidden">
       <div class="absolute inset-0 grid-overlay" />
@@ -90,9 +88,6 @@ useSeoMeta({
           {{ doc.title }}
         </h1>
         <p class="mt-4 font-mono text-[13px] text-dim">{{ $t("blog.published") }} {{ doc.publishDate }} · {{ $t("blog.readTime", { n: readMinutes }) }}</p>
-        <ClientOnly><SharedPostMap :body="doc.body" /></ClientOnly>
-        <SharedReadAloud target="#post-body" />
-        <SharedReadFocus target="#post-body" />
       </div>
     </section>
 
@@ -100,14 +95,11 @@ useSeoMeta({
     <section class="mx-auto max-w-[1180px] px-6 pt-14 pb-8 sm:px-10 grid grid-cols-1 lg:grid-cols-[minmax(0,820px)_1fr] gap-10 lg:gap-14">
       <div>
         <p v-if="locale !== 'en'" class="font-mono text-xs text-dim mb-4">{{ $t("detail.englishOnly") }}</p>
-        <SharedQuoteShare id="post-body">
-          <SharedCodeCopy>
-            <SharedHeadingLinks>
-              <ContentRenderer :value="doc" class="prose prose-invert prose-slate max-w-none prose-headings:font-display prose-headings:uppercase prose-a:text-cyan" />
-            </SharedHeadingLinks>
-          </SharedCodeCopy>
-        </SharedQuoteShare>
-        <p class="mt-6 font-mono text-xs text-dim">{{ $t("quote.hint") }}</p>
+        <SharedCodeCopy>
+          <SharedHeadingLinks>
+            <ContentRenderer :value="doc" class="prose prose-invert prose-slate max-w-none prose-headings:font-display prose-headings:uppercase prose-a:text-cyan" />
+          </SharedHeadingLinks>
+        </SharedCodeCopy>
       </div>
       <aside class="lg:sticky lg:top-24 lg:self-start">
         <ProjectsCaseToc :links="doc.body?.toc?.links || []" />
