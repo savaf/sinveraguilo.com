@@ -269,6 +269,7 @@
     "behind": "{n}h behind me",
     "cta": "Book a call in our overlap"
   },
+  "lens": { "title": "Tailor this résumé", "hint": "Pick the skills you care about. Roles that used them move to the top, and Print / Save as PDF keeps only those roles.", "result": "{m} of {n} roles match", "clear": "Clear", "printNote": "Tailored to: {skills}" },
   "resume": {
     "title": "Résumé",
     "print": "Print / Save as PDF",

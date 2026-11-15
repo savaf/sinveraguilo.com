@@ -269,6 +269,7 @@
     "behind": "{n}h por detrás de mí",
     "cta": "Agenda una llamada en nuestro solape"
   },
+  "lens": { "title": "Adapta este currículum", "hint": "Elige las habilidades que te interesan. Los roles que las usaron suben al inicio e Imprimir / Guardar PDF conserva solo esos roles.", "result": "{m} de {n} roles coinciden", "clear": "Limpiar", "printNote": "Adaptado a: {skills}" },
   "resume": {
     "title": "Currículum",
     "print": "Imprimir / Guardar PDF",
