@@ -119,7 +119,30 @@
     "preview": "Vista previa de tu correo",
     "mailApp": "Abrir en mi app de correo",
     "pvFrom": "De",
-    "pvTo": "Para"
+    "pvTo": "Para",
+    "startWith": "Empieza con una plantilla",
+    "starters": {
+      "project": {
+        "label": "Nuevo proyecto",
+        "subject": "Consulta sobre un proyecto",
+        "body": "Hola Sinver,\n\nMe gustaría hablar de un proyecto.\n\nDe qué se trata:\nPara quién es:\nPlazo:\nRango de presupuesto:\n\n¡Gracias!"
+      },
+      "role": {
+        "label": "Oferta de trabajo",
+        "subject": "Oportunidad laboral",
+        "body": "Hola Sinver,\n\nTenemos un puesto que creo que te encaja.\n\nEmpresa:\nPuesto y nivel:\nStack:\nUbicación / remoto:\n\n¡Gracias!"
+      },
+      "audit": {
+        "label": "Revisa mi sitio",
+        "subject": "Solicitud de revisión de sitio",
+        "body": "Hola Sinver,\n\n¿Podrías revisar mi sitio o app?\n\nURL:\nQué se siente mal:\nQué me gustaría mejorar:\n\n¡Gracias!"
+      },
+      "hi": {
+        "label": "Solo saludar",
+        "subject": "Hola",
+        "body": "Hola Sinver,\n\n"
+      }
+    }
   },
   "palette": {
     "hint": "Menú rápido",

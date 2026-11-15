@@ -119,7 +119,30 @@
     "preview": "Live preview of your email",
     "mailApp": "Open in my mail app",
     "pvFrom": "From",
-    "pvTo": "To"
+    "pvTo": "To",
+    "startWith": "Start with a template",
+    "starters": {
+      "project": {
+        "label": "New project",
+        "subject": "Project inquiry",
+        "body": "Hi Sinver,\n\nI'd like to talk about a project.\n\nWhat it is:\nWho it's for:\nTimeline:\nBudget range:\n\nThanks!"
+      },
+      "role": {
+        "label": "Job opportunity",
+        "subject": "Role opportunity",
+        "body": "Hi Sinver,\n\nWe have a role I think could fit you.\n\nCompany:\nRole and seniority:\nStack:\nLocation / remote:\n\nThanks!"
+      },
+      "audit": {
+        "label": "Review my site",
+        "subject": "Site review request",
+        "body": "Hi Sinver,\n\nCould you take a look at my site or app?\n\nURL:\nWhat feels off:\nWhat I'd like to improve:\n\nThanks!"
+      },
+      "hi": {
+        "label": "Just saying hi",
+        "subject": "Hello",
+        "body": "Hi Sinver,\n\n"
+      }
+    }
   },
   "palette": {
     "hint": "Quick menu",
