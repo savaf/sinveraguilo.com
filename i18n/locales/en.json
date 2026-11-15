@@ -14,6 +14,7 @@
     "available": "Available for work",
     "eyebrow": "Software Engineer",
     "tagline": "Turning your vision into reality with code and design.",
+    "ctaContact": "Contact me",
     "ctaWork": "View work",
     "ctaCV": "Download CV",
     "label": "// engineering + design"
@@ -363,25 +364,6 @@
         "t": "Easy reading",
         "d": "More line, letter and word spacing."
       }
-    }
-  },
-  "intent": {
-    "kicker": "// start here",
-    "title": "What brings you here?",
-    "hire": {
-      "tab": "I'm hiring",
-      "pitch": "Skim the résumé first, then the career log to see how the roles connect. If it fits, the contact page is one click away.",
-      "links": ["Read the résumé", "See the career log"]
-    },
-    "project": {
-      "tab": "I have a project",
-      "pitch": "Skip the intro call. Describe the problem, constraint and deadline in the brief builder and you'll get a plain-language scope back.",
-      "links": ["Open the brief builder", "See past work"]
-    },
-    "look": {
-      "tab": "Just looking",
-      "pitch": "Start with the featured work, or poke around the terminal further down. It answers real questions about the site.",
-      "links": ["Browse featured work", "Try the terminal"]
     }
   },
   "demos": {
