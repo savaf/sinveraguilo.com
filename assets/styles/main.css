@@ -104,9 +104,6 @@ textarea::placeholder {
 
 /* ---- Reduced motion: hard stop ------------------------------------------ */
 @media (prefers-reduced-motion: reduce) {
-  .animate-marquee {
-    animation: none !important;
-  }
   .hero-enter {
     opacity: 1 !important;
     animation: none !important;

@@ -50,15 +50,6 @@ export default <Partial<Config>>{
         mono: ["JetBrains Mono", ...defaultTheme.fontFamily.mono],
         loading: ["Flow Circular", "cursive"],
       },
-      keyframes: {
-        marquee: {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-50%)" },
-        },
-      },
-      animation: {
-        marquee: "marquee 20s linear infinite",
-      },
       // fontSize: {
       //   base: [
       //     "16px",
