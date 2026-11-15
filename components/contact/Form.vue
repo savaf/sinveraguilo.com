@@ -11,7 +11,9 @@ const form = ref({
 // One-click starters: fill subject + a message skeleton so visitors never face a blank box.
 const starters = ["project", "role", "audit", "hi"] as const;
 const activeStarter = ref<string>("");
-const { t: tr } = useI18n();
+const { t: tr, locale } = useI18n();
+const localePath = useLocalePath();
+const sentOn = ref("");
 function applyStarter(key: string) {
   activeStarter.value = key;
   form.value.subject = tr(`contact.starters.${key}.subject`);
@@ -54,6 +56,7 @@ async function sendEmail() {
   try {
     await $fetch("/api/contact", { method: "POST", body: form.value });
     status.value = "sent";
+    sentOn.value = new Date().toLocaleDateString(locale.value, { day: "2-digit", month: "short", year: "numeric" }).toUpperCase();
     restored.value = false;
     form.value = { name: "", email: "", subject: "", message: "" };
   } catch {
@@ -100,7 +103,21 @@ const labelClass = "block font-display font-bold text-xs uppercase tracking-[0.0
           <textarea id="message" v-model="form.message" :class="[inputClass, 'resize-y']" name="message" rows="6" required :placeholder="$t('contact.messagePh')" />
         </div>
         <button type="submit" aria-label="Send message" :disabled="status === 'sending'" class="self-start font-display font-extrabold uppercase text-[15px] text-ink-text bg-yellow border-2 border-ink px-[30px] py-4 shadow-[5px_5px_0_var(--accent)] cursor-pointer transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[7px_7px_0_var(--accent)] active:translate-x-0 active:translate-y-0 active:shadow-[3px_3px_0_var(--accent)] disabled:opacity-60 disabled:cursor-wait">{{ status === "sending" ? $t("contact.sending") : $t("contact.send") }} →</button>
-        <p v-if="status === 'sent'" class="m-0 font-mono text-[13px] text-cyan">{{ $t("contact.sentOk") }}</p>
+        <div v-if="status === 'sent'" role="status" class="flex flex-wrap items-center gap-x-6 gap-y-4">
+          <div class="postmark" aria-hidden="true">
+            <span class="postmark-big">{{ $t("contact.stampSent") }}</span>
+            <span class="postmark-date">{{ sentOn }}</span>
+          </div>
+          <div class="flex flex-col gap-1.5 font-mono text-[13px]">
+            <p class="m-0 text-cyan">{{ $t("contact.sentOk") }}</p>
+            <p class="m-0 text-dim">
+              {{ $t("contact.meanwhile") }}
+              <NuxtLink :to="localePath('/projects')" class="text-yellow underline underline-offset-4 hover:text-cyan">{{ $t("contact.meanwhileProjects") }}</NuxtLink>
+              ·
+              <NuxtLink :to="localePath('/blog')" class="text-yellow underline underline-offset-4 hover:text-cyan">{{ $t("contact.meanwhileBlog") }}</NuxtLink>
+            </p>
+          </div>
+        </div>
         <p v-if="status === 'error'" class="m-0 font-mono text-[13px] text-yellow">{{ $t("contact.sentError") }}</p>
       </form>
     </div>
@@ -122,3 +139,45 @@ const labelClass = "block font-display font-bold text-xs uppercase tracking-[0.0
     </aside>
   </div>
 </template>
+
+<style scoped>
+.postmark {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid var(--color-yellow, #facc15);
+  color: var(--color-yellow, #facc15);
+  padding: 6px 14px;
+  font-family: ui-monospace, monospace;
+  text-transform: uppercase;
+  transform: rotate(-6deg);
+  animation: stamp 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.postmark-big {
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: 0.12em;
+}
+.postmark-date {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  border-top: 2px solid currentcolor;
+  margin-top: 2px;
+  padding-top: 2px;
+}
+@keyframes stamp {
+  from {
+    opacity: 0;
+    transform: rotate(-14deg) scale(2.2);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-6deg) scale(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .postmark {
+    animation: none;
+  }
+}
+</style>
