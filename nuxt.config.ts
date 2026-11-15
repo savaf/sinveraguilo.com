@@ -116,9 +116,6 @@ export default defineNuxtConfig({
         },
       ],
       script: [
-        {
-          innerHTML: "try{if(localStorage.getItem('paper')==='1')document.documentElement.setAttribute('data-paper','')}catch(e){}",
-        },
         // { children: "window.$plausible = [];" },
         // {
         //   defer: true,
