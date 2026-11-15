@@ -8,6 +8,17 @@ const form = ref({
   message: pick(route.query.message),
 });
 
+// One-click starters: fill subject + a message skeleton so visitors never face a blank box.
+const starters = ["project", "role", "audit", "hi"] as const;
+const activeStarter = ref<string>("");
+const { t: tr } = useI18n();
+function applyStarter(key: string) {
+  activeStarter.value = key;
+  form.value.subject = tr(`contact.starters.${key}.subject`);
+  form.value.message = tr(`contact.starters.${key}.body`);
+  nextTick(() => document.getElementById("message")?.focus());
+}
+
 const status = ref<"idle" | "sending" | "sent" | "error">("idle");
 
 async function sendEmail() {
@@ -31,6 +42,12 @@ const labelClass = "block font-display font-bold text-xs uppercase tracking-[0.0
   <div>
     <div class="border-2 border-ink bg-surface shadow-[12px_12px_0_#6366f1] p-9">
       <form class="flex flex-col gap-5" @submit.prevent="sendEmail">
+        <fieldset class="m-0 border-0 p-0">
+          <legend :class="labelClass">{{ $t("contact.startWith") }}</legend>
+          <div class="flex flex-wrap gap-2">
+            <button v-for="k in starters" :key="k" type="button" :aria-pressed="activeStarter === k" class="border-2 border-ink px-3.5 py-2 font-mono text-xs uppercase transition-all hover:-translate-x-0.5 hover:-translate-y-0.5" :class="activeStarter === k ? 'bg-yellow text-ink-text shadow-[3px_3px_0_var(--accent)]' : 'bg-primary-dark text-cyan hover:bg-cyan hover:text-ink-text'" @click="applyStarter(k)">{{ $t(`contact.starters.${k}.label`) }}</button>
+          </div>
+        </fieldset>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <div>
             <label :class="labelClass" for="name">{{ $t("contact.name") }}</label>
