@@ -282,6 +282,7 @@
     "print": "Imprimir / Guardar PDF",
     "skills": "Habilidades clave"
   },
+  "squash": { "title": "Aplasta los bugs", "intro": "Ya que estás aquí: haz clic en los bugs antes de que lleguen al fondo.", "play": "Jugar", "again": "Jugar de nuevo", "over": "Desplegado con {n} bugs aplastados. ¿Quieres a alguien que envíe menos?", "score": "Puntos {n}", "best": "Récord {n}", "bug": "Bug" },
   "error": {
     "label": "Error",
     "notFoundTitle": "Perdido en el stack",
