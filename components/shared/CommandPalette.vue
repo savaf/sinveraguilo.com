@@ -9,26 +9,25 @@ const input = ref<HTMLInputElement | null>(null);
 const EMAIL = "hello@sinveraguilo.com";
 
 const pages = [
-  { key: "nav.home", to: "/", g: "h" },
-  { key: "nav.about", to: "/about", g: "a" },
-  { key: "nav.projects", to: "/projects", g: "p" },
-  { key: "nav.blog", to: "/blog", g: "b" },
-  { key: "nav.contact", to: "/contact", g: "c" },
+  { key: "nav.home", to: "/", gKey: "h" },
+  { key: "nav.about", to: "/about", gKey: "a" },
+  { key: "nav.projects", to: "/projects", gKey: "p" },
+  { key: "nav.blog", to: "/blog", gKey: "b" },
+  { key: "nav.contact", to: "/contact", gKey: "c" },
+  { key: "palette.resume", to: "/resume", gKey: "r", plain: true },
 ];
-const resumeKey = "r";
 // "g" then a letter jumps to a page; never toggles a mode.
-const gRoutes: Record<string, string> = { ...Object.fromEntries(pages.map((p) => [p.g, p.to])), [resumeKey]: "/resume" };
+const gRoutes: Record<string, string> = { ...Object.fromEntries(pages.map((p) => [p.gKey, p.to])) };
 const pending = ref(false);
 let timer: ReturnType<typeof setTimeout> | undefined;
 
 const commands = computed(() => {
   const other = locale.value === "en" ? "es" : "en";
   return [
-    ...pages.map((p) => ({ label: t("palette.go", { page: t(p.key) }), tag: "goto", keys: `g ${p.g}`, run: () => navigateTo(localePath(p.to)) })),
+    ...pages.map((p) => ({ label: p.plain ? t(p.key) : t("palette.go", { page: t(p.key) }), tag: "goto", keys: `g ${p.gKey}`, run: () => navigateTo(localePath(p.to)) })),
     { label: t("palette.lang", { lang: other === "es" ? "Español" : "English" }), tag: "lang", run: () => setLocale(other) },
-    { label: t("shortcuts.blueprint"), tag: "mode", keys: "B", keep: true, run: () => window.dispatchEvent(new Event("blueprint:toggle")) },
+    { label: t("palette.blueprint"), tag: "mode", keys: "B", keep: true, run: () => window.dispatchEvent(new Event("blueprint:toggle")) },
     { label: t("palette.colophon"), tag: "goto", run: () => navigateTo(localePath("/colophon")) },
-    { label: t("palette.resume"), tag: "goto", keys: `g ${resumeKey}`, run: () => navigateTo(localePath("/resume")) },
     {
       label: t("palette.cv"),
       tag: "pdf",

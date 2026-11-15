@@ -78,7 +78,6 @@
   "detail": {
     "prevProject": "Proyecto anterior",
     "nextProject": "Proyecto siguiente",
-    "pagerHint": "Tip: usa ← y → para moverte entre proyectos",
     "zoom": "Ampliar",
     "prev": "Imagen anterior",
     "next": "Imagen siguiente",
@@ -154,6 +153,7 @@
     "copied": "Correo copiado",
     "close": "Cerrar",
     "hintKeys": "↑↓ navegar · ↵ ejecutar · esc cerrar",
+    "blueprint": "Alternar modo plano",
     "resume": "Ver currículum",
     "colophon": "Ver colofón (cómo está hecho)"
   },
@@ -335,7 +335,6 @@
     "case": "Leer el caso"
   },
   "similar": { "title": "¿Necesitas algo así?", "cta": "Empezar un proyecto similar", "subject": "Un proyecto como {title}", "message": "Hola Sinver, vi {title} ({stack}) y me gustaría construir algo parecido. Esto es lo que tengo en mente:\n\n" },
-  "shortcuts": { "blueprint": "Alternar modo plano" },
   "colophon": {
     "label": "// cómo está hecho este sitio",
     "title": "Colofón",

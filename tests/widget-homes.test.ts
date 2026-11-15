@@ -27,6 +27,15 @@ describe("widgets live on their destination page", () => {
     expect(p).not.toMatch(/sticky-cta|StickyCta|fixed bottom/i);
   });
 
+  it("similar-project CTA is inline, not fixed or scroll-driven", () => {
+    const c = read("components/projects/SimilarCta.vue");
+    expect(c).not.toMatch(/fixed|scroll|dismissed/);
+  });
+
+  it("project pager has no window key listener", () => {
+    expect(read("components/projects/Pager.vue")).not.toMatch(/addEventListener|ArrowLeft|ArrowRight/);
+  });
+
   it("PENDING_MOVE is gone", () => {
     expect(read("tests/components.test.ts")).not.toMatch(/PENDING_MOVE/);
   });

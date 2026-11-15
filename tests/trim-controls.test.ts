@@ -45,4 +45,12 @@ describe("command palette absorbs shortcuts (#98)", () => {
     expect(palette).toMatch(/stopImmediatePropagation/);
     expect(palette).not.toMatch(/paper|spotlight|rain/i);
   });
+  it("resume lives in the pages list, no duplicate route or resumeKey", () => {
+    expect(palette).not.toMatch(/resumeKey|"\/resume"[^\n]*navigateTo/);
+    expect(palette).toMatch(/to: "\/resume", gKey: "r"/);
+  });
+  it("blueprint label lives under palette.*", () => {
+    expect(palette).toMatch(/palette\.blueprint/);
+    expect(palette).not.toMatch(/shortcuts\./);
+  });
 });
