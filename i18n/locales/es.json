@@ -219,6 +219,12 @@
     "subj": "{need}",
     "msg": "Hola Sinver,\n\nBusco: {need}.\nPlazo: {time}.\n\nContexto:\n"
   },
+  "heatmap": {
+    "title": "Habilidades por año",
+    "subtitle": "Cuándo usé cada habilidad a diario, construido con las fechas de mis roles reales. Más brillante significa más meses ese año.",
+    "skill": "Habilidad",
+    "legend": "Las columnas son años. Brillo = meses de uso ese año (máx. 12)."
+  },
   "stack": {
     "title": "Explorador de stack",
     "subtitle": "Cada habilidad de mis roles, dimensionada por meses de uso real. Haz clic en una para ver dónde la usé.",

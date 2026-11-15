@@ -13,6 +13,7 @@ const { educations, jobExperiences } = data.value!;
     <AboutBio />
     <SharedStatsBar />
     <AboutTimeline :job-experiences="jobExperiences" />
+    <AboutSkillsHeatmap :job-experiences="jobExperiences" />
     <AboutExperience :job-experiences="jobExperiences" />
     <AboutEducation :educations="educations" />
     <SharedCtaBand />
