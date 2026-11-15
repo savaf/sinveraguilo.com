@@ -60,7 +60,7 @@ onBeforeUnmount(() => observers.forEach((o) => o.disconnect()));
       <p class="m-0 mt-4 max-w-[60ch] text-muted">{{ $t("perf.lead") }}</p>
       <div class="mt-8 border-2 border-ink bg-primary-dark p-5 sm:p-8 font-mono text-sm max-w-[640px]" role="region" :aria-label="$t('perf.title')">
         <p v-if="!ready" class="m-0 text-muted" aria-live="polite">{{ $t("perf.measuring") }}</p>
-        <dl v-else class="m-0 grid gap-0">
+        <dl v-else class="m-0 grid grid-cols-[minmax(0,1fr)] gap-0">
           <div v-for="r in rows" :key="r.key" class="flex items-baseline gap-3 border-b border-dashed border-indigo-600 py-2 last:border-b-0">
             <dt class="m-0 text-primary-light">
               <abbr :title="$t(`perf.rows.${r.key}.d`)" class="no-underline">{{ $t(`perf.rows.${r.key}.t`) }}</abbr>

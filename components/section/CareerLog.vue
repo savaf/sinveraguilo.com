@@ -27,7 +27,7 @@ function range(exp: Exp) {
 
 <template>
   <section id="career" class="mx-auto max-w-[1180px] px-6 pt-16 sm:px-10 sm:pt-[72px]">
-    <div v-reveal class="flex items-center gap-4 mb-8">
+    <div v-reveal class="flex flex-wrap items-center gap-x-4 gap-y-2 mb-8">
       <h2 class="m-0 font-display font-black text-[clamp(2rem,6vw,2.75rem)] uppercase text-slate-50 tracking-[-0.01em]">{{ $t("careerLog.title") }}</h2>
       <div class="flex-1 h-0.5 bg-ink" />
       <NuxtLink :to="localePath('/about')" class="font-mono text-[13px] text-cyan whitespace-nowrap hover:underline">{{ $t("careerLog.all") }} →</NuxtLink>
