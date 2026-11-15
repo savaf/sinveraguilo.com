@@ -88,7 +88,9 @@ useSeoMeta({
       <div>
         <p v-if="locale !== 'en'" class="font-mono text-xs text-dim mb-4">{{ $t("detail.englishOnly") }}</p>
         <SharedQuoteShare id="post-body">
-          <ContentRenderer :value="doc" class="prose prose-invert prose-slate max-w-none prose-headings:font-display prose-headings:uppercase prose-a:text-cyan" />
+          <SharedCodeCopy>
+            <ContentRenderer :value="doc" class="prose prose-invert prose-slate max-w-none prose-headings:font-display prose-headings:uppercase prose-a:text-cyan" />
+          </SharedCodeCopy>
         </SharedQuoteShare>
         <p class="mt-6 font-mono text-xs text-dim">{{ $t("quote.hint") }}</p>
       </div>

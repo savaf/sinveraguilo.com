@@ -61,6 +61,7 @@
     "copied": "Copied ✓",
     "hint": "// Tip: select any passage to copy or share it with a link back."
   },
+  "code": { "copy": "Copy", "copied": "Copied ✓", "failed": "Press Ctrl+C" },
   "listen": { "label": "Listen to this post", "play": "Listen", "pause": "Pause", "resume": "Resume", "stop": "Stop" },
   "blog": {
     "all": "All",

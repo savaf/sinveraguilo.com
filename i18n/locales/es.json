@@ -61,6 +61,7 @@
     "copied": "Copiado ✓",
     "hint": "// Tip: selecciona cualquier pasaje para copiarlo o compartirlo con un enlace."
   },
+  "code": { "copy": "Copiar", "copied": "Copiado ✓", "failed": "Usa Ctrl+C" },
   "listen": { "label": "Escuchar este artículo", "play": "Escuchar", "pause": "Pausar", "resume": "Continuar", "stop": "Detener" },
   "blog": {
     "all": "Todos",
