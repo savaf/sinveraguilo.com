@@ -85,6 +85,9 @@
     "failed": "Copy failed"
   },
   "blog": {
+    "budget": "Reading budget",
+    "any": "Any length",
+    "fit": "{n} of {total} fit your time",
     "all": "All",
     "search": "Search posts",
     "noResults": "No posts match.",
