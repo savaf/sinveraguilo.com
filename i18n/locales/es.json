@@ -525,5 +525,6 @@
     "label": "// lectura de 30 segundos",
     "aria": "Abrir el resumen de 30 segundos"
   },
-  "timeline": { "kicker": "// carrera de un vistazo", "title": "Línea de tiempo", "hint": "Selecciona una barra para ver el rol. Las barras salen de fechas reales de inicio y fin.", "jump": "Ir al detalle", "overlap": "Las barras superpuestas son roles en paralelo." }
+  "timeline": { "kicker": "// carrera de un vistazo", "title": "Línea de tiempo", "hint": "Selecciona una barra para ver el rol. Las barras salen de fechas reales de inicio y fin.", "jump": "Ir al detalle", "overlap": "Las barras superpuestas son roles en paralelo." },
+  "tour": { "kicker": "Tu recorrido", "title": "{n} de {total} páginas vistas", "done": "Lo has visto todo. El siguiente paso es una conversación.", "seen": "visto" }
 }

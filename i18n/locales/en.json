@@ -525,5 +525,6 @@
     "label": "// 30-second read",
     "aria": "Open the 30-second summary"
   },
-  "timeline": { "kicker": "// career at a glance", "title": "Timeline", "hint": "Select a bar to see the role. Bars are drawn from real start and end dates.", "jump": "Jump to details", "overlap": "Overlapping bars are roles held in parallel." }
+  "timeline": { "kicker": "// career at a glance", "title": "Timeline", "hint": "Select a bar to see the role. Bars are drawn from real start and end dates.", "jump": "Jump to details", "overlap": "Overlapping bars are roles held in parallel." },
+  "tour": { "kicker": "Your tour", "title": "{n} of {total} pages seen", "done": "You have seen everything. The next step is a conversation.", "seen": "seen" }
 }
