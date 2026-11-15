@@ -64,7 +64,13 @@
     "compareCategory": "Category",
     "compareDate": "Published",
     "compareShared": "Shared technologies (highlighted): {list}",
-    "compareNone": "No technology is shared by all selected projects."
+    "compareNone": "No technology is shared by all selected projects.",
+    "constellation": "Technology constellation",
+    "constellationKicker": "// how the work connects",
+    "constellationHint": "Each dot is a technology, sized by how many projects use it. Lines join technologies used together. Hover to see neighbours, click to filter the projects below.",
+    "constellationAlone": "not paired with anything else",
+    "constellationNodes": "technologies",
+    "constellationLinks": "links"
   },
   "quote": {
     "label": "Share selection",

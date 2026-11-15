@@ -106,6 +106,8 @@ function chipClass(active: boolean) {
       </div>
     </div>
 
+    <ProjectsConstellation :projects="(projects || []) as unknown as ProjectLike[]" :active="activeTech" @toggle="toggleTech" />
+
     <!-- Grid -->
     <section class="mx-auto max-w-[1180px] px-6 py-12 sm:px-10">
       <ol v-if="filtered.length && view === 'index'" class="m-0 p-0 list-none border-2 border-ink bg-surface">
