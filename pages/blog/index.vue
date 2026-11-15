@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const localePath = useLocalePath();
 const { data: posts } = await useAsyncData("all_posts", () => {
   return queryContent("blog").find();
 });
@@ -62,7 +63,7 @@ const pad = (i: number) => String(i).padStart(2, "0");
         </div>
 
         <template v-if="featured">
-          <NuxtLink :to="`/blog/${featured.slug}`" class="group block border-2 border-ink p-6 sm:p-10 hover:border-yellow transition-all" :class="{ 'opacity-35': !fits(featured) }">
+          <NuxtLink :to="localePath(`/blog/${featured.slug}`)" class="group block border-2 border-ink p-6 sm:p-10 hover:border-yellow transition-all" :class="{ 'opacity-35': !fits(featured) }">
             <div class="flex flex-wrap items-center gap-3 font-mono text-xs uppercase tracking-wider text-dim">
               <span class="bg-yellow px-2 py-0.5 text-black font-bold">{{ $t("blog.latest") }}</span>
               <span>{{ featured.publishDate }}</span>
@@ -81,7 +82,7 @@ const pad = (i: number) => String(i).padStart(2, "0");
 
           <ul v-if="rest.length" class="m-0 mt-8 list-none p-0 border-t-2 border-ink">
             <li v-for="(post, i) in rest" :key="post._path" class="border-b-2 border-ink">
-              <NuxtLink :to="`/blog/${post.slug}`" class="group grid grid-cols-[auto_1fr] sm:grid-cols-[auto_1fr_auto] items-baseline gap-x-6 gap-y-1 py-5 hover:bg-white/5 transition-all" :class="{ 'opacity-35': !fits(post) }">
+              <NuxtLink :to="localePath(`/blog/${post.slug}`)" class="group grid grid-cols-[auto_1fr] sm:grid-cols-[auto_1fr_auto] items-baseline gap-x-6 gap-y-1 py-5 hover:bg-white/5 transition-all" :class="{ 'opacity-35': !fits(post) }">
                 <span class="font-mono text-sm text-yellow">{{ pad(rest.length - i) }}</span>
                 <span class="font-display font-bold text-xl text-slate-50 group-hover:text-yellow transition-colors">{{ post.title }}</span>
                 <span class="col-start-2 sm:col-start-3 font-mono text-xs uppercase text-dim">{{ post.publishDate }} · {{ $t("blog.readTime", { n: minutesOf(post) }) }} · {{ post.lang === "en" ? "EN" : "ES" }}</span>
