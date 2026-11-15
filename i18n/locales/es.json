@@ -63,6 +63,7 @@
   },
   "code": { "copy": "Copiar", "copied": "Copiado ✓", "failed": "Usa Ctrl+C" },
   "listen": { "label": "Escuchar este artículo", "play": "Escuchar", "pause": "Pausar", "resume": "Continuar", "stop": "Detener" },
+  "focus": { "on": "Lectura enfocada", "off": "Salir del enfoque", "hint": "Atenúa todo menos el párrafo que lees (F)" },
   "blog": {
     "all": "Todos",
     "search": "Buscar posts",
