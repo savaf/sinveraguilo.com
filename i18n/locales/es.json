@@ -129,6 +129,9 @@
     "mailApp": "Abrir en mi app de correo",
     "pvFrom": "De",
     "pvTo": "Para",
+    "draftRestored": "Borrador restaurado: seguimos donde lo dejaste.",
+    "draftDiscard": "Descartar borrador",
+    "draftNote": "Borrador guardado solo en este dispositivo.",
     "startWith": "Empieza con una plantilla",
     "starters": {
       "project": {

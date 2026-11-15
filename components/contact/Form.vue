@@ -19,6 +19,34 @@ function applyStarter(key: string) {
   nextTick(() => document.getElementById("message")?.focus());
 }
 
+// Draft autosave: a half-written message survives reloads and tab closes (local to this device).
+const DRAFT_KEY = "contact-draft-v1";
+const restored = ref(false);
+onMounted(() => {
+  try {
+    const d = JSON.parse(localStorage.getItem(DRAFT_KEY) || "null");
+    if (d && !route.query.subject && !route.query.message && (d.message || d.subject || d.name || d.email)) {
+      form.value = { name: pick(d.name).slice(0, 120), email: pick(d.email).slice(0, 200), subject: pick(d.subject).slice(0, 120), message: pick(d.message) };
+      restored.value = true;
+    }
+  } catch {}
+});
+watch(
+  form,
+  (v) => {
+    try {
+      if (v.name || v.email || v.subject || v.message) localStorage.setItem(DRAFT_KEY, JSON.stringify(v));
+      else localStorage.removeItem(DRAFT_KEY);
+    } catch {}
+  },
+  { deep: true },
+);
+function discardDraft() {
+  form.value = { name: "", email: "", subject: "", message: "" };
+  restored.value = false;
+  activeStarter.value = "";
+}
+
 const status = ref<"idle" | "sending" | "sent" | "error">("idle");
 
 async function sendEmail() {
@@ -26,6 +54,7 @@ async function sendEmail() {
   try {
     await $fetch("/api/contact", { method: "POST", body: form.value });
     status.value = "sent";
+    restored.value = false;
     form.value = { name: "", email: "", subject: "", message: "" };
   } catch {
     status.value = "error";
@@ -42,6 +71,10 @@ const labelClass = "block font-display font-bold text-xs uppercase tracking-[0.0
   <div>
     <div class="border-2 border-ink bg-surface shadow-[12px_12px_0_#6366f1] p-9">
       <form class="flex flex-col gap-5" @submit.prevent="sendEmail">
+        <p v-if="restored" role="status" class="m-0 flex flex-wrap items-center justify-between gap-3 border-2 border-ink bg-primary-dark px-3.5 py-2.5 font-mono text-xs text-cyan">
+          <span>{{ $t("contact.draftRestored") }}</span>
+          <button type="button" class="font-mono text-xs uppercase text-yellow underline underline-offset-4 hover:text-cyan" @click="discardDraft">{{ $t("contact.draftDiscard") }}</button>
+        </p>
         <fieldset class="m-0 border-0 p-0">
           <legend :class="labelClass">{{ $t("contact.startWith") }}</legend>
           <div class="flex flex-wrap gap-2">
