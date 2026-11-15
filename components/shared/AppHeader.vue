@@ -11,6 +11,9 @@ const nav = [
   { key: "nav.contact", to: "/contact" },
 ];
 
+// Desktop: the logo is Home and Contact is the button, so only the middle links.
+const desktopNav = nav.filter((i) => i.to !== "/" && i.to !== "/contact");
+
 function isActive(to: string) {
   const target = localePath(to);
   return to === "/" ? route.path === target : route.path.startsWith(target);
@@ -36,20 +39,18 @@ watch(
 
       <!-- Desktop nav -->
       <div class="hidden md:flex gap-1.5 font-display font-bold text-[13px] uppercase tracking-[0.02em]">
-        <NuxtLink v-for="item in nav" :key="item.to" :to="localePath(item.to)" class="px-3.5 py-2 transition-colors" :class="isActive(item.to) ? 'bg-yellow text-ink-text' : 'text-primary-light hover:text-cyan'">
+        <NuxtLink v-for="item in desktopNav":key="item.to" :to="localePath(item.to)" class="px-3.5 py-2 transition-colors" :class="isActive(item.to) ? 'bg-yellow text-ink-text' : 'text-primary-light hover:text-cyan'">
           {{ $t(item.key) }}
         </NuxtLink>
       </div>
 
       <div class="flex items-center gap-3">
         <ClientOnly><SharedCommandPalette /></ClientOnly>
-        <SharedTldr />
-        <SharedAccentPicker />
         <SharedBlueprint />
-        <SharedPaperMode />
-        <SharedSpotlight />
-        <SharedCodeRain />
         <SharedLangSwitcher />
+        <NuxtLink :to="localePath('/contact')" class="hidden md:inline-flex items-center min-h-11 px-4 bg-yellow text-ink-text font-display font-bold text-[13px] uppercase tracking-[0.02em] border-2 border-ink hover:bg-cyan transition-colors">
+          {{ $t("nav.contact") }}
+        </NuxtLink>
         <!-- Mobile toggle -->
         <button type="button" class="md:hidden inline-flex items-center justify-center border-2 border-ink text-primary-light h-11 w-11" aria-label="Toggle menu" @click="mobileMenuOpen = !mobileMenuOpen">
           <Icon :name="mobileMenuOpen ? 'i-heroicons-x-mark' : 'i-heroicons-bars-3-solid'" class="h-5 w-5" aria-hidden="true" />
