@@ -4,7 +4,7 @@ definePageMeta({ title: "colophon.title" });
 
 // Facts below come from this repo's own config and package.json.
 const specs = ["framework", "style", "content", "i18n", "type", "icons", "host"] as const;
-const features = ["palette", "accent", "a11y", "curtain", "share", "resume"] as const;
+const features = ["palette", "a11y", "resume"] as const;
 </script>
 
 <template>
