@@ -70,6 +70,11 @@
   "postReply": { "title": "Did this post help?", "body": "Tell me what worked, what didn't, or what you'd add. I read every reply.", "btn": "Reply to this post", "subject": "About your post: {title}", "msg": "Hi Sinver,\n\nI just read \"{title}\" and wanted to say:\n\n" },
   "timeLeft": { "left": "~{n} min left", "done": "Finished reading" },
   "focus": { "on": "Focus reading", "off": "Exit focus", "hint": "Dim everything but the paragraph you are reading (F)" },
+  "headingLink": {
+    "copy": "Copy link to this section",
+    "copied": "Link copied",
+    "failed": "Copy failed"
+  },
   "blog": {
     "all": "All",
     "search": "Search posts",

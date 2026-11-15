@@ -70,6 +70,11 @@
   "postReply": { "title": "¿Te sirvió este artículo?", "body": "Cuéntame qué funcionó, qué no o qué añadirías. Leo cada respuesta.", "btn": "Responder a este artículo", "subject": "Sobre tu artículo: {title}", "msg": "Hola Sinver,\n\nAcabo de leer \"{title}\" y quería decirte:\n\n" },
   "timeLeft": { "left": "~{n} min restantes", "done": "Lectura terminada" },
   "focus": { "on": "Lectura enfocada", "off": "Salir del enfoque", "hint": "Atenúa todo menos el párrafo que lees (F)" },
+  "headingLink": {
+    "copy": "Copiar enlace a esta sección",
+    "copied": "Enlace copiado",
+    "failed": "No se pudo copiar"
+  },
   "blog": {
     "all": "Todos",
     "search": "Buscar posts",
