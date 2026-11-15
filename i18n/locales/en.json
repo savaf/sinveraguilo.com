@@ -81,7 +81,7 @@
   },
   "code": { "copy": "Copy", "copied": "Copied ✓", "failed": "Press Ctrl+C" },
   "listen": { "label": "Listen to this post", "play": "Listen", "pause": "Pause", "resume": "Resume", "stop": "Stop" },
-  "resume": { "label": "Resume reading", "title": "You stopped at {n}%", "go": "Continue", "reset": "Start over" },
+  "readingResume": { "label": "Resume reading", "title": "You stopped at {n}%", "go": "Continue", "reset": "Start over" },
   "postReply": { "title": "Did this post help?", "body": "Tell me what worked, what didn't, or what you'd add. I read every reply.", "btn": "Reply to this post", "subject": "About your post: {title}", "msg": "Hi Sinver,\n\nI just read \"{title}\" and wanted to say:\n\n" },
   "postMap": { "label": "Post map", "hint": "block width = section length", "min": "{n} min" },
   "timeLeft": { "left": "~{n} min left", "done": "Finished reading" },
@@ -128,6 +128,9 @@
     "englishOnly": "This case study is only available in English."
   },
   "contact": {
+    "copyEmail": "Copy email address",
+    "copied": "Copied",
+    "localTime": "My local time (Santo Domingo)",
     "title": "Contact",
     "intro": "Have a project, a role or just want to say hi? Send a message and I'll get back to you soon.",
     "email": "Email",
