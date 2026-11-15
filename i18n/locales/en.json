@@ -56,7 +56,15 @@
     "techClear": "Clear",
     "showing": "Showing {n} of {total}",
     "search": "Search projects",
-    "noResults": "No projects match your search."
+    "noResults": "No projects match your search.",
+    "compare": "Compare",
+    "compareHint": "Tip: use + to compare up to {n} projects side by side.",
+    "compareClear": "Clear selection",
+    "comparePickMore": "Pick at least one more project to compare.",
+    "compareCategory": "Category",
+    "compareDate": "Published",
+    "compareShared": "Shared technologies (highlighted): {list}",
+    "compareNone": "No technology is shared by all selected projects."
   },
   "quote": {
     "label": "Share selection",
