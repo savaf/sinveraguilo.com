@@ -353,6 +353,7 @@
     "case": "Leer el caso"
   },
   "paper": { "label": "Papel", "hint": "Alternar modo papel, claro (P)" },
+  "similar": { "title": "¿Necesitas algo así?", "cta": "Empezar un proyecto similar", "subject": "Un proyecto como {title}", "message": "Hola Sinver, vi {title} ({stack}) y me gustaría construir algo parecido. Esto es lo que tengo en mente:\n\n" },
   "spotlight": { "label": "Foco", "hint": "Alternar modo foco (L): atenúa la página y ilumina solo junto al cursor" },
   "rain": { "label": "Lluvia", "hint": "Alternar lluvia de código (M): glifos de código cayendo con tu color de acento" },
   "shortcuts": { "title": "Atajos de teclado", "goto": "Ir a (pulsa g y luego…)", "more": "En cualquier lugar", "palette": "Abrir la paleta de comandos", "blueprint": "Alternar modo plano", "paper": "Alternar modo papel (claro)", "spotlight": "Alternar modo foco", "rain": "Alternar lluvia de código", "help": "Mostrar u ocultar esta hoja", "close": "Cerrar" },

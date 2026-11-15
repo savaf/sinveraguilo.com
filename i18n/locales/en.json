@@ -353,6 +353,7 @@
     "case": "Read the case"
   },
   "paper": { "label": "Paper", "hint": "Toggle paper (light) mode (P)" },
+  "similar": { "title": "Need something like this?", "cta": "Start a similar project", "subject": "A project like {title}", "message": "Hi Sinver, I saw {title} ({stack}) and I would like to build something similar. Here is what I have in mind:\n\n" },
   "spotlight": { "label": "Spotlight", "hint": "Toggle spotlight mode (L): dim the page, light only around the cursor" },
   "rain": { "label": "Rain", "hint": "Toggle code rain (M): falling code glyphs in your accent color" },
   "shortcuts": { "title": "Keyboard shortcuts", "goto": "Go to (press g, then…)", "more": "Anywhere", "palette": "Open the command palette", "blueprint": "Toggle blueprint mode", "paper": "Toggle paper (light) mode", "spotlight": "Toggle spotlight mode", "rain": "Toggle code rain", "help": "Show or hide this sheet", "close": "Close" },
