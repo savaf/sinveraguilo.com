@@ -56,7 +56,15 @@
     "techClear": "Limpiar",
     "showing": "Mostrando {n} de {total}",
     "search": "Buscar proyectos",
-    "noResults": "Ningún proyecto coincide con tu búsqueda."
+    "noResults": "Ningún proyecto coincide con tu búsqueda.",
+    "compare": "Comparar",
+    "compareHint": "Tip: usa + para comparar hasta {n} proyectos lado a lado.",
+    "compareClear": "Limpiar selección",
+    "comparePickMore": "Elige al menos un proyecto más para comparar.",
+    "compareCategory": "Categoría",
+    "compareDate": "Publicado",
+    "compareShared": "Tecnologías compartidas (resaltadas): {list}",
+    "compareNone": "Ninguna tecnología es común a todos los proyectos seleccionados."
   },
   "quote": {
     "label": "Compartir selección",

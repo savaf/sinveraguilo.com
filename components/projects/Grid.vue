@@ -49,6 +49,18 @@ const filtered = computed(() => {
   });
 });
 
+// Compare up to 3 projects side by side (index view)
+const MAX_COMPARE = 3;
+const picked = ref<string[]>([]);
+function togglePick(slug: string) {
+  picked.value = picked.value.includes(slug) ? picked.value.filter((x) => x !== slug) : picked.value.length < MAX_COMPARE ? [...picked.value, slug] : picked.value;
+}
+const comparing = computed(() => picked.value.map((s) => (projects.value || []).find((p) => (p as unknown as ProjectLike).slug === s)).filter(Boolean) as unknown as ProjectLike[]);
+const sharedTech = computed(() => {
+  const lists = comparing.value.map((p) => p.technologies || []);
+  return lists.length < 2 ? [] : lists[0].filter((t) => lists.every((l) => l.includes(t)));
+});
+
 function chipClass(active: boolean) {
   return active ? "bg-yellow text-ink-text" : "bg-primary-dark text-muted hover:text-white";
 }
@@ -97,8 +109,11 @@ function chipClass(active: boolean) {
     <!-- Grid -->
     <section class="mx-auto max-w-[1180px] px-6 py-12 sm:px-10">
       <ol v-if="filtered.length && view === 'index'" class="m-0 p-0 list-none border-2 border-ink bg-surface">
-        <li v-for="(project, i) in filtered" :key="project._path" class="border-b-2 border-ink last:border-b-0">
-          <NuxtLink :to="localePath(`/projects/${project.slug}`)" class="row group grid grid-cols-[2.5rem_1fr_auto] sm:grid-cols-[3rem_1fr_9rem_1fr_auto] items-center gap-x-4 px-4 py-5 sm:px-6" :style="{ '--accent': projectAccent(i) }">
+        <li v-for="(project, i) in filtered" :key="project._path" class="flex border-b-2 border-ink last:border-b-0">
+          <button type="button" class="shrink-0 border-r-2 border-ink px-4 font-mono text-xs cursor-pointer transition-colors" :class="chipClass(picked.includes(project.slug))" :aria-pressed="picked.includes(project.slug)" :aria-label="`${$t('projects.compare')}: ${project.title}`" :disabled="!picked.includes(project.slug) && picked.length >= MAX_COMPARE" @click="togglePick(project.slug)">
+            {{ picked.includes(project.slug) ? "✓" : "+" }}
+          </button>
+          <NuxtLink :to="localePath(`/projects/${project.slug}`)" class="row group flex-1 grid grid-cols-[2.5rem_1fr_auto] sm:grid-cols-[3rem_1fr_9rem_1fr_auto] items-center gap-x-4 px-4 py-5 sm:px-6" :style="{ '--accent': projectAccent(i) }">
             <span class="font-mono text-xs text-dim">{{ String(i + 1).padStart(2, "0") }}</span>
             <span class="font-display font-black uppercase text-primary-light text-[clamp(1.1rem,2.5vw,1.75rem)] leading-tight">{{ project.title }}</span>
             <span class="hidden sm:block font-mono text-[11px] text-ink-text bg-yellow px-2 py-[3px] justify-self-start">{{ projectCategory(project as unknown as ProjectLike) }}</span>
@@ -111,6 +126,48 @@ function chipClass(active: boolean) {
         <ProjectsCard v-for="(project, i) in filtered" :key="project._path" :project="project" :accent="projectAccent(i)" :category-chip="projectCategory(project)" :subtitle="projectStack(project)" img-class="h-[190px]" />
       </div>
       <div v-else class="text-center py-16 font-mono text-dim">{{ $t("projects.noResults") }}</div>
+
+      <p v-if="filtered.length && view === 'index' && !picked.length" class="m-0 mt-3 font-mono text-xs text-dim">{{ $t("projects.compareHint", { n: MAX_COMPARE }) }}</p>
+
+      <!-- Compare panel -->
+      <div v-if="comparing.length" class="mt-8 border-2 border-ink bg-surface" role="region" :aria-label="$t('projects.compare')">
+        <div class="flex items-center justify-between gap-4 border-b-2 border-ink px-4 py-3">
+          <h2 class="m-0 font-display font-black uppercase text-primary-light text-lg">{{ $t("projects.compare") }}</h2>
+          <button type="button" class="font-mono text-xs text-dim underline cursor-pointer" @click="picked = []">{{ $t("projects.compareClear") }}</button>
+        </div>
+        <p v-if="comparing.length < 2" class="m-0 px-4 py-4 font-mono text-xs text-muted">{{ $t("projects.comparePickMore") }}</p>
+        <div v-else class="overflow-x-auto">
+          <table class="w-full min-w-[560px] border-collapse text-sm">
+            <thead>
+              <tr>
+                <th scope="col" class="w-28 p-3" />
+                <th v-for="p in comparing" :key="p.slug" scope="col" class="p-3 text-left align-top font-display font-black uppercase text-primary-light">
+                  <NuxtLink :to="localePath(`/projects/${p.slug}`)" class="hover:text-yellow">{{ p.title }}</NuxtLink>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="font-mono text-xs">
+              <tr class="border-t-2 border-ink">
+                <th scope="row" class="p-3 text-left text-dim font-normal uppercase">{{ $t("projects.compareCategory") }}</th>
+                <td v-for="p in comparing" :key="p.slug" class="p-3 text-muted">{{ projectCategory(p) }}</td>
+              </tr>
+              <tr class="border-t-2 border-ink">
+                <th scope="row" class="p-3 text-left text-dim font-normal uppercase">{{ $t("projects.compareDate") }}</th>
+                <td v-for="p in comparing" :key="p.slug" class="p-3 text-muted">{{ (p as any).publishDate || "—" }}</td>
+              </tr>
+              <tr class="border-t-2 border-ink">
+                <th scope="row" class="p-3 text-left text-dim font-normal uppercase align-top">{{ $t("projects.tech") }}</th>
+                <td v-for="p in comparing" :key="p.slug" class="p-3 align-top">
+                  <span v-for="t in p.technologies || []" :key="t" class="mr-1.5 mb-1.5 inline-block border-2 border-ink px-2 py-0.5" :class="sharedTech.includes(t) ? 'bg-yellow text-ink-text' : 'text-muted'">{{ t }}</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="m-0 border-t-2 border-ink px-4 py-3 font-mono text-xs text-muted">
+            {{ sharedTech.length ? $t("projects.compareShared", { list: sharedTech.join(", ") }) : $t("projects.compareNone") }}
+          </p>
+        </div>
+      </div>
     </section>
   </div>
 </template>
