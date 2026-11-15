@@ -79,6 +79,7 @@ useSeoMeta({
           {{ doc.title }}
         </h1>
         <p class="mt-4 font-mono text-[13px] text-dim">{{ $t("blog.published") }} {{ doc.publishDate }} · {{ $t("blog.readTime", { n: readMinutes }) }}</p>
+        <SharedReadAloud target="#post-body" />
       </div>
     </section>
 
@@ -86,7 +87,7 @@ useSeoMeta({
     <section class="mx-auto max-w-[1180px] px-6 pt-14 pb-8 sm:px-10 grid grid-cols-1 lg:grid-cols-[minmax(0,820px)_1fr] gap-10 lg:gap-14">
       <div>
         <p v-if="locale !== 'en'" class="font-mono text-xs text-dim mb-4">{{ $t("detail.englishOnly") }}</p>
-        <SharedQuoteShare>
+        <SharedQuoteShare id="post-body">
           <ContentRenderer :value="doc" class="prose prose-invert prose-slate max-w-none prose-headings:font-display prose-headings:uppercase prose-a:text-cyan" />
         </SharedQuoteShare>
         <p class="mt-6 font-mono text-xs text-dim">{{ $t("quote.hint") }}</p>
