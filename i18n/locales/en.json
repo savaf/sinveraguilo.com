@@ -58,6 +58,7 @@
     "copied": "Copied ✓",
     "hint": "// Tip: select any passage to copy or share it with a link back."
   },
+  "listen": { "label": "Listen to this post", "play": "Listen", "pause": "Pause", "resume": "Resume", "stop": "Stop" },
   "blog": {
     "all": "All",
     "search": "Search posts",
