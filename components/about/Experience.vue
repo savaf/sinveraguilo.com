@@ -42,7 +42,7 @@ function dateLabel(exp: (typeof jobExperiences)[number]) {
     </div>
 
     <div class="flex flex-col gap-5">
-      <article v-for="(exp, i) in jobExperiences" :key="exp._path" v-reveal="Math.min(i, 6) * 70" class="exp-card border-2 border-ink bg-surface px-7 py-6">
+      <article v-for="(exp, i) in jobExperiences" :id="`role-${i}`" :key="exp._path" v-reveal="Math.min(i, 6) * 70" class="exp-card border-2 border-ink bg-surface px-7 py-6">
         <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1.5">
           <h3 class="m-0 font-grotesk font-semibold text-xl text-primary-light">
             {{ tr(exp.position) }} <span class="text-cyan">@ {{ exp.company }}</span>
