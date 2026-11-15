@@ -162,10 +162,6 @@
     "resume": "View résumé",
     "colophon": "View colophon (how this site is made)"
   },
-  "sticky": {
-    "text": "Available — let's talk",
-    "dismiss": "Dismiss"
-  },
   "cta": {
     "title": "Let's build something",
     "subtitle": "Have a project in mind? I'm open to freelance work and full-time roles.",
@@ -228,14 +224,6 @@
       "clear": "clear the screen",
       "open": "open a project by number"
     }
-  },
-  "rail": {
-    "label": "Page sections",
-    "work": "Work",
-    "career": "Career",
-    "stack": "Stack",
-    "terminal": "Terminal",
-    "brief": "Brief"
   },
   "overlap": {
     "kicker": "timezone check",
@@ -301,9 +289,7 @@
     ]
   },
   "faq": {
-    "kicker": "// before you write",
     "title": "Questions you may have",
-    "cta": "Skip to the brief",
     "items": [
       {
         "q": "Do I need a spec first?",
@@ -314,29 +300,12 @@
         "a": "A website or web app, a migration, a full-time role or freelance help. The brief builder below covers all four."
       },
       {
-        "q": "What if we are in different timezones?",
-        "a": "The timezone check above shows our shared hours. When they are few, I work async and write things down."
-      },
-      {
-        "q": "Which languages do you work in?",
-        "a": "Spanish and English, the same as this site."
-      },
-      {
         "q": "Who owns the result?",
         "a": "Your team. Work ships deployed and documented, then gets handed over so you can own it."
       }
     ]
   },
-  "writing": {
-    "kicker": "// field notes",
-    "title": "Latest writing",
-    "all": "All posts"
-  },
   "perf": { "kicker": "// performance, live", "title": "The receipt for this page, measured on your device", "lead": "No lab numbers, no screenshots. These are the real timings your browser recorded while loading this page, read through the Performance API.", "measuring": "Measuring…", "good": "within the recommended threshold", "slow": "above the recommended threshold", "note": "Values vary with your network, device and cache. Thresholds are Google's \"good\" Core Web Vitals limits (LCP 2.5 s, CLS 0.1) plus 1.8 s for FCP and 800 ms for TTFB.", "rows": { "ttfb": { "t": "Server response (TTFB)", "d": "Time to first byte" }, "fcp": { "t": "First paint with content (FCP)", "d": "First Contentful Paint" }, "lcp": { "t": "Largest element (LCP)", "d": "Largest Contentful Paint" }, "cls": { "t": "Layout shift (CLS)", "d": "Cumulative Layout Shift" }, "bytes": { "t": "Transferred so far", "d": "Bytes over the network, 0 if cached" }, "dom": { "t": "DOM elements", "d": "Elements in the page right now" } } },
-  "manifesto": {
-    "kicker": "// how I work",
-    "text": "I do things the right way and I get things done. Accessible to WCAG 2.1 AA, bilingual by default, shipped through CI/CD."
-  },
   "a11y": {
     "kicker": "// accessibility, live",
     "title": "Don't take my word for it. Try it.",
