@@ -45,7 +45,7 @@ useHead({
                 {{ tag }}
               </span>
             </div>
-            <h1 class="m-0 font-display font-black uppercase text-slate-50 leading-[0.9] tracking-[-0.02em] text-[clamp(2.75rem,6vw,4.5rem)]">
+            <h1 data-vt-title style="view-transition-name: project-title" class="m-0 font-display font-black uppercase text-slate-50 leading-[0.9] tracking-[-0.02em] text-[clamp(2.75rem,6vw,4.5rem)]">
               {{ doc.title }}
             </h1>
             <p class="mt-4 font-mono text-[13px] text-dim">{{ $t("detail.published") }} {{ doc.publishDate }}</p>

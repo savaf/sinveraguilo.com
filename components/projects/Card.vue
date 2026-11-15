@@ -53,6 +53,12 @@ function onLeave() {
   tilting.value = false;
   tx.value = ty.value = 0;
 }
+// Shared-element morph: only the clicked card's title carries the transition name (names must be unique per page).
+const titleEl = ref<HTMLElement | null>(null);
+function onClick() {
+  document.querySelectorAll<HTMLElement>("[data-vt-title]").forEach((el) => (el.style.viewTransitionName = ""));
+  if (titleEl.value) titleEl.value.style.viewTransitionName = "project-title";
+}
 const cardStyle = computed(() => ({
   ...(props.accent ? { "--accent": props.accent } : {}),
   "--rx": `${tx.value}deg`,
@@ -63,12 +69,12 @@ const cardStyle = computed(() => ({
 </script>
 
 <template>
-  <NuxtLink :to="href" class="card relative block border-2 border-ink bg-surface" :class="{ 'is-tilting': tilting }" :style="cardStyle" :aria-label="project.title" @pointermove="onMove" @pointerleave="onLeave">
+  <NuxtLink :to="href" class="card relative block border-2 border-ink bg-surface" :class="{ 'is-tilting': tilting }" :style="cardStyle" :aria-label="project.title" @pointermove="onMove" @pointerleave="onLeave" @click="onClick">
     <span class="card-glare" aria-hidden="true" />
     <NuxtImg v-if="displayImage" :src="displayImage" :alt="project.title" width="380" height="190" :format="isSvg ? undefined : 'webp'" loading="lazy" class="w-full object-cover block border-b-2 border-ink" :class="imgClass" />
     <div class="p-5">
       <span v-if="categoryChip" class="inline-block font-mono text-[11px] text-ink-text bg-yellow px-2 py-[3px] mb-2.5">{{ categoryChip }}</span>
-      <div class="font-display font-extrabold text-primary-light text-[18px] uppercase leading-tight">{{ project.title }}</div>
+      <div ref="titleEl" data-vt-title class="font-display font-extrabold text-primary-light text-[18px] uppercase leading-tight">{{ project.title }}</div>
       <div class="font-mono text-xs mt-1.5" :class="subtitleClass">{{ subtitle }}</div>
     </div>
   </NuxtLink>

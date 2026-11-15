@@ -202,3 +202,23 @@ html.a11y-motion *::after {
 :root[data-paper] :is(img, video, picture, canvas, iframe) {
   filter: invert(1) hue-rotate(180deg);
 }
+
+/* Project title morphs from the clicked card into the detail heading */
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-group(project-title) {
+    animation-duration: 0.55s;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  ::view-transition-old(project-title),
+  ::view-transition-new(project-title) {
+    height: 100%;
+    object-fit: none;
+    object-position: left top;
+    mix-blend-mode: normal;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(project-title) {
+    animation: none;
+  }
+}
