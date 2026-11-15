@@ -76,6 +76,7 @@
   "listen": { "label": "Listen to this post", "play": "Listen", "pause": "Pause", "resume": "Resume", "stop": "Stop" },
   "resume": { "label": "Resume reading", "title": "You stopped at {n}%", "go": "Continue", "reset": "Start over" },
   "postReply": { "title": "Did this post help?", "body": "Tell me what worked, what didn't, or what you'd add. I read every reply.", "btn": "Reply to this post", "subject": "About your post: {title}", "msg": "Hi Sinver,\n\nI just read \"{title}\" and wanted to say:\n\n" },
+  "postMap": { "label": "Post map", "hint": "block width = section length", "min": "{n} min" },
   "timeLeft": { "left": "~{n} min left", "done": "Finished reading" },
   "focus": { "on": "Focus reading", "off": "Exit focus", "hint": "Dim everything but the paragraph you are reading (F)" },
   "headingLink": {

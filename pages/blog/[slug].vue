@@ -90,6 +90,7 @@ useSeoMeta({
           {{ doc.title }}
         </h1>
         <p class="mt-4 font-mono text-[13px] text-dim">{{ $t("blog.published") }} {{ doc.publishDate }} · {{ $t("blog.readTime", { n: readMinutes }) }}</p>
+        <ClientOnly><SharedPostMap :body="doc.body" /></ClientOnly>
         <SharedReadAloud target="#post-body" />
         <SharedReadFocus target="#post-body" />
       </div>
