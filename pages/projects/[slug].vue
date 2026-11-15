@@ -100,6 +100,7 @@ useHead({
       </div>
     </section>
 
+    <ProjectsSimilarCta :title="doc.title" :technologies="doc.technologies" />
     <SharedCtaBand />
   </div>
 </template>
