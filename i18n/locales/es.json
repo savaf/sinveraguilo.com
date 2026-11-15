@@ -54,39 +54,11 @@
     "view": "Vista",
     "viewCards": "Tarjetas",
     "viewIndex": "Índice",
-    "tech": "Tecnología",
-    "techClear": "Limpiar",
-    "showing": "Mostrando {n} de {total}",
     "search": "Buscar proyectos",
-    "noResults": "Ningún proyecto coincide con tu búsqueda.",
-    "compare": "Comparar",
-    "compareHint": "Tip: usa + para comparar hasta {n} proyectos lado a lado.",
-    "compareClear": "Limpiar selección",
-    "comparePickMore": "Elige al menos un proyecto más para comparar.",
-    "compareCategory": "Categoría",
-    "compareDate": "Publicado",
-    "compareShared": "Tecnologías compartidas (resaltadas): {list}",
-    "compareNone": "Ninguna tecnología es común a todos los proyectos seleccionados.",
-    "constellation": "Constelación de tecnologías",
-    "constellationKicker": "// cómo se conecta el trabajo",
-    "constellationHint": "Cada punto es una tecnología, con tamaño según cuántos proyectos la usan. Las líneas unen tecnologías usadas juntas. Pasa el cursor para ver vecinas, haz clic para filtrar los proyectos de abajo.",
-    "constellationAlone": "sin pareja en otros proyectos",
-    "constellationNodes": "tecnologías",
-    "constellationLinks": "vínculos"
-  },
-  "quote": {
-    "label": "Compartir selección",
-    "copy": "Copiar cita",
-    "copied": "Copiado ✓",
-    "hint": "// Tip: selecciona cualquier pasaje para copiarlo o compartirlo con un enlace."
+    "noResults": "Ningún proyecto coincide con tu búsqueda."
   },
   "code": { "copy": "Copiar", "copied": "Copiado ✓", "failed": "Usa Ctrl+C" },
-  "listen": { "label": "Escuchar este artículo", "play": "Escuchar", "pause": "Pausar", "resume": "Continuar", "stop": "Detener" },
-  "readingResume": { "label": "Retomar lectura", "title": "Te quedaste en {n}%", "go": "Continuar", "reset": "Empezar de nuevo" },
   "postReply": { "title": "¿Te sirvió este artículo?", "body": "Cuéntame qué funcionó, qué no o qué añadirías. Leo cada respuesta.", "btn": "Responder a este artículo", "subject": "Sobre tu artículo: {title}", "msg": "Hola Sinver,\n\nAcabo de leer \"{title}\" y quería decirte:\n\n" },
-  "postMap": { "label": "Mapa del artículo", "hint": "ancho del bloque = largo de la sección", "min": "{n} min" },
-  "timeLeft": { "left": "~{n} min restantes", "done": "Lectura terminada" },
-  "focus": { "on": "Lectura enfocada", "off": "Salir del enfoque", "hint": "Atenúa todo menos el párrafo que lees (F)" },
   "headingLink": {
     "copy": "Copiar enlace a esta sección",
     "copied": "Enlace copiado",
@@ -148,10 +120,6 @@
     "sending": "Enviando",
     "sentOk": "Mensaje enviado — te responderé pronto.",
     "sentError": "Algo salió mal. Por favor escríbeme directamente por correo.",
-    "preview": "Vista previa de tu correo",
-    "mailApp": "Abrir en mi app de correo",
-    "pvFrom": "De",
-    "pvTo": "Para",
     "stampSent": "ENVIADO",
     "meanwhile": "Mientras tanto, mira los",
     "meanwhileProjects": "proyectos",
@@ -238,12 +206,6 @@
     "subj": "{need}",
     "msg": "Hola Sinver,\n\nBusco: {need}.\nPlazo: {time}.\n\nContexto:\n"
   },
-  "heatmap": {
-    "title": "Habilidades por año",
-    "subtitle": "Cuándo usé cada habilidad a diario, construido con las fechas de mis roles reales. Más brillante significa más meses ese año.",
-    "skill": "Habilidad",
-    "legend": "Las columnas son años. Brillo = meses de uso ese año (máx. 12)."
-  },
   "stack": {
     "title": "Explorador de stack",
     "subtitle": "Cada habilidad de mis roles, dimensionada por meses de uso real. Haz clic en una para ver dónde la usé.",
@@ -294,13 +256,11 @@
     "behind": "{n}h por detrás de mí",
     "cta": "Agenda una llamada en nuestro solape"
   },
-  "lens": { "title": "Adapta este currículum", "hint": "Elige las habilidades que te interesan. Los roles que las usaron suben al inicio e Imprimir / Guardar PDF conserva solo esos roles.", "result": "{m} de {n} roles coinciden", "clear": "Limpiar", "printNote": "Adaptado a: {skills}" },
   "resume": {
     "title": "Currículum",
     "print": "Imprimir / Guardar PDF",
     "skills": "Habilidades clave"
   },
-  "squash": { "title": "Aplasta los bugs", "intro": "Ya que estás aquí: haz clic en los bugs antes de que lleguen al fondo.", "play": "Jugar", "again": "Jugar de nuevo", "over": "Desplegado con {n} bugs aplastados. ¿Quieres a alguien que envíe menos?", "score": "Puntos {n}", "best": "Récord {n}", "bug": "Bug" },
   "error": {
     "label": "Error",
     "notFoundTitle": "Perdido en el stack",
