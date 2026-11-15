@@ -2,8 +2,6 @@
   <div>
     <SectionHero />
     <ClientOnly><SharedSectionRail /></ClientOnly>
-    <SectionMarquee />
-    <SectionIntent />
     <SharedStatsBar />
     <SectionImpact />
     <SectionManifesto />
