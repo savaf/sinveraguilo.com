@@ -48,6 +48,7 @@
   "projects": {
     "title": "Projects",
     "subtitle": "A selection of things I have designed and built — from landing pages to front-end challenges.",
+    "surprise": "Surprise me",
     "filterAll": "All",
     "view": "View",
     "viewCards": "Cards",
