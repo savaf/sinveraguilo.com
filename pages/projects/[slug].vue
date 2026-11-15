@@ -89,6 +89,8 @@ useHead({
       </aside>
     </section>
 
+    <SectionLiveDemos :slug="doc.slug" />
+
     <!-- More projects -->
     <section class="mx-auto max-w-[1180px] px-6 pt-10 pb-18 sm:px-10">
       <div class="flex items-center gap-4 mb-8">
