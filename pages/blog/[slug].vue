@@ -61,6 +61,7 @@ useSeoMeta({
     <div class="fixed top-0 inset-x-0 z-50 h-1 pointer-events-none" aria-hidden="true">
       <div class="h-full bg-yellow origin-left" :style="{ width: `${readProgress * 100}%` }" />
     </div>
+    <ClientOnly><SharedTimeLeft :minutes="readMinutes" target="#post-body" /></ClientOnly>
     <ClientOnly><SharedResumeReading :id="String(route.params.slug)" /></ClientOnly>
     <!-- Hero -->
     <section class="relative border-b-2 border-ink overflow-hidden">
