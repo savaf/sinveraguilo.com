@@ -43,6 +43,15 @@ onMounted(() => {
 });
 onBeforeUnmount(() => window.removeEventListener("scroll", onScroll));
 
+const { t } = useI18n();
+const replyTo = computed(() => ({
+  path: localePath("/contact"),
+  query: {
+    subject: t("postReply.subject", { title: doc.value?.title || "" }).slice(0, 120),
+    message: t("postReply.msg", { title: doc.value?.title || "" }),
+  },
+}));
+
 const tagAccent = ["bg-yellow", "bg-cyan", "bg-indigo-600 text-white"];
 
 useHead({
@@ -100,6 +109,17 @@ useSeoMeta({
       <aside class="lg:sticky lg:top-24 lg:self-start">
         <ProjectsCaseToc :links="doc.body?.toc?.links || []" />
       </aside>
+    </section>
+
+    <!-- Reply -->
+    <section class="mx-auto max-w-[1180px] px-6 pb-10 sm:px-10">
+      <div class="flex flex-wrap items-center justify-between gap-5 border-2 border-ink bg-yellow p-6 sm:p-8 shadow-[6px_6px_0_#0a1420]">
+        <div>
+          <h2 class="m-0 font-display font-black uppercase text-ink-text text-[clamp(1.4rem,3vw,2rem)] leading-[0.95]">{{ $t("postReply.title") }}</h2>
+          <p class="mt-2 mb-0 max-w-[48ch] text-ink-text">{{ $t("postReply.body") }}</p>
+        </div>
+        <NuxtLink :to="replyTo" class="font-display font-extrabold uppercase text-ink-text bg-white border-2 border-ink px-6 py-4 shadow-[4px_4px_0_#0a1420] transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0_#0a1420]">{{ $t("postReply.btn") }} →</NuxtLink>
+      </div>
     </section>
 
     <!-- Keep reading -->
