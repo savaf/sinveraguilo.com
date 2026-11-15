@@ -64,6 +64,7 @@
   "code": { "copy": "Copy", "copied": "Copied ✓", "failed": "Press Ctrl+C" },
   "listen": { "label": "Listen to this post", "play": "Listen", "pause": "Pause", "resume": "Resume", "stop": "Stop" },
   "resume": { "label": "Resume reading", "title": "You stopped at {n}%", "go": "Continue", "reset": "Start over" },
+  "timeLeft": { "left": "~{n} min left", "done": "Finished reading" },
   "focus": { "on": "Focus reading", "off": "Exit focus", "hint": "Dim everything but the paragraph you are reading (F)" },
   "blog": {
     "all": "All",
