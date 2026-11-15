@@ -35,9 +35,7 @@ describe("css rules that break position: fixed UI", () => {
 describe("components are used", () => {
   const all = [...vue, ...walk("components", [".vue"])];
   const haystack = [...new Set(all)].map((f) => read(f)).join("\n") + read("app.vue") + read("error.vue");
-  // Home gadgets waiting to be re-homed by their own tickets (#97, #99); drop each entry when it lands on a page.
-  const PENDING_MOVE = new Set(["A11yLive", "PerfReceipt", "LiveDemos", "Terminal", "TimeOverlap"].map((n) => `components/section/${n}.vue`));
-  const comps = walk("components", [".vue"]).filter((f) => !f.startsWith("components/content/") && !PENDING_MOVE.has(f));
+  const comps = walk("components", [".vue"]).filter((f) => !f.startsWith("components/content/"));
   it("no dead components (auto-import name never referenced)", () => {
     const dead = comps.filter((f) => {
       const parts = f.replace(/^components\//, "").replace(/\.vue$/, "").split("/");

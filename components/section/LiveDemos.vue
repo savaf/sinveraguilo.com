@@ -1,7 +1,8 @@
 <script setup lang="ts">
+const props = defineProps<{ slug?: string }>();
 // Only my own GitHub Pages demos are embedded; they are mine, so framing is safe.
 const { data: all } = await useAsyncData("live_demos", () => queryContent("projects").find());
-const demos = computed(() => (all.value || []).filter((p: any) => /\.github\.io\//.test(p.previewLink || "")));
+const demos = computed(() => (all.value || []).filter((p: any) => /\.github\.io\//.test(p.previewLink || "") && (!props.slug || p.slug === props.slug)));
 const loaded = ref<Record<string, boolean>>({});
 const localePath = useLocalePath();
 </script>
@@ -26,7 +27,7 @@ const localePath = useLocalePath();
               <span class="relative font-mono text-xs">{{ $t("demos.note") }}</span>
             </button>
           </div>
-          <footer class="px-4 py-3 text-right">
+          <footer v-if="!slug" class="px-4 py-3 text-right">
             <NuxtLink :to="localePath(`/projects/${p.slug}`)" class="font-mono text-xs font-bold uppercase text-cyan underline underline-offset-4 hover:text-yellow">{{ $t("demos.case") }} →</NuxtLink>
           </footer>
         </article>
