@@ -15,8 +15,11 @@ test("Ctrl+K lists shortcuts and toggles blueprint", async ({ page }) => {
 test("g p goes to projects without changing mode", async ({ page }) => {
   await page.goto("/");
   await page.waitForLoadState("networkidle");
+  const modeAttrs = () => page.locator("html").evaluate((el) => el.getAttributeNames().filter((n) => n.startsWith("data-")).sort().map((n) => `${n}=${el.getAttribute(n)}`));
+  const before = await modeAttrs();
   await page.keyboard.press("g");
   await page.keyboard.press("p");
   await expect(page).toHaveURL(/\/projects$/);
-  await expect(page.locator("html")).not.toHaveAttribute("data-paper", /.*/);
+  await expect(page.locator("html")).not.toHaveAttribute("data-blueprint", /.*/);
+  expect(await modeAttrs()).toEqual(before);
 });

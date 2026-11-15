@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// Previous / next project pager. Wraps around the list; ← and → keys navigate.
+// Previous / next project pager. Wraps around the list; links are keyboard-focusable.
 const props = defineProps<{ slug: string; projects: any[] }>();
 const localePath = useLocalePath();
 
@@ -9,17 +9,6 @@ const pair = computed(() => {
   if (i < 0 || list.length < 2) return null;
   return { prev: list[(i - 1 + list.length) % list.length], next: list[(i + 1) % list.length] };
 });
-
-function onKey(e: KeyboardEvent) {
-  if (!pair.value || e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return;
-  if (document.querySelector("dialog[open]")) return;
-  const el = e.target as HTMLElement | null;
-  if (el && (el.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(el.tagName))) return;
-  if (e.key === "ArrowLeft") navigateTo(localePath(`/projects/${pair.value.prev.slug}`));
-  else if (e.key === "ArrowRight") navigateTo(localePath(`/projects/${pair.value.next.slug}`));
-}
-onMounted(() => window.addEventListener("keydown", onKey));
-onBeforeUnmount(() => window.removeEventListener("keydown", onKey));
 </script>
 
 <template>
@@ -34,6 +23,5 @@ onBeforeUnmount(() => window.removeEventListener("keydown", onKey));
         <span class="mt-2 block font-display font-black uppercase leading-[0.95] text-slate-50 text-[clamp(1.4rem,3vw,2rem)] group-hover:text-ink-text">{{ pair.next.title }}</span>
       </NuxtLink>
     </div>
-    <p class="mt-3 hidden lg:block font-mono text-xs text-dim">{{ $t("detail.pagerHint") }}</p>
   </nav>
 </template>

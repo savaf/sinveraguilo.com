@@ -78,7 +78,6 @@
   "detail": {
     "prevProject": "Previous project",
     "nextProject": "Next project",
-    "pagerHint": "Tip: use ← and → to move between projects",
     "zoom": "Zoom",
     "prev": "Previous image",
     "next": "Next image",
@@ -154,6 +153,7 @@
     "copied": "Email copied",
     "close": "Close",
     "hintKeys": "↑↓ navigate · ↵ run · esc close",
+    "blueprint": "Toggle blueprint mode",
     "resume": "View résumé",
     "colophon": "View colophon (how this site is made)"
   },
@@ -335,7 +335,6 @@
     "case": "Read the case"
   },
   "similar": { "title": "Need something like this?", "cta": "Start a similar project", "subject": "A project like {title}", "message": "Hi Sinver, I saw {title} ({stack}) and I would like to build something similar. Here is what I have in mind:\n\n" },
-  "shortcuts": { "blueprint": "Toggle blueprint mode" },
   "colophon": {
     "label": "// how this site is made",
     "title": "Colophon",
