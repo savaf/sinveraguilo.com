@@ -51,9 +51,6 @@
     "subtitle": "A selection of things I have designed and built — from landing pages to front-end challenges.",
     "surprise": "Surprise me",
     "filterAll": "All",
-    "view": "View",
-    "viewCards": "Cards",
-    "viewIndex": "Index",
     "search": "Search projects",
     "noResults": "No projects match your search."
   },
@@ -375,21 +372,8 @@
     "open": "Open in new tab",
     "case": "Read the case"
   },
-  "paper": { "label": "Paper", "hint": "Toggle paper (light) mode (P)" },
   "similar": { "title": "Need something like this?", "cta": "Start a similar project", "subject": "A project like {title}", "message": "Hi Sinver, I saw {title} ({stack}) and I would like to build something similar. Here is what I have in mind:\n\n" },
-  "spotlight": { "label": "Spotlight", "hint": "Toggle spotlight mode (L): dim the page, light only around the cursor" },
-  "rain": { "label": "Rain", "hint": "Toggle code rain (M): falling code glyphs in your accent color" },
-  "shortcuts": { "title": "Keyboard shortcuts", "goto": "Go to (press g, then…)", "more": "Anywhere", "palette": "Open the command palette", "blueprint": "Toggle blueprint mode", "paper": "Toggle paper (light) mode", "spotlight": "Toggle spotlight mode", "rain": "Toggle code rain", "help": "Show or hide this sheet", "close": "Close" },
-  "blueprint": { "label": "Blueprint", "hint": "Toggle blueprint mode (B): outline every section and heading" },
-  "accent": {
-    "label": "Accent color",
-    "names": {
-      "cyan": "Cyan",
-      "mint": "Mint",
-      "pink": "Pink",
-      "orange": "Orange"
-    }
-  },
+  "shortcuts": { "blueprint": "Toggle blueprint mode" },
   "colophon": {
     "label": "// how this site is made",
     "title": "Colophon",
@@ -432,21 +416,9 @@
         "k": "Command palette",
         "v": "Ctrl/⌘ K opens a quick menu to jump pages, switch language, or copy my email."
       },
-      "accent": {
-        "k": "Accent picker",
-        "v": "The header colour picker re-themes every cyan highlight, live."
-      },
       "a11y": {
         "k": "Accessibility switches",
         "v": "Text size, contrast, motion and spacing adjustable on the home page."
-      },
-      "curtain": {
-        "k": "Page curtain",
-        "v": "Route changes wipe through a curtain that names the destination."
-      },
-      "share": {
-        "k": "Quote sharing",
-        "v": "Select text in a blog post to copy it or share it on X and LinkedIn."
       },
       "resume": {
         "k": "Printable résumé",
@@ -466,10 +438,6 @@
     "cta": "Send this stack to me",
     "subj": "Stack fit check",
     "msg": "My stack: {stack}\nCovered by your roles: {have} ({pct}%)\n\nAbout the project: "
-  },
-  "tldr": {
-    "label": "// 30-second read",
-    "aria": "Open the 30-second summary"
   },
   "timeline": { "kicker": "// career at a glance", "title": "Timeline", "hint": "Select a bar to see the role. Bars are drawn from real start and end dates.", "jump": "Jump to details", "overlap": "Overlapping bars are roles held in parallel." }
 }

@@ -51,9 +51,6 @@
     "subtitle": "Una selección de cosas que he diseñado y construido — desde landing pages hasta retos de front-end.",
     "surprise": "Sorpréndeme",
     "filterAll": "Todos",
-    "view": "Vista",
-    "viewCards": "Tarjetas",
-    "viewIndex": "Índice",
     "search": "Buscar proyectos",
     "noResults": "Ningún proyecto coincide con tu búsqueda."
   },
@@ -375,21 +372,8 @@
     "open": "Abrir en pestaña nueva",
     "case": "Leer el caso"
   },
-  "paper": { "label": "Papel", "hint": "Alternar modo papel, claro (P)" },
   "similar": { "title": "¿Necesitas algo así?", "cta": "Empezar un proyecto similar", "subject": "Un proyecto como {title}", "message": "Hola Sinver, vi {title} ({stack}) y me gustaría construir algo parecido. Esto es lo que tengo en mente:\n\n" },
-  "spotlight": { "label": "Foco", "hint": "Alternar modo foco (L): atenúa la página y ilumina solo junto al cursor" },
-  "rain": { "label": "Lluvia", "hint": "Alternar lluvia de código (M): glifos de código cayendo con tu color de acento" },
-  "shortcuts": { "title": "Atajos de teclado", "goto": "Ir a (pulsa g y luego…)", "more": "En cualquier lugar", "palette": "Abrir la paleta de comandos", "blueprint": "Alternar modo plano", "paper": "Alternar modo papel (claro)", "spotlight": "Alternar modo foco", "rain": "Alternar lluvia de código", "help": "Mostrar u ocultar esta hoja", "close": "Cerrar" },
-  "blueprint": { "label": "Plano", "hint": "Alternar modo plano (B): delinea cada sección y encabezado" },
-  "accent": {
-    "label": "Color de acento",
-    "names": {
-      "cyan": "Cian",
-      "mint": "Menta",
-      "pink": "Rosa",
-      "orange": "Naranja"
-    }
-  },
+  "shortcuts": { "blueprint": "Alternar modo plano" },
   "colophon": {
     "label": "// cómo está hecho este sitio",
     "title": "Colofón",
@@ -432,21 +416,9 @@
         "k": "Paleta de comandos",
         "v": "Ctrl/⌘ K abre un menú rápido para saltar de página, cambiar de idioma o copiar mi correo."
       },
-      "accent": {
-        "k": "Selector de acento",
-        "v": "El selector de color del encabezado recolorea en vivo todos los resaltes cian."
-      },
       "a11y": {
         "k": "Ajustes de accesibilidad",
         "v": "Tamaño de texto, contraste, movimiento y espaciado ajustables en el inicio."
-      },
-      "curtain": {
-        "k": "Cortina de página",
-        "v": "Los cambios de ruta pasan por una cortina que nombra el destino."
-      },
-      "share": {
-        "k": "Compartir citas",
-        "v": "Selecciona texto en un artículo para copiarlo o compartirlo en X y LinkedIn."
       },
       "resume": {
         "k": "Currículum imprimible",
@@ -466,10 +438,6 @@
     "cta": "Enviarme este stack",
     "subj": "Compatibilidad de stack",
     "msg": "Mi stack: {stack}\nCubierto por tus roles: {have} ({pct}%)\n\nSobre el proyecto: "
-  },
-  "tldr": {
-    "label": "// lectura de 30 segundos",
-    "aria": "Abrir el resumen de 30 segundos"
   },
   "timeline": { "kicker": "// carrera de un vistazo", "title": "Línea de tiempo", "hint": "Selecciona una barra para ver el rol. Las barras salen de fechas reales de inicio y fin.", "jump": "Ir al detalle", "overlap": "Las barras superpuestas son roles en paralelo." }
 }

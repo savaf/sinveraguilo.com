@@ -142,22 +142,10 @@ html.a11y-motion *::after {
   scroll-behavior: auto !important;
 }
 
-/* Accent palette (switched from SharedAccentPicker). Default is the original cyan. */
+/* Default accent (cyan) */
 :root {
   --accent: #22d3ee;
   --accent-rgb: 34 211 238;
-}
-:root[data-accent="mint"] {
-  --accent: #34d399;
-  --accent-rgb: 52 211 153;
-}
-:root[data-accent="pink"] {
-  --accent: #f472b6;
-  --accent-rgb: 244 114 182;
-}
-:root[data-accent="orange"] {
-  --accent: #fb923c;
-  --accent-rgb: 251 146 60;
 }
 
 /* Blueprint mode: outlines every layout box and labels it with its tag (toggle with "B") */
@@ -189,15 +177,6 @@ html.a11y-motion *::after {
 :root[data-blueprint] main {
   background-image: linear-gradient(rgb(var(--accent-rgb) / 0.07) 1px, transparent 1px), linear-gradient(90deg, rgb(var(--accent-rgb) / 0.07) 1px, transparent 1px);
   background-size: 24px 24px;
-}
-
-/* ---- Paper (light) mode: invert the dark palette, keep media true ------- */
-:root[data-paper] {
-  color-scheme: light;
-  filter: invert(1) hue-rotate(180deg);
-}
-:root[data-paper] :is(img, video, picture, canvas, iframe) {
-  filter: invert(1) hue-rotate(180deg);
 }
 
 /* Project title morphs from the clicked card into the detail heading */
