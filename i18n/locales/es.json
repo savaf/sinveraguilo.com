@@ -75,6 +75,9 @@
     "empty": "Aún no hay posts — vuelve pronto."
   },
   "detail": {
+    "prevProject": "Proyecto anterior",
+    "nextProject": "Proyecto siguiente",
+    "pagerHint": "Tip: usa ← y → para moverte entre proyectos",
     "zoom": "Ampliar",
     "prev": "Imagen anterior",
     "next": "Imagen siguiente",
