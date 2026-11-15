@@ -13,6 +13,7 @@ const other = [
   { keys: ["⌘/Ctrl", "K"], k: "shortcuts.palette" },
   { keys: ["B"], k: "shortcuts.blueprint" },
   { keys: ["P"], k: "shortcuts.paper" },
+  { keys: ["L"], k: "shortcuts.spotlight" },
   { keys: ["?"], k: "shortcuts.help" },
   { keys: ["Esc"], k: "shortcuts.close" },
 ];
