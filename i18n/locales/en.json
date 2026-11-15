@@ -53,39 +53,11 @@
     "view": "View",
     "viewCards": "Cards",
     "viewIndex": "Index",
-    "tech": "Technology",
-    "techClear": "Clear",
-    "showing": "Showing {n} of {total}",
     "search": "Search projects",
-    "noResults": "No projects match your search.",
-    "compare": "Compare",
-    "compareHint": "Tip: use + to compare up to {n} projects side by side.",
-    "compareClear": "Clear selection",
-    "comparePickMore": "Pick at least one more project to compare.",
-    "compareCategory": "Category",
-    "compareDate": "Published",
-    "compareShared": "Shared technologies (highlighted): {list}",
-    "compareNone": "No technology is shared by all selected projects.",
-    "constellation": "Technology constellation",
-    "constellationKicker": "// how the work connects",
-    "constellationHint": "Each dot is a technology, sized by how many projects use it. Lines join technologies used together. Hover to see neighbours, click to filter the projects below.",
-    "constellationAlone": "not paired with anything else",
-    "constellationNodes": "technologies",
-    "constellationLinks": "links"
-  },
-  "quote": {
-    "label": "Share selection",
-    "copy": "Copy quote",
-    "copied": "Copied ✓",
-    "hint": "// Tip: select any passage to copy or share it with a link back."
+    "noResults": "No projects match your search."
   },
   "code": { "copy": "Copy", "copied": "Copied ✓", "failed": "Press Ctrl+C" },
-  "listen": { "label": "Listen to this post", "play": "Listen", "pause": "Pause", "resume": "Resume", "stop": "Stop" },
-  "readingResume": { "label": "Resume reading", "title": "You stopped at {n}%", "go": "Continue", "reset": "Start over" },
   "postReply": { "title": "Did this post help?", "body": "Tell me what worked, what didn't, or what you'd add. I read every reply.", "btn": "Reply to this post", "subject": "About your post: {title}", "msg": "Hi Sinver,\n\nI just read \"{title}\" and wanted to say:\n\n" },
-  "postMap": { "label": "Post map", "hint": "block width = section length", "min": "{n} min" },
-  "timeLeft": { "left": "~{n} min left", "done": "Finished reading" },
-  "focus": { "on": "Focus reading", "off": "Exit focus", "hint": "Dim everything but the paragraph you are reading (F)" },
   "headingLink": {
     "copy": "Copy link to this section",
     "copied": "Link copied",
@@ -147,10 +119,6 @@
     "sending": "Sending",
     "sentOk": "Message sent — I'll get back to you soon.",
     "sentError": "Something went wrong. Please email me directly instead.",
-    "preview": "Live preview of your email",
-    "mailApp": "Open in my mail app",
-    "pvFrom": "From",
-    "pvTo": "To",
     "stampSent": "SENT",
     "meanwhile": "Meanwhile, browse",
     "meanwhileProjects": "projects",
@@ -237,12 +205,6 @@
     "subj": "{need}",
     "msg": "Hi Sinver,\n\nI'm looking for: {need}.\nTiming: {time}.\n\nSome context:\n"
   },
-  "heatmap": {
-    "title": "Skills by year",
-    "subtitle": "When each skill was in daily use, built from the date ranges of my real roles. Brighter means more months in that year.",
-    "skill": "Skill",
-    "legend": "Columns are years. Brightness = months of use that year (max 12)."
-  },
   "stack": {
     "title": "Stack explorer",
     "subtitle": "Every skill from my roles, sized by months of real use. Click one to see where I used it.",
@@ -293,13 +255,11 @@
     "behind": "{n}h behind me",
     "cta": "Book a call in our overlap"
   },
-  "lens": { "title": "Tailor this résumé", "hint": "Pick the skills you care about. Roles that used them move to the top, and Print / Save as PDF keeps only those roles.", "result": "{m} of {n} roles match", "clear": "Clear", "printNote": "Tailored to: {skills}" },
   "resume": {
     "title": "Résumé",
     "print": "Print / Save as PDF",
     "skills": "Core skills"
   },
-  "squash": { "title": "Squash the bugs", "intro": "While you're here: click the bugs before they hit the bottom.", "play": "Play", "again": "Play again", "over": "Deployed with {n} bugs squashed. Want someone who ships fewer?", "score": "Score {n}", "best": "Best {n}", "bug": "Bug" },
   "error": {
     "label": "Error",
     "notFoundTitle": "Lost in the stack",
