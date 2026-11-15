@@ -340,6 +340,7 @@
     "title": "Lo último que escribí",
     "all": "Todos los artículos"
   },
+  "perf": { "kicker": "// rendimiento, en vivo", "title": "El recibo de esta página, medido en tu dispositivo", "lead": "Sin números de laboratorio ni capturas. Son los tiempos reales que tu navegador registró al cargar esta página, leídos con la Performance API.", "measuring": "Midiendo…", "good": "dentro del umbral recomendado", "slow": "por encima del umbral recomendado", "note": "Los valores varían según tu red, dispositivo y caché. Los umbrales son los límites \"buenos\" de Core Web Vitals de Google (LCP 2,5 s, CLS 0,1) más 1,8 s para FCP y 800 ms para TTFB.", "rows": { "ttfb": { "t": "Respuesta del servidor (TTFB)", "d": "Tiempo hasta el primer byte" }, "fcp": { "t": "Primer pintado con contenido (FCP)", "d": "First Contentful Paint" }, "lcp": { "t": "Elemento más grande (LCP)", "d": "Largest Contentful Paint" }, "cls": { "t": "Salto de diseño (CLS)", "d": "Cumulative Layout Shift" }, "bytes": { "t": "Transferido hasta ahora", "d": "Bytes por la red, 0 si está en caché" }, "dom": { "t": "Elementos DOM", "d": "Elementos en la página ahora mismo" } } },
   "manifesto": {
     "kicker": "// cómo trabajo",
     "text": "Hago las cosas bien y hago que las cosas pasen. Accesible según WCAG 2.1 AA, bilingüe por defecto, entregado con CI/CD."

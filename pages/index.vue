@@ -8,6 +8,7 @@
     <SectionImpact />
     <SectionManifesto />
     <SectionA11yLive />
+    <SectionPerfReceipt />
     <SectionFeatured />
     <SectionLiveDemos />
     <SectionCareerLog />

@@ -340,6 +340,7 @@
     "title": "Latest writing",
     "all": "All posts"
   },
+  "perf": { "kicker": "// performance, live", "title": "The receipt for this page, measured on your device", "lead": "No lab numbers, no screenshots. These are the real timings your browser recorded while loading this page, read through the Performance API.", "measuring": "Measuring…", "good": "within the recommended threshold", "slow": "above the recommended threshold", "note": "Values vary with your network, device and cache. Thresholds are Google's \"good\" Core Web Vitals limits (LCP 2.5 s, CLS 0.1) plus 1.8 s for FCP and 800 ms for TTFB.", "rows": { "ttfb": { "t": "Server response (TTFB)", "d": "Time to first byte" }, "fcp": { "t": "First paint with content (FCP)", "d": "First Contentful Paint" }, "lcp": { "t": "Largest element (LCP)", "d": "Largest Contentful Paint" }, "cls": { "t": "Layout shift (CLS)", "d": "Cumulative Layout Shift" }, "bytes": { "t": "Transferred so far", "d": "Bytes over the network, 0 if cached" }, "dom": { "t": "DOM elements", "d": "Elements in the page right now" } } },
   "manifesto": {
     "kicker": "// how I work",
     "text": "I do things the right way and I get things done. Accessible to WCAG 2.1 AA, bilingual by default, shipped through CI/CD."
