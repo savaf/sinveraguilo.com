@@ -37,7 +37,7 @@ onBeforeUnmount(() => clearTimeout(timer));
 
 <template>
   <footer class="relative overflow-hidden border-t-2 border-ink bg-footer-dark">
-    <div class="mx-auto max-w-[1180px] px-6 pt-14 sm:px-10">
+    <div class="mx-auto max-w-[1180px] px-6 py-14 sm:px-10">
       <div class="flex flex-wrap items-end justify-between gap-8">
         <div>
           <p class="m-0 font-mono text-[13px] text-cyan">{{ $t("footer.emailLabel") }}</p>
@@ -54,8 +54,6 @@ onBeforeUnmount(() => clearTimeout(timer));
         </nav>
       </div>
 
-      <!-- Oversized outlined wordmark, cropped by the bottom edge -->
-      <div aria-hidden="true" class="wordmark mt-12 -mb-[0.16em] select-none whitespace-nowrap text-center font-display font-black uppercase leading-[0.85] tracking-[-0.03em] text-[clamp(2.75rem,12.5vw,9.5rem)]">Sinver Aguiló</div>
     </div>
 
     <div class="relative border-t-2 border-ink bg-footer-dark">
@@ -74,14 +72,3 @@ onBeforeUnmount(() => clearTimeout(timer));
     </div>
   </footer>
 </template>
-
-<style scoped>
-.wordmark {
-  color: transparent;
-  -webkit-text-stroke: 2px var(--accent);
-  transition: color 0.3s ease;
-}
-.wordmark:hover {
-  color: #facc15;
-}
-</style>
