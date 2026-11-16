@@ -27,7 +27,6 @@ const commands = computed(() => {
     ...pages.map((p) => ({ label: p.plain ? t(p.key) : t("palette.go", { page: t(p.key) }), tag: "goto", keys: `g ${p.gKey}`, run: () => navigateTo(localePath(p.to)) })),
     { label: t("palette.lang", { lang: other === "es" ? "Español" : "English" }), tag: "lang", run: () => setLocale(other) },
     { label: t("palette.blueprint"), tag: "mode", keys: "B", keep: true, run: () => window.dispatchEvent(new Event("blueprint:toggle")) },
-    { label: t("palette.colophon"), tag: "goto", run: () => navigateTo(localePath("/colophon")) },
     {
       label: t("palette.cv"),
       tag: "pdf",

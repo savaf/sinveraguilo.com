@@ -20,7 +20,6 @@ const pages = [
   { key: "nav.projects", to: "/projects" },
   { key: "nav.blog", to: "/blog" },
   { key: "nav.contact", to: "/contact" },
-  { key: "nav.colophon", to: "/colophon" },
 ];
 
 async function copyEmail() {

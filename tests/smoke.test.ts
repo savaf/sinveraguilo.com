@@ -5,7 +5,7 @@ import { join } from "node:path";
 // Run against a live server:  SMOKE_URL=http://localhost:3000 pnpm test
 const BASE = process.env.SMOKE_URL;
 const slugs = (dir: string) => readdirSync(join(__dirname, "..", "content", dir)).map((f) => f.replace(/^\d+\./, "").replace(/\.md$/, ""));
-const routes = ["/", "/about", "/projects", "/blog", "/contact", "/colophon", "/resume", ...slugs("projects").map((s) => `/projects/${s}`), ...slugs("blog").map((s) => `/blog/${s}`)];
+const routes = ["/", "/about", "/projects", "/blog", "/contact", "/resume", ...slugs("projects").map((s) => `/projects/${s}`), ...slugs("blog").map((s) => `/blog/${s}`)];
 const cases = routes.flatMap((r) => [{ url: r, lang: "en" }, { url: r === "/" ? "/es" : `/es${r}`, lang: "es" }]);
 
 describe.skipIf(!BASE)("smoke: every route renders", () => {
@@ -18,7 +18,7 @@ describe.skipIf(!BASE)("smoke: every route renders", () => {
     expect(title.length).toBeGreaterThan(0);
     expect((title.match(/Sinver Aguil/g) || []).length).toBeLessThanOrEqual(1); // no doubled site name
     expect(html).not.toMatch(/Not found '[^']+' key/);
-    expect(html).not.toMatch(/\b(contact|resume|readingResume|terminal|palette|colophon)\.[a-zA-Z.]+\b(?=<)/); // raw i18n keys leaking into the page
+    expect(html).not.toMatch(/\b(contact|resume|readingResume|terminal|palette)\.[a-zA-Z.]+\b(?=<)/); // raw i18n keys leaking into the page
   });
   it("unknown route returns 404", async () => {
     expect((await fetch(BASE + "/definitely-not-a-page")).status).toBe(404);

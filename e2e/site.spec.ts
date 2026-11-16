@@ -2,7 +2,7 @@ import { readdirSync } from "node:fs";
 import { expect, test } from "@playwright/test";
 
 const slugs = (dir: string) => readdirSync(`content/${dir}`).map((f) => f.replace(/^\d+\./, "").replace(/\.md$/, ""));
-const pages = ["/", "/projects", "/blog", "/contact", "/about", "/colophon", "/resume"];
+const pages = ["/", "/projects", "/blog", "/contact", "/about", "/resume"];
 const routes = [...pages, ...slugs("projects").map((s) => `/projects/${s}`), ...slugs("blog").map((s) => `/blog/${s}`)];
 const langs = [
   { lang: "en", prefix: "" },

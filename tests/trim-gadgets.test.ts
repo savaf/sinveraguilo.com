@@ -49,6 +49,6 @@ describe("cut page gadgets", () => {
 
   it("every page route still exists", () => {
     const pages = walk("pages", [".vue"]);
-    for (const p of ["pages/index.vue", "pages/about.vue", "pages/contact.vue", "pages/resume.vue", "pages/colophon.vue", "pages/blog/index.vue", "pages/blog/[slug].vue", "pages/projects/index.vue", "pages/projects/[slug].vue"]) expect(pages).toContain(p);
+    for (const p of ["pages/index.vue", "pages/about.vue", "pages/contact.vue", "pages/resume.vue", "pages/blog/index.vue", "pages/blog/[slug].vue", "pages/projects/index.vue", "pages/projects/[slug].vue"]) expect(pages).toContain(p);
   });
 });

@@ -7,8 +7,7 @@
     "about": "Sobre mí",
     "projects": "Proyectos",
     "blog": "Blog",
-    "contact": "Contacto",
-    "colophon": "Colofón"
+    "contact": "Contacto"
   },
   "hero": {
     "available": "Disponible para proyectos",
@@ -154,8 +153,7 @@
     "close": "Cerrar",
     "hintKeys": "↑↓ navegar · ↵ ejecutar · esc cerrar",
     "blueprint": "Alternar modo plano",
-    "resume": "Ver currículum",
-    "colophon": "Ver colofón (cómo está hecho)"
+    "resume": "Ver currículum"
   },
   "cta": {
     "title": "Construyamos algo",
@@ -247,33 +245,6 @@
     "after": "Después",
     "migrated": "Migraciones de sistemas legados (.NET, Rails, JSP → cliente-servidor y microservicios) para"
   },
-  "perf": { "kicker": "// rendimiento, en vivo", "title": "El recibo de esta página, medido en tu dispositivo", "lead": "Sin números de laboratorio ni capturas. Son los tiempos reales que tu navegador registró al cargar esta página, leídos con la Performance API.", "measuring": "Midiendo…", "good": "dentro del umbral recomendado", "slow": "por encima del umbral recomendado", "note": "Los valores varían según tu red, dispositivo y caché. Los umbrales son los límites \"buenos\" de Core Web Vitals de Google (LCP 2,5 s, CLS 0,1) más 1,8 s para FCP y 800 ms para TTFB.", "rows": { "ttfb": { "t": "Respuesta del servidor (TTFB)", "d": "Tiempo hasta el primer byte" }, "fcp": { "t": "Primer pintado con contenido (FCP)", "d": "First Contentful Paint" }, "lcp": { "t": "Elemento más grande (LCP)", "d": "Largest Contentful Paint" }, "cls": { "t": "Salto de diseño (CLS)", "d": "Cumulative Layout Shift" }, "bytes": { "t": "Transferido hasta ahora", "d": "Bytes por la red, 0 si está en caché" }, "dom": { "t": "Elementos DOM", "d": "Elementos en la página ahora mismo" } } },
-  "a11y": {
-    "kicker": "// accesibilidad, en vivo",
-    "title": "No me creas. Pruébalo.",
-    "lead": "Construyo según WCAG 2.1 AA. Estos interruptores cambian esta misma página, para que veas cómo se adapta el sitio a distintas necesidades. Tu elección se guarda en este navegador.",
-    "on": "Activo",
-    "off": "Inactivo",
-    "reset": "Restablecer todo",
-    "modes": {
-      "text": {
-        "t": "Texto más grande",
-        "d": "Aumenta la tipografía un 25%."
-      },
-      "contrast": {
-        "t": "Alto contraste",
-        "d": "Mayor separación entre texto y fondo."
-      },
-      "motion": {
-        "t": "Sin movimiento",
-        "d": "Detiene animaciones y transiciones."
-      },
-      "spacing": {
-        "t": "Lectura fácil",
-        "d": "Más espacio entre líneas, letras y palabras."
-      }
-    }
-  },
   "demos": {
     "kicker": "// pruébalo en vivo",
     "title": "Ejecuta las demos aquí mismo",
@@ -284,57 +255,5 @@
     "case": "Leer el caso"
   },
   "similar": { "title": "¿Necesitas algo así?", "cta": "Empezar un proyecto similar", "subject": "Un proyecto como {title}", "message": "Hola Sinver, vi {title} ({stack}) y me gustaría construir algo parecido. Esto es lo que tengo en mente:\n\n" },
-  "colophon": {
-    "label": "// cómo está hecho este sitio",
-    "title": "Colofón",
-    "intro": "Sin plantilla ni constructor de páginas. Este sitio es una app Nuxt hecha a mano, y esta página lista de qué está hecho y los detalles que cuidé.",
-    "specsTitle": "Stack",
-    "featuresTitle": "Detalles que vale la pena ver",
-    "hint": "Tip: pulsa Ctrl/⌘ K en cualquier parte del sitio.",
-    "specs": {
-      "framework": {
-        "k": "framework",
-        "v": "Nuxt 3 · Vue 3"
-      },
-      "style": {
-        "k": "estilos",
-        "v": "Tailwind CSS 4"
-      },
-      "content": {
-        "k": "contenido",
-        "v": "{'@'}nuxt/content (Markdown + JSON)"
-      },
-      "i18n": {
-        "k": "idiomas",
-        "v": "English / Español con {'@'}nuxtjs/i18n"
-      },
-      "type": {
-        "k": "tipografía",
-        "v": "Archivo, Inter, Space Grotesk, JetBrains Mono"
-      },
-      "icons": {
-        "k": "seo",
-        "v": "Sitemap, alternates hreflang, etiquetas OG"
-      },
-      "host": {
-        "k": "paquetes",
-        "v": "pnpm"
-      }
-    },
-    "features": {
-      "palette": {
-        "k": "Paleta de comandos",
-        "v": "Ctrl/⌘ K abre un menú rápido para saltar de página, cambiar de idioma o copiar mi correo."
-      },
-      "a11y": {
-        "k": "Ajustes de accesibilidad",
-        "v": "Tamaño de texto, contraste, movimiento y espaciado ajustables en el inicio."
-      },
-      "resume": {
-        "k": "Currículum imprimible",
-        "v": "Una página de currículum hecha con el mismo contenido del sitio, lista para Guardar como PDF."
-      }
-    }
-  },
   "timeline": { "kicker": "// carrera de un vistazo", "title": "Línea de tiempo", "hint": "Selecciona una barra para ver el rol. Las barras salen de fechas reales de inicio y fin.", "jump": "Ir al detalle", "overlap": "Las barras superpuestas son roles en paralelo." }
 }
