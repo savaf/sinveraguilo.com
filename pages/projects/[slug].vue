@@ -16,7 +16,6 @@ const { data: allProjects } = await useAsyncData("detail_more_projects", () => {
 });
 
 const tagAccent = ["bg-yellow", "bg-cyan", "bg-indigo-600 text-white"];
-const galleryShadow = ["#22d3ee", "#facc15", "#6366f1"];
 
 function moreProjects(slug: string) {
   return (allProjects.value || []).filter((p: any) => p.slug !== slug).slice(0, 2);
@@ -46,7 +45,7 @@ useHead({
                 {{ tag }}
               </span>
             </div>
-            <h1 class="m-0 font-display font-black uppercase text-slate-50 leading-[0.9] tracking-[-0.02em] text-[clamp(2.75rem,6vw,4.5rem)]">
+            <h1 data-vt-title style="view-transition-name: project-title" class="m-0 font-display font-black uppercase text-slate-50 leading-[0.9] tracking-[-0.02em] text-[clamp(2.75rem,6vw,4.5rem)]">
               {{ doc.title }}
             </h1>
             <p class="mt-4 font-mono text-[13px] text-dim">{{ $t("detail.published") }} {{ doc.publishDate }}</p>
@@ -67,14 +66,7 @@ useHead({
 
     <!-- Gallery -->
     <section v-if="doc.projectImages?.length" class="mx-auto max-w-[1180px] px-6 pt-14 sm:px-10">
-      <div class="border-2 border-ink" :style="{ boxShadow: `10px 10px 0 ${galleryShadow[2]}` }">
-        <NuxtImg :src="doc.projectImages[0].img" :alt="doc.projectImages[0].title" width="1120" height="600" class="w-full block" />
-      </div>
-      <div v-if="doc.projectImages.length > 1" class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
-        <div v-for="(img, i) in doc.projectImages.slice(1)" :key="img.id" v-reveal="(i % 2) * 90" class="border-2 border-ink" :style="{ boxShadow: `8px 8px 0 ${galleryShadow[i % galleryShadow.length]}` }">
-          <NuxtImg :src="img.img" :alt="img.title" width="550" height="360" class="w-full h-full object-cover block" />
-        </div>
-      </div>
+      <ProjectsGallery :images="doc.projectImages" />
     </section>
 
     <!-- Overview + tech -->
@@ -84,15 +76,20 @@ useHead({
         <p v-if="locale !== 'en'" class="font-mono text-xs text-dim mb-4">{{ $t("detail.englishOnly") }}</p>
         <ContentRenderer :value="doc" class="prose prose-invert prose-slate max-w-none prose-headings:font-display prose-headings:uppercase prose-a:text-cyan" />
       </div>
-      <div v-reveal="120">
-        <h3 class="m-0 mb-4 font-mono text-[13px] text-cyan uppercase tracking-[0.06em]">{{ $t("detail.tech") }}</h3>
-        <div class="flex flex-wrap gap-2.5">
-          <span v-for="tech in doc.technologies" :key="tech" class="font-mono text-[13px] text-slate-200 border-2 border-ink bg-surface px-3.5 py-[7px]">
-            {{ tech }}
-          </span>
+      <aside class="lg:sticky lg:top-24 lg:self-start">
+        <ProjectsCaseToc :links="doc.body?.toc?.links || []" />
+        <div v-reveal="120">
+          <h3 class="m-0 mb-4 font-mono text-[13px] text-cyan uppercase tracking-[0.06em]">{{ $t("detail.tech") }}</h3>
+          <div class="flex flex-wrap gap-2.5">
+            <span v-for="tech in doc.technologies" :key="tech" class="font-mono text-[13px] text-slate-200 border-2 border-ink bg-surface px-3.5 py-[7px]">
+              {{ tech }}
+            </span>
+          </div>
         </div>
-      </div>
+      </aside>
     </section>
+
+    <SectionLiveDemos :slug="doc.slug" />
 
     <!-- More projects -->
     <section class="mx-auto max-w-[1180px] px-6 pt-10 pb-18 sm:px-10">
@@ -105,6 +102,9 @@ useHead({
       </div>
     </section>
 
+    <ProjectsPager :slug="doc.slug" :projects="allProjects || []" />
+
+    <ProjectsSimilarCta :title="doc.title" :technologies="doc.technologies" />
     <SharedCtaBand />
   </div>
 </template>

@@ -26,7 +26,7 @@ export default <Partial<Config>>{
         grid: "#123049",
         surface: "#0a1c2e",
         "footer-dark": "#0a1626",
-        cyan: "#22d3ee",
+        cyan: "rgb(var(--accent-rgb) / <alpha-value>)",
         yellow: "#facc15",
         indigo: "#6366f1",
         mint: "#34d399",
@@ -49,15 +49,6 @@ export default <Partial<Config>>{
         grotesk: ["Space Grotesk", ...defaultTheme.fontFamily.sans],
         mono: ["JetBrains Mono", ...defaultTheme.fontFamily.mono],
         loading: ["Flow Circular", "cursive"],
-      },
-      keyframes: {
-        marquee: {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-50%)" },
-        },
-      },
-      animation: {
-        marquee: "marquee 20s linear infinite",
       },
       // fontSize: {
       //   base: [

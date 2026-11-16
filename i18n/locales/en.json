@@ -13,6 +13,7 @@
     "available": "Available for work",
     "eyebrow": "Software Engineer",
     "tagline": "Turning your vision into reality with code and design.",
+    "ctaContact": "Contact me",
     "ctaWork": "View work",
     "ctaCV": "Download CV",
     "label": "// engineering + design"
@@ -44,18 +45,43 @@
   "projects": {
     "title": "Projects",
     "subtitle": "A selection of things I have designed and built — from landing pages to front-end challenges.",
+    "surprise": "Surprise me",
     "filterAll": "All",
     "search": "Search projects",
     "noResults": "No projects match your search."
   },
+  "code": { "copy": "Copy", "copied": "Copied ✓", "failed": "Press Ctrl+C" },
+  "postReply": { "title": "Did this post help?", "body": "Tell me what worked, what didn't, or what you'd add. I read every reply.", "btn": "Reply to this post", "subject": "About your post: {title}", "msg": "Hi Sinver,\n\nI just read \"{title}\" and wanted to say:\n\n" },
+  "headingLink": {
+    "copy": "Copy link to this section",
+    "copied": "Link copied",
+    "failed": "Copy failed"
+  },
   "blog": {
+    "budget": "Reading budget",
+    "any": "Any length",
+    "fit": "{n} of {total} fit your time",
+    "all": "All",
+    "search": "Search posts",
+    "noResults": "No posts match.",
+    "latest": "Latest",
+    "open": "Read post",
     "title": "Blog",
     "subtitle": "Notes on engineering, design and things I'm building.",
+    "readTime": "{n} min read",
+    "next": "Keep reading",
     "back": "Back to blog",
     "published": "Published",
     "empty": "No posts yet — check back soon."
   },
   "detail": {
+    "prevProject": "Previous project",
+    "nextProject": "Next project",
+    "zoom": "Zoom",
+    "prev": "Previous image",
+    "next": "Next image",
+    "close": "Close",
+    "toc": "On this page",
     "back": "Back to projects",
     "published": "Published",
     "live": "Live preview",
@@ -66,6 +92,9 @@
     "englishOnly": "This case study is only available in English."
   },
   "contact": {
+    "copyEmail": "Copy email address",
+    "copied": "Copied",
+    "localTime": "My local time (Santo Domingo)",
     "title": "Contact",
     "intro": "Have a project, a role or just want to say hi? Send a message and I'll get back to you soon.",
     "email": "Email",
@@ -81,11 +110,50 @@
     "send": "Send message",
     "sending": "Sending",
     "sentOk": "Message sent — I'll get back to you soon.",
-    "sentError": "Something went wrong. Please email me directly instead."
+    "sentError": "Something went wrong. Please email me directly instead.",
+    "stampSent": "SENT",
+    "meanwhile": "Meanwhile, browse",
+    "meanwhileProjects": "projects",
+    "meanwhileBlog": "writing",
+    "draftRestored": "Draft restored — picking up where you left off.",
+    "draftDiscard": "Discard draft",
+    "startWith": "Start with a template",
+    "starters": {
+      "project": {
+        "label": "New project",
+        "subject": "Project inquiry",
+        "body": "Hi Sinver,\n\nI'd like to talk about a project.\n\nWhat it is:\nWho it's for:\nTimeline:\nBudget range:\n\nThanks!"
+      },
+      "role": {
+        "label": "Job opportunity",
+        "subject": "Role opportunity",
+        "body": "Hi Sinver,\n\nWe have a role I think could fit you.\n\nCompany:\nRole and seniority:\nStack:\nLocation / remote:\n\nThanks!"
+      },
+      "audit": {
+        "label": "Review my site",
+        "subject": "Site review request",
+        "body": "Hi Sinver,\n\nCould you take a look at my site or app?\n\nURL:\nWhat feels off:\nWhat I'd like to improve:\n\nThanks!"
+      },
+      "hi": {
+        "label": "Just saying hi",
+        "subject": "Hello",
+        "body": "Hi Sinver,\n\n"
+      }
+    }
   },
-  "sticky": {
-    "text": "Available — let's talk",
-    "dismiss": "Dismiss"
+  "palette": {
+    "hint": "Quick menu",
+    "placeholder": "Type a command or search…",
+    "empty": "No matches",
+    "go": "Go to {page}",
+    "lang": "Switch language to {lang}",
+    "cv": "Download CV",
+    "copyEmail": "Copy email address",
+    "copied": "Email copied",
+    "close": "Close",
+    "hintKeys": "↑↓ navigate · ↵ run · esc close",
+    "blueprint": "Toggle blueprint mode",
+    "resume": "View résumé"
   },
   "cta": {
     "title": "Let's build something",
@@ -93,6 +161,99 @@
     "button": "Get in touch"
   },
   "footer": {
-    "follow": "Follow me"
-  }
+    "emailLabel": "Prefer email?",
+    "copy": "Copy email",
+    "copied": "Copied ✓",
+    "pages": "Pages"
+  },
+  "brief": {
+    "title": "Start your brief",
+    "subtitle": "Pick what you need. I'll prefill the message so you only add the details.",
+    "needLabel": "I need",
+    "timeLabel": "Timing",
+    "needs": {
+      "web": "A website or web app",
+      "migration": "A migration",
+      "role": "A full-time hire",
+      "freelance": "Freelance help"
+    },
+    "times": {
+      "asap": "As soon as possible",
+      "month": "Within a month",
+      "explore": "Just exploring"
+    },
+    "send": "Draft my message",
+    "subj": "{need}",
+    "msg": "Hi Sinver,\n\nI'm looking for: {need}.\nTiming: {time}.\n\nSome context:\n"
+  },
+  "terminal": {
+    "title": "Terminal",
+    "subtitle": "Prefer a shell? Type a command or tap one. Everything it prints comes from my real projects and roles.",
+    "welcome": "Type 'help' to see what you can run.",
+    "openHint": "Run 'open N' to read one.",
+    "badIndex": "No project with that number.",
+    "notFound": "command not found, try 'help'",
+    "cvStart": "Downloading CV…",
+    "cmd": {
+      "help": "list commands",
+      "whoami": "who I am",
+      "projects": "list my projects",
+      "experience": "latest roles",
+      "cv": "download my CV",
+      "contact": "go to the contact page",
+      "clear": "clear the screen",
+      "open": "open a project by number"
+    }
+  },
+  "overlap": {
+    "kicker": "timezone check",
+    "title": "We share {n} working hours a day",
+    "titleNone": "Our days barely overlap, so I work async",
+    "note": "Based on a standard {start}:00-{end}:00 workday on both sides. Santo Domingo is UTC-4 year-round.",
+    "me": "Santo Domingo",
+    "you": "You",
+    "aria": "Working-hours overlap: {n} hours per day",
+    "legendBoth": "both online",
+    "legendOne": "one of us",
+    "legendNow": "now (my time)",
+    "same": "same timezone as me",
+    "ahead": "{n}h ahead of me",
+    "behind": "{n}h behind me",
+    "cta": "Book a call in our overlap"
+  },
+  "resume": {
+    "title": "Résumé",
+    "print": "Print / Save as PDF",
+    "skills": "Core skills"
+  },
+  "error": {
+    "label": "Error",
+    "notFoundTitle": "Lost in the stack",
+    "notFoundText": "This route doesn't exist. It may have moved, or the link is wrong. Here are the places that do.",
+    "errorTitle": "Something broke",
+    "errorText": "An unexpected error happened on my side. Try again or head somewhere safe.",
+    "path": "Requested path",
+    "home": "Back home",
+    "goto": "Go to",
+    "report": "Report a broken link",
+    "hint": "Press Ctrl/Cmd+K to search the site"
+  },
+  "impact": {
+    "kicker": "// measured result",
+    "claim": "Roughly 4x faster request processing on PSM, a national government platform in the Dominican Republic.",
+    "before": "Before",
+    "after": "After",
+    "migrated": "Legacy migrations (.NET, Rails, JSP → client-server & microservices) for"
+  },
+  "demos": {
+    "kicker": "// try it live",
+    "title": "Run the demos right here",
+    "lead": "Two of my small projects are hosted online. Load them inside the page and click around, no tab switching.",
+    "run": "Run live demo",
+    "note": "Loads the hosted site on click",
+    "open": "Open in new tab",
+    "case": "Read the case"
+  },
+  "similar": { "title": "Need something like this?", "cta": "Start a similar project", "subject": "A project like {title}", "message": "Hi Sinver, I saw {title} ({stack}) and I would like to build something similar. Here is what I have in mind:\n\n" },
+  "timeline": { "kicker": "// career at a glance", "title": "Timeline", "hint": "Select a bar to see the role. Bars are drawn from real start and end dates.", "jump": "Jump to details", "overlap": "Overlapping bars are roles held in parallel." }
 }

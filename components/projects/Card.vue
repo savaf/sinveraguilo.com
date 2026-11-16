@@ -18,7 +18,7 @@ const props = withDefaults(
   {
     to: undefined,
     fallback: "/images/projects/placeholder.svg",
-    accent: "#22d3ee",
+    accent: undefined,
     categoryChip: "",
     subtitleClass: "text-muted",
     imgClass: "h-[180px]",
@@ -31,14 +31,24 @@ const displayImage = computed(() => props.project.image ?? props.fallback ?? und
 
 // @nuxt/image can't rasterize SVGs to webp — serve those as-is.
 const isSvg = computed(() => displayImage.value?.endsWith(".svg") ?? false);
+
+// Shared-element morph: only the clicked card's title carries the transition name (names must be unique per page).
+const titleEl = ref<HTMLElement | null>(null);
+function onClick() {
+  document.querySelectorAll<HTMLElement>("[data-vt-title]").forEach((el) => (el.style.viewTransitionName = ""));
+  if (titleEl.value) titleEl.value.style.viewTransitionName = "project-title";
+}
+const cardStyle = computed(() => ({
+  ...(props.accent ? { "--accent": props.accent } : {}),
+}));
 </script>
 
 <template>
-  <NuxtLink :to="href" class="card block border-2 border-ink bg-surface" :style="{ '--accent': accent }" :aria-label="project.title">
+  <NuxtLink :to="href" class="card relative block border-2 border-ink bg-surface" :style="cardStyle" :aria-label="project.title" @click="onClick">
     <NuxtImg v-if="displayImage" :src="displayImage" :alt="project.title" width="380" height="190" :format="isSvg ? undefined : 'webp'" loading="lazy" class="w-full object-cover block border-b-2 border-ink" :class="imgClass" />
     <div class="p-5">
       <span v-if="categoryChip" class="inline-block font-mono text-[11px] text-ink-text bg-yellow px-2 py-[3px] mb-2.5">{{ categoryChip }}</span>
-      <div class="font-display font-extrabold text-primary-light text-[18px] uppercase leading-tight">{{ project.title }}</div>
+      <div ref="titleEl" data-vt-title class="font-display font-extrabold text-primary-light text-[18px] uppercase leading-tight">{{ project.title }}</div>
       <div class="font-mono text-xs mt-1.5" :class="subtitleClass">{{ subtitle }}</div>
     </div>
   </NuxtLink>

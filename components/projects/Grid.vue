@@ -5,6 +5,7 @@ const { data: projects } = await useAsyncData("all_projects", () => {
 
 const activeFilter = ref("All");
 const query = ref("");
+const localePath = useLocalePath();
 
 // Distinct categories present in the content, in a stable order
 const categories = computed(() => {
@@ -25,6 +26,14 @@ const filtered = computed(() => {
   });
 });
 
+// Surprise me: open a random project from whatever is currently filtered
+function surprise() {
+  const list = filtered.value as unknown as ProjectLike[];
+  if (!list.length) return;
+  const pick = list[Math.floor(Math.random() * list.length)];
+  navigateTo(localePath(`/projects/${pick.slug}`));
+}
+
 function chipClass(active: boolean) {
   return active ? "bg-yellow text-ink-text" : "bg-primary-dark text-muted hover:text-white";
 }
@@ -43,6 +52,10 @@ function chipClass(active: boolean) {
             {{ cat }}
           </button>
         </div>
+
+        <button type="button" class="border-2 border-ink bg-cyan text-ink-text px-4 py-2.5 font-display font-extrabold uppercase text-[13px] cursor-pointer transition-transform hover:-translate-y-0.5 disabled:opacity-40 disabled:cursor-not-allowed" :disabled="!filtered.length" @click="surprise">
+          🎲 {{ $t("projects.surprise") }}
+        </button>
 
         <div class="flex items-center border-2 border-ink bg-primary-dark">
           <span class="flex px-3 py-2.5 border-r-2 border-ink">

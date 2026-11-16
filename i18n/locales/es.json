@@ -13,6 +13,7 @@
     "available": "Disponible para proyectos",
     "eyebrow": "Ingeniero de Software",
     "tagline": "Convierto tu visión en realidad con código y diseño.",
+    "ctaContact": "Contáctame",
     "ctaWork": "Ver proyectos",
     "ctaCV": "Descargar CV",
     "label": "// ingeniería + diseño"
@@ -44,18 +45,43 @@
   "projects": {
     "title": "Proyectos",
     "subtitle": "Una selección de cosas que he diseñado y construido — desde landing pages hasta retos de front-end.",
+    "surprise": "Sorpréndeme",
     "filterAll": "Todos",
     "search": "Buscar proyectos",
     "noResults": "Ningún proyecto coincide con tu búsqueda."
   },
+  "code": { "copy": "Copiar", "copied": "Copiado ✓", "failed": "Usa Ctrl+C" },
+  "postReply": { "title": "¿Te sirvió este artículo?", "body": "Cuéntame qué funcionó, qué no o qué añadirías. Leo cada respuesta.", "btn": "Responder a este artículo", "subject": "Sobre tu artículo: {title}", "msg": "Hola Sinver,\n\nAcabo de leer \"{title}\" y quería decirte:\n\n" },
+  "headingLink": {
+    "copy": "Copiar enlace a esta sección",
+    "copied": "Enlace copiado",
+    "failed": "No se pudo copiar"
+  },
   "blog": {
+    "budget": "Tiempo disponible",
+    "any": "Cualquier duración",
+    "fit": "{n} de {total} caben en tu tiempo",
+    "all": "Todos",
+    "search": "Buscar posts",
+    "noResults": "Ningún post coincide.",
+    "latest": "Más reciente",
+    "open": "Leer post",
     "title": "Blog",
     "subtitle": "Notas sobre ingeniería, diseño y cosas que estoy construyendo.",
+    "readTime": "{n} min de lectura",
+    "next": "Sigue leyendo",
     "back": "Volver al blog",
     "published": "Publicado",
     "empty": "Aún no hay posts — vuelve pronto."
   },
   "detail": {
+    "prevProject": "Proyecto anterior",
+    "nextProject": "Proyecto siguiente",
+    "zoom": "Ampliar",
+    "prev": "Imagen anterior",
+    "next": "Imagen siguiente",
+    "close": "Cerrar",
+    "toc": "En esta página",
     "back": "Volver a proyectos",
     "published": "Publicado",
     "live": "Ver en vivo",
@@ -66,6 +92,9 @@
     "englishOnly": "Este case study solo está disponible en inglés."
   },
   "contact": {
+    "copyEmail": "Copiar correo",
+    "copied": "Copiado",
+    "localTime": "Mi hora local (Santo Domingo)",
     "title": "Contacto",
     "intro": "¿Tienes un proyecto, una vacante o solo quieres saludar? Envíame un mensaje y te responderé pronto.",
     "email": "Correo",
@@ -81,11 +110,50 @@
     "send": "Enviar mensaje",
     "sending": "Enviando",
     "sentOk": "Mensaje enviado — te responderé pronto.",
-    "sentError": "Algo salió mal. Por favor escríbeme directamente por correo."
+    "sentError": "Algo salió mal. Por favor escríbeme directamente por correo.",
+    "stampSent": "ENVIADO",
+    "meanwhile": "Mientras tanto, mira los",
+    "meanwhileProjects": "proyectos",
+    "meanwhileBlog": "artículos",
+    "draftRestored": "Borrador restaurado: seguimos donde lo dejaste.",
+    "draftDiscard": "Descartar borrador",
+    "startWith": "Empieza con una plantilla",
+    "starters": {
+      "project": {
+        "label": "Nuevo proyecto",
+        "subject": "Consulta sobre un proyecto",
+        "body": "Hola Sinver,\n\nMe gustaría hablar de un proyecto.\n\nDe qué se trata:\nPara quién es:\nPlazo:\nRango de presupuesto:\n\n¡Gracias!"
+      },
+      "role": {
+        "label": "Oferta de trabajo",
+        "subject": "Oportunidad laboral",
+        "body": "Hola Sinver,\n\nTenemos un puesto que creo que te encaja.\n\nEmpresa:\nPuesto y nivel:\nStack:\nUbicación / remoto:\n\n¡Gracias!"
+      },
+      "audit": {
+        "label": "Revisa mi sitio",
+        "subject": "Solicitud de revisión de sitio",
+        "body": "Hola Sinver,\n\n¿Podrías revisar mi sitio o app?\n\nURL:\nQué se siente mal:\nQué me gustaría mejorar:\n\n¡Gracias!"
+      },
+      "hi": {
+        "label": "Solo saludar",
+        "subject": "Hola",
+        "body": "Hola Sinver,\n\n"
+      }
+    }
   },
-  "sticky": {
-    "text": "Disponible — hablemos",
-    "dismiss": "Cerrar"
+  "palette": {
+    "hint": "Menú rápido",
+    "placeholder": "Escribe un comando o busca…",
+    "empty": "Sin resultados",
+    "go": "Ir a {page}",
+    "lang": "Cambiar idioma a {lang}",
+    "cv": "Descargar CV",
+    "copyEmail": "Copiar correo",
+    "copied": "Correo copiado",
+    "close": "Cerrar",
+    "hintKeys": "↑↓ navegar · ↵ ejecutar · esc cerrar",
+    "blueprint": "Alternar modo plano",
+    "resume": "Ver currículum"
   },
   "cta": {
     "title": "Construyamos algo",
@@ -93,6 +161,99 @@
     "button": "Contáctame"
   },
   "footer": {
-    "follow": "Sígueme"
-  }
+    "emailLabel": "¿Prefieres correo?",
+    "copy": "Copiar correo",
+    "copied": "Copiado ✓",
+    "pages": "Páginas"
+  },
+  "brief": {
+    "title": "Empieza tu brief",
+    "subtitle": "Elige lo que necesitas. Yo relleno el mensaje y tú solo añades los detalles.",
+    "needLabel": "Necesito",
+    "timeLabel": "Plazo",
+    "needs": {
+      "web": "Un sitio o app web",
+      "migration": "Una migración",
+      "role": "Una contratación full-time",
+      "freelance": "Ayuda freelance"
+    },
+    "times": {
+      "asap": "Lo antes posible",
+      "month": "En el próximo mes",
+      "explore": "Solo explorando"
+    },
+    "send": "Redactar mi mensaje",
+    "subj": "{need}",
+    "msg": "Hola Sinver,\n\nBusco: {need}.\nPlazo: {time}.\n\nContexto:\n"
+  },
+  "terminal": {
+    "title": "Terminal",
+    "subtitle": "¿Prefieres una shell? Escribe un comando o toca uno. Todo lo que imprime viene de mis proyectos y roles reales.",
+    "welcome": "Escribe 'help' para ver qué puedes ejecutar.",
+    "openHint": "Ejecuta 'open N' para leer uno.",
+    "badIndex": "No hay un proyecto con ese número.",
+    "notFound": "comando no encontrado, prueba 'help'",
+    "cvStart": "Descargando CV…",
+    "cmd": {
+      "help": "lista los comandos",
+      "whoami": "quién soy",
+      "projects": "lista mis proyectos",
+      "experience": "últimos roles",
+      "cv": "descarga mi CV",
+      "contact": "ir a la página de contacto",
+      "clear": "limpia la pantalla",
+      "open": "abre un proyecto por número"
+    }
+  },
+  "overlap": {
+    "kicker": "chequeo de zona horaria",
+    "title": "Compartimos {n} horas laborales al día",
+    "titleNone": "Nuestros días casi no coinciden, así que trabajo asíncrono",
+    "note": "Basado en una jornada estándar de {start}:00 a {end}:00 en ambos lados. Santo Domingo es UTC-4 todo el año.",
+    "me": "Santo Domingo",
+    "you": "Tú",
+    "aria": "Solape de horario laboral: {n} horas al día",
+    "legendBoth": "ambos en línea",
+    "legendOne": "uno de los dos",
+    "legendNow": "ahora (mi hora)",
+    "same": "misma zona horaria que yo",
+    "ahead": "{n}h por delante de mí",
+    "behind": "{n}h por detrás de mí",
+    "cta": "Agenda una llamada en nuestro solape"
+  },
+  "resume": {
+    "title": "Currículum",
+    "print": "Imprimir / Guardar PDF",
+    "skills": "Habilidades clave"
+  },
+  "error": {
+    "label": "Error",
+    "notFoundTitle": "Perdido en el stack",
+    "notFoundText": "Esta ruta no existe. Puede que se haya movido o que el enlace esté mal. Estos son los lugares que sí existen.",
+    "errorTitle": "Algo se rompió",
+    "errorText": "Ocurrió un error inesperado de mi lado. Intenta de nuevo o ve a un lugar seguro.",
+    "path": "Ruta solicitada",
+    "home": "Volver al inicio",
+    "goto": "Ir a",
+    "report": "Reportar un enlace roto",
+    "hint": "Presiona Ctrl/Cmd+K para buscar en el sitio"
+  },
+  "impact": {
+    "kicker": "// resultado medido",
+    "claim": "Procesamiento de solicitudes aproximadamente 4x más rápido en PSM, una plataforma de gobierno nacional en República Dominicana.",
+    "before": "Antes",
+    "after": "Después",
+    "migrated": "Migraciones de sistemas legados (.NET, Rails, JSP → cliente-servidor y microservicios) para"
+  },
+  "demos": {
+    "kicker": "// pruébalo en vivo",
+    "title": "Ejecuta las demos aquí mismo",
+    "lead": "Dos de mis proyectos pequeños están publicados en línea. Cárgalos dentro de la página y pruébalos, sin cambiar de pestaña.",
+    "run": "Ejecutar demo en vivo",
+    "note": "Carga el sitio publicado al hacer clic",
+    "open": "Abrir en pestaña nueva",
+    "case": "Leer el caso"
+  },
+  "similar": { "title": "¿Necesitas algo así?", "cta": "Empezar un proyecto similar", "subject": "Un proyecto como {title}", "message": "Hola Sinver, vi {title} ({stack}) y me gustaría construir algo parecido. Esto es lo que tengo en mente:\n\n" },
+  "timeline": { "kicker": "// carrera de un vistazo", "title": "Línea de tiempo", "hint": "Selecciona una barra para ver el rol. Las barras salen de fechas reales de inicio y fin.", "jump": "Ir al detalle", "overlap": "Las barras superpuestas son roles en paralelo." }
 }

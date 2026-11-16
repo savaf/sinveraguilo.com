@@ -6,7 +6,6 @@ useHead({
     lang: appConfig.lang as string,
   },
   title: appConfig.title as string,
-  titleTemplate: (title) => (title !== (appConfig.title as string) ? `${title} · ${appConfig.title}` : title),
 });
 </script>
 <template>

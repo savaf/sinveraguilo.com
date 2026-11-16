@@ -7,28 +7,24 @@ function titleTemplate(title: string) {
   return title !== (appConfig.title as string) ? `${appConfig.title} · ${title}` : title;
 }
 
-const pageTitle = route.meta.title ? t(route.meta.title as string) : (appConfig.title as string);
-const pageDescription = route.meta.description ? t(route.meta.description as string) : t("seo.description");
-
-let seoMetaOptions: Record<string, string> = {
-  title: titleTemplate(pageTitle),
-  url: appConfig.url + route.path,
-  description: pageDescription,
-  icon: "/images/og-logo.png",
-};
-
-const ogImage = route.meta.image ? route.meta.image : "/images/og-image.png";
-seoMetaOptions.ogImage = ogImage;
-seoMetaOptions.twitterImage = ogImage;
+const pageTitle = computed(() => (route.meta.title ? t(route.meta.title as string) : (appConfig.title as string)));
+const pageDescription = computed(() => (route.meta.description ? t(route.meta.description as string) : t("seo.description")));
+const fullTitle = computed(() => titleTemplate(pageTitle.value));
+const pageUrl = computed(() => appConfig.url + route.path);
+const ogImage = computed(() => (route.meta.image ? (route.meta.image as string) : "/images/og-image.png"));
 
 useSeoMeta({
-  ...seoMetaOptions,
-  ogTitle: seoMetaOptions.title,
-  ogDescription: seoMetaOptions.description,
-  ogUrl: seoMetaOptions.url,
-
-  twitterTitle: seoMetaOptions.title,
-  twitterDescription: seoMetaOptions.description,
+  title: () => fullTitle.value,
+  url: () => pageUrl.value,
+  description: () => pageDescription.value,
+  icon: "/images/og-logo.png",
+  ogImage: () => ogImage.value,
+  twitterImage: () => ogImage.value,
+  ogTitle: () => fullTitle.value,
+  ogDescription: () => pageDescription.value,
+  ogUrl: () => pageUrl.value,
+  twitterTitle: () => fullTitle.value,
+  twitterDescription: () => pageDescription.value,
   twitterCard: "summary",
 });
 
@@ -49,8 +45,6 @@ useHead(() => ({
     </main>
 
     <LazySharedAppFooter />
-
-    <ClientOnly><SharedStickyCta /></ClientOnly>
 
     <!-- Go back to top when scrolled down -->
     <div class="flex space-x-2 mr-8 mb-6 right-0 bottom-0 z-50 fixed items-center sm:space-x-4">
