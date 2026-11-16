@@ -69,6 +69,7 @@ export default defineNuxtConfig({
   },
 
   nitro: {
+    watchOptions: { ignored: ["**/.claude/**", "**/node_modules/**"] },
     prerender: {
       autoSubfolderIndex: false,
       crawlLinks: true,
@@ -164,6 +165,10 @@ export default defineNuxtConfig({
   content: {
     // ... options
   },
+
+  // Los worktrees de agentes viven en .claude/ dentro del repo; sin esto, el watcher de Nuxt
+  // y el de Nitro los recorren y `nuxt dev` agota la memoria (>4 GB, Nitro tarda ~3 min).
+  ignore: [".claude/**"],
 
   compatibilityDate: "2026-07-14",
 });
