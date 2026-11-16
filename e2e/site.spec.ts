@@ -26,9 +26,9 @@ for (const { lang, prefix } of langs) {
   });
 
   test.describe(`home [${lang}]`, () => {
-    test("has 7 sections and a single #brief", async ({ page }) => {
+    test("has 4 sections and a single #brief", async ({ page }) => {
       await page.goto(url(prefix, "/"));
-      await expect(page.locator("[data-home-section]")).toHaveCount(7);
+      await expect(page.locator("[data-home-section]")).toHaveCount(4);
       await expect(page.locator("#brief")).toHaveCount(1);
     });
 

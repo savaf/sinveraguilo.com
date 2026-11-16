@@ -168,10 +168,6 @@
     "copied": "Copiado ✓",
     "pages": "Páginas"
   },
-  "careerLog": {
-    "title": "Bitácora de carrera",
-    "all": "Experiencia completa"
-  },
   "brief": {
     "title": "Empieza tu brief",
     "subtitle": "Elige lo que necesitas. Yo relleno el mensaje y tú solo añades los detalles.",
@@ -191,13 +187,6 @@
     "send": "Redactar mi mensaje",
     "subj": "{need}",
     "msg": "Hola Sinver,\n\nBusco: {need}.\nPlazo: {time}.\n\nContexto:\n"
-  },
-  "stack": {
-    "title": "Explorador de stack",
-    "subtitle": "Cada habilidad de mis roles, dimensionada por meses de uso real. Haz clic en una para ver dónde la usé.",
-    "hint": "Selecciona una habilidad para ver los roles detrás.",
-    "years": "años",
-    "months": "meses"
   },
   "terminal": {
     "title": "Terminal",
@@ -257,46 +246,6 @@
     "before": "Antes",
     "after": "Después",
     "migrated": "Migraciones de sistemas legados (.NET, Rails, JSP → cliente-servidor y microservicios) para"
-  },
-  "process": {
-    "kicker": "// cómo trabajaríamos",
-    "title": "Del brief a producción en cuatro pasos",
-    "cta": "Empezar con el paso 01",
-    "steps": [
-      {
-        "t": "Brief",
-        "d": "Me cuentas el problema, la restricción y la fecha. No hace falta una presentación."
-      },
-      {
-        "t": "Alcance",
-        "d": "Te respondo con un plan en lenguaje claro: qué sale primero, qué espera y qué omitiría."
-      },
-      {
-        "t": "Construcción",
-        "d": "Incrementos pequeños en un repo compartido, con CI desde el primer día."
-      },
-      {
-        "t": "Entrega",
-        "d": "Desplegado, documentado y entregado para que tu equipo lo mantenga."
-      }
-    ]
-  },
-  "faq": {
-    "title": "Preguntas que quizá tengas",
-    "items": [
-      {
-        "q": "¿Necesito una especificación primero?",
-        "a": "No. Cuéntame el problema, la restricción y la fecha límite. Te respondo con un plan en lenguaje claro."
-      },
-      {
-        "q": "¿Para qué puedo contratarte?",
-        "a": "Un sitio o app web, una migración, un puesto a tiempo completo o ayuda freelance. El constructor de brief de abajo cubre los cuatro."
-      },
-      {
-        "q": "¿De quién es el resultado?",
-        "a": "De tu equipo. El trabajo se entrega desplegado y documentado, y se traspasa para que lo hagas tuyo."
-      }
-    ]
   },
   "perf": { "kicker": "// rendimiento, en vivo", "title": "El recibo de esta página, medido en tu dispositivo", "lead": "Sin números de laboratorio ni capturas. Son los tiempos reales que tu navegador registró al cargar esta página, leídos con la Performance API.", "measuring": "Midiendo…", "good": "dentro del umbral recomendado", "slow": "por encima del umbral recomendado", "note": "Los valores varían según tu red, dispositivo y caché. Los umbrales son los límites \"buenos\" de Core Web Vitals de Google (LCP 2,5 s, CLS 0,1) más 1,8 s para FCP y 800 ms para TTFB.", "rows": { "ttfb": { "t": "Respuesta del servidor (TTFB)", "d": "Tiempo hasta el primer byte" }, "fcp": { "t": "Primer pintado con contenido (FCP)", "d": "First Contentful Paint" }, "lcp": { "t": "Elemento más grande (LCP)", "d": "Largest Contentful Paint" }, "cls": { "t": "Salto de diseño (CLS)", "d": "Cumulative Layout Shift" }, "bytes": { "t": "Transferido hasta ahora", "d": "Bytes por la red, 0 si está en caché" }, "dom": { "t": "Elementos DOM", "d": "Elementos en la página ahora mismo" } } },
   "a11y": {
@@ -386,19 +335,6 @@
         "v": "Una página de currículum hecha con el mismo contenido del sitio, lista para Guardar como PDF."
       }
     }
-  },
-  "fit": {
-    "title": "Compatibilidad de stack",
-    "subtitle": "Escribe las tecnologías que necesita tu proyecto. Las comparo con las habilidades de mis roles reales y marco lo que conviene preguntarme.",
-    "label": "Tu stack",
-    "placeholder": "ej. Vue, Node, PostgreSQL",
-    "try": "Prueba:",
-    "empty": "Agrega algunas tecnologías, separadas por comas.",
-    "summary": "{m} de {n} aparecen en mis roles",
-    "ask": "pregúntame",
-    "cta": "Enviarme este stack",
-    "subj": "Compatibilidad de stack",
-    "msg": "Mi stack: {stack}\nCubierto por tus roles: {have} ({pct}%)\n\nSobre el proyecto: "
   },
   "timeline": { "kicker": "// carrera de un vistazo", "title": "Línea de tiempo", "hint": "Selecciona una barra para ver el rol. Las barras salen de fechas reales de inicio y fin.", "jump": "Ir al detalle", "overlap": "Las barras superpuestas son roles en paralelo." }
 }

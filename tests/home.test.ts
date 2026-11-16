@@ -3,19 +3,19 @@ import { describe, expect, it } from "vitest";
 import { ROOT, read } from "./helpers";
 import { join } from "node:path";
 
-describe("home is 7 sections + footer", () => {
+describe("home is 4 sections + footer", () => {
   const index = read("pages/index.vue");
 
-  it("has exactly 7 section groups", () => {
-    expect([...index.matchAll(/data-home-section/g)]).toHaveLength(7);
+  it("has exactly 4 section groups", () => {
+    expect([...index.matchAll(/data-home-section/g)]).toHaveLength(4);
   });
 
-  it("keeps hero, proof strip, featured, career log, stack + fit check, process, brief", () => {
-    for (const c of ["SectionHero", "SharedStatsBar", "SectionImpact", "SectionFeatured", "SectionCareerLog", "SectionStackExplorer", "SectionFitCheck", "SectionProcess", "SectionBriefBuilder"]) expect(index).toContain(`<${c} `);
+  it("keeps hero, proof strip, featured, brief", () => {
+    for (const c of ["SectionHero", "SharedStatsBar", "SectionImpact", "SectionFeatured", "SectionBriefBuilder"]) expect(index).toContain(`<${c} `);
   });
 
   it("drops cut sections and the second contact close", () => {
-    expect(index).not.toMatch(/SectionManifesto|SectionRail|SectionWriting|SectionFaq|SharedCtaBand|SectionA11yLive|SectionPerfReceipt|SectionLiveDemos|SectionTerminal|SectionTimeOverlap/);
+    expect(index).not.toMatch(/SectionManifesto|SectionRail|SectionWriting|SectionFaq|SharedCtaBand|SectionA11yLive|SectionPerfReceipt|SectionLiveDemos|SectionTerminal|SectionTimeOverlap|SectionCareerLog|SectionStackExplorer|SectionFitCheck|SectionProcess/);
   });
 
   it("no global sticky CTA", () => {
@@ -23,9 +23,7 @@ describe("home is 7 sections + footer", () => {
     expect(existsSync(join(ROOT, "components/shared/StickyCta.vue"))).toBe(false);
   });
 
-  it("FAQ is folded into Process with 3 questions", () => {
-    expect(existsSync(join(ROOT, "components/section/Faq.vue"))).toBe(false);
-    expect(read("components/section/Process.vue")).toMatch(/faq\.items/);
-    for (const l of ["en", "es"]) expect(JSON.parse(read(`i18n/locales/${l}.json`)).faq.items).toHaveLength(3);
+  it("career log, stack explorer, fit check and process are gone", () => {
+    for (const c of ["CareerLog", "StackExplorer", "FitCheck", "Process", "Faq"]) expect(existsSync(join(ROOT, `components/section/${c}.vue`))).toBe(false);
   });
 });

@@ -36,7 +36,6 @@ describe("cut page gadgets", () => {
 
   it("resume has no tailor lens, process has no progress bar, contact has no email preview", () => {
     expect(read("pages/resume.vue")).not.toMatch(/lens\.|picked/);
-    expect(read("components/section/Process.vue")).not.toMatch(/progress|scroll/);
     expect(read("components/contact/Form.vue")).not.toMatch(/mail-preview|contact\.preview/);
   });
 

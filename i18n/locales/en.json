@@ -168,10 +168,6 @@
     "copied": "Copied ✓",
     "pages": "Pages"
   },
-  "careerLog": {
-    "title": "Career log",
-    "all": "Full experience"
-  },
   "brief": {
     "title": "Start your brief",
     "subtitle": "Pick what you need. I'll prefill the message so you only add the details.",
@@ -191,13 +187,6 @@
     "send": "Draft my message",
     "subj": "{need}",
     "msg": "Hi Sinver,\n\nI'm looking for: {need}.\nTiming: {time}.\n\nSome context:\n"
-  },
-  "stack": {
-    "title": "Stack explorer",
-    "subtitle": "Every skill from my roles, sized by months of real use. Click one to see where I used it.",
-    "hint": "Select a skill to see the roles behind it.",
-    "years": "yrs",
-    "months": "mo"
   },
   "terminal": {
     "title": "Terminal",
@@ -257,46 +246,6 @@
     "before": "Before",
     "after": "After",
     "migrated": "Legacy migrations (.NET, Rails, JSP → client-server & microservices) for"
-  },
-  "process": {
-    "kicker": "// how we'd work",
-    "title": "From brief to shipped, in four moves",
-    "cta": "Start with step 01",
-    "steps": [
-      {
-        "t": "Brief",
-        "d": "You tell me the problem, the constraint and the deadline. No deck needed."
-      },
-      {
-        "t": "Scope",
-        "d": "I reply with a plain-language plan: what ships first, what waits, what I'd skip."
-      },
-      {
-        "t": "Build",
-        "d": "Small increments in a shared repo, with CI running from day one."
-      },
-      {
-        "t": "Ship",
-        "d": "Deployed, documented and handed over so your team can own it."
-      }
-    ]
-  },
-  "faq": {
-    "title": "Questions you may have",
-    "items": [
-      {
-        "q": "Do I need a spec first?",
-        "a": "No. Tell me the problem, the constraint and the deadline. I reply with a plain-language plan."
-      },
-      {
-        "q": "What can I hire you for?",
-        "a": "A website or web app, a migration, a full-time role or freelance help. The brief builder below covers all four."
-      },
-      {
-        "q": "Who owns the result?",
-        "a": "Your team. Work ships deployed and documented, then gets handed over so you can own it."
-      }
-    ]
   },
   "perf": { "kicker": "// performance, live", "title": "The receipt for this page, measured on your device", "lead": "No lab numbers, no screenshots. These are the real timings your browser recorded while loading this page, read through the Performance API.", "measuring": "Measuring…", "good": "within the recommended threshold", "slow": "above the recommended threshold", "note": "Values vary with your network, device and cache. Thresholds are Google's \"good\" Core Web Vitals limits (LCP 2.5 s, CLS 0.1) plus 1.8 s for FCP and 800 ms for TTFB.", "rows": { "ttfb": { "t": "Server response (TTFB)", "d": "Time to first byte" }, "fcp": { "t": "First paint with content (FCP)", "d": "First Contentful Paint" }, "lcp": { "t": "Largest element (LCP)", "d": "Largest Contentful Paint" }, "cls": { "t": "Layout shift (CLS)", "d": "Cumulative Layout Shift" }, "bytes": { "t": "Transferred so far", "d": "Bytes over the network, 0 if cached" }, "dom": { "t": "DOM elements", "d": "Elements in the page right now" } } },
   "a11y": {
@@ -386,19 +335,6 @@
         "v": "A résumé page built from the same content as the site, ready for Save as PDF."
       }
     }
-  },
-  "fit": {
-    "title": "Stack fit check",
-    "subtitle": "Type the technologies your project needs. I'll check them against the skills from my real roles, and flag what to ask me about.",
-    "label": "Your stack",
-    "placeholder": "e.g. Vue, Node, PostgreSQL",
-    "try": "Try:",
-    "empty": "Add a few technologies, separated by commas.",
-    "summary": "{m} of {n} found in my roles",
-    "ask": "ask me",
-    "cta": "Send this stack to me",
-    "subj": "Stack fit check",
-    "msg": "My stack: {stack}\nCovered by your roles: {have} ({pct}%)\n\nAbout the project: "
   },
   "timeline": { "kicker": "// career at a glance", "title": "Timeline", "hint": "Select a bar to see the role. Bars are drawn from real start and end dates.", "jump": "Jump to details", "overlap": "Overlapping bars are roles held in parallel." }
 }
