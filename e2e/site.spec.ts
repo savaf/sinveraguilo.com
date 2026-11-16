@@ -2,7 +2,7 @@ import { readdirSync } from "node:fs";
 import { expect, test } from "@playwright/test";
 
 const slugs = (dir: string) => readdirSync(`content/${dir}`).map((f) => f.replace(/^\d+\./, "").replace(/\.md$/, ""));
-const pages = ["/", "/projects", "/blog", "/contact", "/about", "/colophon", "/resume"];
+const pages = ["/", "/projects", "/blog", "/contact", "/about", "/resume"];
 const routes = [...pages, ...slugs("projects").map((s) => `/projects/${s}`), ...slugs("blog").map((s) => `/blog/${s}`)];
 const langs = [
   { lang: "en", prefix: "" },
@@ -26,9 +26,9 @@ for (const { lang, prefix } of langs) {
   });
 
   test.describe(`home [${lang}]`, () => {
-    test("has 7 sections and a single #brief", async ({ page }) => {
+    test("has 4 sections and a single #brief", async ({ page }) => {
       await page.goto(url(prefix, "/"));
-      await expect(page.locator("[data-home-section]")).toHaveCount(7);
+      await expect(page.locator("[data-home-section]")).toHaveCount(4);
       await expect(page.locator("#brief")).toHaveCount(1);
     });
 

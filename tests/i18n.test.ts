@@ -34,7 +34,7 @@ describe("i18n locale files", () => {
   });
 
   // Technical strings that are legitimately identical in both languages.
-  const SAME_OK = new Set(["colophon.specs.type.v"]);
+  const SAME_OK = new Set<string>();
   it("es is actually translated (no long message identical to en)", () => {
     const same = Object.keys(flat.en).filter((k) => typeof flat.en[k] === "string" && (flat.en[k] as string).length > 40 && !SAME_OK.has(k) && flat.en[k] === flat.es[k]);
     expect(same).toEqual([]);

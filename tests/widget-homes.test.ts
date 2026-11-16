@@ -3,7 +3,6 @@ import { read } from "./helpers";
 
 // #97: each moved widget lives on exactly one page.
 const homes: Record<string, string[]> = {
-  "pages/colophon.vue": ["SectionA11yLive", "SectionPerfReceipt"],
   "pages/about.vue": ["SectionTerminal"],
   "pages/projects/[slug].vue": ["SectionLiveDemos"],
   "pages/contact.vue": ["SectionTimeOverlap"],

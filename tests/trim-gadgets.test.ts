@@ -36,7 +36,6 @@ describe("cut page gadgets", () => {
 
   it("resume has no tailor lens, process has no progress bar, contact has no email preview", () => {
     expect(read("pages/resume.vue")).not.toMatch(/lens\.|picked/);
-    expect(read("components/section/Process.vue")).not.toMatch(/progress|scroll/);
     expect(read("components/contact/Form.vue")).not.toMatch(/mail-preview|contact\.preview/);
   });
 
@@ -50,6 +49,6 @@ describe("cut page gadgets", () => {
 
   it("every page route still exists", () => {
     const pages = walk("pages", [".vue"]);
-    for (const p of ["pages/index.vue", "pages/about.vue", "pages/contact.vue", "pages/resume.vue", "pages/colophon.vue", "pages/blog/index.vue", "pages/blog/[slug].vue", "pages/projects/index.vue", "pages/projects/[slug].vue"]) expect(pages).toContain(p);
+    for (const p of ["pages/index.vue", "pages/about.vue", "pages/contact.vue", "pages/resume.vue", "pages/blog/index.vue", "pages/blog/[slug].vue", "pages/projects/index.vue", "pages/projects/[slug].vue"]) expect(pages).toContain(p);
   });
 });

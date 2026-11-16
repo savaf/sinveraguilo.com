@@ -7,8 +7,7 @@
     "about": "About",
     "projects": "Projects",
     "blog": "Blog",
-    "contact": "Contact",
-    "colophon": "Colophon"
+    "contact": "Contact"
   },
   "hero": {
     "available": "Available for work",
@@ -154,8 +153,7 @@
     "close": "Close",
     "hintKeys": "↑↓ navigate · ↵ run · esc close",
     "blueprint": "Toggle blueprint mode",
-    "resume": "View résumé",
-    "colophon": "View colophon (how this site is made)"
+    "resume": "View résumé"
   },
   "cta": {
     "title": "Let's build something",
@@ -167,10 +165,6 @@
     "copy": "Copy email",
     "copied": "Copied ✓",
     "pages": "Pages"
-  },
-  "careerLog": {
-    "title": "Career log",
-    "all": "Full experience"
   },
   "brief": {
     "title": "Start your brief",
@@ -191,13 +185,6 @@
     "send": "Draft my message",
     "subj": "{need}",
     "msg": "Hi Sinver,\n\nI'm looking for: {need}.\nTiming: {time}.\n\nSome context:\n"
-  },
-  "stack": {
-    "title": "Stack explorer",
-    "subtitle": "Every skill from my roles, sized by months of real use. Click one to see where I used it.",
-    "hint": "Select a skill to see the roles behind it.",
-    "years": "yrs",
-    "months": "mo"
   },
   "terminal": {
     "title": "Terminal",
@@ -258,73 +245,6 @@
     "after": "After",
     "migrated": "Legacy migrations (.NET, Rails, JSP → client-server & microservices) for"
   },
-  "process": {
-    "kicker": "// how we'd work",
-    "title": "From brief to shipped, in four moves",
-    "cta": "Start with step 01",
-    "steps": [
-      {
-        "t": "Brief",
-        "d": "You tell me the problem, the constraint and the deadline. No deck needed."
-      },
-      {
-        "t": "Scope",
-        "d": "I reply with a plain-language plan: what ships first, what waits, what I'd skip."
-      },
-      {
-        "t": "Build",
-        "d": "Small increments in a shared repo, with CI running from day one."
-      },
-      {
-        "t": "Ship",
-        "d": "Deployed, documented and handed over so your team can own it."
-      }
-    ]
-  },
-  "faq": {
-    "title": "Questions you may have",
-    "items": [
-      {
-        "q": "Do I need a spec first?",
-        "a": "No. Tell me the problem, the constraint and the deadline. I reply with a plain-language plan."
-      },
-      {
-        "q": "What can I hire you for?",
-        "a": "A website or web app, a migration, a full-time role or freelance help. The brief builder below covers all four."
-      },
-      {
-        "q": "Who owns the result?",
-        "a": "Your team. Work ships deployed and documented, then gets handed over so you can own it."
-      }
-    ]
-  },
-  "perf": { "kicker": "// performance, live", "title": "The receipt for this page, measured on your device", "lead": "No lab numbers, no screenshots. These are the real timings your browser recorded while loading this page, read through the Performance API.", "measuring": "Measuring…", "good": "within the recommended threshold", "slow": "above the recommended threshold", "note": "Values vary with your network, device and cache. Thresholds are Google's \"good\" Core Web Vitals limits (LCP 2.5 s, CLS 0.1) plus 1.8 s for FCP and 800 ms for TTFB.", "rows": { "ttfb": { "t": "Server response (TTFB)", "d": "Time to first byte" }, "fcp": { "t": "First paint with content (FCP)", "d": "First Contentful Paint" }, "lcp": { "t": "Largest element (LCP)", "d": "Largest Contentful Paint" }, "cls": { "t": "Layout shift (CLS)", "d": "Cumulative Layout Shift" }, "bytes": { "t": "Transferred so far", "d": "Bytes over the network, 0 if cached" }, "dom": { "t": "DOM elements", "d": "Elements in the page right now" } } },
-  "a11y": {
-    "kicker": "// accessibility, live",
-    "title": "Don't take my word for it. Try it.",
-    "lead": "I build to WCAG 2.1 AA. These switches change this very page, so you can see how the site adapts to different needs. Your choice is saved in this browser.",
-    "on": "On",
-    "off": "Off",
-    "reset": "Reset all",
-    "modes": {
-      "text": {
-        "t": "Larger text",
-        "d": "Scales type up 25%."
-      },
-      "contrast": {
-        "t": "High contrast",
-        "d": "Sharper separation between text and background."
-      },
-      "motion": {
-        "t": "No motion",
-        "d": "Stops animations and transitions."
-      },
-      "spacing": {
-        "t": "Easy reading",
-        "d": "More line, letter and word spacing."
-      }
-    }
-  },
   "demos": {
     "kicker": "// try it live",
     "title": "Run the demos right here",
@@ -335,70 +255,5 @@
     "case": "Read the case"
   },
   "similar": { "title": "Need something like this?", "cta": "Start a similar project", "subject": "A project like {title}", "message": "Hi Sinver, I saw {title} ({stack}) and I would like to build something similar. Here is what I have in mind:\n\n" },
-  "colophon": {
-    "label": "// how this site is made",
-    "title": "Colophon",
-    "intro": "No template, no page builder. This site is a hand-built Nuxt app, and this page lists what it is made of and the details I sweated over.",
-    "specsTitle": "Stack",
-    "featuresTitle": "Details worth a look",
-    "hint": "Tip: press Ctrl/⌘ K anywhere on the site.",
-    "specs": {
-      "framework": {
-        "k": "framework",
-        "v": "Nuxt 3 · Vue 3"
-      },
-      "style": {
-        "k": "styling",
-        "v": "Tailwind CSS 4"
-      },
-      "content": {
-        "k": "content",
-        "v": "{'@'}nuxt/content (Markdown + JSON)"
-      },
-      "i18n": {
-        "k": "languages",
-        "v": "English / Español via {'@'}nuxtjs/i18n"
-      },
-      "type": {
-        "k": "type",
-        "v": "Archivo, Inter, Space Grotesk, JetBrains Mono"
-      },
-      "icons": {
-        "k": "seo",
-        "v": "Sitemap, hreflang alternates, OG tags"
-      },
-      "host": {
-        "k": "package mgr",
-        "v": "pnpm"
-      }
-    },
-    "features": {
-      "palette": {
-        "k": "Command palette",
-        "v": "Ctrl/⌘ K opens a quick menu to jump pages, switch language, or copy my email."
-      },
-      "a11y": {
-        "k": "Accessibility switches",
-        "v": "Text size, contrast, motion and spacing adjustable on the home page."
-      },
-      "resume": {
-        "k": "Printable résumé",
-        "v": "A résumé page built from the same content as the site, ready for Save as PDF."
-      }
-    }
-  },
-  "fit": {
-    "title": "Stack fit check",
-    "subtitle": "Type the technologies your project needs. I'll check them against the skills from my real roles, and flag what to ask me about.",
-    "label": "Your stack",
-    "placeholder": "e.g. Vue, Node, PostgreSQL",
-    "try": "Try:",
-    "empty": "Add a few technologies, separated by commas.",
-    "summary": "{m} of {n} found in my roles",
-    "ask": "ask me",
-    "cta": "Send this stack to me",
-    "subj": "Stack fit check",
-    "msg": "My stack: {stack}\nCovered by your roles: {have} ({pct}%)\n\nAbout the project: "
-  },
   "timeline": { "kicker": "// career at a glance", "title": "Timeline", "hint": "Select a bar to see the role. Bars are drawn from real start and end dates.", "jump": "Jump to details", "overlap": "Overlapping bars are roles held in parallel." }
 }

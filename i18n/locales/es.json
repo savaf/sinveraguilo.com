@@ -7,8 +7,7 @@
     "about": "Sobre mí",
     "projects": "Proyectos",
     "blog": "Blog",
-    "contact": "Contacto",
-    "colophon": "Colofón"
+    "contact": "Contacto"
   },
   "hero": {
     "available": "Disponible para proyectos",
@@ -154,8 +153,7 @@
     "close": "Cerrar",
     "hintKeys": "↑↓ navegar · ↵ ejecutar · esc cerrar",
     "blueprint": "Alternar modo plano",
-    "resume": "Ver currículum",
-    "colophon": "Ver colofón (cómo está hecho)"
+    "resume": "Ver currículum"
   },
   "cta": {
     "title": "Construyamos algo",
@@ -167,10 +165,6 @@
     "copy": "Copiar correo",
     "copied": "Copiado ✓",
     "pages": "Páginas"
-  },
-  "careerLog": {
-    "title": "Bitácora de carrera",
-    "all": "Experiencia completa"
   },
   "brief": {
     "title": "Empieza tu brief",
@@ -191,13 +185,6 @@
     "send": "Redactar mi mensaje",
     "subj": "{need}",
     "msg": "Hola Sinver,\n\nBusco: {need}.\nPlazo: {time}.\n\nContexto:\n"
-  },
-  "stack": {
-    "title": "Explorador de stack",
-    "subtitle": "Cada habilidad de mis roles, dimensionada por meses de uso real. Haz clic en una para ver dónde la usé.",
-    "hint": "Selecciona una habilidad para ver los roles detrás.",
-    "years": "años",
-    "months": "meses"
   },
   "terminal": {
     "title": "Terminal",
@@ -258,73 +245,6 @@
     "after": "Después",
     "migrated": "Migraciones de sistemas legados (.NET, Rails, JSP → cliente-servidor y microservicios) para"
   },
-  "process": {
-    "kicker": "// cómo trabajaríamos",
-    "title": "Del brief a producción en cuatro pasos",
-    "cta": "Empezar con el paso 01",
-    "steps": [
-      {
-        "t": "Brief",
-        "d": "Me cuentas el problema, la restricción y la fecha. No hace falta una presentación."
-      },
-      {
-        "t": "Alcance",
-        "d": "Te respondo con un plan en lenguaje claro: qué sale primero, qué espera y qué omitiría."
-      },
-      {
-        "t": "Construcción",
-        "d": "Incrementos pequeños en un repo compartido, con CI desde el primer día."
-      },
-      {
-        "t": "Entrega",
-        "d": "Desplegado, documentado y entregado para que tu equipo lo mantenga."
-      }
-    ]
-  },
-  "faq": {
-    "title": "Preguntas que quizá tengas",
-    "items": [
-      {
-        "q": "¿Necesito una especificación primero?",
-        "a": "No. Cuéntame el problema, la restricción y la fecha límite. Te respondo con un plan en lenguaje claro."
-      },
-      {
-        "q": "¿Para qué puedo contratarte?",
-        "a": "Un sitio o app web, una migración, un puesto a tiempo completo o ayuda freelance. El constructor de brief de abajo cubre los cuatro."
-      },
-      {
-        "q": "¿De quién es el resultado?",
-        "a": "De tu equipo. El trabajo se entrega desplegado y documentado, y se traspasa para que lo hagas tuyo."
-      }
-    ]
-  },
-  "perf": { "kicker": "// rendimiento, en vivo", "title": "El recibo de esta página, medido en tu dispositivo", "lead": "Sin números de laboratorio ni capturas. Son los tiempos reales que tu navegador registró al cargar esta página, leídos con la Performance API.", "measuring": "Midiendo…", "good": "dentro del umbral recomendado", "slow": "por encima del umbral recomendado", "note": "Los valores varían según tu red, dispositivo y caché. Los umbrales son los límites \"buenos\" de Core Web Vitals de Google (LCP 2,5 s, CLS 0,1) más 1,8 s para FCP y 800 ms para TTFB.", "rows": { "ttfb": { "t": "Respuesta del servidor (TTFB)", "d": "Tiempo hasta el primer byte" }, "fcp": { "t": "Primer pintado con contenido (FCP)", "d": "First Contentful Paint" }, "lcp": { "t": "Elemento más grande (LCP)", "d": "Largest Contentful Paint" }, "cls": { "t": "Salto de diseño (CLS)", "d": "Cumulative Layout Shift" }, "bytes": { "t": "Transferido hasta ahora", "d": "Bytes por la red, 0 si está en caché" }, "dom": { "t": "Elementos DOM", "d": "Elementos en la página ahora mismo" } } },
-  "a11y": {
-    "kicker": "// accesibilidad, en vivo",
-    "title": "No me creas. Pruébalo.",
-    "lead": "Construyo según WCAG 2.1 AA. Estos interruptores cambian esta misma página, para que veas cómo se adapta el sitio a distintas necesidades. Tu elección se guarda en este navegador.",
-    "on": "Activo",
-    "off": "Inactivo",
-    "reset": "Restablecer todo",
-    "modes": {
-      "text": {
-        "t": "Texto más grande",
-        "d": "Aumenta la tipografía un 25%."
-      },
-      "contrast": {
-        "t": "Alto contraste",
-        "d": "Mayor separación entre texto y fondo."
-      },
-      "motion": {
-        "t": "Sin movimiento",
-        "d": "Detiene animaciones y transiciones."
-      },
-      "spacing": {
-        "t": "Lectura fácil",
-        "d": "Más espacio entre líneas, letras y palabras."
-      }
-    }
-  },
   "demos": {
     "kicker": "// pruébalo en vivo",
     "title": "Ejecuta las demos aquí mismo",
@@ -335,70 +255,5 @@
     "case": "Leer el caso"
   },
   "similar": { "title": "¿Necesitas algo así?", "cta": "Empezar un proyecto similar", "subject": "Un proyecto como {title}", "message": "Hola Sinver, vi {title} ({stack}) y me gustaría construir algo parecido. Esto es lo que tengo en mente:\n\n" },
-  "colophon": {
-    "label": "// cómo está hecho este sitio",
-    "title": "Colofón",
-    "intro": "Sin plantilla ni constructor de páginas. Este sitio es una app Nuxt hecha a mano, y esta página lista de qué está hecho y los detalles que cuidé.",
-    "specsTitle": "Stack",
-    "featuresTitle": "Detalles que vale la pena ver",
-    "hint": "Tip: pulsa Ctrl/⌘ K en cualquier parte del sitio.",
-    "specs": {
-      "framework": {
-        "k": "framework",
-        "v": "Nuxt 3 · Vue 3"
-      },
-      "style": {
-        "k": "estilos",
-        "v": "Tailwind CSS 4"
-      },
-      "content": {
-        "k": "contenido",
-        "v": "{'@'}nuxt/content (Markdown + JSON)"
-      },
-      "i18n": {
-        "k": "idiomas",
-        "v": "English / Español con {'@'}nuxtjs/i18n"
-      },
-      "type": {
-        "k": "tipografía",
-        "v": "Archivo, Inter, Space Grotesk, JetBrains Mono"
-      },
-      "icons": {
-        "k": "seo",
-        "v": "Sitemap, alternates hreflang, etiquetas OG"
-      },
-      "host": {
-        "k": "paquetes",
-        "v": "pnpm"
-      }
-    },
-    "features": {
-      "palette": {
-        "k": "Paleta de comandos",
-        "v": "Ctrl/⌘ K abre un menú rápido para saltar de página, cambiar de idioma o copiar mi correo."
-      },
-      "a11y": {
-        "k": "Ajustes de accesibilidad",
-        "v": "Tamaño de texto, contraste, movimiento y espaciado ajustables en el inicio."
-      },
-      "resume": {
-        "k": "Currículum imprimible",
-        "v": "Una página de currículum hecha con el mismo contenido del sitio, lista para Guardar como PDF."
-      }
-    }
-  },
-  "fit": {
-    "title": "Compatibilidad de stack",
-    "subtitle": "Escribe las tecnologías que necesita tu proyecto. Las comparo con las habilidades de mis roles reales y marco lo que conviene preguntarme.",
-    "label": "Tu stack",
-    "placeholder": "ej. Vue, Node, PostgreSQL",
-    "try": "Prueba:",
-    "empty": "Agrega algunas tecnologías, separadas por comas.",
-    "summary": "{m} de {n} aparecen en mis roles",
-    "ask": "pregúntame",
-    "cta": "Enviarme este stack",
-    "subj": "Compatibilidad de stack",
-    "msg": "Mi stack: {stack}\nCubierto por tus roles: {have} ({pct}%)\n\nSobre el proyecto: "
-  },
   "timeline": { "kicker": "// carrera de un vistazo", "title": "Línea de tiempo", "hint": "Selecciona una barra para ver el rol. Las barras salen de fechas reales de inicio y fin.", "jump": "Ir al detalle", "overlap": "Las barras superpuestas son roles en paralelo." }
 }
